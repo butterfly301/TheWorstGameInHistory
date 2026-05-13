@@ -2142,6 +2142,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df8e0bc03401865478b55f798451377a
+    m_Address: Assets/GameRes/Art/Playthrough3/Common/btn_round_corner.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e01a1e5f2c768c049b575a4940a66226
     m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker
     m_ReadOnly: 0
