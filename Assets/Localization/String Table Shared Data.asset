@@ -1,0 +1,641 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: String Table Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: String Table
+  m_TableCollectionNameGuidString: 0ce7c79f82dba5540acee91aa9005e7c
+  m_Entries:
+  - m_Id: 15866564608
+    m_Key: SKIP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 457306457804800
+    m_Key: "Text Localization Loading\u2026\u2026\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479958182432768
+    m_Key: This is a super exciting plot I have carefully planned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479992747692032
+    m_Key: ' You must watch it to the end'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480007570362368
+    m_Key: If you even skip the plot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480015640203264
+    m_Key: why don't you skip your own life?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 522551217917952
+    m_Key: Game Designer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3818279159762944
+    m_Key: 'Tip: Due to the lack of optimization during development, please restart
+      the game at regular intervals to free up memory.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4022800360181760
+    m_Key: '!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4022820232794112
+    m_Key: Wait. Aren't I a hero?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4022850737967104
+    m_Key: How could I be a disabled person?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4119057107816448
+    m_Key: In order to make players to experience the satisfaction of growth during
+      their adventure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4119745300828160
+    m_Key: "we\u2019ve integrated all basic functions into a skill tree"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4119763449581568
+    m_Key: "You\u2019ll need to earn skill points and unlock them gradually"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4119776556781568
+    m_Key: Just slightly push D forward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4133247046422528
+    m_Key: 'Toilet
+
+      Village'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4177474128220160
+    m_Key: The toilet in my home is clogged
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4177554067460096
+    m_Key: Could you help me unclog it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4177577844969472
+    m_Key: You are more healthy than me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4177595557515264
+    m_Key: ' Why don''t you do it yourself?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4196950953463808
+    m_Key: just help me out
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4196965507698688
+    m_Key: Helping NPCs unclog toilets is the fundamental logic of this canned game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4196974961659904
+    m_Key: "don\u2019t ruin the game\u2019s worldview!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4196985363533824
+    m_Key: But
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4196994884603904
+    m_Key: "the game\u2019s worldview is about the demon king trying to wipe out
+      humanity"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4197008688058368
+    m_Key: "why am I so free that I\u2019m stuck unclogging a toilet for you?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4197602958020608
+    m_Key: "\u2026\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4364113584623616
+    m_Key: .
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4382353526394880
+    m_Key: This is part of the main storyline. If you don't do it, you can't progress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4382401731530752
+    m_Key: Just open your map and take a look
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4382418106093568
+    m_Key: there are still 114514 question marks on it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4382439606095872
+    m_Key: which means you'll have to unclog 114514 more toilets later
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4382457884872704
+    m_Key: How about it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4382471751241728
+    m_Key: Enjoy the massive amount of exciting content we've prepared for you
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4382488784310272
+    m_Key: Now, go check out the toilet ahead
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4441924542435328
+    m_Key: Isn't this the code written by our team's programmer?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4441938543022080
+    m_Key: Why is it all here?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4441953529270272
+    m_Key: The bugs are charging at you
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4441967278198784
+    m_Key: quick, hit them with the toilet plunger!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4768301586092032
+    m_Key: ' This is not exactly the same as the me in the video just now'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4768667379732480
+    m_Key: but at least it can be said to be completely different
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4769494790082560
+    m_Key: And what the hell is this toilet peg in my hand?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4769748063129600
+    m_Key: Where is my horse?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4769910424637440
+    m_Key: Where is my sword?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4778733709332480
+    m_Key: Go for it! bro, Bottoms up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4804296037666816
+    m_Key: Oh no, although you've cleared the bug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4804339121557504
+    m_Key: the program can't run at all
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4804408168189952
+    m_Key: This game is going to crash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4804475776176128
+    m_Key: See you later
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5026284601643008
+    m_Key: Empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5051232065982464
+    m_Key: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5051289473421312
+    m_Key: Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5051415906521088
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5051485590687744
+    m_Key: BackToDesktop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5067818957049856
+    m_Key: Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5067863529918464
+    m_Key: Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5067895591178240
+    m_Key: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5067929825087488
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5228363773415424
+    m_Key: The game stutters every time I attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5422002122297344
+    m_Key: The optimization is really poor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5501527824830464
+    m_Key: An exciting adventure awaits you to embark on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5503907324792832
+    m_Key: 'Design/Program/Art: StillSCE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5504472469508096
+    m_Key: "Music provided by [\u4E4C\u9E26Producer]"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5574755054292992
+    m_Key: Don't blame me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5574770841653248
+    m_Key: you might need to upgrade your specs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5772915638833152
+    m_Key: The map is covered with question marks, waiting for you to clear them
+      up.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5775723263987712
+    m_Key: Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5777230961086464
+    m_Key: Use
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5777303006646272
+    m_Key: Remove
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5828918149419008
+    m_Key: 'For any feedback or suggestions, please send them to: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5830671800504320
+    m_Key: I read every email carefully.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6302886346133504
+    m_Key: 'The Last Hero: 1789'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6303060359417856
+    m_Key: System Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6303203775254528
+    m_Key: Credits.txt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6303328417386496
+    m_Key: Future Update Plan.txt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6303542033289216
+    m_Key: Recycle Bin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6303803879493632
+    m_Key: A newly created blank document
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6303982812696576
+    m_Key: Con-curd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6305054180544512
+    m_Key: "M\u018EHT\u1D0EA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6307462927388672
+    m_Key: M-assEye
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6308018521673728
+    m_Key: 'MONKEY KING: HERO IS GONE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6309204503072768
+    m_Key: StarEmpty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6309410208518144
+    m_Key: "Loading\u2026\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6309964234133504
+    m_Key: Huge Angles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6310316236902400
+    m_Key: BLUERISE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6310481576366080
+    m_Key: 'Noisy Valley: Fall'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6311100194263040
+    m_Key: Skulls And Boring Ocean Navigation Experience Simulation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6311417292034048
+    m_Key: Servant Risen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6311815247597568
+    m_Key: The trolls won and ( ) died
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6311994050777088
+    m_Key: 'The Servant of the Cringe: Gullible'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6312826053890048
+    m_Key: End Of Pallid Orphan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6313752181379072
+    m_Key: The Night After
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6314486398488576
+    m_Key: 'Life Squad: Save the Evil League'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6314984803438592
+    m_Key: 'Null Island: Lies of Wrong'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6315974524964864
+    m_Key: RainbowMound Non-event
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6347087939145728
+    m_Key: Open this book to browse the skill tree.(Not yet available)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6347276435361792
+    m_Key: Meow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6347320890789888
+    m_Key: Meow meow meow meow meow meow meow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6348749537841152
+    m_Key: Skill Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6348833063211008
+    m_Key: Meow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6348857264345088
+    m_Key: Meow Meow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6526287950155776
+    m_Key: Confirm shutdown?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6526820672901120
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6526849831702528
+    m_Key: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6527329584582656
+    m_Key: This program was broken.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6527787480944640
+    m_Key: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6528880709505024
+    m_Key: Music volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6528903824314368
+    m_Key: Sound volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6531873135693824
+    m_Key: '"The Last Hero II: 1793" is set to release soon! (Perhaps the previous
+      work should be renamed "The Second-to-Last Hero"?)
+
+
+      Our development
+      team has undergone a major overhaul. In this new title, guided by principles
+      of openness and inclusivity, we have incorporated substantial elements exploring
+      diverse gender identities, feminism, people of color, and more. Our aim is
+      to encourage players to embrace marginalized groups and dismantle prejudices
+      against them.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6631134925983744
+    m_Key: Is fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8758377131315200
+    m_Key: Hi! Hero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9041806968262656
+    m_Key: Explorer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9242114310836224
+    m_Key: Advertisement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9793748149506048
+    m_Key: Matrix Ice-Breaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11362101855031296
+    m_Key: Installer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11438101662044160
+    m_Key: Download Complete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11443374573260800
+    m_Key: Download failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13908673050480640
+    m_Key: 'Decryption successful. Result: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13960122560188416
+    m_Key: The Last Hero 2:1793 Game Package
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13971977290682368
+    m_Key: Save to Local
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14129696148590592
+    m_Key: The Last Hero 2:1793
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14150843250544640
+    m_Key: Open the folder location
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14295010010238976
+    m_Key: "Tip: The repeated delays are to polish the game to perfection, and not
+      due to autocratic leadership, repeated overhauls, inter-departmental disputes,
+      or inefficiencies\u2014absolutely not!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15404525019500544
+    m_Key: '  Guess you want to see:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15405829297049600
+    m_Key: RajiNet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15615853810192384
+    m_Key: That's it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15616014347177984
+    m_Key: Change it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23588634413797376
+    m_Key: Why not try hacking into our server to get the game that works properly?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23594481902718976
+    m_Key: Just kidding! Haha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46766030918815744
+    m_Key: Test
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49351287853584384
+    m_Key: test_dialogue_001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49351377435529216
+    m_Key: test_dialogue_002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49351443076386816
+    m_Key: test_dialogue_003
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49351463808831488
+    m_Key: test_dialogue_004
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49351566607028224
+    m_Key: test_choice_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49351590367760384
+    m_Key: 'test_choice_2 '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64478112476860416
+    m_Key: "\u2014\u2014Click to start\u2014\u2014"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64552546084622336
+    m_Key: 'Three Kingdoms: The Wane of Divine Will'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64577100114857984
+    m_Key: 'Select Server Zone:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64577100114857985
+    m_Key: XuzhouCity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64577100114857986
+    m_Key: JingXiangNineCommanderies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64577100114857987
+    m_Key: YanzhouCity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64577100114857988
+    m_Key: ChenliuGrandHotel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64577100114857989
+    m_Key: MangdangMountain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64579578818498560
+    m_Key: Enter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64579619532607488
+    m_Key: the pass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64588149769670656
+    m_Key: Account Management
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64591650855882752
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64598325230866432
+    m_Key: Carrying out an evening raid...
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1392786859480055834
+  references:
+    version: 2
+    RefIds:
+    - rid: 1392786859480055834
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1762999994077

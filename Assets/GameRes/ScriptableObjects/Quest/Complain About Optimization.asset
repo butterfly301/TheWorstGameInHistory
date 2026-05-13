@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe889e7ac54e30240817952f35c162eb, type: 3}
+  m_Name: Complain About Optimization
+  m_EditorClassIdentifier: 
+  icon: {fileID: 982111207384942013, guid: 44678ada8eeac0944a27bd6bb0e578fc, type: 3}
+  title: Complain about optimization
+  goal: 3
+  extraInfo: 
+  description: 'Complain About Optimization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    rewards a major treasure
+    chest.'
+  rewards: []
+  saveQuest:
+    progress: 0
+    isActive: 0
+    isComplete: 0
+  add: 0
+  foldOut: 0
+  remove: 0
+  delete: 0
+  deleteAsk: 0
+  deleteData: 0
+  descriptionFoldOut: 1
+  extraInfoFoldOut: 1

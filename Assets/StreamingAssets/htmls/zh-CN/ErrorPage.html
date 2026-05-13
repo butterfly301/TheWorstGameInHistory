@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连接失败</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        h1 {
+            font-size: 24px;
+            color: #d9534f;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .error-code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #eee;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #c7254e;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .retry-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4285F4;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .retry-button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNjNzI1NGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCI+PC9jaXJjbGU+PGxpbmUgeDE9IjE1IiB5MT0iOSIgeDI9IjkiIHkyPSIxNSI+PC9saW5lPjxsaW5lIHgxPSI5IiB5MT0iOSIgeDI9IjE1IiB5Mj0iMTUiPjwvbGluZT48L3N2Zz4=" class="icon" alt="Error Icon">
+        <h1>建立安全连接失败</h1>
+        <p>搜索地图内容时发生错误。</p>
+        <p>由于不能验证所收到的数据是否可信，无法显示您想要查看的页面。</p>
+        <p>建议向此网站的管理员反馈这个问题。</p>
+        <p>错误代码：<span class="error-code">PR_CONNECT_RESET_ERROR</span></p>
+        <a href="ErrorPage.html" class="retry-button">重试</a>
+    </div>
+</body>
+</html>

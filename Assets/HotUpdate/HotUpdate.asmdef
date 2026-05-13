@@ -1,0 +1,29 @@
+{
+  "name": "HotUpdate",
+  "rootNamespace": "",
+  "references": [
+    "QFramework",
+    "QFramework.CoreKit",
+    "Unity.Addressables",
+    "HybridCLR.Runtime",
+    "Unity.ResourceManager",
+    "TwoBitMachines.FlareEngine.Interface",
+    "Unity.TextMeshPro",
+    "AudioKit",
+    "Unity.Localization",
+    "UnityEditor.UI",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll",
+    "DOTween.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

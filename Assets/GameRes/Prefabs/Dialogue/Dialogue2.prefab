@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3560414862830838969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4852615026813520573}
+  - component: {fileID: 6950093631764490638}
+  - component: {fileID: 4119789241384569546}
+  m_Layer: 5
+  m_Name: Dialogue2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4852615026813520573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560414862830838969}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6950093631764490638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560414862830838969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822cd1b4ee223954eba90b25e461251f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 0}
+  exitButton: {fileID: 0}
+  skipButton: {fileID: 0}
+  isRandom: 0
+  positionIcon: 0
+  blockInventories: 0
+  messengers:
+  - name: Game Designer
+    icon: {fileID: 21300000, guid: c6bd7deb446d61c499737d6af055ff85, type: 3}
+    bubble: {fileID: 0}
+    background: {fileID: 0}
+    transform: {fileID: 0}
+    bubbles: []
+    animation: []
+    foldOut: 1
+    addAnimation: 0
+  conversation:
+  - name: Designer
+    isRandom: 0
+    messages:
+    - type: 0
+      messenger: Game Designer
+      messageTo: 
+      message: This is part of the main storyline. If you don't do it, you can't
+        progress
+      animation: 
+      useAnimation: 0
+      onMessage:
+        m_PersistentCalls:
+          m_Calls: []
+      choice: []
+      open: 1
+      options: 0
+      addChoice: 0
+      eventFoldOut: 0
+    - type: 0
+      messenger: Game Designer
+      messageTo: 
+      message: Just open your map and take a look
+      animation: 
+      useAnimation: 0
+      onMessage:
+        m_PersistentCalls:
+          m_Calls: []
+      choice: []
+      open: 1
+      options: 0
+      addChoice: 0
+      eventFoldOut: 0
+    - type: 0
+      messenger: Game Designer
+      messageTo: 
+      message: there are still 114514 question marks on it
+      animation: 
+      useAnimation: 0
+      onMessage:
+        m_PersistentCalls:
+          m_Calls: []
+      choice: []
+      open: 1
+      options: 0
+      addChoice: 0
+      eventFoldOut: 0
+    - type: 0
+      messenger: Game Designer
+      messageTo: 
+      message: which means you'll have to unclog 114514 more toilets later
+      animation: 
+      useAnimation: 0
+      onMessage:
+        m_PersistentCalls:
+          m_Calls: []
+      choice: []
+      open: 1
+      options: 0
+      addChoice: 0
+      eventFoldOut: 0
+    - type: 0
+      messenger: Game Designer
+      messageTo: 
+      message: How about it?
+      animation: 
+      useAnimation: 0
+      onMessage:
+        m_PersistentCalls:
+          m_Calls: []
+      choice: []
+      open: 1
+      options: 0
+      addChoice: 0
+      eventFoldOut: 0
+    - type: 0
+      messenger: Game Designer
+      messageTo: 
+      message: Enjoy the massive amount of exciting content we've prepared for you
+      animation: 
+      useAnimation: 0
+      onMessage:
+        m_PersistentCalls:
+          m_Calls: []
+      choice: []
+      open: 1
+      options: 0
+      addChoice: 0
+      eventFoldOut: 0
+    - type: 0
+      messenger: Game Designer
+      messageTo: 
+      message: Now, go check out the toilet ahead
+      animation: 
+      useAnimation: 0
+      onMessage:
+        m_PersistentCalls:
+          m_Calls: []
+      choice: []
+      open: 1
+      options: 0
+      addChoice: 0
+      eventFoldOut: 0
+    settingsFoldOut: 0
+    add: 0
+    delete: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    editName: 0
+    signalIndex: 1
+  rememberState: 0
+  saveKey: 
+  saveFloat:
+    value: 0
+  conversationIndex: []
+  onEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4119789241384569546}
+        m_TargetAssemblyTypeName: DestroyAfterDelay, HotUpdate
+        m_MethodName: DestroyMyself
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  active: 0
+  active2: 0
+  addState: 0
+  eventsFoldOut: 1
+  onEnterFoldOut: 0
+  onExitFoldOut: 0
+  settingsFoldOut: 1
+  messengerFoldOut: 0
+  conversationFoldOut: 1
+  rememberFoldOut: 0
+  addMessenger: 0
+  addConversation: 0
+  signalIndex: -1
+  signalIndex2: -1
+  currentNodeID: root
+  branchName: Conversation
+  animationName: Talking
+--- !u!114 &4119789241384569546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560414862830838969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b53ebeb7dcca34c9ce37f8120bdc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDespawn:
+    m_PersistentCalls:
+      m_Calls: []
+  assetNames: []

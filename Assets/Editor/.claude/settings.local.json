@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find E:/1FairyOnTheTree/WorstGame/Assets/GameRes -type f \\\\\\(-name *.prefab -o -name *.png -o -name *.jpg -o -name *.mp3 -o -name *.wav -o -name *.json \\\\\\) ! -name *.meta)",
+      "Bash(find E:/1FairyOnTheTree/WorstGame/Assets/GameRes -type f ! -name *.meta ! -name *.DS_Store)",
+      "Bash(python3 temp_gen.py)",
+      "Bash(cd:*)",
+      "Bash(python3 temp_gen2.py)",
+      "Bash(rm temp_gen2.py)",
+      "Bash(python3 refresh_keys.py)",
+      "Bash(rm refresh_keys.py)",
+      "Bash(python3 fix_keys.py)",
+      "Bash(rm fix_keys.py)",
+      "Bash(python3 fix_keys2.py)",
+      "Bash(rm fix_keys2.py)",
+      "Bash(find E:/1FairyOnTheTree/WorstGame/Assets/GameRes -type f -newer E:/1FairyOnTheTree/WorstGame/Assets/HotUpdate/Key/AddressableKeys.cs ! -name *.meta)",
+      "Bash(python3 regen.py)",
+      "Bash(rm regen.py)",
+      "Bash(ls -la *.cs)",
+      "Bash(python3 regen_final.py)",
+      "Bash(rm regen_final.py)",
+      "Bash(python3 fix_duplicate.py)",
+      "Bash(rm fix_duplicate.py)",
+      "Bash(python3:*)",
+      "Read(//e/1FairyOnTheTree/WorstGame/**)",
+      "Bash(\"C:/Program Files/Unity/Hub/Editor/2022.3.21f1c1/Editor/Unity.exe\" -quit -batchmode -nographics -projectPath . -executeMethod HotUpdate.Utility.Editor.GameResAssetProcessor.GenerateAddressableKeys -logFile -)",
+      "Bash(ls -la \"E:\\\\1FairyOnTheTree\\\\WorstGame\\\\Assets\"\" | grep -E \"GameRes)",
+      "Bash(Addressable \")",
+      "Bash(else echo:*)",
+      "Bash(fi)"
+    ]
+  }
+}

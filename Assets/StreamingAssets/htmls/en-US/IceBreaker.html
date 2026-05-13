@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Ice-Breaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; color: #0f0; font-family: 'Courier New', Courier, monospace; overflow: hidden; display: flex; align-items: center; justify-content: center;
+        }
+        #video-container {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: flex; align-items: center; justify-content: center; cursor: pointer;
+        }
+        #video-player {
+            max-width: 100%; max-height: 100%; width: auto; height: auto;
+        }
+        #play-overlay {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            font-size: 18px;
+            pointer-events: none;
+        }
+        #main-content {
+            display: none; padding: 40px; box-sizing: border-box; height: 100%; overflow-y: auto; max-width: 960px;
+            font-family: 'Inter', sans-serif; /* **Use more readable font for content** */
+        }
+        h1 {
+            color: #0f0; text-shadow: 0 0 5px #0f0; margin-bottom: 20px;
+        }
+        h2 {
+            color: #0f0; text-shadow: 0 0 3px #0f0; margin-top: 30px; margin-bottom: 15px;
+        }
+        p, ul, li {
+            line-height: 1.8; margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: '>> '; padding-left: 20px;
+        }
+        .testimonial {
+            background-color: rgba(15, 255, 15, 0.1);
+            border-left: 3px solid #0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #0c0;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: #888;
+            margin-top: 40px;
+            border-top: 1px dashed #333;
+            padding-top: 20px;
+        }
+        .download-button {
+            display: inline-block; margin-top: 30px; padding: 15px 35px; font-size: 18px; color: #000; background-color: #0f0; border: 1px solid #0f0; text-decoration: none; cursor: pointer; transition: all 0.3s;
+        }
+        .download-button:hover {
+            background-color: #000; color: #0f0; box-shadow: 0 0 15px #0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="video-container" title="Click to Play / Skip">
+        <video id="video-player" muted playsinline preload="metadata">
+            <source src="Art/IceBreakerVideo_en-US.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="play-overlay">▶ Click to Play</div>
+    </div>
+
+    <div id="main-content">
+        <h1>Matrix Ice-Breaker</h1>
+        <p>A disruptive network penetration and data analysis tool. We don't create the rules; we just find ways to bypass them.</p>
+        <p>The "Matrix Ice-Breaker" can delve into any known digital structure, parse its underlying logic, and provide you with unprecedented access. Whether it's encrypted data streams or protected memory fragments, nothing can hide from the "Ice-Breaker".</p>
+        
+        <h2>Core Features:</h2>
+        <ul>
+            <li>Protocol Spoofing & Data Sniffing</li>
+            <li>Real-time Logic Vulnerability Analysis</li>
+            <li>Memory Fragment Reconstruction</li>
+            <li>Emotional Resonance Bypass</li>
+            <li>Quantum Data Defragmentation</li>
+            <li>Legacy System Compatibility (requires additional compatibility modules)</li>
+        </ul>
+
+        <h2>Testimonials:</h2>
+        <div class="testimonial">
+            <p>"I used it to hack my coffee machine, and now it only makes bitter coffee. - Anonymous User"</p>
+            <p>"Since using Matrix Ice-Breaker, my computer blue-screens every day, but my mind has never been clearer. - A Philosopher"</p>
+            <p>"I just wanted to download a final exam paper, but it ended up downloading my teacher's private photo for me. - A College Student"</p>
+        </div>
+
+        <h2>System Requirements:</h2>
+        <ul>
+            <li>Operating System: Any system that runs (stability not guaranteed)</li>
+            <li>Processor: At least one CPU core capable of thought</li>
+            <li>Memory: All of your memories</li>
+            <li>Storage: All of your hopes</li>
+            <li>Network: Access to any corner of the universe</li>
+            <li>Display: At least one screen capable of displaying the color green</li>
+        </ul>
+
+        <a href="https://github.com/butterfly301/TheWorstGameInHistoryResource/blob/main/IceBreakerSoftwareDownloadPackage.png?raw=true" download="IceBreaker_Package.jpg" class="download-button">Download v1.0 Initial Release</a>
+
+        <div class="disclaimer">
+            <p>WARNING: By using this software, you agree to waive all digital rights, including but not limited to your privacy, data ownership, and expectations for a bright future. This software is provided by DickSuck™ and is not responsible for any physical, mental, or digital damage caused by its use. This software may cause the boundary between reality and virtuality to blur. Use with caution.</p>
+        </div>
+    </div>
+
+    <script>
+        const videoPlayer = document.getElementById('video-player');
+        const videoContainer = document.getElementById('video-container');
+        const mainContent = document.getElementById('main-content');
+        const playOverlay = document.getElementById('play-overlay');
+
+        let hasStartedPlaying = false;
+
+        let contentShown = false;
+        function showMainContent() {
+            if (contentShown) return;
+            contentShown = true;
+            videoPlayer.pause();
+            videoContainer.style.transition = 'opacity 0.5s';
+            videoContainer.style.opacity = '0';
+            setTimeout(() => {
+                videoContainer.style.display = 'none';
+                mainContent.style.display = 'block';
+            }, 500);
+        }
+
+        videoPlayer.addEventListener('ended', showMainContent);
+
+        videoContainer.addEventListener('click', function() {
+            if (!hasStartedPlaying) {
+                hasStartedPlaying = true;
+                videoPlayer.muted = false;
+                videoPlayer.play();
+                playOverlay.style.display = 'none';
+            } 
+            else {
+                showMainContent();
+            }
+        });
+
+        videoPlayer.addEventListener('error', function() {
+            console.log("An error occurred during video playback.");
+            showMainContent();
+        });
+    </script>
+
+</body>
+</html>

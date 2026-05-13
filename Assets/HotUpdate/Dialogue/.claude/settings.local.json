@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(grep -r DialogueSystem. /e/1FairyOnTheTree/WorstGame/Assets/HotUpdate/DialogueSystem/ --include=*.cs)",
+      "Bash(grep -r \"IDialogueView\\\\|DialogueViewBase\\\\|TraditionalDialogueView\\\\|BubbleDialogueView\" /e/1FairyOnTheTree/WorstGame/Assets/GameRes/Prefabs/UI/Playthrough1/DialogueViewType/*.prefab)",
+      "Bash(2)",
+      "Bash(cat /e/1FairyOnTheTree/WorstGame/Assets/AddressableAssetsData/AssetGroups/*.asset)",
+      "Bash(python -m json.tool)",
+      "Bash(grep -v \"///\")",
+      "Bash(ls:*)",
+      "Bash(xargs grep:*)",
+      "Bash(xargs wc:*)",
+      "Bash(mkdir -p ../../../Scripts/Editor/DialogueEditor)",
+      "Bash(mkdir -p ../../../GameRes/Data/Dialogue)",
+      "Read(//e/1FairyOnTheTree/**)",
+      "Bash(dotnet build:*)",
+      "Bash(wc -l ../../Scripts/Editor/DialogueEditor/*.cs)",
+      "Bash(/c/Unity/Hub/Editor/2022.3.21f1c1/Editor/Unity.exe -batchmode -quit -nographics -projectPath . -executeMethod UnityEditor.EditorApplication.Exit -logFile -)",
+      "Bash(for file:*)",
+      "Bash(do echo:*)",
+      "Read(//e/1FairyOnTheTree/WorstGame/Assets/HotUpdate/Dialogue/**)",
+      "Bash(done)",
+      "Read(//e/1FairyOnTheTree/WorstGame/Assets/Scripts/Editor/DialogueEditor/**)",
+      "Bash(grep -n \"fontWeight\\\\|Clicked\\\\|showAddRemove\\\\|windowBound\\\\|HotUpdate.DialogueViewType\" *.cs)",
+      "Bash(grep -n \"unityFontStyleAndWeight\\\\|DialogueViewType\\\\|public.*nodeViews\" *.cs)"
+    ]
+  }
+}

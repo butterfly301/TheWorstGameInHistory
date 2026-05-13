@@ -1,0 +1,2428 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 2b9bcbd4da64e32439450dbf19e06ee7
+  m_SerializeEntries:
+  - m_GUID: 0017e01926ed9e94582c881de2699c9f
+    m_Address: Assets/GameRes/Audio/BGM/City of Night.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 009d11df6659c3d47a9eaf3d983f3e17
+    m_Address: Assets/GameRes/Animations/UI/GlitchEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 00aebbb98fed28b498e9b617dfae3b6e
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/PlayerShard.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0149b8287bbbb7943ae000c0205ce8e6
+    m_Address: Assets/GameRes/Art/Playthrough3/Login/LoginBg2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0282eae26706dd6408a092cbd4f654a7
+    m_Address: Assets/GameRes/Animations/UI/Login
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 04e7326deb359224eac28e3bf8ff74b0
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Board.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 050d9e84d8de61d41ac16ebab39e64a2
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Gravestone
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05729d45cbe07ae4db7cd2de3600ce5e
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/OpenAnim/OpenAnim.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05d871b9365825b4ca356e1345739ee2
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Road Sign
+      02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0633c41d05e26db46bef317bb1c3b0b2
+    m_Address: Assets/GameRes/Data/Dialogue/SkipPlot1.json
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0669ccba2f2994743bb92745d0951d1a
+    m_Address: Assets/GameRes/Art/Playthrough3/Common/quit.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06764ed0051fea047b711827a95a5886
+    m_Address: Assets/GameRes/Audio/BGM/Hate, Birth and Humanity.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06dcb180fcd28494f99c483a4773b192
+    m_Address: Assets/GameRes/Animations/UI/Narrator/Narrator1Idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07f556d266d2a8347babc0a0c4616150
+    m_Address: Assets/GameRes/ScriptableObjects/Quest/Complain About Optimization.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08c932a30f580f14eb03013ecfb44778
+    m_Address: Assets/GameRes/Animations/UI/GlitchEffect/GlitchEffect.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09177c7a7de1aee4dab4ff61f26875e1
+    m_Address: Assets/GameRes/ScriptableObjects/Effect/Shakes.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0994c12e202f342459a4212e7287f7e8
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-40.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09a8cf358b24173479d376dd7a9c9c39
+    m_Address: Assets/GameRes/Prefabs/Dialogue/Dialogue1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a84f54077193d3489d0de133048df37
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Bush 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0af7265bda48fd34d8d62379ab548f6e
+    m_Address: Assets/GameRes/Prefabs/World/ToiletVillage2Platform.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c008ee3ee72a4362a35be25fa5de043
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-15.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cadafc44435d2649b8aa171d49f61d6
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 09.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cb8ddf3da0fefc409b7cba63c1a6778
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/DialogueViewType/TraditionalView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cde5280cb0df5240bf5cc2866248e08
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wheat 05.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e58d26c21081cb46b8a6ce8db2a3042
+    m_Address: Assets/GameRes/Art/Playthrough3/Menu
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f4181f9bd486b64c96e14a835716c6b
+    m_Address: Assets/GameRes/Art/Common/TipsGradientFade.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 100154d4aff77254898048e6148945d8
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/Maps
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10d0885e28d7f5043a3fa53c0adffa43
+    m_Address: Assets/GameRes/Prefabs/Dialogue/Dialogue2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12345678901234567890123456789012
+    m_Address: Assets/GameRes/Data/Dialogue/test_dialogue.json
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 125720acdca0229468fc820da821cbdb
+    m_Address: Assets/GameRes/Animations/UI/SkipButton
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12eefd5d015d31f4baf5a0eb739f9392
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/Player/Controller/Player.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 130a177e727814a2ea78a886ab72213d
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-30.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1509360826d6bb34587310ad4949fdd5
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Barrel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 15ca3d4f7d113db46a3ac72298c33c42
+    m_Address: Assets/GameRes/Audio/Sound/MouseClick.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16a652d6d18817e4e8c0a8a7fd59d143
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stairs X32.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 172e70f8df2eb474b88057ddafddb474
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/IceBreakerManager.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17f80083db181754baaab9f4cea6aa54
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Bold SDF Underlay.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 187b2acbaee972945b4b4fd0d2575724
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Ladder 01
+      Side R.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1881b05c2d22dd24883524163861d680
+    m_Address: Assets/GameRes/Animations/World/ScriptRain/ScriptRain.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18fa525347f595f4897e2b541ce4ce12
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stairs X24.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19352e8a79c44fe4a8b5e1a60c1b962c
+    m_Address: Assets/GameRes/ScriptableObjects/Quest/Destroy Bugs.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1950b2c8102fd37498768a269c0d40a7
+    m_Address: Assets/GameRes/Animations/UI/Login/controller/Login.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19a3e093a39b41a43b83834793e41d55
+    m_Address: Assets/GameRes/Animations/UI/Login/SelectServer.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19c814d7a6d59b74686e74ddb900f806
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Obstacle
+      Platform X40.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19f89c6e740e7447f9e12a8310d3e973
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-03.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1aeefc9f784f3fc4a9c6f87e54d0ea6f
+    m_Address: Assets/GameRes/Prefabs/Video
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b91152551af98c41ae31b12bd9e4c31
+    m_Address: Assets/GameRes/Scenes/IceBreaker.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b9ce63a440e4364a9b27c0f599509f5
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/LoadingScreenPlayThrough3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d837edfe8cc5b74e8d4ef0c0ad41223
+    m_Address: Assets/GameRes/Animations/UI/Login/controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1fd1075277f732f4490842714d4cfd6a
+    m_Address: Assets/GameRes/Art/Font
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20333406b1510254389119ae4145544f
+    m_Address: Assets/GameRes/Prefabs/Character
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 208588d6b7820ca4982a7810b4101723
+    m_Address: Assets/GameRes/Prefabs/Enemy/Manager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21ca9668cdaa72c4eaf725b8f3bc9e02
+    m_Address: Assets/GameRes/Art/Font/ipix_12px SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21ea8328ff672424dbc06ada9dd5bc67
+    m_Address: Assets/GameRes/Art/Playthrough3/Loading/LoadingBg.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 225856a0604d46d4d9b4897e0b16b729
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/QuitWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22f48f75938dfb84c8869d5efb6919ca
+    m_Address: Assets/GameRes/Data/MiniGame
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 235aed4bf3b1d1c4c9105f9ca653e2a2
+    m_Address: Assets/GameRes/Animations/UI/GlitchWindow/GlitchWindow.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23974a65958d2e64ca7af0500fd90faf
+    m_Address: Assets/GameRes/Art/Font/Cartoon/Rubik-SemiBold.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24af4c35c7cfa204090a021171ceb9d1
+    m_Address: Assets/GameRes/Art/Font/SourceHanSans-Medium SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 253b80e8730999f4d9ce7f5d3e73b38f
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/FutureUpdatePlanWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25f9f2235afcaca429284c9aec8982df
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Gunny Bag
+      02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2667a0a008b044e218b63df62e2be749
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-18.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27277137d0605bd45bd741cdb791e0c1
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Arrow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 276cc6c6cf21650419d7e88a4331c9e6
+    m_Address: Assets/GameRes/Audio
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 282d10bd840f2244d993130a17f23515
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Pot 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28ae4e85426a2f54a98737a016d4cbc2
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Log Bench.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 295bb10ead83a4d44b8a1398a7f16c99
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Sunflower
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29bde6326b4c34ad8a12da475f79b50a
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-32.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29ed8b9da25e44c4ea767e3083fa014f
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/Level/GoalPrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a5b410bcfb771340a35789c27325046
+    m_Address: Assets/GameRes/Art
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b7100ec099cb1140976d78fd7543102
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/DownloadIcebreakerWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c46a44d61009c143a39e6312a2f1754
+    m_Address: Assets/GameRes/ScriptableObjects/Inventory/Item Inventory SO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c5292ba5cf254919a6b9e2b18e04f49
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-07.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c65f85fa477a5b48aed763873e8bd2a
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/OpenAnim/Controller/OpenAnim.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c844ecc42c736944ac3d66f130ed6aa
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Flower 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ce4b55a96a1c5144a1243397aba2b91
+    m_Address: Assets/GameRes/Animations/World
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d147df9e25910b4b81e8e08c2a5e84a
+    m_Address: Assets/GameRes/Data/Dialogue/ExampleDialogue.json
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2de03dd2646316d42b273cedce2a80b1
+    m_Address: Assets/GameRes/Art/RenderTexture/Water Render Texture 1.renderTexture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f54e7022d76f09478e2e1124e212cc5
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Rock 03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3102ee9a33728e14c9bb36798c3da4c5
+    m_Address: Assets/GameRes/Art/RenderTexture/HackPreviewRenderTexture.renderTexture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31f5303d9104304468913261a397f24f
+    m_Address: Assets/GameRes/Audio/BGM/ReplaceInTheFuture/TheSongOfGuanyu.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 321c995588844724e8b526a5c53ad6e6
+    m_Address: Assets/GameRes/Animations/UI/Login/First.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32d4b1811dda14a6cb9e059ee8ad17d2
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-01.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33241a27fe2ed314792df4e5569f5811
+    m_Address: Assets/GameRes/Data/Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3373af298f123a849a61f9aefe9ec4c4
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Ladder 01
+      Side L.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33765db783031c64eb242d22002b9a55
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Basket.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 337bf7fb32e777b41a8411ca5d35e56f
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Hay Pile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 347eaee456cf66b4f97ced63ecc11323
+    m_Address: Assets/GameRes/Prefabs/DialogueBubbles/DialogueBubble1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 349de65acff914c48b7b6f5fdab8bdda
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-SemiBold.otf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 359341c00580331479a38c93eb84a6b7
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/LoginForm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35fbad8cdde724f11ba6481f1e64af71
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-33.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35ff5f2cc18840a4ca4ecf97ed2779c2
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
+      01 L X1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 366bd147d3b568843ab9463d10b7fb98
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Fence B.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 367acab6b4839d34f847dc791e026c4d
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stone of
+      Recall.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36fb44d4bb36c23489436959daaab45a
+    m_Address: Assets/GameRes/ScriptableObjects
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 382937b7849c6a84cb55707a73feee04
+    m_Address: Assets/GameRes/Prefabs/Environment
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 382e1288cab783e4eb607a762c1de210
+    m_Address: Assets/GameRes/Animations/UI/GlitchWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38a17a92b9d9748c6a1e67972041b833
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-42.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a33349c57065cc4999beb2119ce1fff
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Regular.otf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3becec1909f194046945d85ac1077772
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-39.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c079d50c364c5a48bb8262ada5cf33a
+    m_Address: Assets/GameRes/Animations/UI/Narrator
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c235a3665af9ee44bda36af3167841e
+    m_Address: Assets/GameRes/Art/Playthrough3/Common/00_Components_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c2cdb04fed10fe4c815844c47e62daf
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-ExtraLight SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c7326a3b793fca45875e5e7474d498c
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Sign 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3eb15742c08a0534e992d8031e95b4d8
+    m_Address: Assets/GameRes/Prefabs/DialogueBubbles/DialogueBubble2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ef78722fb869784f9db80922ba4155e
+    m_Address: Assets/GameRes/Art/Playthrough3/Common/user.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f221dff797bcc04f93920ab6fb086c5
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Hay Fork.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3fb133af7f96ac24bbcf4c5706dd7b00
+    m_Address: Assets/GameRes/Art/Font/Cartoon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 406ae01b7bf025d478da7b57dfe1715c
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 04.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 419378b134eda754c9a1e3bbae048765
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Obstacle
+      Platform X16.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41d4294f662241e458641e7328f39628
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 08.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 425fd31e384456f47bb3ce405a6f7415
+    m_Address: Assets/GameRes/Art/Playthrough3/Login/Title.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 436c9ca99c06853458a80f0ee70ba89b
+    m_Address: Assets/GameRes/Prefabs/Camera/InitCamera.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44a8917ea64a5d24d82701671f438ce3
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Heavy SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 459b141b624c9bf4eb1775d8260cec37
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Bold.otf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 459b65f26ee3d2d4c830fbffaa476ebc
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Flower 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 467a0b5a47dcae444965173fd49289d5
+    m_Address: Assets/GameRes/Prefabs/DialogueBubbles/DialogueBubble3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46e31554a688a084d9c34b753a1dbf69
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49437f4ad0b44f5438b6216b787c82c1
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Slope Platform
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a93dfbb85994ac4db3f1557c0001d1c
+    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b4dd7245f6104c8c8eb07ccf6b386ed
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-43.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b666403bba7a814e99834b66da8cb8c
+    m_Address: Assets/GameRes/Audio/Voice/CatTalk2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b67eec7376fb9b4285a58bc3d22ac45
+    m_Address: Assets/GameRes/Animations/Character
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b8ea262687601b46a867e3f497e67c3
+    m_Address: Assets/GameRes/Art/Common
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c09aa47d6e0e954f899cb8efe5a6816
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wheelbarrow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c2b20d25404614479721bfae35bce89
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/IceBreakerPreWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c6f7f680d35ecb45bd66603fd0f3516
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Elevator.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c7668f32ddf4c843bc8d57bf6b43000
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Pumpkin A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d0ea86cf0ef88c4fa3ae46ee54d15d1
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Pot 03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d8ad400922c4a343911784077c26568
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Cup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4da9b9761848a1848868ed8a0c18f051
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4db607dbe7b26224280d0b201335d6a5
+    m_Address: Assets/GameRes/Art/Playthrough3/Login/LoginBg.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dda088725e1b8f47bb667971da4975e
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/Maps/MapPanel0.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e1ff8faed12a475eba9be0e46072269
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-08.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f5c1ade11ab96e49b0d2d59f67fbeab
+    m_Address: Assets/GameRes/Animations/UI/PauseUIButton/OptionUIButton.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f69630512bcf3c44bf49b22f1b23a80
+    m_Address: Assets/GameRes/Animations/UI/GlitchWindow/Controller/GlitchWindow.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5039414d94a6e4e70a5ab9e8833e992a
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-27.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50a2e78df10c7ee488a4a09a1e7c8a6b
+    m_Address: Assets/GameRes/Art/Font/Cartoon/MuseoModerno-ExtraBold SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5105ccaacad8d714b94dfb93084fa936
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Gravestone
+      04.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52320e590bf774734a288886eba557ba
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-45.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52e5911430a75d8489ccca90a22d9483
+    m_Address: Assets/GameRes/Art/Font/Cartoon/MuseoModerno-ExtraBold.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 540a74296e4e6b24ebddc8bf3014e028
+    m_Address: Assets/GameRes/Art/Font/Cartoon/Rubik-SemiBold SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 540e407199cf6254fbd4ae43ba57e8f5
+    m_Address: Assets/GameRes/Art/Font/Cartoon/MuseoModerno-CriticalNum_Transpar_46
+      SDF Atlas.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5539ef0bea7e86d47b83bae472ce2975
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-ExtraLight.otf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55e220e9324021f4aba5a837610ec52e
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Archery Target
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56e2a525e0fbd93419c9b313c362934d
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Fire Bowl.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59993b08f803ca047964bd7a332e0f36
+    m_Address: Assets/GameRes/Scenes/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a4d983acd5452743930759213bf8190
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Obstacle
+      Platform Large 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a7dd7b37fed51240b4f5047284391cf
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a8cc5283d2f45a4f89efd07f262ee8e
+    m_Address: Assets/GameRes/Art/Playthrough3/Common
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5abf20f0457997348bd80242fe916388
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Chest Iron.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b25f78d6b86c474597bb8ee31f26345
+    m_Address: Assets/GameRes/Scenes/ToiletVillage.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b863081ef08aeb42abb2f87baf72b1e
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Bread 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c266168e379f394d9c5188ee20a2558
+    m_Address: Assets/GameRes/Audio/BGM/Rest time.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ceb8cf8b31fe0948b2775924e8aaf63
+    m_Address: Assets/GameRes/Scenes/Playthrough3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d0775168f770e848a6729b691844fde
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d203fa5be107ef4092d484317a0391d
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/Choice.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d35947465b24ec44897b9ce66183a49
+    m_Address: Assets/GameRes/Scenes/Playthrough3/Menu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d513d885427ead42b7f004681d110b7
+    m_Address: Assets/GameRes/ScriptableObjects/Inventory
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5dad1464d7a3246408607532834aec13
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/TX Village Props - Kettle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e8d23661846f4140b8492397ab54a94
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
+      02 X4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fd9ed34f1f755643b41c4b41d7077e5
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Banner.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fdb13d3756c84fecac96f5a2d124370
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-25.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61587dd648526a7488c0aafe52814762
+    m_Address: Assets/GameRes/Prefabs/DialogueBubbles/DialogueBubble0.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62887e6ba5cc9594a9fe2b9804cf19de
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Medium SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63ac56f1f8c663649b680b458f2d20b6
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Heavy.otf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64ad26f35d95fc84997ad93db1292861
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Bounding
+      Platform 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64c6980f4a607fd4ab71bbf47b7782d8
+    m_Address: Assets/GameRes/Art/RenderTexture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64cddfc21e04a9c408921968b73a68ad
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stump.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65321bf0311c2eb48be353666f829ca1
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Jump Platform
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65486e6b65430ad4f87831ae04690b36
+    m_Address: Assets/GameRes/Audio/Sound
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 657578e4be6b64dbf9b09deada272e55
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-24.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67c577e73adf2b44f9d891bb36856eba
+    m_Address: Assets/GameRes/Prefabs/UI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a74efa2ddd90634683c70985175fd4a
+    m_Address: Assets/GameRes/Animations/MiniGame
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a9ccf5128b7b1349a5a89b136f037a4
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Hay Bale.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b4b3ccb1e4071a419d9f6399198722f
+    m_Address: Assets/GameRes/Prefabs/World/ToiletVillagePlatform.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6be1531308dc3744ca689c2e388b05c8
+    m_Address: Assets/GameRes/Audio/Voice
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c4901b8d79ee794a9d820330f6ba2d2
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/LoadingScreenPlayThrough1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d7bf3139459ced4c972d27149e96ddf
+    m_Address: Assets/GameRes/Prefabs/Camera/ToiletVillageCamera.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e623aae259c2b64bb6a397767f1e601
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Light SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e62974242ad16942a4430b76afaf6c1
+    m_Address: Assets/GameRes/Art/Materials/IceBreakerSkybox.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e8772b49f34d402a90016ed445d8a2f
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-20.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ecf5bcec20adfa429a788f660f29ff5
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Billboard.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f36db5bab08ecb45adc5f0689246933
+    m_Address: Assets/GameRes/Scenes/OpenVideo2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70e4f80265d902443a6249697d613d81
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70e8c50e45a40c04d96872f782bb021c
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 717d9be06ccab314bb3c6be9feae82ee
+    m_Address: Assets/GameRes/Animations/UI/Loading/loading.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71d1e23306d668041aadae2ec117e0b7
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stairs X40.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72127805eb2bc4e7fbf2e02eca266cfa
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-13.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 724131bc8a7f34041bb9f1701f0cb58d
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-16.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72a905bcc22e3e443be6f48bfb173c00
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 05.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7317e5aff4febde498f3b8510d726f21
+    m_Address: Assets/GameRes/Art/Font/SourceHanSans-Medium SDF OutLine.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73a65c758e42a1345bc8efd2d3625ad6
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Obstacle
+      Platform X32.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74100513268bbec438081eaa351c0d55
+    m_Address: Assets/GameRes/Art/Font/SmileySans-Oblique SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7478151cf36724a7dada558f746c3633
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-12.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7484ae744365bf147a033e1d66fb6a98
+    m_Address: Assets/GameRes/Audio/BGM/Lantern.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74d9a01c13aac9548b0420acd7a4aa4b
+    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd/Enter.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75e84fbdb66ab5647a06b786c6662307
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Bucket 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75eefa63cf8dbbf4cb013f121e25bbb4
+    m_Address: Assets/GameRes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76e09107407ed824587263ae4a33372c
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/AdWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78538c3cab4610f4d914a10e71bdf46b
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Crate Large.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 789851a886126f4429628a9ab2550415
+    m_Address: Assets/GameRes/Prefabs/TriggerDialogueBubble
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78c0f168d9274124eaeedea139301a44
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Pot 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7903d081236f2304396572efb80b5f8f
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Tree 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79180f511d89441b9aa23ccae1992fe0
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-28.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 792781d5e73fc6d4a8c78e7529c991a9
+    m_Address: Assets/GameRes/Data/Enemy/EnemyData.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79d3d5e36dc676c47972eeadb375aab5
+    m_Address: Assets/GameRes/Animations/UI/Narrator/Controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79e6baad2fd414b82a6d49ce1568d2e5
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-50.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7aa243ffd7c1aed45ae1350dce07b640
+    m_Address: Assets/GameRes/Art/Font/Cartoon/Quicksand-SemiBold.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b51376ff9aae694dbc3f515f5737d84
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Ladder 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bd6b897eb5ca4b7d88a205c4a51640c
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-26.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bef0064f8567430cac22499c6b93d4f
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-49.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7daef439607990447ba6a50785583a93
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/Level/EnemyPrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e26c9daf4c32483b9c2790e662d3f1b
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-48.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e29e219b59dbc2438e19d7f4c136d66
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/SkipButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e4ffeea3299da543b6299181bbc7724
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/Player/Attack.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e9ee6dc04a5d40d1a5dfc4beb9865e7
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-41.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f2681b23c23afc4fbb43c6dca9f41f9
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Chest Silver.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fc30cd74f5aa724387df7546e0f3d5b
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Training
+      Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8066f0a5985a5bb498006037910ee0b6
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Medium.otf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80b4d3b2d77fcab4b9d1f3c6cc85a94c
+    m_Address: Assets/GameRes/Prefabs/Environment/3D
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80e397195ea2940b69ee7bdbded856a5
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-29.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80e52ac4fd44898469552aaa2734cc71
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/SettingWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81652031b64c342cc8dbc59c138d77c5
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-19.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 821ab2ee5a45f16458b23919f211dcaf
+    m_Address: Assets/GameRes/Art/Playthrough3/Login/LoginBg2ServerBtn.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82b908c58a27feb4fb4e8a000f3cfa58
+    m_Address: Assets/GameRes/Audio/Voice/CatTalk1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 838a9c74e6cba734faec44d9be3b765e
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Cauldron.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83d9652edf8102948abc7e6551b4db36
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wine Bottle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84b2d391ed23bec46afa329e1900a308
+    m_Address: Assets/GameRes/Prefabs/Effect/ScriptRain.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84ccecf26ce968246b2bb836ead38c06
+    m_Address: Assets/GameRes/Art/Materials/Water.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84e427d6b66ab4066b6a4dcd0ce819ee
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-38.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 851fb730285011e47b696310dadf3ffb
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stairs X64.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 852364d118dd30248a3b9d8743ff3964
+    m_Address: Assets/GameRes/Animations/UI/Login/Second.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 852c7353510fc5b4c9a8fb4126689f47
+    m_Address: Assets/GameRes/ScriptableObjects/Effect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 867df0a95797b9745b8a0d9082bcbe65
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/Level/EnemyShard.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86d38be4937d1c344b9c7f22912685eb
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wood Log
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87a08af3b77b9b543839990c1d81c2a7
+    m_Address: Assets/GameRes/Animations/World/ScriptRain/Normal.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 881e3f52c86c94f26a60718d35627cd8
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-34.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89e6bc608da7b47d4914f3d9c2484e48
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-35.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b196d74cd9e8d8458a2bb37a446fbc6
+    m_Address: Assets/GameRes/Art/Materials
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b6129d1c3a721e45ab61330aed7d685
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/DialogueViewType
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c6297b08769da2459f0ba60c2227f13
+    m_Address: Assets/GameRes/Animations/UI/Loading/Controller/Loading.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c9cfa26abfee488c85f1582747f6a02
+    m_Address: Assets/GameRes/Scenes/OpenVideo1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ca9fad414ac7cf42a3017c7e76ea983
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/GlitchWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cc938fe21b426a4daedf2f6c7e34c80
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Fence A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8dab7379f6c67d9448d4c24d1eace61b
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Rock 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8dfb5630d2f299842a6c44ae1620831a
+    m_Address: Assets/GameRes/Art/Playthrough3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e0f2533dcba6ed48a83fc3f5a005a5c
+    m_Address: Assets/GameRes/Prefabs/World/MaodieVillage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e6530ec77929434f97fa7e68295eef5
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/DialogueViewType/BubbleView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f0b414806fcbda47b9f242883104bb5
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
+      02 X3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8fbf7cb5ab0a70f42812076327706612
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/DownloadTLHWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 900702508e3a4654f970d0749c23c3fb
+    m_Address: Assets/GameRes/Prefabs/Dialogue/Dialogue5.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90160022ffec388469933d10154dc51d
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/Manager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9064c839545289c4084657be539a063e
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Bold SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90d84ef94f0e404d92a1e287a6e37821
+    m_Address: Assets/GameRes/Data/MainMenu/MainMenuData.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 917ef9b197723b946bef9a879c025ef2
+    m_Address: Assets/GameRes/Art/Materials/TrailPlayerIdle.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91aebb278b095f843a6d4213d7df47fd
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 07.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 924118ea6eca18f459f67d54f8640858
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wheat 03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92a08448cd3527a4aaf11bc404e0f1a0
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Statue.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92aca809b931fc849b230d03bbcfee16
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stairs X48.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 930ee59b83b79d5469387feadebb1d93
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/OpenAnim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9369d6ddd650ea34ba5bea069ef7524b
+    m_Address: Assets/GameRes/Art/Font/Cartoon/Rubik-Medium.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 945a24dea7767f846ad8007110a371f3
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grain Box.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 948a335f2eab4d944a21f7654ca9e467
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
+      01 R X2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9552717602f56144abf4e53e3c6d33f9
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9562fef03b39b624aa00e0305aad0155
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/IceBreakerCamera.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9563607d3e23f8948a82d7a0a819520f
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/Player
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96ab13eb6f1230347867b81c27ed59ac
+    m_Address: Assets/GameRes/Prefabs/UI/GlitchEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96e1850d489e42b48af766aff1625c9d
+    m_Address: Assets/GameRes/Art/RenderTexture/Video Render Texture.renderTexture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98973b16791ef4b4aadaf5e245547911
+    m_Address: Assets/GameRes/Prefabs/UI/LoadingScreenDefault.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9902e1a6a7bc0f84387c19e369dc40b6
+    m_Address: Assets/GameRes/Prefabs/IceBreaker
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9af026272fa8fd144b992aa10e9a13b5
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Heavy Sword.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c07394648801f54f96f1e66cb5a7fc1
+    m_Address: Assets/GameRes/Prefabs/Dialogue/Dialogue0.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c8c4d3adbdea754a8926db5e1221a5e
+    m_Address: Assets/GameRes/Prefabs/Dialogue/Dialogue3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c9ad8b075ae05b43b3a09cc968ba60f
+    m_Address: Assets/GameRes/Prefabs/World/CallNarrator0.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ca2a515405f5f84a866ab033c8b1419
+    m_Address: Assets/GameRes/Art/Font/Cartoon/MuseoModerno-CriticalNum_Red_64_Dark
+      SDF Atlas.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e5c173b0c1f7d94fb4d0cf4407acf49
+    m_Address: Assets/GameRes/Prefabs/DialogueBubbles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ee3013f602f3ea42b1337788d70cbdf
+    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd/Controller/IceBreakerAd_en-US.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f8b8a5f1be548c42b8a9ea48d1d0ee0
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/EmptyWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0010a1a0c474473b81729eb770c485f
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-11.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0104c4ed513646498ea06ca9cadf9e7
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/LevelGenerator.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0ca8964c08d54c5dbebf245bdc474ca
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-23.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1f406e4f35f14141ad484be5b60197b
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
+      02 X2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a235d590ef2a04d1b85b61ef4c21337c
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-06.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a44b83072b6e3dc4087324d363969e90
+    m_Address: Assets/GameRes/Animations/UI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a46a3f134d5ac184283122c5dc475610
+    m_Address: Assets/GameRes/Prefabs/Dialogue/Dialogue4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4733d1588dd00b45a4013bb0ade53ca
+    m_Address: Assets/GameRes/Art/Font/Cartoon/Rubik-Medium SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4dccc94af742024db573e1311ee8ac4
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/IceBreakerPlayer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5d190019ef8f6b49ba727d2a17ab3ad
+    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd/Controller/IceBreakerAd_zh-CN.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5ee28c9cb4e71f42adfc812e5631ae1
+    m_Address: Assets/GameRes/Prefabs/Camera
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7268a2b7dd44ab49ac704f66fe5e034
+    m_Address: Assets/GameRes/Art/Font/Cartoon/Quicksand-Bold.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a931da70ee74947d5a047de583170ade
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-37.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa2214c04d2c2dd48b4b1aa8174c577e
+    m_Address: Assets/GameRes/ScriptableObjects/Quest
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab2f44b99adf358449c83b74c274b97b
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Sunflower
+      03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab86b24e2aa0cf64a853c65f90f07db6
+    m_Address: Assets/GameRes/Scenes/Playthrough3/Login.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab9278aa8a6f856468c48e893720a765
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Crate Small.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac067d7d3bd8a1c4a9fb05099b5a4e06
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Spike Ball.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac60a87beaa6bb74687d3744b6668f84
+    m_Address: Assets/GameRes/Art/Font/SmileySans-Oblique.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad3f0ac2b6894164ea5201edd08324b8
+    m_Address: Assets/GameRes/Prefabs/Video/VideoManager.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae444a79a4cf3f542ab8d80bdc38acbf
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/PauseForm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae78360f737cf314b82a5b994158c213
+    m_Address: Assets/GameRes/Data/MiniGame/IceBreaker
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af37d6137b6748f4dbfe059a86aad627
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - White Bottle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af9e523e721a06d408a046147bf82b80
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough2/SkipButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afc99622c0da72c47959495154b359aa
+    m_Address: Assets/GameRes/Prefabs/TriggerDialogueBubble/TriggerDialogueBubble1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b076c268235cb7348a5d9a036ec254c4
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Rock 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0f23a237df406b4186e460a74c25045
+    m_Address: Assets/GameRes/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b18dcd3ee86986b469e9cfc64055704c
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stall.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1c59aa2642aa8b439cc40185a4a5930
+    m_Address: Assets/GameRes/Prefabs/Enemy/Manager/EnemyManager.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2c677de85ad9fd45844f838c12bb544
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/ConfirmCrackWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b31f0ab76ba864744abb4f9784e2cc1a
+    m_Address: Assets/GameRes/Animations/UI/AdWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b43d102aac6b145468dcaa94a5cccae1
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-44.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b51901e6748833e4695e0c1db509dcd4
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5866d78fe6dce549a3dcd007f7eaca5
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Spear.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6428d4edb06344ba829da4edd9967c1
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-14.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b66942e8458865e4990a5fc39874e9a1
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
+      02 X1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b78702531cc991540bea14f3518027c2
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Table.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b825f3bddee39db4c90ad1ab1196ea2e
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Regular SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8fd7e9f16def9745b8b8b4c3928d52d
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Sword.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b900ad670b1b1224cb6a5f84da59d6f5
+    m_Address: Assets/GameRes/Animations/UI/AdWindow/Enter.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b99da9a57308d4ba1bee1cf1d9038376
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-05.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9d81364c34bcf8479488485b520798d
+    m_Address: Assets/GameRes/Prefabs/Environment/3D/Toilet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9eff218e132a4e76be78840eca96fb2
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-17.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9fdd7e1c7a4ba049a8021eba68839aa
+    m_Address: Assets/GameRes/Prefabs/Enemy/BugToiletVillage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bad53070b28240b4282bc102e6922c83
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Obstacle
+      Platform X24.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb67ae3035abce24aa87122c96acac22
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Chair.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb7ad522b214b114f9a29ff2f887f686
+    m_Address: Assets/GameRes/Animations/UI/PauseUIButton/PauseUIButton.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbb923beb215a454eacd451dac16e46c
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/RubbishCanWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbde5b0f2fde63f47aab9703a1e8e784
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Road Sign
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc5e53fd255e74a409bb9355143d3b33
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/Player/Idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd6b4abd3fbcb4243870f74f513f5b80
+    m_Address: Assets/GameRes/Prefabs/Environment/2D
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be45c7f16746c98428fc87d0d0f34226
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
+      01 L X2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bef830e91c1190b4c9d6e834ace51fe4
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Obstacle
+      Platform Large 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf73753b0114dec4198666fdf9085a90
+    m_Address: Assets/GameRes/Animations/UI/Narrator/Narrator1Enter.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c01d2851a28eddf4ba496c5ae4d15c78
+    m_Address: Assets/GameRes/Data
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c13263f1f05170f4e849875cee5c46d0
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Road Lamp.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c13d2d5f85558a647babab118316a624
+    m_Address: Assets/GameRes/Prefabs/Empty.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1f7d2847c9b408438b9a5f0f50b4b5f
+    m_Address: Assets/GameRes/Prefabs/Character/NPC/DaoshiLaoBa.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c223d1574bec3184c97d31eaf1406178
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Gunny Bag
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2835c965868ad147a78cdab9fbc0297
+    m_Address: Assets/GameRes/Animations/UI/PauseUIButton
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2f614a8e0864dc428810ace2ccc1584
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Anvil 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3832cbcd8d9376429c339a4466f90c0
+    m_Address: Assets/GameRes/Animations/UI/GlitchWindow/Controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3b86686583e114479cc11b139a8a401
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wheat 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c42b0682918752f448d23ec9db284258
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/Manager/UIManager1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4728654af6c1b84fb5102e3f29ffb8f
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Spike.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5e2a73ad4706440f93bf05df0b465fe
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-04.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5f8f079905bce04f945cd8ff4ba545a
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Tree 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c61cbddd1926a76469e6a4ebe9fa7035
+    m_Address: Assets/GameRes/Art/Playthrough3/Login
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6e2b1806a618ee45bc3031183e966c3
+    m_Address: Assets/GameRes/Data/MainMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c733f14e73fac4e4cbcdf3c827225214
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Pumpkin B.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c759bb922e42eda4eb6f7e6e4e2fbe63
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Torch.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7ba50df77a48f841afe9e9894f071a8
+    m_Address: Assets/GameRes/Animations/UI/Login/start
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8c725f9373a11541bde4f5b80c444bd
+    m_Address: Assets/GameRes/Animations/UI/Login/First2Second.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca0a75ec0bcdb6f41a604544623ca01e
+    m_Address: Assets/GameRes/Art/Materials/TrailPlayerAttack.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca1b84c44cbf4964b93c641822ec4790
+    m_Address: Assets/GameRes/Art/Font/Cartoon/MuseoModerno-CriticalNum_Red_64_Light
+      SDF Atlas.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca53124d88c13ee47baffdbbc0ae1ddc
+    m_Address: Assets/GameRes/Prefabs/Character/NPC/NPC1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cabfae866cab347928b74b7d0ca6bfa9
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-10.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cac559d4d356835428b1ef04256c4220
+    m_Address: Assets/GameRes/Prefabs/Character/Player
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb80f1992e25c1043a8d939fa1a66826
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/TouchControls.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cbdefb422455c2a4aab364028b4b5e10
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Clother Hanger.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cea950ff3b9b0804f967eaec919f19f7
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Chest Golden.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cefffbfb309078249803358c2a0e0577
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/AudioWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf1291db75c0fe44a82f8787cd90221e
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/MainMenuForm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf6c0e7fbef9449c98a0cdb5ea0c4d9f
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-31.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0bde9a42898be64ab7372c560194d8d
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wood Logs.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0d330d574f4d4f468b9340b27692e1d
+    m_Address: Assets/GameRes/Scenes/Test.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2179a8c5b82fab4c9e4faeb582ab18b
+    m_Address: Assets/GameRes/Prefabs/World
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d39672cc18ccd9545840277c51264e6f
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Well.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4071901789ed384389951219d1e0315
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Brick Wall
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d41c93cb27f482a4c9c577a6e3fc61c4
+    m_Address: Assets/GameRes/Art/Materials/Green.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d46323e22e74e46baa241cbf48c85671
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-47.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d46aa8752258e00409ea662e05c4d955
+    m_Address: Assets/GameRes/Art/Playthrough3/Loading
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d52f6d1608e02834eb49e8261b82ee01
+    m_Address: Assets/GameRes/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5f7066e247357149b9a778fcd53e819
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Sunflower
+      02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6770ea3eabbc694a9bad4112d5af65b
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Gravestone
+      03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d732c433f052247478d37fac6cedfe30
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Apple 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8287bcd41c024c4e82c61be96f9e922
+    m_Address: Assets/GameRes/Art/Playthrough3/Menu/MenuBg.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d85eeb2b7a3fd06459e4b892c5d5a43d
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/Player/Controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d865c46aafe55c34691bc570791540bd
+    m_Address: Assets/GameRes/Animations
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8d04c6f80a1140db85ede568dab1f51
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-22.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9997400142b1f14281284870012ac00
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wooden Bridge
+      X6.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dafb82fb38b62494fad2719f83fac62d
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/Level/ObstaclePrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db3033d1b9a69204ebc8a3bc98f3c254
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Weapon Rack.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db60848a4a8bb634c8d6063de58f9d75
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough2/ChoiceButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db9802aa66dead6419b8dfabba670977
+    m_Address: Assets/GameRes/Prefabs/Dialogue
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbda9be947895a34db28ff84d990ec17
+    m_Address: Assets/GameRes/Prefabs/TriggerDialogueBubble/TriggerDialogueBubble2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc356337bfd1c08488f1da0909bfb677
+    m_Address: Assets/GameRes/Audio/BGM/Fruit Machine.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc6614beca09347ec9b258f12d154bdd
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-02.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc6ff1ed93239ee49a8ec48a274e0fd4
+    m_Address: Assets/GameRes/Art/RenderTexture/Water Render Texture 0.renderTexture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dcc13dff332f6b9449456f2bd81503f2
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/DialogueViewType/NarratorView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ddb6f2e960ed6494badfbe32ebaa90d9
+    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd/IceBreakerAd_zh-CN.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de570bfbf1a49ba4c9575930f7db6bae
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Bush 03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: defc8821cd2b53344ace427cb4493883
+    m_Address: Assets/GameRes/Animations/UI/GlitchEffect/Controller/GlitchEffect.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df729d213c4be44a9b55cd109f5cd4f9
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-36.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e01a1e5f2c768c049b575a4940a66226
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0868e2099f22704cb8f4781f4dffe5f
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Barricade.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e190b8a97956901429eb7f8da5128a89
+    m_Address: Assets/GameRes/Animations/Character/PlayerController.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1e964664bfbc7a42a158337ccc17565
+    m_Address: Assets/GameRes/Animations/UI/AdWindow/Controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e25962a23b0ae06459d988ce85f4476e
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wheat 04.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3c16bd16788d1c4180a6de3c9176c6b
+    m_Address: Assets/GameRes/Art/Font/Cartoon/Quicksand-SemiBold SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3ef72d9f2a941b479a3bda87147db32
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Bush 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e496de2bd698f6c409bd2a9bceda980e
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Hammer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5594822ef093bc489e0992243957465
+    m_Address: Assets/GameRes/Data/Dialogue
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5a64e972dda58a42b5303ba1680a034
+    m_Address: Assets/GameRes/Animations/UI/Loading/Controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6204281684b23240a438977cdc75153
+    m_Address: Assets/GameRes/Audio/BGM/Circulation.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e64afd86eabcd6d4cb219105f42af131
+    m_Address: Assets/GameRes/Prefabs/TriggerDialogueBubble/TriggerDialogueBubble0.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e67c11f0784172249b208930121a8060
+    m_Address: Assets/GameRes/Animations/UI/GlitchEffect/Controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e749d96263b64c641b56f4eb15654993
+    m_Address: Assets/GameRes/Audio/BGM
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7502ec130b273042b3db361c31f1a4a
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/Level
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7b890a5b7ce4e4e8ce9291f1a9a0066
+    m_Address: Assets/GameRes/Data/MiniGame/IceBreaker/IceBreakerData.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8bae36b607017047ace9061609051d9
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Campfire
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e93fab53e5939ab4099fad690317eb06
+    m_Address: Assets/GameRes/Prefabs/Effect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea2f079e0a4e9914e999447041f145fb
+    m_Address: Assets/GameRes/Animations/UI/AdWindow/Controller/AdWindow.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec71b0f74b424124198a7a5d499a3059
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed42b87f79ad6984484bd329f7881a89
+    m_Address: Assets/GameRes/Animations/UI/Narrator/Controller/Icon.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed925410cd097664ea4b9e3e758f02a4
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 06.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed93714a92117b743b984400db26d72f
+    m_Address: Assets/GameRes/Animations/World/ScriptRain
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed9b63eb6d4c6da4aa6072d86950c741
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Seesaw 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef020470c711c744198902263c7818ad
+    m_Address: Assets/GameRes/Prefabs/IceBreaker/Level/PlatformPrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef2b6e3a0904d0a488fb7a1bd47ce073
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Scarecrow
+      01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f112b645a44edee4dbf6ccedd3967486
+    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd/IceBreakerAd_en-US.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f159612144d5b3e4abd041ce5c99c2c7
+    m_Address: Assets/GameRes/Prefabs/Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2f1725df8293a24f835ecf4449b7b20
+    m_Address: Assets/GameRes/Audio/BGM/ReplaceInTheFuture
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f39426a001c71d84999be2ee63c7d322
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Gravestone
+      02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f41211a6e39d8ab42a846d7622cabd05
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Ladder 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f48e635004848d14d8d834f57cf3e43f
+    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd/Controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7bbe134de23a114f87f6892596f1967
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/OpenAnim/Controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8798a82ea1140f4696176961fe6eb95
+    m_Address: Assets/GameRes/Animations/UI/SkipButton/SkipButton.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8ebc6004b70f2f45be142bc75701ad9
+    m_Address: Assets/GameRes/Prefabs/Character/Player/Player1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9304d111725ecd479997cc7906ec497
+    m_Address: Assets/GameRes/Art/Font/Cartoon/Quicksand-Bold SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f98d0f39fcc67a34f844abd8a50f2c03
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Chest Wooden.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: faa8413b1d9e4cd48ab117de84514e7c
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
+      01 R X1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fae448f3e4df99346a5f596c8538eedb
+    m_Address: Assets/GameRes/Animations/UI/Loading
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb6d995f1610dc240821b72635f9aaa4
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough2/LoadingScreenPlayThrough2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc249ebfc9a6d7545a80de4817b83a0b
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-SemiBold SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc408c908afdc4a7c9213c3bb144bbb9
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc50b918c39dc66429985b3d59d44e3e
+    m_Address: Assets/GameRes/Art/Materials/Baguette.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc58d47115d892641b16e78b2a132bfb
+    m_Address: Assets/GameRes/Art/Font/ipix_12px.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc9968c4dc5d5264b89413cdfe5d303e
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wheat 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcd923b494dc8644b83691eb7fe09146
+    m_Address: Assets/GameRes/Art/Font/SourceHanSans-Medium.otf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fda4ff6572a395d46a9536275703f39f
+    m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/OpenAnim/OpenAnimEnd.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fddca267e7ceec643a1fd00ff0b880e1
+    m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/CreditWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe0b1f9aeb45b41b089175aeeabd5d95
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-46.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe690cceaf261234183024fc4516e18d
+    m_Address: Assets/GameRes/Prefabs/Character/NPC
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff5f85da24bc943d1abdc5760a22bc81
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-09.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff7e14fe6ad8cc84ead1774ab576604c
+    m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Light.otf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffb159a21c8a04135a5616979c828fab
+    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-21.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8942cdc2860880b43beef82aa6fab200, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ebc3f12c81b7fcb45a206235903a0830, type: 2}
+    - {fileID: 11400000, guid: 262a5ad2d070ee044b129cc5d843d2f8, type: 2}

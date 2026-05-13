@@ -1,0 +1,500 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4013628891864700215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7558820163011943307}
+  - component: {fileID: 8992691641249544548}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7558820163011943307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013628891864700215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3506738814435639459}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8992691641249544548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013628891864700215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 56f88febebc82ec439f819420bdacd10, type: 2}
+--- !u!1 &6591603849575408233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3506738814435639459}
+  - component: {fileID: 4707731761031758385}
+  - component: {fileID: 8166399024368169460}
+  - component: {fileID: 5042572136344718560}
+  m_Layer: 0
+  m_Name: IceBreakerCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3506738814435639459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591603849575408233}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7558820163011943307}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &4707731761031758385
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591603849575408233}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.003921569, g: 0.30588236, b: 0.30980393, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!114 &8166399024368169460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591603849575408233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9106d07ed27f96247a04c5e2cb49fa82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTransform: {fileID: 0}
+  cameraRef: {fileID: 4707731761031758385}
+  zoom:
+    type: 0
+  peek:
+    enable: 0
+    ignoreClamps: 0
+    time: 0.25
+    distance: 5
+    buttonA: 119
+    buttonB: 115
+    directionA: {x: 0, y: 1}
+    directionB: {x: 0, y: -1}
+    foldOut: 0
+    close: 0
+    edit: 0
+    add: 0
+  rooms:
+    enable: 0
+    rooms: []
+    add: 0
+    edit: 0
+    close: 0
+    foldOut: 0
+    view: 1
+  shake:
+    enable: 1
+    shake: {fileID: 11400000, guid: 09177c7a7de1aee4dab4ff61f26875e1, type: 2}
+    add: 0
+    edit: 1
+    close: 0
+    foldOut: 1
+  follow:
+    enable: 1
+    followType: 1
+    speed: 10
+    smoothX: 1
+    smoothY: 1
+    returnSmooth: 0.75
+    useUnscaledTime: 0
+    offset: {x: 5, y: 1.5}
+    autoScroll: {x: 0, y: 0}
+    rails:
+      enable: 0
+      rails: []
+      add: 0
+      edit: 0
+      close: 0
+      foldOut: 0
+      view: 1
+      select: -1
+    regions:
+      enable: 0
+      regions: []
+      add: 0
+      edit: 0
+      close: 0
+      foldOut: 0
+      view: 1
+    deadZone:
+      size: {x: 0, y: 0}
+    pushZone:
+      zoneX: 0
+      zoneY: 0
+      horizontal: 0
+      vertical: 0
+    lookAhead:
+      enable: 0
+      type: 0
+      zoneType: 0
+      threshold: {x: 0, y: 0}
+      smooth: 0.5
+      distanceX: 0
+      distanceY: 0
+      radius: 0
+      edit: 0
+      close: 0
+      foldOut: 0
+      view: 1
+    screenZone:
+      size: {x: 0, y: 0}
+    detectWalls:
+      direction: 0
+      layerMask:
+        serializedVersion: 2
+        m_Bits: 0
+    followBlocks:
+      enable: 0
+      block: []
+      view: 1
+      foldOut: 0
+      close: 0
+      edit: 0
+      add: 0
+    highlightTarget:
+      enable: 0
+      targets: []
+      add: 0
+      edit: 0
+      close: 0
+      foldOut: 0
+    userPan:
+      enable: 0
+      useEdge: 0
+      useTouch: 0
+      useMouse: 0
+      useKeyboard: 0
+      useInputButtonSO: 0
+      bottomEdge: 0
+      rightEdge: 0
+      leftEdge: 0
+      topEdge: 0
+      boost: 1
+      right: 100
+      down: 115
+      left: 97
+      up: 119
+      inputLeft: {fileID: 0}
+      inputRight: {fileID: 0}
+      inputUp: {fileID: 0}
+      inputDown: {fileID: 0}
+      pan: 0
+      panTouch: 0
+      mouseButton: 0
+      holdButton: 1
+      edit: 0
+      close: 0
+      foldOut: 0
+      touchFoldOut: 0
+      mouseFoldOut: 0
+      edgeFoldOut: 0
+      keyboardFoldOut: 0
+      inputFoldOut: 0
+    userZoom:
+      enable: 0
+      speed: 1
+      smooth: 0.5
+      maxZoomIn: 1
+      maxZoomOut: 2
+      useTouch: 0
+      useMouse: 0
+      useKeyboard: 0
+      useInputButtonSO: 0
+      saveZoom: 0
+      zoomIn: 113
+      zoomOut: 101
+      inputIn: {fileID: 0}
+      inputOut: {fileID: 0}
+      edit: 0
+      close: 0
+      foldOut: 0
+      extraFoldOut: 0
+      keyboardFoldOut: 0
+      inputFoldOut: 0
+    userRotate:
+      enable: 0
+      speed: 10
+      smooth: 0.25
+      useTouch: 0
+      useMouse: 0
+      useKeyboard: 0
+      useInputButtonSO: 0
+      touchAxis: 0
+      mouseButton: 0
+      rotateLeft: 122
+      rotateRight: 120
+      inputIn: {fileID: 0}
+      inputOut: {fileID: 0}
+      edit: 0
+      close: 0
+      foldOut: 0
+      mouseFoldOut: 0
+      touchFoldOut: 0
+      keyboardFoldOut: 0
+      inputFoldOut: 0
+    edit: 0
+    close: 0
+    foldOut: 1
+    view: 1
+  parallax:
+    enable: 0
+    parallax: []
+    signalIndex: 0
+    foldOut: 0
+    active: 0
+    close: 0
+    edit: 0
+    add: 0
+  peekPlus:
+    enable: 0
+    ignoreClamps: 0
+    speed: 10
+    distance: {x: 5, y: 5}
+    controllerTypeX: 0
+    controllerTypeY: 0
+    inputLeft: {fileID: 0}
+    inputRight: {fileID: 0}
+    inputUp: {fileID: 0}
+    inputDown: {fileID: 0}
+    horizontalStick: {fileID: 0}
+    verticalStick: {fileID: 0}
+    foldOut: 0
+    close: 0
+    edit: 0
+    add: 0
+  parallaxFinite:
+    enable: 0
+    parallax: []
+    signalIndex: 0
+    foldOut: 0
+    active: 0
+    close: 0
+    edit: 0
+    add: 0
+  resolutionScaling:
+    enable: 0
+    resolution: {fileID: 0}
+    foldOut: 0
+    close: 0
+    edit: 0
+    add: 0
+  speedZoom:
+    enable: 0
+    list: []
+    signalIndex: 0
+    foldOut: 0
+    active: 0
+    close: 0
+    edit: 0
+    add: 0
+  cinematics:
+    enable: 0
+    cines: []
+    add: 0
+    edit: 0
+    close: 0
+    foldOut: 0
+    view: 1
+  worldBounds:
+    enable: 0
+    bounds:
+    - boundsType: 0
+      clampType: 0
+      a: {x: -11.75, y: 3.633553}
+      b: {x: -11.75, y: -6.5}
+      pause: 0
+    - boundsType: 0
+      clampType: 0
+      a: {x: 44, y: -15.081974}
+      b: {x: 44, y: -26}
+      pause: 0
+    - boundsType: 1
+      clampType: 0
+      a: {x: 82.5, y: -8.812001}
+      b: {x: 82.5, y: -27}
+      pause: 0
+    - boundsType: 3
+      clampType: 0
+      a: {x: 82.5, y: -27}
+      b: {x: 44, y: -27}
+      pause: 0
+    add: 0
+    edit: 0
+    close: 0
+    foldOut: 1
+    view: 1
+    select: 4
+    signalIndex: 0
+    active: 0
+  worldClamp:
+    enable: 0
+    clampCenterOnly: 0
+    easeIntoWall: 1
+    bounds:
+      position: {x: 0, y: 0}
+      size: {x: 10, y: 5}
+    edit: 0
+    close: 0
+    foldOut: 0
+    view: 1
+  pixelPerfect: {fileID: 0}
+  enablePixelPerfect: 0
+  pixelFoldOut: 0
+  zoomTrigger:
+    enable: 0
+    zooms: []
+    add: 0
+    edit: 0
+    close: 0
+    foldOut: 0
+    view: 1
+  basicTrigger:
+    enable: 0
+    basics: []
+    add: 0
+    edit: 0
+    close: 0
+    foldOut: 0
+    view: 1
+  slowMotionTrigger:
+    enable: 0
+    slowMotions: []
+    add: 0
+    edit: 0
+    close: 0
+    foldOut: 0
+    view: 1
+--- !u!114 &5042572136344718560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591603849575408233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0

@@ -1,0 +1,10 @@
+{
+  "enemies": [
+    {
+      "EnemyName": "BugToiletVillage"
+    },
+    {
+      "EnemyName": "Goblin"
+    }
+  ]
+}

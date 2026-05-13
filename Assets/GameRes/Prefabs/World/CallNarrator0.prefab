@@ -1,0 +1,874 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4728274808256781381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3577936318575103084}
+  - component: {fileID: 3428616913311321217}
+  - component: {fileID: 6271839648697412175}
+  - component: {fileID: 4880571075915369507}
+  - component: {fileID: 594558036278492079}
+  - component: {fileID: 6860435771916414061}
+  - component: {fileID: 1109219190513404026}
+  - component: {fileID: 7067759548129949559}
+  - component: {fileID: 573305514984264528}
+  - component: {fileID: 3922657211530210830}
+  - component: {fileID: 8212242078935078392}
+  - component: {fileID: 4037335082879275925}
+  m_Layer: 0
+  m_Name: CallNarrator0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3577936318575103084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5906885409256935385}
+  - {fileID: 5504084026757921459}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3428616913311321217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a6abfb407f89240b4fe45a1f0a99e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  world:
+    climbSlopes: 0
+    rotateToSlope: 0
+    rectifyInAir: 0
+    collideWorldOnly: 0
+    horizontalCorners: 0
+    useMovingPlatform: 0
+    useMovingPlatformMomentum: 1
+    rotateToWall: 0
+    useBridges: 1
+    jumpThroughEdge: 1
+    maxSlopeAngle: 45
+    rotateRate: 0.5
+    crushedWE: 
+    skipDownEdge: 0
+    onCrushed:
+      m_PersistentCalls:
+        m_Calls: []
+    box:
+      rays: {x: 3, y: 2}
+    rotateTo: 0
+    foldOut: 0
+    eventsFoldOut: 0
+    crushedFoldOut: 0
+  signals:
+    spriteEngine: {fileID: 0}
+  turnOffSignals: 0
+  pushBackActive: 0
+  executeInLateUpdate: 0
+  mainFoldOut: 0
+  canUseTool: 1
+  onToolSet:
+    m_PersistentCalls:
+      m_Calls: []
+  setVelocity: {x: 0, y: 0}
+  root: {fileID: 4880571075915369507}
+  thisIsPlayer: 0
+  resetToActive: 0
+  movingPlatformGravity: 0
+  gravity:
+    jumpHeight: 4
+    jumpTime: 0.75
+    multiplier: 1.5
+    terminalVelocity: 40
+  damage:
+    layer:
+      serializedVersion: 2
+      m_Bits: 0
+    direction: 0
+    canDealDamage: 0
+    pauseTimer: 0
+    damage: 1
+    force: 1
+    counter: 0
+    damageFoldOut: 0
+    pauseDamage: 0
+    pauseDamageTimer: 0
+  data:
+  - {fileID: 594558036278492079}
+  - {fileID: 7067759548129949559}
+  tempChildren: []
+  units: []
+  inspectNode: {fileID: 0}
+  nodeMessage:
+    position: {x: 0, y: 0}
+    size: {x: 0, y: 0}
+    message: 
+    isDragged: 0
+  oldGUIMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  tempNameType: 
+  inspectNameType: 
+  barIndex: 0
+  tempUnits: 0
+  menuIndex: 0
+  deleteIndex: 0
+  signalIndex: 1
+  panX: 0
+  panY: 0
+  snapToGrid: 10
+  scaling: 1
+  add: 0
+  active: 0
+  foldOut: 0
+  foundNodes: 0
+  settingsFoldOut: 0
+  showNodeMessage: 0
+  isSelectingNodes: 0
+  blackboardFoldOut: 0
+  collisionSettings: 0
+  aNodeIsBeingDragged: 0
+  window: {fileID: 0}
+  selectSize: {x: 0, y: 0}
+  selectPosition: {x: 0, y: 0}
+  ScrollPosition: {x: 0, y: 0}
+  startHoldPoint: {x: 0, y: 0}
+  stateActionIndex: {x: 1, y: 1}
+  state:
+  - action:
+    - node: {fileID: 6860435771916414061}
+      onSuccess: Wait
+      onFailure: Wait
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 8212242078935078392}
+      onSuccess: Complete
+      onFailure: Complete
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 573305514984264528}
+      onSuccess: Complete
+      onFailure: Complete
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 1109219190513404026}
+      onSuccess: Complete
+      onFailure: Complete
+      goToSuccess: 1
+      goToFailure: 1
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Wait
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 2
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 1
+  - action:
+    - node: {fileID: 3922657211530210830}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Complete
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 1
+  alwaysState: []
+  resetState:
+    action: []
+    stateName: State Name
+    defaultSignal: Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 1
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: -1
+  resetToFirst: 0
+--- !u!114 &6271839648697412175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b53ebeb7dcca34c9ce37f8120bdc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  onDespawn:
+    m_PersistentCalls:
+      m_Calls: []
+  assetNames: []
+--- !u!114 &4880571075915369507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1353c2b8524781a42a64ea27a9fd7d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 0
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Root
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 0
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  canInterrupt: 0
+  onInterrupt: 0
+  children: []
+  defaultSignal: Signal
+  useSignal: 0
+  currentChildIndex: 0
+  pause: 0
+--- !u!114 &594558036278492079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c035ee5e169a2c4187de1497e45f669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataName: Player
+  blackboardType: 0
+  hasNoTargets: 0
+  foldOut: 1
+  delete: 0
+  deleteAsk: 0
+  refName: []
+  type: 0
+  offset: {x: 0, y: 0}
+  randomIndex: 0
+--- !u!114 &6860435771916414061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2d7549e6884f040a147156b3b3d482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 3
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FindTarget
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName:
+  - Player
+  - Territory
+  message: []
+  target: {fileID: 594558036278492079}
+  findType: 2
+  radius: 0
+  mirror: 0
+  offset: {x: 0, y: 0}
+  distance: {x: 0, y: 0}
+  territory: {fileID: 7067759548129949559}
+--- !u!114 &1109219190513404026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 0
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CallNarrator, HotUpdate
+        m_MethodName: Call
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7067759548129949559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f15aca995a94c47a2cdad732962cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataName: Territory
+  blackboardType: 1
+  hasNoTargets: 0
+  foldOut: 1
+  delete: 0
+  deleteAsk: 0
+  refName: []
+  bounds:
+    position: {x: 52.25, y: -24}
+    size: {x: 8.25, y: 1.5}
+  oldPosition: {x: 3.5, y: 0, z: 0}
+  focus: 0
+--- !u!114 &573305514984264528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d84b4b0e2acb34596f0dd2b39c1225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Clock
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 0
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  type: 0
+  wait: 0.5
+  min: 2
+  max: 5
+  dontReset: 0
+  waitAnimation: 
+  onBeginClock:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinishClock:
+    m_PersistentCalls:
+      m_Calls: []
+  eventsFoldOut: 0
+  beginFoldOut: 0
+  finishFoldOut: 0
+--- !u!114 &3922657211530210830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6271839648697412175}
+        m_TargetAssemblyTypeName: DestroyAfterDelay, HotUpdate
+        m_MethodName: DestroyMyself
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8212242078935078392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4037335082879275925}
+        m_TargetAssemblyTypeName: AudioTrigger, HotUpdate
+        m_MethodName: PlayMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Assets/Audio/BGM/Fruit Machine.mp3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2787007378839891564}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.Quest, Assembly-CSharp
+        m_MethodName: AcceptQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2259006214752058561}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.Quest, Assembly-CSharp
+        m_MethodName: AcceptQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4037335082879275925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728274808256781381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1995c0c9a9fbd47bda119c0d15ac10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8243902433101278778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5504084026757921459}
+  - component: {fileID: 2259006214752058561}
+  - component: {fileID: 2374879190281841029}
+  m_Layer: 8
+  m_Name: QuestComplainAboutOptimization
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5504084026757921459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243902433101278778}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 67, y: -24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3577936318575103084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2259006214752058561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243902433101278778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b77b97e52115ff49a89553444b435e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questSO: {fileID: 0}
+  questUI: {fileID: 0}
+  journal: journal
+  onQuestAccepted:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  acceptFoldOut: 0
+  completeFoldOut: 1
+--- !u!114 &2374879190281841029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243902433101278778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655f0352da77d0447b3ed332422d7270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: Complain About Optimization
+--- !u!1 &8453264548490723215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5906885409256935385}
+  - component: {fileID: 2787007378839891564}
+  - component: {fileID: 8647030528942012653}
+  m_Layer: 8
+  m_Name: QuestDestroyBug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5906885409256935385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8453264548490723215}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 67, y: -24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3577936318575103084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2787007378839891564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8453264548490723215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b77b97e52115ff49a89553444b435e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questSO: {fileID: 0}
+  questUI: {fileID: 0}
+  journal: journal
+  onQuestAccepted:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  acceptFoldOut: 0
+  completeFoldOut: 0
+--- !u!114 &8647030528942012653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8453264548490723215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655f0352da77d0447b3ed332422d7270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: Destroy Bugs

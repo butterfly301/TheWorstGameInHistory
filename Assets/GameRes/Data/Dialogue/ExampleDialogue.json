@@ -1,0 +1,63 @@
+{
+  "config": {
+    "dialogueId": "ExampleDialogue",
+    "startNodeId": "start",
+    "viewType": 0,
+    "saveProgress": false,
+    "typingSpeed": 0.05,
+    "canSkip": true,
+    "events": {
+      "onStart": [],
+      "onEnd": []
+    },
+    "nodes": {
+      "start": {
+        "nodeId": "start",
+        "speaker": "NPC",
+        "textKey": "dialogue_start",
+        "choices": [],
+        "nextNodeId": "greeting",
+        "conditions": null,
+        "events": null
+      },
+      "greeting": {
+        "nodeId": "greeting",
+        "speaker": "NPC",
+        "textKey": "dialogue_greeting",
+        "choices": [
+          {
+            "textKey": "choice_hello",
+            "nextNodeId": "hello_response",
+            "condition": null
+          },
+          {
+            "textKey": "choice_goodbye",
+            "nextNodeId": "goodbye_response",
+            "condition": null
+          }
+        ],
+        "nextNodeId": null,
+        "conditions": null,
+        "events": null
+      },
+      "hello_response": {
+        "nodeId": "hello_response",
+        "speaker": "NPC",
+        "textKey": "dialogue_hello_response",
+        "choices": [],
+        "nextNodeId": null,
+        "conditions": null,
+        "events": null
+      },
+      "goodbye_response": {
+        "nodeId": "goodbye_response",
+        "speaker": "NPC",
+        "textKey": "dialogue_goodbye_response",
+        "choices": [],
+        "nextNodeId": null,
+        "conditions": null,
+        "events": null
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "config": {
+    "dialogueId": "test_dialogue",
+    "startNodeId": "node_1",
+    "viewType": "Traditional",
+    "saveProgress": false,
+    "typingSpeed": 0.05,
+    "canSkip": true,
+    "nodes": {
+      "node_1": {
+        "nodeId": "node_1",
+        "speaker": "Player",
+        "textKey": "test_dialogue_001",
+        "choices": null,
+        "nextNodeId": "node_2",
+        "conditions": null,
+        "events": null
+      },
+      "node_2": {
+        "nodeId": "node_2",
+        "speaker": "NPC",
+        "textKey": "test_dialogue_002",
+        "choices": null,
+        "nextNodeId": "node_3",
+        "conditions": null,
+        "events": null
+      },
+      "node_3": {
+        "nodeId": "node_3",
+        "speaker": "NPC",
+        "textKey": "test_dialogue_003",
+        "choices": null,
+        "nextNodeId": null,
+        "conditions": null,
+        "events": null
+      }
+    }
+  }
+}

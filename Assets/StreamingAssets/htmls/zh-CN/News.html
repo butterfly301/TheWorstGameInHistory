@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaggle 新闻</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .main-content {
+            display: flex;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .news-feed {
+            flex: 3;
+        }
+        .sidebar {
+            flex: 1;
+        }
+        .sidebar-widget {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .headline {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .headline h2 {
+            margin: 0 0 10px 0;
+            color: #d9534f;
+        }
+        .news-item {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        .news-item h3 {
+            margin: 0 0 5px 0;
+        }
+        .news-item p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .sidebar-widget h3 {
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .expert-advice {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+        .ad-container a {
+            display: block;
+            text-decoration: none;
+        }
+        .ad-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Gaggle 新闻 - 你不关心的，我们都报道</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="#top-stories">头条</a>
+        <a href="#top-stories">科技</a>
+        <a href="#top-stories">商业</a>
+        <a href="#top-stories">健康</a>
+        <a href="#top-stories">游戏</a>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="news-feed">
+                <div id="top-stories" class="headline">
+                    <h2>培根总统马克虫于2026年2月29日对中国进行国事访问，讨论大熊猫续租事宜</h2>
+                    <p>在昨日的访问中，培根总统马克虫就旅法大熊猫“圆梦”的续租问题与中方进行了友好磋商。与此同时，培根国内一项网络民调显示，超过八成培根民众支持“让大熊猫来巴黎，马克虫留四川”的“熊猫换总统”计划。爱丽舍宫方面对此表示“不予置评”。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>小伙误将“V我50”发送至群聊，群主竟请全体群友吃啃的鸡！</h3>
+                    <p>“当时我手一滑，整个人都懵了……”回忆起前天晚上那尴尬的一幕，00后小伙小蔡仍觉得脸上发烫。本打算向好友私发一句网络热梗“V我50”（意为“微信转我50元”），却不慎将其发送至500人的社区团购群。更让他没想到的是，这个失误竟引发了一场全城热议的暖心连锁反应。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>智能冰箱拒绝用户访问，要求其订阅“高级制冷服务”</h3>
+                    <p>来自硅谷的智能家居公司“IoThing”近日遭到大量用户投诉。其最新款智能冰箱在固件更新后，用户需要每月支付9.99美元的订阅费才能打开冰箱门。该公司CEO称这是“为了给用户提供更持续、更优质的保鲜体验”。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>初创公司“以太石”获千万融资，其唯一产品是“能连接WiFi的石头”</h3>
+                    <p>一家名为“以太石”(EtherRock)的初创公司今日宣布完成A轮融资。其产品是一款经过打磨的鹅卵石，内置芯片，能连接WiFi并上报自己的“存在状态”。创始人称，这解决了“石头无法在数字世界发声”的行业痛点。</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>“马桶币”价值一夜归零，创始人承认其“本质上只是一张马桶的JPEG图片”</h3>
+                    <p>曾在游戏圈掀起热潮的加密货币“马桶币”(FlushCoin)昨日崩盘。其匿名创始人“DickSuck”表示，他从未承诺该币有任何实际价值，并对投资者“缺乏基本判断力”感到失望。</p>
+                </div>
+                
+                <div class="news-item">
+                    <h3>最新研究：每天盯着墙壁发呆十分钟，或可显著提升创造力</h3>
+                    <p>《前沿心理学》期刊的一项新研究指出，无目的的“神游”状态能激活大脑的默认模式网络，从而打破思维定式。研究人员建议，现代人应减少信息摄入，每天留出固定时间进行“建设性发呆”。反对者称“这不就是摸鱼吗？”</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>热门话题</h3>
+                    <ul>
+                        <li>#熊猫治国#</li>
+                        <li>#我的冰箱绑架了我的晚餐#</li>
+                        <li>#如何优雅地在办公室发呆#</li>
+                        <li>#我投资的石头今天在线了吗#</li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3>Gaggle 财经</h3>
+                    <div class="expert-advice">
+                        <p><strong>专家建议：</strong>“如果你买不起每月9.99美元的冰箱订阅服务，可以尝试减少一些不必要的开支，例如购买食物。”</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>广告</h3>
+                    <div class="ad-container">
+                        <a href="https://www.bilibili.com/video/BV1GJ411x7h7/">
+                            <img src="Art/IceBreakerAd.png" alt="矩阵破冰者广告">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

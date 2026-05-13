@@ -1,0 +1,55 @@
+{
+  "playerData": {
+    "moveSpeed": 15.0,
+    "jumpForce": 8.0,
+    "acceleration": 0.5,
+    "jerk": 0.1,
+    "explosionForce": 10
+  },
+  "levelData": {
+    "levelDuration": 15.0,
+    "platformY": -3.5,
+    "minObstacleDistance": 35.0,
+    "maxObstacleDistance": 45.0,
+    "minEnemyDistance": 10.0,
+    "maxEnemyDistance": 20.0,
+    "initialObstacleOffset": 15.0,
+    "initialEnemyOffset": 20.0,
+    "explosionForce": 10,
+    "generationZoneWidth": 10.0,
+    "frontLayerColor": {
+      "r": 0.439,
+      "g": 0.631,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "backLayerColor": {
+      "r": 0.78,
+      "g": 0.925,
+      "b": 0.933,
+      "a": 0.7
+    },
+    "minZ": 0.1,
+    "maxZ": 1.0
+  },
+  "enemyData": {
+    "speed": 2.0,
+    "patrolRange": 5.0,
+    "clockwiseSize": {
+      "x": 5.0,
+      "y": 5.0
+    },
+    "explosionForce": 10.0
+  },
+  "downloadData": {
+    "downloadTLH2Urls": [
+      "https://raw.githubusercontent.com/butterfly301/TheWorstGameInHistoryResource/refs/heads/main/%E6%9C%80%E5%90%8E%E7%9A%84%E5%8B%87%E8%80%852%E6%B8%B8%E6%88%8F%E5%8C%85%E4%BD%93.png",
+      "https://raw.githubusercontent.com/butterfly301/TheWorstGameInHistoryResource/refs/heads/main/TheLastHero17893GameDownloadPackage.png"
+    ],
+    "downloadOtherFileUrls": [
+      "https://raw.githubusercontent.com/butterfly301/TheWorstGameInHistoryResource/refs/heads/main/%E6%9C%80%E5%90%8E%E7%9A%84%E5%8B%87%E8%80%852%E6%B8%B8%E6%88%8F%E5%8C%85%E4%BD%93.png",
+      "https://raw.githubusercontent.com/butterfly301/TheWorstGameInHistoryResource/refs/heads/main/TheLastHero17893GameDownloadPackage.png"
+    ],
+    "targetSubFolder": "DownloadByIceBreaker"
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaggle News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .main-content {
+            display: flex;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .news-feed {
+            flex: 3;
+        }
+        .sidebar {
+            flex: 1;
+        }
+        .sidebar-widget {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .headline {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .headline h2 {
+            margin: 0 0 10px 0;
+            color: #d9534f;
+        }
+        .news-item {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        .news-item h3 {
+            margin: 0 0 5px 0;
+        }
+        .news-item p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .sidebar-widget h3 {
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .expert-advice {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+        .ad-container a {
+            display: block;
+            text-decoration: none;
+        }
+        .ad-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Gaggle News - We Report What You Don't Care About</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="#top-stories">Top Stories</a>
+        <a href="#top-stories">Tech</a>
+        <a href="#top-stories">Business</a>
+        <a href="#top-stories">Health</a>
+        <a href="#top-stories">Gaming</a>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="news-feed">
+                <div id="top-stories" class="headline">
+                    <h2>Bacon President Macaron Conducts State Visit to China on Feb 29, 2026, to Discuss Panda Lease Renewal</h2>
+                    <p>During yesterday's visit, Bacon President Macaron held friendly consultations with the Chinese side regarding the lease renewal for the giant panda "Yuan Meng." Meanwhile, an online poll in France shows that over 80% of the Bacon public supports the "Panda for President" initiative, proposing "let the panda come to Paris, and Macaron stay in Sichuan." The Élysée Palace has offered "no comment" on the matter.</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>The young man accidentally sent "Send me 50" to a group chat, and the group admin actually treated all the group members to Kinda Fantastic Chicken!</h3>
+                    <p>"I was so flustered that I messed up, and my mind just went blank..." Recalling the embarrassing moment from the night before, Xiao Cai, a young man born in the 2000s, still feels his face flush. He had intended to send the popular online catchphrase "Send me 50" (meaning "send me 50 yuan via WeChat") privately to a friend, but mistakenly posted it in a 500-member community group chat. What he never expected was that this mishap would trigger a heartwarming chain reaction, sparking citywide discussions.</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>Smart Fridge Denies User Access, Demands Subscription to "Premium Cooling Service"</h3>
+                    <p>Silicon Valley smart home company "IoThing" has recently faced numerous user complaints. After a firmware update, its latest smart fridge requires users to pay a $9.99 monthly subscription fee to open the door. The company's CEO claims this is "to provide users with a more continuous and high-quality preservation experience."</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>Startup "EtherRock" Secures Millions in Funding, Its Only Product is a "Wi-Fi Connected Stone"</h3>
+                    <p>A startup named "EtherRock" announced the completion of its Series A funding today. Its product is a polished pebble with a built-in chip that connects to Wi-Fi and reports its "state of existence." The founder claims this solves the industry pain point of "stones being unable to have a voice in the digital world."</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>"FlushCoin" Value Drops to Zero Overnight, Founder Admits It Was "Essentially Just a JPEG of a Toilet"</h3>
+                    <p>The cryptocurrency "FlushCoin," which had created a frenzy in the gaming community, crashed yesterday. Its anonymous founder, "DickSuck," stated that he never promised the coin had any actual value and was "disappointed in the investors' lack of basic judgment."</p>
+                </div>
+
+                <div class="news-item">
+                    <h3>New Study: Staring at a Wall for Ten Minutes a Day May Significantly Boost Creativity</h3>
+                    <p>A new study in "Frontiers in Psychology" suggests that a state of aimless "mind-wandering" activates the brain's default mode network, thus breaking cognitive rigidity. Researchers recommend that modern individuals should reduce information intake and set aside fixed time for "constructive daydreaming." Critics argue, "Isn't that just slacking off?"</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Trending Topics</h3>
+                    <ul>
+                        <li>#PandaForPresident#</li>
+                        <li>#MyFridgeKidnappedMyDinner#</li>
+                        <li>#HowToDaydreamElegantlyAtWork#</li>
+                        <li>#IsMyPetRockOnlineToday#</li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3>Gaggle Finance</h3>
+                    <div class="expert-advice">
+                        <p><strong>Expert Advice:</strong> "If you can't afford the $9.99 monthly fridge subscription, try cutting back on unnecessary expenses, such as food."</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Advertisement</h3>
+                    <!-- **Core Change: Replaced with image ad** -->
+                    <div class="ad-container">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <img src="Art/IceBreakerAd.png" alt="Matrix Ice-Breaker Ad">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

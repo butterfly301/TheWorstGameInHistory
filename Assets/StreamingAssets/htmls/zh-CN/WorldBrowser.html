@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浏览器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #fff;
+            color: #202124;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+        .logo {
+            font-size: 80px;
+            font-weight: bold;
+            letter-spacing: -4px;
+            margin-bottom: 20px;
+        }
+        .logo .g { color: #4285F4; }
+        .logo .a1 { color: #EA4335; }
+        .logo .g2 { color: #FBBC05; }
+        .logo .g3 { color: #4285F4; }
+        .logo .l { color: #34A853; }
+        .logo .e { color: #EA4335; }
+
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            width: 580px;
+            max-width: 90%;
+            height: 44px;
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+        .search-bar:hover, .search-bar:focus-within {
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+            border-color: rgba(223,225,229,0);
+        }
+        .search-bar input {
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background-color: transparent;
+        }
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            opacity: 0.5;
+            margin-right: 10px;
+        }
+
+        .shortcuts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 360px;
+            max-width: 90%;
+        }
+        .shortcut-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #3c4043;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .shortcut-item:hover {
+            background-color: #f1f3f4;
+        }
+        .shortcut-icon-bg {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #f1f3f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        .shortcut-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .shortcut-label {
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo">
+            <span class="g">w</span><span class="a1">a</span><span class="g2">t</span><span class="g3">e</span><span class="l">r</span><span class="e">b</span><span class="g">o</span><span class="a1">x</span>
+        </div>
+        <form class="search-form" id="searchForm">
+            <div class="search-bar">
+                <img src="data:image/svg+xml;base64,PHN2ZyBmb2N1c2FibGU9ImZhbHNlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzgwODg4ZiIgZD0iTTE1LjUgMTRoLS43OWwtLjI4LS4yN0E2LjQ3MSA2LjQ3MSAwIDAgMCAxNiA5LjUgNi41IDYuNSAwIDEgMCA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDVjMi40OSAwIDQuNSAyLjAxIDQuNSA0LjVTMTIuMDEgMTQgOS41IDE0eiIvPjwvc3ZnPg==" class="search-icon" alt="Search">
+                <input type="text" placeholder="在 waterfox 上搜索，或者输入一个网址">
+            </div>
+        </form>
+    </div>
+
+    <div class="shortcuts">
+        <!-- 快捷方式 1: 拉吉网络官网 -->
+        <a href="RajiNet.html" class="shortcut-item">
+            <div class="shortcut-icon-bg">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM1ODZFNzciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCI+PC9jaXJjbGU+PGxpbmUgeDE9IjIiIHkxPSIxMiIgeDI9IjIyIiB5Mj0iMTIiPjwvbGluZT48cGF0aCBkPSJNMTIgMmM0IDAgOCAzIDggN3MtNCA3LTggNy04LTMtOC03IDQtNyA4LTdaTTEyIDEyYzAgMi44IDIuMiA1IDUgNXMyLjgtMi4yIDUtNVMxNi44IDcgMTIgN2MtMi44IDAtNSAyLjItNSA1WiI+PC9wYXRoPjwvc3ZnPg==" class="shortcut-icon" alt="Website">
+            </div>
+            <span class="shortcut-label">拉吉网络官网</span>
+        </a>
+        <!-- 快捷方式 2: 商店 -->
+        <a href="StorePage_1789.html" class="shortcut-item">
+            <div class="shortcut-icon-bg">
+                <!-- **核心改动：替换为购物车图标** -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM1ODZFNzciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSI5IiBjeT0iMjEiIHI9IjEiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjEiIHI9IjEiPjwvY2lyY2xlPjxwYXRoIGQ9Ik0xIDFINGwyLjY4IDEzLjM5YTIgMiAwIDAgMCAyIDEuNjFoOS43MmEyIDIgMCAwIDAgMi0xLjYxTDIzIDZINiI+PC9wYXRoPjwvc3ZnPg==" class="shortcut-icon" alt="Store">
+            </div>
+            <span class="shortcut-label">商店</span>
+        </a>
+        <!-- 快捷方式 3: 新闻 -->
+        <a href="News.html" class="shortcut-item">
+            <div class="shortcut-icon-bg">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM1ODZFNzciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMjIgMTdINmEyIDIgMCAwIDEtMi0yVjdhMiAyIDAgMCAxIDItMmgxNGExIDEgMCAwIDEgMSAxdjExYTEgMSAwIDAgMS0xIDEvTTIgN2gxdjExYTEgMSAwIDAgMCAxIDFoMTIiPjwvcGF0aD48L3N2Zz4=" class="shortcut-icon" alt="News">
+            </div>
+            <span class="shortcut-label">新闻</span>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'ErrorPage.html';
+        });
+    </script>
+</body>
+</html>

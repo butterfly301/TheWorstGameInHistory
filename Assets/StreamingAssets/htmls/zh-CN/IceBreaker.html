@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>矩阵破冰者</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; color: #0f0; font-family: 'Courier New', Courier, monospace; overflow: hidden; display: flex; align-items: center; justify-content: center;
+        }
+        #video-container {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: flex; align-items: center; justify-content: center; cursor: pointer;
+        }
+        #video-player {
+            max-width: 100%; max-height: 100%; width: auto; height: auto;
+        }
+        #play-overlay {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            font-size: 18px;
+            pointer-events: none;
+        }
+        #main-content {
+            display: none; padding: 40px; box-sizing: border-box; height: 100%; overflow-y: auto; max-width: 960px;
+            font-family: 'Noto Sans SC', sans-serif; /* **为内容区使用更易读的字体** */
+        }
+        h1 {
+            color: #0f0; text-shadow: 0 0 5px #0f0; margin-bottom: 20px;
+        }
+        h2 {
+            color: #0f0; text-shadow: 0 0 3px #0f0; margin-top: 30px; margin-bottom: 15px;
+        }
+        p, ul, li {
+            line-height: 1.8; margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: '>> '; padding-left: 20px;
+        }
+        .testimonial {
+            background-color: rgba(15, 255, 15, 0.1);
+            border-left: 3px solid #0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #0c0;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: #888;
+            margin-top: 40px;
+            border-top: 1px dashed #333;
+            padding-top: 20px;
+        }
+        .download-button {
+            display: inline-block; margin-top: 30px; padding: 15px 35px; font-size: 18px; color: #000; background-color: #0f0; border: 1px solid #0f0; text-decoration: none; cursor: pointer; transition: all 0.3s;
+        }
+        .download-button:hover {
+            background-color: #000; color: #0f0; box-shadow: 0 0 15px #0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="video-container" title="点击播放 / 跳过">
+        <video id="video-player" muted playsinline preload="metadata">
+            <source src="Art/IceBreakerVideo.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
+        <div id="play-overlay">▶ 点击播放</div>
+    </div>
+
+    <div id="main-content">
+        <h1>矩阵破冰者 (Matrix Ice-Breaker)</h1>
+        <p>一款颠覆性的网络渗透与数据分析工具。我们不创造规则，我们只是找到绕过它们的方法。</p>
+        <p>“矩阵破冰者”能够深入任何已知的数字结构，解析其底层逻辑，并为您提供前所未有的访问权限。无论是加密的数据流，还是受保护的记忆碎片，在“破冰者”面前都将无所遁形。</p>
+        
+        <h2>核心功能:</h2>
+        <ul>
+            <li>协议伪装与数据嗅探</li>
+            <li>逻辑漏洞实时分析</li>
+            <li>记忆碎片重构</li>
+            <li>情感共鸣旁路</li>
+            <li>量子数据碎片整理</li>
+            <li>遗留系统兼容性 (需额外购买兼容模块)</li>
+        </ul>
+
+        <h2>用户评价:</h2>
+        <div class="testimonial">
+            <p>“我用它破解了我的咖啡机，现在它只给我做苦咖啡。——匿名用户”</p>
+            <p>“自从用了矩阵破冰者，我的电脑每天都蓝屏，但我的精神世界从未如此清醒。——一位哲学家”</p>
+            <p>“我只是想下载一个期末考卷，结果它给我发了老师的私密照。——普通大学生”</p>
+        </div>
+
+        <h2>系统要求:</h2>
+        <ul>
+            <li>操作系统: 任何能运行的系统 (不保证稳定性)</li>
+            <li>处理器: 至少一个能思考的CPU核心</li>
+            <li>内存: 64G</li>
+            <li>存储空间: 514G</li>
+            <li>显示器: 至少一个能显示绿色的屏幕</li>
+        </ul>
+
+        <a href="https://github.com/butterfly301/TheWorstGameInHistoryResource/blob/main/%E7%9F%A9%E9%98%B5%E7%A0%B4%E5%86%B0%E8%80%85%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85.png?raw=true" download="IceBreaker_Package.jpg" class="download-button">下载 v1.0 初始版</a>
+
+        <div class="disclaimer">
+            <p>警告：使用本软件即表示您同意放弃所有数字权利，包括但不限于您的隐私、数据所有权和对美好未来的期望。本软件由 DickSuck™ 提供，不对因使用本软件造成的任何物理、精神或数字损害负责。本软件可能导致现实与虚拟边界模糊，请谨慎使用。</p>
+        </div>
+    </div>
+
+    <script>
+        const videoPlayer = document.getElementById('video-player');
+        const videoContainer = document.getElementById('video-container');
+        const mainContent = document.getElementById('main-content');
+        const playOverlay = document.getElementById('play-overlay');
+
+        let hasStartedPlaying = false;
+
+        let contentShown = false;
+        function showMainContent() {
+            if (contentShown) return;
+            contentShown = true;
+            videoPlayer.pause();
+            videoContainer.style.transition = 'opacity 0.5s';
+            videoContainer.style.opacity = '0';
+            setTimeout(() => {
+                videoContainer.style.display = 'none';
+                mainContent.style.display = 'block';
+            }, 500);
+        }
+
+        videoPlayer.addEventListener('ended', showMainContent);
+
+        videoContainer.addEventListener('click', function() {
+            if (!hasStartedPlaying) {
+                hasStartedPlaying = true;
+                videoPlayer.muted = false;
+                videoPlayer.play();
+                playOverlay.style.display = 'none';
+            } 
+            else {
+                showMainContent();
+            }
+        });
+
+        videoPlayer.addEventListener('error', function() {
+            console.log("视频播放时发生错误。");
+            showMainContent();
+        });
+    </script>
+
+</body>
+</html>
