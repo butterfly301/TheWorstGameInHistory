@@ -451,11 +451,13 @@ public static class AddressableKeys
             public static class Common
             {
                 public const string _00_Components_1_Png = "Assets/GameRes/Art/Playthrough3/Common/00_Components_1.png";
+                public const string btn_round_corner_Png = "Assets/GameRes/Art/Playthrough3/Common/btn_round_corner.png";
                 public const string quit_Png = "Assets/GameRes/Art/Playthrough3/Common/quit.png";
                 public const string user_Png = "Assets/GameRes/Art/Playthrough3/Common/user.png";
                 public enum CommonName
                 {
                     _00_Components_1,
+                    btn_round_corner,
                     quit,
                     user
                 }
