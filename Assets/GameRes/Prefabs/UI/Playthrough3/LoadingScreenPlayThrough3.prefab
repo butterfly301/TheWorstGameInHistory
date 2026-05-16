@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 8873674509321962547}
   - component: {fileID: 6130731271911445326}
   - component: {fileID: 5486736536069925604}
+  - component: {fileID: 8487301665138237884}
   m_Layer: 5
   m_Name: ProgressFill
   m_TagString: Untagged
@@ -341,6 +342,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8487301665138237884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818368630251473329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.13725491, g: 0.7176471, b: 0.93725497, a: 0.39215687}
+  m_EffectDistance: {x: 0, y: -10}
+  m_UseGraphicAlpha: 1
 --- !u!1 &4382863040127585708
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +631,8 @@ MonoBehaviour:
   loadingPanel: {fileID: 5933452381719031340}
   progressFill: {fileID: 5486736536069925604}
   progressText: {fileID: 7088373789661392883}
+  key: Carrying out an evening raid...
+  loadingTime: 2.5
 --- !u!1 &8440667981777991581
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +644,7 @@ GameObject:
   - component: {fileID: 7456602374658972015}
   - component: {fileID: 3682810910449840099}
   - component: {fileID: 210646414686213727}
+  - component: {fileID: 1153461420796965500}
   m_Layer: 5
   m_Name: LoadingBar
   m_TagString: Untagged
@@ -692,3 +711,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1153461420796965500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8440667981777991581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.39215687}
+  m_EffectDistance: {x: 0, y: -10}
+  m_UseGraphicAlpha: 1

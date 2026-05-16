@@ -21,10 +21,10 @@
   <Project Path="HybridCLR.Editor.csproj" />
   <Project Path="Unity.2D.Common.Path.Editor.csproj" />
   <Project Path="Unity.Addressables.Editor.csproj" />
+  <Project Path="Unity.2D.Psdimporter.Editor.csproj" />
   <Project Path="HotUpdate.csproj" />
   <Project Path="UnityEngine.Advertisements.csproj" />
   <Project Path="UIKit.csproj" />
-  <Project Path="Unity.2D.Psdimporter.Editor.csproj" />
   <Project Path="Unity.2D.IK.Runtime.csproj" />
   <Project Path="UnityEditor.TestRunner.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />

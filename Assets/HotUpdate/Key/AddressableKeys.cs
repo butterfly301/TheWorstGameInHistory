@@ -444,10 +444,20 @@ public static class AddressableKeys
         }
         public static class Playthrough3
         {
+            public const string Character_File = "Assets/GameRes/Art/Playthrough3/Character";
             public const string Common_File = "Assets/GameRes/Art/Playthrough3/Common";
             public const string Loading_File = "Assets/GameRes/Art/Playthrough3/Loading";
             public const string Login_File = "Assets/GameRes/Art/Playthrough3/Login";
             public const string Menu_File = "Assets/GameRes/Art/Playthrough3/Menu";
+            public static class Character
+            {
+                public const string XunYu_Png = "Assets/GameRes/Art/Playthrough3/Character/XunYu.png";
+                public enum CharacterName
+                {
+                    XunYu
+                }
+                public static string GetCharacter(string path) => "Assets/GameRes/Art/Playthrough3/Character/" + path + ".png";
+            }
             public static class Common
             {
                 public const string _00_Components_1_Png = "Assets/GameRes/Art/Playthrough3/Common/00_Components_1.png";
@@ -498,6 +508,7 @@ public static class AddressableKeys
             }
             public enum Playthrough3Name
             {
+                Character,
                 Common,
                 Loading,
                 Login,
