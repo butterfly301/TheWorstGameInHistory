@@ -11,7 +11,10 @@ namespace HotUpdate.Character.Player
         public override void Init()
         {
             base.Init();
-            inventory = UIManager.Instance.GetInventory();
+            if (UIManager.Instance is UIManager1 uiManager1)
+            {
+                inventory = uiManager1.MapUI.GetInventory();
+            }
             //pickUpItems = GetComponentInChildren<IPickUpItems>();
             //pickUpItems.Initialize(inventory);
         }

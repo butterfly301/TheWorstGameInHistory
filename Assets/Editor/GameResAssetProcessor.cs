@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 using UnityEditor.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
@@ -176,7 +176,7 @@ namespace HotUpdate.Utility.Editor
             // 使用 AssetDatabase 获取所有 GameRes 文件
             var allAssetPaths = AssetDatabase.FindAssets("", new[] { GameResPath })
                 .Select(guid => AssetDatabase.GUIDToAssetPath(guid))
-                .Where(path => !string.IsNullOrEmpty(path) && path.StartsWith(GameResPath))
+                .Where(path => !string.IsNullOrEmpty(path) && path.StartsWith(GameResPath) && !path.EndsWith(".meta") && !Directory.Exists(path))
                 .ToArray();
 
             // 统计 Addressable 中的 GameRes 条目
@@ -251,7 +251,7 @@ namespace HotUpdate.Utility.Editor
             // 使用 AssetDatabase 获取所有资产，避免路径问题
             var allAssetPaths = AssetDatabase.FindAssets("", new[] { GameResPath })
                 .Select(guid => AssetDatabase.GUIDToAssetPath(guid))
-                .Where(path => !string.IsNullOrEmpty(path) && path.StartsWith(GameResPath))
+                .Where(path => !string.IsNullOrEmpty(path) && path.StartsWith(GameResPath) && !path.EndsWith(".meta") && !Directory.Exists(path))
                 .ToArray();
 
             int totalCount = allAssetPaths.Length;
@@ -330,7 +330,6 @@ namespace HotUpdate.Utility.Editor
                     return;
                 }
 
-                // 显示进度条
                 EditorUtility.DisplayProgressBar("生成 AddressableKeys", "正在扫描文件结构...", 0.1f);
 
                 var sb = new StringBuilder();
@@ -340,53 +339,57 @@ namespace HotUpdate.Utility.Editor
                 sb.AppendLine("public static class AddressableKeys");
                 sb.AppendLine("{");
 
-                // 使用 AssetDatabase 获取所有文件，避免路径问题
                 var allAssetPaths = AssetDatabase.FindAssets("", new[] { GameResPath })
                     .Select(guid => AssetDatabase.GUIDToAssetPath(guid))
                     .Where(path => !string.IsNullOrEmpty(path) &&
                                    path.StartsWith(GameResPath) &&
-                                   !path.EndsWith(".meta"))
+                                   !path.EndsWith(".meta") &&
+                                   !Directory.Exists(path))
                     .OrderBy(path => path)
                     .ToArray();
 
-                // 按目录结构组织文件
-                var directoryStructure = new Dictionary<string, List<string>>();
+                var directoryStructure = allAssetPaths
+                    .GroupBy(path =>
+                    {
+                        var relativePath = path.Substring(GameResPath.Length + 1);
+                        return Path.GetDirectoryName(relativePath)?.Replace("\\", "/") ?? string.Empty;
+                    })
+                    .ToDictionary(group => group.Key, group => group.OrderBy(path => path).ToArray());
+
                 foreach (var assetPath in allAssetPaths)
                 {
-                    // 获取相对于 GameRes 的路径
-                    var relativePath = assetPath.Substring(GameResPath.Length + 1);
-                    var directory = Path.GetDirectoryName(relativePath)?.Replace("\\", "/") ?? "";
-                    var fileName = Path.GetFileName(relativePath);
-
-                    if (!directoryStructure.ContainsKey(directory))
-                    {
-                        directoryStructure[directory] = new List<string>();
-                    }
-                    directoryStructure[directory].Add(assetPath);
+                    AddIndent(sb, 1);
+                    sb.AppendLine($"public const string {BuildFlatMemberName(assetPath)} = \"{assetPath}\";");
                 }
 
-                // 递归生成目录结构
-                ProcessDirectoryStructure(directoryStructure, "", sb, 1, GameResPath);
+                if (allAssetPaths.Length > 0 && directoryStructure.Count > 0)
+                {
+                    sb.AppendLine();
+                }
+
+                foreach (var entry in directoryStructure.OrderBy(pair => pair.Key))
+                {
+                    AddIndent(sb, 1);
+                    sb.AppendLine($"public static string {BuildGetterName(entry.Key)}(string path) => \"{BuildDirectoryPath(entry.Key)}/\" + path + \"{GetSharedExtension(entry.Value)}\";");
+                }
 
                 sb.AppendLine("}");
                 sb.AppendLine("}");
 
-                // 确保输出目录存在
                 var outputDir = Path.GetDirectoryName(OutputPath);
                 if (!Directory.Exists(outputDir))
                 {
                     Directory.CreateDirectory(outputDir);
                 }
 
-                // 写入文件
                 EditorUtility.DisplayProgressBar("生成 AddressableKeys", "正在写入文件...", 0.9f);
                 var outputPath = Path.GetFullPath(OutputPath);
-                File.WriteAllText(outputPath, sb.ToString(), System.Text.Encoding.UTF8);
+                File.WriteAllText(outputPath, sb.ToString(), Encoding.UTF8);
 
                 AssetDatabase.Refresh();
                 Debug.Log($"AddressableKeys 已生成: {outputPath}");
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 Debug.LogError($"生成 AddressableKeys 时出错: {e.Message}\n{e.StackTrace}");
             }
@@ -396,150 +399,71 @@ namespace HotUpdate.Utility.Editor
             }
         }
 
-        private static void ProcessDirectoryStructure(Dictionary<string, List<string>> directoryStructure,
-            string currentDirectory, StringBuilder sb, int indent, string basePath)
+        private static string BuildFlatMemberName(string assetPath)
         {
-            // 获取当前目录的直接子目录（只获取一级子目录）
-            var subDirectories = new HashSet<string>();
+            var relativePath = assetPath.Substring(GameResPath.Length + 1).Replace("\\", "/");
+            var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(relativePath);
+            var extension = NormalizeExtension(Path.GetExtension(relativePath));
 
-            foreach (var key in directoryStructure.Keys)
+            return $"{SanitizePathSegment(fileNameWithoutExtension)}_{extension}";
+        }
+
+        private static string BuildGetterName(string directory)
+        {
+            if (string.IsNullOrEmpty(directory))
             {
-                // 跳过当前目录本身
-                if (key == currentDirectory)
-                    continue;
-
-                // 如果当前目录为空，获取所有顶级目录
-                if (string.IsNullOrEmpty(currentDirectory))
-                {
-                    if (!key.Contains("/"))
-                    {
-                        subDirectories.Add(key);
-                    }
-                }
-                else
-                {
-                    // 检查是否是当前目录的直接子目录
-                    if (key.StartsWith(currentDirectory + "/"))
-                    {
-                        var relativePart = key.Substring(currentDirectory.Length + 1);
-                        if (!relativePart.Contains("/"))
-                        {
-                            subDirectories.Add(key);
-                        }
-                    }
-                }
+                return "GetGameRes";
             }
 
-            // 获取当前目录的文件
-            var currentFiles = directoryStructure.ContainsKey(currentDirectory)
-                ? directoryStructure[currentDirectory].OrderBy(p => p).ToArray()
-                : Array.Empty<string>();
+            var flattenedDirectory = string.Join("_", directory.Split('/').Select(SanitizePathSegment));
+            return $"Get{flattenedDirectory}";
+        }
 
-            bool hasFiles = currentFiles.Length > 0;
+        private static string BuildDirectoryPath(string directory)
+        {
+            return string.IsNullOrEmpty(directory)
+                ? GameResPath
+                : $"{GameResPath}/{directory}";
+        }
 
-            // 处理当前目录中的文件
-            foreach (var assetPath in currentFiles)
+        private static string GetSharedExtension(IEnumerable<string> assetPaths)
+        {
+            var extensions = assetPaths
+                .Select(Path.GetExtension)
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .ToArray();
+
+            return extensions.Length == 1 ? extensions[0] : string.Empty;
+        }
+
+        private static string NormalizeExtension(string extension)
+        {
+            var trimmed = extension.TrimStart('.');
+            if (string.IsNullOrEmpty(trimmed))
             {
-                var fileName = Path.GetFileName(assetPath);
-                var fileNameWithoutExt = Path.GetFileNameWithoutExtension(fileName);
-                var extension = Path.GetExtension(fileName).TrimStart('.');
-
-                // 扩展名首字母大写
-                if (!string.IsNullOrEmpty(extension))
-                {
-                    extension = char.ToUpper(extension[0]) + extension.Substring(1);
-                }
-                else
-                {
-                    extension = "File";
-                }
-
-                // 变量名: 文件名_扩展名（首字母大写）
-                var variableName = $"{SanitizeVariableName(fileNameWithoutExt)}_{extension}";
-
-                AddIndent(sb, indent);
-                sb.AppendLine($"public const string {variableName} = \"{assetPath}\";");
+                return "File";
             }
 
-            // 处理所有子文件夹
-            foreach (var subDir in subDirectories.OrderBy(d => d))
-            {
-                // 获取子目录名称
-                var subDirName = string.IsNullOrEmpty(currentDirectory)
-                    ? subDir
-                    : subDir.Substring(currentDirectory.Length + 1);
+            var sanitized = SanitizeClassName(trimmed);
+            return char.ToUpper(sanitized[0]) + sanitized.Substring(1);
+        }
 
-                var className = SanitizeClassName(subDirName);
-                AddIndent(sb, indent);
-                sb.AppendLine($"public static class {className}");
-                AddIndent(sb, indent);
-                sb.AppendLine("{");
+        private static string SanitizePathSegment(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+                return "Empty";
 
-                ProcessDirectoryStructure(directoryStructure, subDir, sb, indent + 1, basePath);
+            var result = System.Text.RegularExpressions.Regex.Replace(name, "[^a-zA-Z0-9_]", "_");
+            if (string.IsNullOrWhiteSpace(result) || result.All(c => c == '_'))
+                return "Empty";
 
-                AddIndent(sb, indent);
-                sb.AppendLine("}");
-            }
-
-            // 如果有文件或子文件夹，添加枚举和 Get 函数
-            if (hasFiles || subDirectories.Count > 0)
-            {
-                // 获取当前文件夹名称作为函数名
-                var folderName = string.IsNullOrEmpty(currentDirectory)
-                    ? "GameRes"
-                    : currentDirectory.Split('/').Last();
-                var functionName = SanitizeClassName(folderName);
-
-                // 如果有文件，生成枚举
-                if (hasFiles)
-                {
-                    var fileNames = currentFiles
-                        .Select(p => Path.GetFileNameWithoutExtension(p))
-                        .ToArray();
-
-                    var enumName = $"{functionName}Name";
-                    AddIndent(sb, indent);
-                    sb.AppendLine($"public enum {enumName}");
-                    AddIndent(sb, indent);
-                    sb.AppendLine("{");
-
-                    for (int i = 0; i < fileNames.Length; i++)
-                    {
-                        var enumMemberName = SanitizeClassName(fileNames[i]);
-                        AddIndent(sb, indent + 1);
-                        if (i < fileNames.Length - 1)
-                            sb.AppendLine($"{enumMemberName},");
-                        else
-                            sb.AppendLine($"{enumMemberName}");
-                    }
-
-                    AddIndent(sb, indent);
-                    sb.AppendLine("}");
-                }
-
-                // 添加 Get 函数
-                // 检测该文件夹中文件的扩展名（取第一个文件的扩展名）
-                string fileExtension = "";
-                if (currentFiles.Length > 0)
-                {
-                    fileExtension = Path.GetExtension(currentFiles[0]); // 例如 ".prefab"
-                }
-
-                // 构建文件夹完整路径
-                var folderFullPath = string.IsNullOrEmpty(currentDirectory)
-                    ? basePath
-                    : $"{basePath}/{currentDirectory}";
-
-                AddIndent(sb, indent);
-                sb.AppendLine($"public static string Get{functionName}(string path) => \"{folderFullPath}/\" + path + \"{fileExtension}\";");
-            }
+            return result.TrimStart('_');
         }
 
         private static void AddIndent(StringBuilder sb, int count)
         {
             sb.Append(new string(' ', count * 4));
         }
-
         private static string SanitizeClassName(string name)
         {
             // 清理类名，移除无效字符

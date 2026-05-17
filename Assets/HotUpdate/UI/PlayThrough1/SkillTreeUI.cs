@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HotUpdate.Enums;
 using UnityEngine;
 
@@ -27,7 +27,7 @@ namespace HotUpdate.UI
         {
             // TODO: 加载技能树面板Prefab
             // AddressablesManager.Instance.LoadAssetAsync<GameObject>(
-            //     AddressableKeys.Prefabs.UI.Playthrough1.SkillTree_Prefab,
+            //     AddressableKeys.SkillTree_Prefab,
             //     handle => { ... }
             // );
         }

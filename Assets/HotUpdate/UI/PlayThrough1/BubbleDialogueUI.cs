@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using HotUpdate.Dialogue.View;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
@@ -8,30 +6,41 @@ using UnityEngine;
 public class BubbleDialogueUI
 {
     private Transform trans;
-    // 对话视图对象
     private GameObject bubbleViewPrefab;
     private GameObject bubbleViewObj;
     private DialogueViewBase bubbleView;
+    private GameObject choiceButtonPrefab;
 
     public BubbleDialogueUI(Transform layerTrans)
     {
         trans = layerTrans;
     }
-    public void Init(GameObject varChoiceButtonPrefab)
+
+    public void Init()
     {
-        LoadBubbleView(varChoiceButtonPrefab);
+        LoadChoiceButtonPrefab();
+        LoadBubbleView();
     }
 
-    private void LoadBubbleView(GameObject varChoiceButtonPrefab)
+    private void LoadChoiceButtonPrefab()
     {
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
-            AddressableKeys.Prefabs.UI.Playthrough1.DialogueViewType.BubbleView_Prefab,
+            AddressableKeys.Choice_Prefab,
+            handle => choiceButtonPrefab = handle.Result
+        );
+    }
+
+    private void LoadBubbleView()
+    {
+        AddressablesManager.Instance.LoadAssetAsync<GameObject>(
+            AddressableKeys.BubbleView_Prefab,
             handle =>
             {
                 bubbleViewPrefab = handle.Result;
                 bubbleViewObj = Object.Instantiate(bubbleViewPrefab, trans);
                 bubbleView = bubbleViewObj.GetComponent<DialogueViewBase>();
-                bubbleView.Init(varChoiceButtonPrefab);
+                bubbleView.SetChoiceButtonPrefab(choiceButtonPrefab);
+                bubbleView.Init();
                 bubbleViewObj.SetActive(false);
             }
         );
@@ -43,3 +52,5 @@ public class BubbleDialogueUI
         return bubbleView;
     }
 }
+
+

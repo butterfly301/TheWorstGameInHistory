@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using HotUpdate.Dialogue.View;
-using HotUpdate.Enums;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
 using UnityEngine;
@@ -13,30 +11,41 @@ namespace HotUpdate.UI
     public class NarratorDialogueUI
     {
         private Transform trans;
-        // 对话视图对象
         private GameObject narratorViewPrefab;
         private GameObject narratorViewObj;
         private DialogueViewBase narratorView;
+        private GameObject choiceButtonPrefab;
 
         public NarratorDialogueUI(Transform layerTrans)
         {
             trans = layerTrans;
         }
-        public void Init(GameObject varChoiceButtonPrefab)
+
+        public void Init()
         {
-            LoadNarratorView(varChoiceButtonPrefab);
+            LoadChoiceButtonPrefab();
+            LoadNarratorView();
         }
 
-        private void LoadNarratorView(GameObject varChoiceButtonPrefab)
+        private void LoadChoiceButtonPrefab()
         {
             AddressablesManager.Instance.LoadAssetAsync<GameObject>(
-                AddressableKeys.Prefabs.UI.Playthrough1.DialogueViewType.NarratorView_Prefab,
+                AddressableKeys.Choice_Prefab,
+                handle => choiceButtonPrefab = handle.Result
+            );
+        }
+
+        private void LoadNarratorView()
+        {
+            AddressablesManager.Instance.LoadAssetAsync<GameObject>(
+                AddressableKeys.NarratorView_Prefab,
                 handle =>
                 {
                     narratorViewPrefab = handle.Result;
                     narratorViewObj = Object.Instantiate(narratorViewPrefab, trans);
                     narratorView = narratorViewObj.GetComponent<DialogueViewBase>();
-                    narratorView.Init(varChoiceButtonPrefab);
+                    narratorView.SetChoiceButtonPrefab(choiceButtonPrefab);
+                    narratorView.Init();
                     narratorViewObj.SetActive(false);
                 }
             );
@@ -49,3 +58,5 @@ namespace HotUpdate.UI
         }
     }
 }
+
+

@@ -32,7 +32,7 @@ namespace HotUpdate.Manager
         #region Synchronous Loading Method
 
         /// <summary>
-        ///     ͬ�����ص�����Դ�����������߳�ֱ���������
+        ///     Load an Addressables asset synchronously. This will block the caller until completion.
         /// </summary>
         public T LoadAssetSynchronously<T>(string name) where T : class
         {
@@ -41,12 +41,12 @@ namespace HotUpdate.Manager
             if (resDic.ContainsKey(keyName))
             {
                 resDic[keyName].count++;
-                Debug.Log(keyName + " �ѱ����� (ͬ��), ���ü���: " + resDic[keyName].count);
+                Debug.Log(keyName + " already loaded (sync), ref count: " + resDic[keyName].count);
                 return resDic[keyName].handle.Convert<T>().Result;
             }
 
             var handle = Addressables.LoadAssetAsync<T>(name);
-            var result = handle.WaitForCompletion(); // **���ģ��������ȴ��������**
+            var result = handle.WaitForCompletion(); // This blocks until the load finishes.
 
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
@@ -55,7 +55,7 @@ namespace HotUpdate.Manager
                 return result;
             }
 
-            Debug.LogError($"��Դͬ������ʧ��: {keyName}");
+            Debug.LogError($"Synchronous load failed: {keyName}");
             return null;
         }
 
@@ -84,7 +84,7 @@ namespace HotUpdate.Manager
                 return result;
             }
 
-            Debug.LogError($"��Դ����ʧ��: {keyName}");
+            Debug.LogError($"Load failed: {keyName}");
             return null;
         }
 
@@ -109,7 +109,7 @@ namespace HotUpdate.Manager
                 return result;
             }
 
-            Debug.LogError($"ͨ����ǩ������Դʧ��: {keyName}");
+            Debug.LogError($"Load by label failed: {keyName}");
             return null;
         }
 
@@ -149,7 +149,7 @@ namespace HotUpdate.Manager
                 }
                 else
                 {
-                    Debug.LogWarning(keyName + "��Դ����ʧ��");
+                    Debug.LogWarning(keyName + " load failed");
                 }
             };
         }
@@ -165,7 +165,7 @@ namespace HotUpdate.Manager
                     var handle = resDic[keyName].handle;
                     Addressables.Release(handle);
                     resDic.Remove(keyName);
-                    Debug.Log(keyName + "�ѱ��ͷ�");
+                    Debug.Log(keyName + " released");
                 }
             }
         }
@@ -177,7 +177,7 @@ namespace HotUpdate.Manager
             AssetBundle.UnloadAllAssetBundles(true);
             Resources.UnloadUnusedAssets();
             GC.Collect();
-            Debug.Log("AddressablesManager ���������л�����Դ��");
+            Debug.Log("AddressablesManager cleared all cached resources");
         }
 
         #endregion

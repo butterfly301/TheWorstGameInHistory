@@ -65,7 +65,7 @@ namespace HotUpdate.Dialogue.System
             // }
 
             // 构建Addressable地址
-            var address = AddressableKeys.Data.Dialogue.GetDialogue(dialogueId);
+            var address = AddressableKeys.GetData_Dialogue(dialogueId);
 
             // 使用 Addressables 加载 JSON
             AddressablesManager.Instance.LoadAssetAsync<TextAsset>(address,

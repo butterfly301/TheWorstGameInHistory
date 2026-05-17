@@ -7,7 +7,10 @@ namespace HotUpdate.Utility
     {
         public void Call()
         {
-            UIManager.Instance.OpenGlitchWindow();
+            if (UIManager.Instance is UIManager1 uiManager1)
+            {
+                uiManager1.GlitchWindow.OpenGlitchWindow();
+            }
         }
     }
 }

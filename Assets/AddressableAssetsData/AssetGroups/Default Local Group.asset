@@ -131,6 +131,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c1d8b259477bec43b93081e034aecbf
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/SmallEntryCell.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0cadafc44435d2649b8aa171d49f61d6
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 09.prefab
     m_ReadOnly: 0
@@ -148,7 +154,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0e58d26c21081cb46b8a6ce8db2a3042
-    m_Address: Assets/GameRes/Art/Playthrough3/Menu
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -404,10 +410,22 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b9115a1448d8464db81c4036c9c7c5a
+    m_Address: Assets/GameRes/Art/Font/SourceHanSans-Medium SDF Underlay.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2c46a44d61009c143a39e6312a2f1754
     m_Address: Assets/GameRes/ScriptableObjects/Inventory/Item Inventory SO.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c49d32789280d240a9866d4270f1410
+    m_Address: Assets/GameRes/Audio/BGM/ReplaceInTheFuture/TheSongOfXiaoQiao.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2c5292ba5cf254919a6b9e2b18e04f49
     m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-07.wav
@@ -533,6 +551,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37cb5e6cbe791114e83c70ca20a0b262
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/icon4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 382937b7849c6a84cb55707a73feee04
     m_Address: Assets/GameRes/Prefabs/Environment
     m_ReadOnly: 0
@@ -565,7 +589,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3c235a3665af9ee44bda36af3167841e
-    m_Address: Assets/GameRes/Art/Playthrough3/Common/00_Components_1.png
+    m_Address: Assets/GameRes/Art/Playthrough3/Common/Components_1.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -648,6 +672,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Flower 01.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 464cdb77dde2f8b46970258f7c8b63ac
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/LobbyForm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 467a0b5a47dcae444965173fd49289d5
     m_Address: Assets/GameRes/Prefabs/DialogueBubbles/DialogueBubble3.prefab
@@ -783,6 +813,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53be3c563696b2142a0646b080faef01
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/ActivityEnter.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 540a74296e4e6b24ebddc8bf3014e028
     m_Address: Assets/GameRes/Art/Font/Cartoon/Rubik-SemiBold SDF.asset
     m_ReadOnly: 0
@@ -873,7 +909,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d35947465b24ec44897b9ce66183a49
-    m_Address: Assets/GameRes/Scenes/Playthrough3/Menu.unity
+    m_Address: Assets/GameRes/Scenes/Playthrough3/Lobby.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -958,6 +994,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes/Prefabs/UI
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 685eba9771ba03644b352d9508691eaf
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/Lobby.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6a74efa2ddd90634683c70985175fd4a
     m_Address: Assets/GameRes/Animations/MiniGame
@@ -1082,9 +1124,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 74d9a01c13aac9548b0420acd7a4aa4b
-    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd/Enter.anim
+    m_Address: Assets/GameRes/Animations/UI/IceBreakerAd/IceBreakerAdEnter.anim
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 75e84fbdb66ab5647a06b786c6662307
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Bucket 01.prefab
@@ -1095,6 +1138,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7620d2839ba5c3c48b0c7e14830385b4
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PlayThrough3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 76e09107407ed824587263ae4a33372c
     m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/AdWindow.prefab
@@ -1175,7 +1224,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e29e219b59dbc2438e19d7f4c136d66
-    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/SkipButton.prefab
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/SkipButtonPlaythrough1.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -1593,6 +1642,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a899658a9b4fce64394a80da06dfb528
+    m_Address: Assets/GameRes/Art/Playthrough3/Character/XunYu.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a931da70ee74947d5a047de583170ade
     m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-37.wav
     m_ReadOnly: 0
@@ -1653,7 +1708,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: af9e523e721a06d408a046147bf82b80
-    m_Address: Assets/GameRes/Prefabs/UI/Playthrough2/SkipButton.prefab
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough2/SkipButtonPlaythrough2.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -1739,9 +1794,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b900ad670b1b1224cb6a5f84da59d6f5
-    m_Address: Assets/GameRes/Animations/UI/AdWindow/Enter.anim
+    m_Address: Assets/GameRes/Animations/UI/AdWindow/AdWindowEnter.anim
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b99da9a57308d4ba1bee1cf1d9038376
     m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-05.wav
@@ -1803,11 +1859,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be086444622ea5d40b8d7f7be725cbca
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/icon2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: be45c7f16746c98428fc87d0d0f34226
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
       01 L X2.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be935f43eca6dc745a142896db98fc9f
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/UIManager3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bef830e91c1190b4c9d6e834ace51fe4
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Obstacle
@@ -1982,6 +2050,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf7d519b952505c41ad3b7183232e2f4
+    m_Address: Assets/GameRes/Prefabs/Environment/2D/PlayThrough3/LobbyWorld.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d0bde9a42898be64ab7372c560194d8d
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wood Logs.prefab
     m_ReadOnly: 0
@@ -2046,8 +2120,14 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d75c8600bad32b24da39c73e07525d72
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/icon3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d8287bcd41c024c4e82c61be96f9e922
-    m_Address: Assets/GameRes/Art/Playthrough3/Menu/MenuBg.png
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/MenuBg.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -2141,6 +2221,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-36.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df8e0bc03401865478b55f798451377a
+    m_Address: Assets/GameRes/Art/Playthrough3/Common/btn_round_corner.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e01a1e5f2c768c049b575a4940a66226
     m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker
@@ -2288,6 +2374,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f2f1725df8293a24f835ecf4449b7b20
     m_Address: Assets/GameRes/Audio/BGM/ReplaceInTheFuture
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f354883029db9c54cb5e1001c70ed7da
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/icon1.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default

@@ -20,7 +20,6 @@ namespace HotUpdate.Dialogue.View
 
         [SerializeField] protected TextMeshProUGUI dialogueText;
         [SerializeField] protected Transform choicesContainer;
-        protected GameObject choiceButtonPrefab;
 
         [Header("打字机配置")] [SerializeField] protected float defaultTypingSpeed = 0.05f;
 
@@ -31,6 +30,7 @@ namespace HotUpdate.Dialogue.View
         protected Action<int> onChoiceSelectedCallback;
 
         protected TypeWriterEffect typeWriterEffect;
+        protected GameObject choiceButtonPrefab;
 
         protected virtual void OnDestroy()
         {
@@ -114,11 +114,18 @@ namespace HotUpdate.Dialogue.View
             if (speakerNameText != null) speakerNameText.text = speakerName;
         }
 
-        public void Init(GameObject varChoiceButtonPrefab)
+        public void Init()
         {
-            this.choiceButtonPrefab = varChoiceButtonPrefab;
             typeWriterEffect = dialogueText?.GetComponent<TypeWriterEffect>();
             currentTypingSpeed = defaultTypingSpeed;
+        }
+
+        /// <summary>
+        /// 设置选择按钮预制体
+        /// </summary>
+        public void SetChoiceButtonPrefab(GameObject prefab)
+        {
+            choiceButtonPrefab = prefab;
         }
 
         protected virtual void CreateChoiceButton(ChoiceData choice, int index)

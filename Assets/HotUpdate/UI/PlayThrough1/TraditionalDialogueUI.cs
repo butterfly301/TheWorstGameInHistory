@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using HotUpdate.Dialogue.View;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
@@ -11,25 +9,38 @@ public class TraditionalDialogueUI
     private GameObject traditionalViewPrefab;
     private GameObject traditionalViewObj;
     private DialogueViewBase traditionalView;
+    private GameObject choiceButtonPrefab;
+
     public TraditionalDialogueUI(Transform transform)
     {
         trans = transform;
     }
-    public void Init(GameObject varChoiceButtonPrefab)
+
+    public void Init()
     {
-        LoadNarratorView(varChoiceButtonPrefab);
+        LoadChoiceButtonPrefab();
+        LoadTraditionalView();
     }
 
-    private void LoadNarratorView(GameObject varChoiceButtonPrefab)
+    private void LoadChoiceButtonPrefab()
     {
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
-            AddressableKeys.Prefabs.UI.Playthrough1.DialogueViewType.TraditionalView_Prefab,
+            AddressableKeys.Choice_Prefab,
+            handle => choiceButtonPrefab = handle.Result
+        );
+    }
+
+    private void LoadTraditionalView()
+    {
+        AddressablesManager.Instance.LoadAssetAsync<GameObject>(
+            AddressableKeys.TraditionalView_Prefab,
             handle =>
             {
                 traditionalViewPrefab = handle.Result;
                 traditionalViewObj = Object.Instantiate(traditionalViewPrefab, trans);
                 traditionalView = traditionalViewObj.GetComponent<DialogueViewBase>();
-                traditionalView.Init(varChoiceButtonPrefab);
+                traditionalView.SetChoiceButtonPrefab(choiceButtonPrefab);
+                traditionalView.Init();
                 traditionalViewObj.SetActive(false);
             }
         );
@@ -41,3 +52,5 @@ public class TraditionalDialogueUI
         return traditionalView;
     }
 }
+
+

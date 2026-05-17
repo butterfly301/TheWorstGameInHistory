@@ -29,7 +29,11 @@ namespace HotUpdate.UI
         /// </summary>
         public void Init()
         {
-            // 地图面板的Prefab会在需要时通过LoadMapPanelPrefab加载
+            // 初始化背包列表
+            if (Inventory == null)
+            {
+                Inventory = new List<IInventory>();
+            }
         }
 
         /// <summary>
@@ -38,7 +42,7 @@ namespace HotUpdate.UI
         public void LoadMapPanelPrefab(string index)
         {
             AddressablesManager.Instance.LoadAssetAsync<GameObject>(
-                AddressableKeys.Prefabs.UI.Playthrough1.Maps.GetMaps(index),
+                AddressableKeys.GetPrefabs_UI_Playthrough1_Maps(index),
                 handle => { mapPanelPrefab = handle.Result; }
             );
         }

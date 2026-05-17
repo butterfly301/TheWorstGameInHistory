@@ -1,21 +1,20 @@
 using System.Collections.Generic;
-using HotUpdate.Dialogue.View;
-using HotUpdate.Enums;
 using HotUpdate.Interface;
-using HotUpdate.Utility;
 using QFramework;
+using UnityEngine;
 
 namespace HotUpdate.UI
 {
-    public abstract class UIManager : MonoSingleton<UIManager>,IAutoBind
+    public abstract class UIManager : MonoSingleton<UIManager>, IAutoBind
     {
-        public abstract List<IInventory> GetInventory();
-        public abstract void AdjustGlitchEffect(float changeValue);
-        public abstract void OpenGlitchWindow();
-        public abstract void OpenMapPanel();
-        public abstract void CloseMapPanel();
-        public abstract void OpenPausePanel();
-        public abstract void ClosePausePanel();
-        public abstract DialogueViewBase ShowDialogueView(DialogueViewType viewType);
+        /// <summary>
+        /// UI图层与Transform的映射字典
+        /// </summary>
+        protected Dictionary<object, Transform> uiLayerTrans = new();
+
+        /// <summary>
+        /// 初始化UI管理器
+        /// </summary>
+        public abstract void Init();
     }
 }
