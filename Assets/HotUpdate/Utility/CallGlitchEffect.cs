@@ -7,9 +7,9 @@ namespace HotUpdate.Utility
     {
         public void Call(float value)
         {
-            if (UIManager.Instance is UIManager1 uiManager1)
+            if (UIManager1.Instance != null)
             {
-                uiManager1.GlitchEffect.AdjustGlitchEffect(value);
+                UIManager1.Instance.GlitchEffect.AdjustGlitchEffect(value);
             }
         }
     }

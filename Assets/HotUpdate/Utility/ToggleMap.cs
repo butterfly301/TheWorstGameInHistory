@@ -9,15 +9,15 @@ namespace HotUpdate.Utility
 
 public void Toggle()
         {
-            if (UIManager.Instance is UIManager1 uiManager1)
+            if (UIManager1.Instance != null)
             {
                 if (wantToOpen)
                 {
-                    uiManager1.MapUI.OpenMapPanel();
+                    UIManager1.Instance.MapUI.OpenMapPanel();
                 }
                 else
                 {
-                    uiManager1.MapUI.CloseMapPanel();
+                    UIManager1.Instance.MapUI.CloseMapPanel();
                 }
             }
         }

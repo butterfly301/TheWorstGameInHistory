@@ -441,13 +441,13 @@ ShowNode();
             DialogueViewType viewType = currentDialogueData.config.viewType;
 
 // 通过 UIManager1 暴露的子组件入口获取并显示对话视图
-            if (UIManager.Instance is UIManager1 uiManager1)
+            if (UIManager1.Instance != null)
             {
                 currentView = viewType switch
                 {
-                    DialogueViewType.Bubble => uiManager1.BubbleDialogue.GetDialogueView(),
-                    DialogueViewType.Narrator => uiManager1.NarratorDialogue.GetDialogueView(),
-                    DialogueViewType.Traditional => uiManager1.TraditionalDialogue.GetDialogueView(),
+                    DialogueViewType.Bubble => UIManager1.Instance.BubbleDialogue.GetDialogueView(),
+                    DialogueViewType.Narrator => UIManager1.Instance.NarratorDialogue.GetDialogueView(),
+                    DialogueViewType.Traditional => UIManager1.Instance.TraditionalDialogue.GetDialogueView(),
                     _ => null
                 };
             }

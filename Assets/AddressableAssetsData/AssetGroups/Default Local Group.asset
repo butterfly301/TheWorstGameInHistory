@@ -167,6 +167,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f43051e6cc32a240b79ff2869dea661
+    m_Address: Assets/GameRes/Art/Playthrough3/Extension/DoublueGuanYu/sparks.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 100154d4aff77254898048e6148945d8
     m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/Maps
     m_ReadOnly: 0
@@ -303,6 +309,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes/Prefabs/Character
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 203de33d7492d1c43a0375e359b6efa5
+    m_Address: Assets/GameRes/Art/Playthrough3/Extension/DoublueGuanYu/red_ribbon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 208588d6b7820ca4982a7810b4101723
     m_Address: Assets/GameRes/Prefabs/Enemy/Manager
@@ -702,6 +714,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 463f4ade1f82b5246ba14a2956b4d4fc
+    m_Address: Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/SunQian.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 464cdb77dde2f8b46970258f7c8b63ac
     m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/LobbyForm.prefab
     m_ReadOnly: 0
@@ -773,6 +791,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ca0bf96411d4a34e988415042e3c6fc
+    m_Address: Assets/GameRes/Art/Playthrough3/Extension/DoublueGuanYu/center_slash.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4d0ea86cf0ef88c4fa3ae46ee54d15d1
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Pot 03.prefab
     m_ReadOnly: 0
@@ -802,6 +826,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e1ff8faed12a475eba9be0e46072269
     m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-08.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f51c81cf86671b47a4288513ab67277
+    m_Address: Assets/GameRes/Art/Playthrough3/Extension/DoublueGuanYu/red_nebula.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -887,6 +917,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Fire Bowl.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5777f89c80a16364db1ea6c4de2283bb
+    m_Address: Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/ZhouCang.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 59993b08f803ca047964bd7a332e0f36
     m_Address: Assets/GameRes/Scenes/MainMenu.unity
@@ -988,6 +1024,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 62887e6ba5cc9594a9fe2b9804cf19de
     m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Medium SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62bab72a2a2dade43898c4e01de8764f
+    m_Address: Assets/GameRes/Art/Playthrough3/Extension/DoublueGuanYu
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -1383,6 +1425,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8667e217c9f6591479d3a281243bb0fa
+    m_Address: Assets/GameRes/Art/Playthrough3/Extension/DoublueGuanYu/blue_ribbon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 867df0a95797b9745b8a0d9082bcbe65
     m_Address: Assets/GameRes/Prefabs/IceBreaker/Level/EnemyShard.prefab
     m_ReadOnly: 0
@@ -1644,6 +1692,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a022d59a48ebcfa41962f147c970bf1b
+    m_Address: Assets/GameRes/Art/Playthrough3/Extension
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a0ca8964c08d54c5dbebf245bdc474ca
     m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-23.wav
     m_ReadOnly: 0
@@ -1838,6 +1892,12 @@ MonoBehaviour:
       02 X1.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6c22183ce0629b4289941ee0a3823e5
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/ConfirmForm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b78702531cc991540bea14f3518027c2
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Table.prefab
@@ -2519,6 +2579,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f9304d111725ecd479997cc7906ec497
     m_Address: Assets/GameRes/Art/Font/Cartoon/Quicksand-Bold SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f949c5a220ee29c44b7651ff6a343c18
+    m_Address: Assets/GameRes/Art/Playthrough3/Extension/DoublueGuanYu/blue_nebula.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
