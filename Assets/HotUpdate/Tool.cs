@@ -1,4 +1,4 @@
-// updated in 2025/8/5
+﻿// updated in 2025/8/5
 
 using System;
 using System.Collections.Generic;
@@ -12,12 +12,12 @@ public static class MyTimer
 {
     private static readonly List<TimingEvent> L;
 
-    static MyTimer()
+static MyTimer()
     {
         L = new List<TimingEvent>();
     }
 
-    public static void AddEvent(Action action, float time, bool isLoop = false)
+public static void AddEvent(Action action, float time, bool isLoop = false)
     {
         var s = new TimingEvent
         {
@@ -29,7 +29,7 @@ public static class MyTimer
         L.Add(s);
     }
 
-    public static void Update()
+public static void Update()
     {
         var n = L.Count;
         for (var i = 0; i < n; ++i)
@@ -47,7 +47,7 @@ public static class MyTimer
                     continue;
                 }
 
-                if (!L[i].IsLoop)
+if (!L[i].IsLoop)
                 {
                     L.RemoveAt(i);
                     --i;
@@ -62,7 +62,7 @@ public static class MyTimer
             }
     }
 
-    private struct TimingEvent
+private struct TimingEvent
     {
         public float StartTime;
         public Action Action;
@@ -70,7 +70,6 @@ public static class MyTimer
         public bool IsLoop;
     }
 }
-
 
 public static class MyConverter
 {
@@ -80,7 +79,7 @@ public static class MyConverter
         return new ArraySegment<byte>(byteArray);
     }
 
-    public static string Byte2String(ArraySegment<byte> bytes)
+public static string Byte2String(ArraySegment<byte> bytes)
     {
         var list = (IList<byte>)bytes;
         var bt = bytes.ToArray();
@@ -95,7 +94,7 @@ public static class MyTool
         return baseNum + (1 - Random.value * 2) * offset;
     }
 
-    public static string PrintArray<T>(T[] array)
+public static string PrintArray<T>(T[] array)
     {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < array.Length; ++i)
@@ -104,10 +103,10 @@ public static class MyTool
             s.Append("\t");
         }
 
-        return s.ToString();
+return s.ToString();
     }
 
-    public static string PrintTwoDimensionalArray<T>(T[,] array, int w, int h)
+public static string PrintTwoDimensionalArray<T>(T[,] array, int w, int h)
     {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < w; ++i)
@@ -118,13 +117,13 @@ public static class MyTool
                 s.Append("\t");
             }
 
-            s.Append("\n");
+s.Append("\n");
         }
 
-        return s.ToString();
+return s.ToString();
     }
 
-    public static string PrintTwoDimensionalArray<T>(T[][] array, int w, int h)
+public static string PrintTwoDimensionalArray<T>(T[][] array, int w, int h)
     {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < w; ++i)
@@ -135,18 +134,18 @@ public static class MyTool
                 s.Append("\t");
             }
 
-            s.Append("\n");
+s.Append("\n");
         }
 
-        return s.ToString();
+return s.ToString();
     }
 
-    public static Vector2 GetRectNormal(Vector2 targetPos, Vector2 targetDir, Rect rect)
+public static Vector2 GetRectNormal(Vector2 targetPos, Vector2 targetDir, Rect rect)
     {
         float ydx = targetDir.y / targetDir.x;
         float xdy = targetDir.x / targetDir.y;
 
-        if (targetPos.y > rect.yMax && targetDir.y < 0)
+if (targetPos.y > rect.yMax && targetDir.y < 0)
         {
             float toTop = rect.yMax - targetPos.y;
             float x = targetPos.x + xdy * toTop;
@@ -154,7 +153,7 @@ public static class MyTool
                 return Vector2.up;
         }
 
-        if (targetPos.y < rect.yMin && targetDir.y > 0)
+if (targetPos.y < rect.yMin && targetDir.y > 0)
         {
             float toBottom = rect.yMin - targetPos.y;
             float x = targetPos.x + xdy * toBottom;
@@ -162,7 +161,7 @@ public static class MyTool
                 return Vector2.down;
         }
 
-        if (targetPos.x > rect.xMax && targetDir.x < 0)
+if (targetPos.x > rect.xMax && targetDir.x < 0)
         {
             float toRight = rect.xMax - targetPos.x;
             float y = targetPos.y + ydx * toRight;
@@ -170,7 +169,7 @@ public static class MyTool
                 return Vector2.right;
         }
 
-        if (targetPos.x < rect.xMin && targetDir.x > 0)
+if (targetPos.x < rect.xMin && targetDir.x > 0)
         {
             float toLeft = rect.xMin - targetPos.x;
             float y = targetPos.y + ydx * toLeft;
@@ -178,7 +177,7 @@ public static class MyTool
                 return Vector2.left;
         }
 
-        return Vector2.zero;
+return Vector2.zero;
     }
 }
 
@@ -190,17 +189,17 @@ public class MyObjectPool<T> where T : MonoBehaviour
     private readonly GameObject[] _prefabs;
     private int _maxNum;
 
-    public Action<GameObject, T> OnGet;
+public Action<GameObject, T> OnGet;
     public Action<GameObject, T> OnRelease;
 
-    private void Initialize(int maxNum)
+private void Initialize(int maxNum)
     {
         _stack = new Stack<GameObject>(maxNum);
         _dictionary = new Dictionary<GameObject, T>(maxNum);
         _maxNum = maxNum;
     }
 
-    public MyObjectPool(GameObject prefab, int maxNum)
+public MyObjectPool(GameObject prefab, int maxNum)
     {
         if (!prefab.TryGetComponent(out T _))
             throw new ArgumentException($"prefab has no {typeof(T)}");
@@ -208,7 +207,7 @@ public class MyObjectPool<T> where T : MonoBehaviour
         _prefab = prefab;
     }
 
-    public MyObjectPool(GameObject[] prefabs, int maxNum)
+public MyObjectPool(GameObject[] prefabs, int maxNum)
     {
         for (int i = 0; i < prefabs.Length; ++i)
         {
@@ -216,11 +215,11 @@ public class MyObjectPool<T> where T : MonoBehaviour
                 throw new ArgumentException($"prefab has no {typeof(T)}");
         }
 
-        Initialize(maxNum);
+Initialize(maxNum);
         _prefabs = prefabs;
     }
 
-    // ReSharper disable Unity.PerformanceAnalysis
+// ReSharper disable Unity.PerformanceAnalysis
     public GameObject Get()
     {
         GameObject g;
@@ -234,20 +233,20 @@ public class MyObjectPool<T> where T : MonoBehaviour
             _dictionary.Add(g, g.GetComponent<T>());
         }
 
-        g.SetActive(true);
+g.SetActive(true);
         OnGet?.Invoke(g.gameObject, _dictionary[g]);
         return g;
     }
 
-    public bool TryGetScript(GameObject g, out T script)
+public bool TryGetScript(GameObject g, out T script)
     {
         bool b = _dictionary.ContainsKey(g);
         script = b ? _dictionary[g] : null;
 
-        return b;
+return b;
     }
 
-    public void Release(GameObject g)
+public void Release(GameObject g)
     {
         OnRelease?.Invoke(g, _dictionary[g]);
         if (_stack.Count < _maxNum)
@@ -269,25 +268,25 @@ public class MyEventCore
 {
     private bool _joinFlag = false;
 
-    public readonly List<Delegate> _actions = new();
+public readonly List<Delegate> _actions = new();
     public int _index;
     private object[] _lastArgs;
 
-    public Action EndAction;
+public Action EndAction;
 
-    protected void Add(Delegate d) => _actions.Add(d);
+protected void Add(Delegate d) => _actions.Add(d);
     protected void Remove(Delegate d) => _actions.Remove(d);
 
-    protected void Invoke(params object[] args)
+protected void Invoke(params object[] args)
     {
         _index = 0;
         _joinFlag = false;
         _lastArgs = args;
 
-        Resume();
+Resume();
     }
 
-    public void Resume()
+public void Resume()
     {
         _joinFlag = false;
         for (; _index < _actions.Count; ++_index)
@@ -298,19 +297,19 @@ public class MyEventCore
                 return;
             }
 
-            _actions[_index].DynamicInvoke(_lastArgs);
+_actions[_index].DynamicInvoke(_lastArgs);
         }
 
-        if (_joinFlag) // to jump out
+if (_joinFlag) // to jump out
         {
             _joinFlag = false;
             return;
         }
 
-        EndAction?.Invoke();
+EndAction?.Invoke();
     }
 
-    public void Join() => _joinFlag = true;
+public void Join() => _joinFlag = true;
 }
 
 public class MyEvent : MyEventCore
@@ -321,13 +320,13 @@ public class MyEvent : MyEventCore
         return e;
     }
 
-    public static MyEvent operator -(MyEvent e, Action a)
+public static MyEvent operator -(MyEvent e, Action a)
     {
         e.Remove(a);
         return e;
     }
 
-    public void Invoke() => base.Invoke();
+public void Invoke() => base.Invoke();
 }
 
 public class MyEvent<T1> : MyEventCore
@@ -338,13 +337,13 @@ public class MyEvent<T1> : MyEventCore
         return e;
     }
 
-    public static MyEvent<T1> operator -(MyEvent<T1> e, Action<T1> a)
+public static MyEvent<T1> operator -(MyEvent<T1> e, Action<T1> a)
     {
         e.Remove(a);
         return e;
     }
 
-    public void Invoke(T1 arg1) => base.Invoke(arg1);
+public void Invoke(T1 arg1) => base.Invoke(arg1);
 }
 
 public class MyEvent<T1, T2> : MyEventCore
@@ -355,13 +354,13 @@ public class MyEvent<T1, T2> : MyEventCore
         return e;
     }
 
-    public static MyEvent<T1, T2> operator -(MyEvent<T1, T2> e, Action<T1, T2> a)
+public static MyEvent<T1, T2> operator -(MyEvent<T1, T2> e, Action<T1, T2> a)
     {
         e.Remove(a);
         return e;
     }
 
-    public void Invoke(T1 arg1, T2 arg2) => base.Invoke(arg1, arg2);
+public void Invoke(T1 arg1, T2 arg2) => base.Invoke(arg1, arg2);
 }
 
 public class MyEvent<T1, T2, T3> : MyEventCore
@@ -372,13 +371,13 @@ public class MyEvent<T1, T2, T3> : MyEventCore
         return e;
     }
 
-    public static MyEvent<T1, T2, T3> operator -(MyEvent<T1, T2, T3> e, Action<T1, T2, T3> a)
+public static MyEvent<T1, T2, T3> operator -(MyEvent<T1, T2, T3> e, Action<T1, T2, T3> a)
     {
         e.Remove(a);
         return e;
     }
 
-    public void Invoke(T1 arg1, T2 arg2, T3 arg3) => base.Invoke(arg1, arg2, arg3);
+public void Invoke(T1 arg1, T2 arg2, T3 arg3) => base.Invoke(arg1, arg2, arg3);
 }
 
 public class MyEvent<T1, T2, T3, T4> : MyEventCore
@@ -389,13 +388,13 @@ public class MyEvent<T1, T2, T3, T4> : MyEventCore
         return e;
     }
 
-    public static MyEvent<T1, T2, T3, T4> operator -(MyEvent<T1, T2, T3, T4> e, Action<T1, T2, T3, T4> a)
+public static MyEvent<T1, T2, T3, T4> operator -(MyEvent<T1, T2, T3, T4> e, Action<T1, T2, T3, T4> a)
     {
         e.Remove(a);
         return e;
     }
 
-    public void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4) => base.Invoke(arg1, arg2, arg3, arg4);
+public void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4) => base.Invoke(arg1, arg2, arg3, arg4);
 }
 
 #endregion

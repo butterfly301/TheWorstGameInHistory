@@ -1,50 +1,50 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HotUpdate.Character;
 using HotUpdate.Interface;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
 using QFramework;
 using UnityEngine;
-
+
 namespace HotUpdate.World
 {
     public class WorldConfigManager1 : MonoSingleton<WorldConfigManager1>,IAutoBind
     {
         [SerializeField] private Transform dialogueBubbles;
         private Transform[] dialogueBubbleTransforms;
-        
-        [SerializeField] private Transform enemySpawnPoints;
+
+[SerializeField] private Transform enemySpawnPoints;
         private Transform[] enemySpawnPointTransforms;
-        
-        private GameObject[] npcObjs;
+
+private GameObject[] npcObjs;
         [SerializeField]private Transform npcs;
         private Transform[] npcTransforms;
-
-        private void Awake()
+
+private void Awake()
         {
             dialogueBubbleTransforms = GetAllChildren(dialogueBubbles);
             npcTransforms = GetAllChildren(npcs);
             enemySpawnPointTransforms = GetAllChildren(enemySpawnPoints);
-
-            InitializeNpCs();
+
+InitializeNpCs();
             InitializeTriggerDialogueBubbles();
             InitializeEnemySpawnPoints();
         }
-
-        public Transform[] GetAllChildren(Transform parent)
+
+public Transform[] GetAllChildren(Transform parent)
         {
             var children = new List<Transform>();
-
-            for (var i = 0; i < parent.childCount; i++)
+
+for (var i = 0; i < parent.childCount; i++)
             {
                 var child = parent.GetChild(i);
                 children.Add(child);
             }
-
-            return children.ToArray();
+
+return children.ToArray();
         }
-
-        private void InitializeNpCs()
+
+private void InitializeNpCs()
         {
             npcObjs = new GameObject[npcTransforms.Length];
             for (var i = 0; i < npcTransforms.Length; i++)
@@ -62,8 +62,8 @@ namespace HotUpdate.World
                     });
             }
         }
-
-        private void InitializeTriggerDialogueBubbles()
+
+private void InitializeTriggerDialogueBubbles()
         {
             for (var i = 0; i < dialogueBubbleTransforms.Length; i++)
             {
@@ -76,12 +76,12 @@ namespace HotUpdate.World
                     });
             }
         }
-
-        private void InitializeEnemySpawnPoints()
+
+private void InitializeEnemySpawnPoints()
         {
         }
-
-        public Transform GetEnemySpawnPoints(int index)
+
+public Transform GetEnemySpawnPoints(int index)
         {
             return enemySpawnPointTransforms[index];
         }

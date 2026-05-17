@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace HotUpdate.Utility
 {
@@ -6,17 +6,17 @@ namespace HotUpdate.Utility
     {
         private Canvas canvas;
 
-        private void Awake()
+private void Awake()
         {
             canvas = GetComponent<Canvas>();
         }
 
-        private void OnEnable()
+private void OnEnable()
         {
             GetMainCameraAndRegisterToCanvas();
         }
 
-        public void GetMainCameraAndRegisterToCanvas()
+public void GetMainCameraAndRegisterToCanvas()
         {
             canvas.worldCamera = Camera.main;
         }

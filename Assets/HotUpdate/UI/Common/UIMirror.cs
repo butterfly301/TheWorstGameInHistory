@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,13 +14,13 @@ namespace StandaloneUIEffects
             Quarter,
         }
 
-        [SerializeField]
+[SerializeField]
         private MirrorType m_MirrorType = MirrorType.Horizontal;
 
-        [System.NonSerialized]
+[System.NonSerialized]
         private RectTransform m_RectTransform;
 
-        public MirrorType mirrorType
+public MirrorType mirrorType
         {
             get => m_MirrorType;
             set
@@ -30,7 +30,7 @@ namespace StandaloneUIEffects
                     return;
                 }
 
-                m_MirrorType = value;
+m_MirrorType = value;
                 if (graphic != null)
                 {
                     graphic.SetVerticesDirty();
@@ -38,7 +38,7 @@ namespace StandaloneUIEffects
             }
         }
 
-        public RectTransform rectTransform
+public RectTransform rectTransform
         {
             get
             {
@@ -47,51 +47,51 @@ namespace StandaloneUIEffects
                     m_RectTransform = GetComponent<RectTransform>();
                 }
 
-                return m_RectTransform;
+return m_RectTransform;
             }
         }
 
-        public static UIMirror Get(GameObject target)
+public static UIMirror Get(GameObject target)
         {
             if (target == null)
             {
                 return null;
             }
 
-            var mirror = target.GetComponent<UIMirror>();
+var mirror = target.GetComponent<UIMirror>();
             return mirror != null ? mirror : target.AddComponent<UIMirror>();
         }
 
-        public static UIMirror GetFrom(GameObject root, string childPath)
+public static UIMirror GetFrom(GameObject root, string childPath)
         {
             if (root == null || string.IsNullOrEmpty(childPath))
             {
                 return null;
             }
 
-            var child = root.transform.Find(childPath);
+var child = root.transform.Find(childPath);
             return child == null ? null : Get(child.gameObject);
         }
 
-        public void SetNativeSize()
+public void SetNativeSize()
         {
             if (!(graphic is Image image))
             {
                 return;
             }
 
-            var sprite = image.overrideSprite;
+var sprite = image.overrideSprite;
             if (sprite == null)
             {
                 return;
             }
 
-            float width = sprite.rect.width / image.pixelsPerUnit;
+float width = sprite.rect.width / image.pixelsPerUnit;
             float height = sprite.rect.height / image.pixelsPerUnit;
 
-            rectTransform.anchorMax = rectTransform.anchorMin;
+rectTransform.anchorMax = rectTransform.anchorMin;
 
-            switch (m_MirrorType)
+switch (m_MirrorType)
             {
                 case MirrorType.Horizontal:
                     rectTransform.sizeDelta = new Vector2(width * 2f, height);
@@ -104,22 +104,22 @@ namespace StandaloneUIEffects
                     break;
             }
 
-            graphic.SetVerticesDirty();
+graphic.SetVerticesDirty();
         }
 
-        public override void ModifyMesh(VertexHelper vh)
+public override void ModifyMesh(VertexHelper vh)
         {
             if (!IsActive())
             {
                 return;
             }
 
-            var vertices = new List<UIVertex>();
+var vertices = new List<UIVertex>();
             vh.GetUIVertexStream(vertices);
 
-            int count = vertices.Count;
+int count = vertices.Count;
 
-            if (graphic is Image image)
+if (graphic is Image image)
             {
                 switch (image.type)
                 {
@@ -139,16 +139,16 @@ namespace StandaloneUIEffects
                 DrawSimple(vertices, count);
             }
 
-            vh.Clear();
+vh.Clear();
             vh.AddUIVertexTriangleStream(vertices);
         }
 
-        private void DrawSimple(List<UIVertex> vertices, int count)
+private void DrawSimple(List<UIVertex> vertices, int count)
         {
             Rect rect = graphic.GetPixelAdjustedRect();
             SimpleScale(rect, vertices, count);
 
-            switch (m_MirrorType)
+switch (m_MirrorType)
             {
                 case MirrorType.Horizontal:
                     EnsureCapacity(vertices, count);
@@ -166,7 +166,7 @@ namespace StandaloneUIEffects
             }
         }
 
-        private void DrawSliced(List<UIVertex> vertices, int count)
+private void DrawSliced(List<UIVertex> vertices, int count)
         {
             var image = graphic as Image;
             if (image == null)
@@ -174,17 +174,17 @@ namespace StandaloneUIEffects
                 return;
             }
 
-            if (!image.hasBorder)
+if (!image.hasBorder)
             {
                 DrawSimple(vertices, count);
                 return;
             }
 
-            Rect rect = graphic.GetPixelAdjustedRect();
+Rect rect = graphic.GetPixelAdjustedRect();
             SlicedScale(rect, vertices, count);
             count = SliceExcludeVerts(vertices, count);
 
-            switch (m_MirrorType)
+switch (m_MirrorType)
             {
                 case MirrorType.Horizontal:
                     EnsureCapacity(vertices, count);
@@ -202,7 +202,7 @@ namespace StandaloneUIEffects
             }
         }
 
-        private static void EnsureCapacity(List<UIVertex> vertices, int addCount)
+private static void EnsureCapacity(List<UIVertex> vertices, int addCount)
         {
             int neededCapacity = vertices.Count + addCount;
             if (vertices.Capacity < neededCapacity)
@@ -211,40 +211,40 @@ namespace StandaloneUIEffects
             }
         }
 
-        private void SimpleScale(Rect rect, List<UIVertex> vertices, int count)
+private void SimpleScale(Rect rect, List<UIVertex> vertices, int count)
         {
             for (int i = 0; i < count; i++)
             {
                 var vertex = vertices[i];
                 Vector3 position = vertex.position;
 
-                if (m_MirrorType == MirrorType.Horizontal || m_MirrorType == MirrorType.Quarter)
+if (m_MirrorType == MirrorType.Horizontal || m_MirrorType == MirrorType.Quarter)
                 {
                     position.x = (position.x + rect.x) * 0.5f;
                 }
 
-                if (m_MirrorType == MirrorType.Vertical || m_MirrorType == MirrorType.Quarter)
+if (m_MirrorType == MirrorType.Vertical || m_MirrorType == MirrorType.Quarter)
                 {
                     position.y = (position.y + rect.y) * 0.5f;
                 }
 
-                vertex.position = position;
+vertex.position = position;
                 vertices[i] = vertex;
             }
         }
 
-        private void SlicedScale(Rect rect, List<UIVertex> vertices, int count)
+private void SlicedScale(Rect rect, List<UIVertex> vertices, int count)
         {
             Vector4 border = GetAdjustedBorders(rect);
             float halfWidth = rect.width * 0.5f;
             float halfHeight = rect.height * 0.5f;
 
-            for (int i = 0; i < count; i++)
+for (int i = 0; i < count; i++)
             {
                 var vertex = vertices[i];
                 Vector3 position = vertex.position;
 
-                if (m_MirrorType == MirrorType.Horizontal || m_MirrorType == MirrorType.Quarter)
+if (m_MirrorType == MirrorType.Horizontal || m_MirrorType == MirrorType.Quarter)
                 {
                     if (halfWidth < border.x && position.x >= rect.center.x)
                     {
@@ -256,7 +256,7 @@ namespace StandaloneUIEffects
                     }
                 }
 
-                if (m_MirrorType == MirrorType.Vertical || m_MirrorType == MirrorType.Quarter)
+if (m_MirrorType == MirrorType.Vertical || m_MirrorType == MirrorType.Quarter)
                 {
                     if (halfHeight < border.y && position.y >= rect.center.y)
                     {
@@ -268,19 +268,19 @@ namespace StandaloneUIEffects
                     }
                 }
 
-                vertex.position = position;
+vertex.position = position;
                 vertices[i] = vertex;
             }
         }
 
-        private static void MirrorVerts(Rect rect, List<UIVertex> vertices, int count, bool isHorizontal)
+private static void MirrorVerts(Rect rect, List<UIVertex> vertices, int count, bool isHorizontal)
         {
             for (int i = 0; i < count; i++)
             {
                 var vertex = vertices[i];
                 Vector3 position = vertex.position;
 
-                if (isHorizontal)
+if (isHorizontal)
                 {
                     position.x = rect.center.x * 2f - position.x;
                 }
@@ -289,23 +289,23 @@ namespace StandaloneUIEffects
                     position.y = rect.center.y * 2f - position.y;
                 }
 
-                vertex.position = position;
+vertex.position = position;
                 vertices.Add(vertex);
             }
         }
 
-        private static int SliceExcludeVerts(List<UIVertex> vertices, int count)
+private static int SliceExcludeVerts(List<UIVertex> vertices, int count)
         {
             int realCount = count;
             int index = 0;
 
-            while (index < realCount)
+while (index < realCount)
             {
                 UIVertex v1 = vertices[index];
                 UIVertex v2 = vertices[index + 1];
                 UIVertex v3 = vertices[index + 2];
 
-                if (v1.position == v2.position || v2.position == v3.position || v3.position == v1.position)
+if (v1.position == v2.position || v2.position == v3.position || v3.position == v1.position)
                 {
                     vertices[index] = vertices[realCount - 3];
                     vertices[index + 1] = vertices[realCount - 2];
@@ -314,28 +314,28 @@ namespace StandaloneUIEffects
                     continue;
                 }
 
-                index += 3;
+index += 3;
             }
 
-            if (realCount < count)
+if (realCount < count)
             {
                 vertices.RemoveRange(realCount, count - realCount);
             }
 
-            return realCount;
+return realCount;
         }
 
-        private Vector4 GetAdjustedBorders(Rect rect)
+private Vector4 GetAdjustedBorders(Rect rect)
         {
             var image = graphic as Image;
             Vector4 border = Vector4.zero;
 
-            if (image != null && image.overrideSprite != null)
+if (image != null && image.overrideSprite != null)
             {
                 border = image.overrideSprite.border / image.pixelsPerUnit;
             }
 
-            for (int axis = 0; axis <= 1; axis++)
+for (int axis = 0; axis <= 1; axis++)
             {
                 float combinedBorders = border[axis] + border[axis + 2];
                 if (rect.size[axis] < combinedBorders && combinedBorders > 0f)
@@ -346,7 +346,7 @@ namespace StandaloneUIEffects
                 }
             }
 
-            return border;
+return border;
         }
     }
 }

@@ -1,4 +1,4 @@
-using HotUpdate.Manager;
+﻿using HotUpdate.Manager;
 using UnityEngine;
 
 namespace HotUpdate.Quest
@@ -10,7 +10,7 @@ namespace HotUpdate.Quest
         private readonly string persistentQuestPath = "Assets/ScriptableObjects/Quest/";
         private IQuest quest;
 
-        private void Awake()
+private void Awake()
         {
             var questPath = persistentQuestPath + questName + ".asset";
             AddressablesManager.Instance.LoadAssetAsync<IQuestSO>(questPath,

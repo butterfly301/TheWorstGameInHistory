@@ -1,23 +1,23 @@
-using HotUpdate.Interface;
+﻿using HotUpdate.Interface;
 using HotUpdate.UI;
 using HotUpdate.UI.MainMenuUI;
 using HotUpdate.Utility;
 using UnityEngine;
 using UnityEngine.Localization.Components;
-
+
 public class ConfirmCrackWindow : ConfirmWindow, IAutoBind
 {
     private int count;
     [SerializeField] private LocalizeStringEvent text;
-
-    public override void Init(MainMenu mainMenuVar)
+
+public override void Init(MainMenu mainMenuVar)
     {
         base.Init(mainMenuVar);
         confirm.onClick.AddListener(OnConfirmButtonClick);
         text.SetEntry(LocalizationKeys.ConfirmCrackText1);
     }
-
-    private void OnConfirmButtonClick()
+
+private void OnConfirmButtonClick()
     {
         mainMenu.OpenWindow(AddressableKeys.AdWindow_Prefab);
         count++;

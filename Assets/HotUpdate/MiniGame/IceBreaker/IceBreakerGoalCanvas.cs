@@ -10,7 +10,7 @@ using HotUpdate.Utility;
 using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
-
+
 namespace HotUpdate.MiniGame.IceBreaker
 {
     public class IceBreakerGoalCanvas : MonoBehaviour, IController
@@ -25,43 +25,43 @@ namespace HotUpdate.MiniGame.IceBreaker
         private Button result;
         private string targetSubFolder;
         private Button url;
-
-        public IArchitecture GetArchitecture()
+
+public IArchitecture GetArchitecture()
         {
             return TheWorstGameInHistory.Interface;
         }
-
-        public void Init(IceBreakerGoalController goalControllerVar)
+
+public void Init(IceBreakerGoalController goalControllerVar)
         {
             goalController = goalControllerVar;
             canvas = GetComponent<Canvas>();
-
-            congratulations = transform.Find("Congratulations").GetComponent<TypeWriterEffect>();
+
+congratulations = transform.Find("Congratulations").GetComponent<TypeWriterEffect>();
             congratulations.gameObject.SetActive(false);
             congratulations.onTypeComplete.AddListener(OnCongratulationsButtonClicked);
-
-            result = transform.Find("Result").GetComponent<Button>();
+
+result = transform.Find("Result").GetComponent<Button>();
             result.onClick.AddListener(() => { goalController.StartRearranging(); });
             result.interactable = false;
-
-            itemName = transform.Find("ItemName").GetComponent<TypeWriterEffect>();
+
+itemName = transform.Find("ItemName").GetComponent<TypeWriterEffect>();
             itemName.gameObject.SetActive(false);
             itemName.onTypeComplete.AddListener(() => { confirm.gameObject.SetActive(true); });
-
-            confirm = transform.Find("Confirm").GetComponent<Button>();
+
+confirm = transform.Find("Confirm").GetComponent<Button>();
             confirm.onClick.AddListener(RearrangePlayerShards);
             confirm.gameObject.SetActive(false);
             confirm.interactable = false; // Enable only after download completes.
-
-            url = transform.Find("URL").GetComponent<Button>();
+
+url = transform.Find("URL").GetComponent<Button>();
             url.onClick.AddListener(OnURLButtonClicked);
             url.gameObject.SetActive(false);
-
-            // Use the download system to save the reward files in the background.
+
+// Use the download system to save the reward files in the background.
             StartDownloadAndSaveAsync();
         }
-
-        // Start downloading files and unlock confirm when at least one succeeds.
+
+// Start downloading files and unlock confirm when at least one succeeds.
         private async void StartDownloadAndSaveAsync()
         {
             try
@@ -77,8 +77,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                     Debug.LogWarning("No download URLs configured. Confirm will remain disabled.");
                     return;
                 }
-
-                var downloadSystem = this.GetSystem<DownloadSystem>();
+
+var downloadSystem = this.GetSystem<DownloadSystem>();
                 var summary = await downloadSystem.DownloadAndSaveAsync(downloadUrls, targetSubFolder);
                 confirm.interactable = summary is { SuccessCount: > 0 };
                 if (summary != null)
@@ -89,14 +89,14 @@ namespace HotUpdate.MiniGame.IceBreaker
                 Debug.LogWarning("All downloads failed.");
             }
         }
-
-        private void OnCongratulationsButtonClicked()
+
+private void OnCongratulationsButtonClicked()
         {
             itemName.gameObject.SetActive(true);
             itemName.StartTyping();
         }
-
-        private void RearrangePlayerShards()
+
+private void RearrangePlayerShards()
         {
             var player = goalController.GetPlayer();
             if (player != null && Camera.main != null)
@@ -105,8 +105,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                 StartCoroutine(EnableURLButton(2f));
             }
         }
-
-        public IEnumerator MoveCanvas(Vector3 targetPosition, float duration)
+
+public IEnumerator MoveCanvas(Vector3 targetPosition, float duration)
         {
             canvas.sortingOrder = 6;
             result.interactable = false;
@@ -120,25 +120,25 @@ namespace HotUpdate.MiniGame.IceBreaker
                 transform.position = Vector3.Lerp(startPosition, targetPosition, t);
                 yield return null;
             }
-
-            transform.position = targetPosition;
+
+transform.position = targetPosition;
             congratulations.gameObject.SetActive(true);
             congratulations.StartTyping();
         }
-
-        private IEnumerator EnableURLButton(float delay)
+
+private IEnumerator EnableURLButton(float delay)
         {
             yield return new WaitForSeconds(delay);
             url.gameObject.SetActive(true);
         }
-
-        private void OnURLButtonClicked()
+
+private void OnURLButtonClicked()
         {
             this.GetSystem<DownloadSystem>().OpenFolder(targetSubFolder);
             this.SendCommand(new LoadSceneCommand(AddressableKeys.MainMenu_Unity, false));
         }
-
-        public void SetResultButtonInteractable(bool interactable)
+
+public void SetResultButtonInteractable(bool interactable)
         {
             result.interactable = interactable;
         }

@@ -1,4 +1,4 @@
-using QFramework;
+﻿using QFramework;
 
 namespace HotUpdate.Browser
 {
@@ -6,12 +6,12 @@ namespace HotUpdate.Browser
     {
         private readonly string _url;
 
-        public OpenURLCommand(string url)
+public OpenURLCommand(string url)
         {
             _url = url;
         }
 
-        protected override void OnExecute()
+protected override void OnExecute()
         {
             this.GetSystem<BrowserSystem>().HandleURL(_url);
         }

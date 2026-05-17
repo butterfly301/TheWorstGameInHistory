@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace HotUpdate.Core.Condition
@@ -16,14 +16,14 @@ namespace HotUpdate.Core.Condition
             return ConditionChecker.GetRegisteredConditionTypesCount();
         }
 
-        /// <summary>
+/// <summary>
         /// 检查所有条件是否都满足（AND关系）
         /// </summary>
         public static bool CheckAll(this IEnumerable<ConditionData> conditions)
         {
             if (conditions == null) return true;
 
-            foreach (var condition in conditions)
+foreach (var condition in conditions)
             {
                 if (!ConditionChecker.CheckCondition(condition))
                 {
@@ -31,17 +31,17 @@ namespace HotUpdate.Core.Condition
                 }
             }
 
-            return true;
+return true;
         }
 
-        /// <summary>
+/// <summary>
         /// 检查是否满足任意一个条件（OR关系）
         /// </summary>
         public static bool CheckAny(this IEnumerable<ConditionData> conditions)
         {
             if (conditions == null) return false;
 
-            return conditions.Any(ConditionChecker.CheckCondition);
+return conditions.Any(ConditionChecker.CheckCondition);
         }
     }
 }

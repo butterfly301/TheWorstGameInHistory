@@ -1,4 +1,4 @@
-using HotUpdate.Manager;
+﻿using HotUpdate.Manager;
 using QFramework;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ namespace HotUpdate.Audio.System
             });
         }
 
-        public void PlaySound(string soundName)
+public void PlaySound(string soundName)
         {
             AddressablesManager.Instance.LoadAssetAsync<AudioClip>(soundName, handle =>
             {
@@ -24,7 +24,7 @@ namespace HotUpdate.Audio.System
             });
         }
 
-        public void PlayVoice(string voiceName)
+public void PlayVoice(string voiceName)
         {
             AddressablesManager.Instance.LoadAssetAsync<AudioClip>(voiceName, handle =>
             {
@@ -33,12 +33,12 @@ namespace HotUpdate.Audio.System
             });
         }
 
-        public void PauseMusic()
+public void PauseMusic()
         {
             AudioKit.PauseMusic();
         }
 
-        protected override void OnInit()
+protected override void OnInit()
         {
         }
     }

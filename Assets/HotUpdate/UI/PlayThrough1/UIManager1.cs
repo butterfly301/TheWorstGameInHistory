@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using HotUpdate.Dialogue.View;
 using HotUpdate.Enums;
@@ -22,7 +22,7 @@ namespace HotUpdate.UI
         [SerializeField] private Transform glitchEffectTrans;
         [SerializeField] private Transform touchControlTrans;
 
-        public NarratorDialogueUI NarratorDialogue { get; private set; }
+public NarratorDialogueUI NarratorDialogue { get; private set; }
         public TraditionalDialogueUI TraditionalDialogue { get; private set; }
         public BubbleDialogueUI BubbleDialogue { get; private set; }
         public SkillTreeUI SkillTree { get; private set; }
@@ -32,7 +32,7 @@ namespace HotUpdate.UI
         public GlitchWindowUI GlitchWindow { get; private set; }
         public TouchControlUI TouchControl { get; private set; }
 
-        public override void Init()
+public override void Init()
         {
             uiLayerTrans.Add(UILayer.NarratorUI, narratorUITrans);
             uiLayerTrans.Add(UILayer.traditionDialogueUI, traditionDialogueUITrans);
@@ -44,7 +44,7 @@ namespace HotUpdate.UI
             uiLayerTrans.Add(UILayer.GlitchEffect, glitchEffectTrans);
             uiLayerTrans.Add(UILayer.TouchControl, touchControlTrans);
 
-            NarratorDialogue = new NarratorDialogueUI(uiLayerTrans[UILayer.NarratorUI]);
+NarratorDialogue = new NarratorDialogueUI(uiLayerTrans[UILayer.NarratorUI]);
             TraditionalDialogue = new TraditionalDialogueUI(uiLayerTrans[UILayer.traditionDialogueUI]);
             BubbleDialogue = new BubbleDialogueUI(uiLayerTrans[UILayer.bubbleUI]);
             SkillTree = new SkillTreeUI(uiLayerTrans[UILayer.SkillTreeUI]);
@@ -54,7 +54,7 @@ namespace HotUpdate.UI
             GlitchWindow = new GlitchWindowUI(uiLayerTrans[UILayer.GlitchWindow]);
             TouchControl = new TouchControlUI(uiLayerTrans[UILayer.TouchControl]);
 
-            NarratorDialogue.Init();
+NarratorDialogue.Init();
             TraditionalDialogue.Init();
             BubbleDialogue.Init();
             SkillTree.Init();

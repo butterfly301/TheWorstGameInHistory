@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using HotUpdate.Dialogue.Data;
 using HotUpdate.Effect;
@@ -18,53 +18,53 @@ namespace HotUpdate.Dialogue.View
     {
         [Header("对话组件")] [SerializeField] protected TextMeshProUGUI speakerNameText;
 
-        [SerializeField] protected TextMeshProUGUI dialogueText;
+[SerializeField] protected TextMeshProUGUI dialogueText;
         [SerializeField] protected Transform choicesContainer;
 
-        [Header("打字机配置")] [SerializeField] protected float defaultTypingSpeed = 0.05f;
+[Header("打字机配置")] [SerializeField] protected float defaultTypingSpeed = 0.05f;
 
-        [SerializeField] protected bool canSkip = true;
+[SerializeField] protected bool canSkip = true;
         protected Dictionary<GameObject, int> choiceButtonIndexMap = new();
         protected List<GameObject> currentChoiceButtons = new();
         protected float currentTypingSpeed;
         protected Action<int> onChoiceSelectedCallback;
 
-        protected TypeWriterEffect typeWriterEffect;
+protected TypeWriterEffect typeWriterEffect;
         protected GameObject choiceButtonPrefab;
 
-        protected virtual void OnDestroy()
+protected virtual void OnDestroy()
         {
             ClearChoices();
         }
 
-        public virtual void ShowDialogue(string speaker, string text)
+public virtual void ShowDialogue(string speaker, string text)
         {
             SetSpeakerName(speaker);
             StartTyping(text);
         }
 
-        public virtual void ShowChoices(ChoiceData[] choices, Action<int> onChoiceSelected)
+public virtual void ShowChoices(ChoiceData[] choices, Action<int> onChoiceSelected)
         {
             ClearChoices();
             onChoiceSelectedCallback = onChoiceSelected;
 
-            if (choices == null || choices.Length == 0)
+if (choices == null || choices.Length == 0)
             {
                 Debug.LogWarning("[DialogueViewBase] 选项列表为空");
                 return;
             }
 
-            // 生成选项按钮
+// 生成选项按钮
             for (var i = 0; i < choices.Length; i++) CreateChoiceButton(choices[i], i);
         }
 
-        public virtual void Hide()
+public virtual void Hide()
         {
             gameObject.SetActive(false);
             ClearChoices();
         }
 
-        public virtual void SetTypingSpeed(float speed)
+public virtual void SetTypingSpeed(float speed)
         {
             currentTypingSpeed = speed;
             if (typeWriterEffect != null)
@@ -75,16 +75,16 @@ namespace HotUpdate.Dialogue.View
             }
         }
 
-        public virtual void StartTyping(string text)
+public virtual void StartTyping(string text)
         {
             if (dialogueText == null || typeWriterEffect == null) return;
 
-            dialogueText.text = text;
+dialogueText.text = text;
             typeWriterEffect.SetTypingSpeed(currentTypingSpeed);
             typeWriterEffect.StartTyping();
         }
 
-        public virtual void CompleteTyping()
+public virtual void CompleteTyping()
         {
             if (typeWriterEffect != null && canSkip)
             {
@@ -94,33 +94,33 @@ namespace HotUpdate.Dialogue.View
             }
         }
 
-        public virtual bool IsTyping()
+public virtual bool IsTyping()
         {
             return typeWriterEffect != null && typeWriterEffect.GetIsTyping();
         }
 
-        public virtual void ClearChoices()
+public virtual void ClearChoices()
         {
             foreach (var button in currentChoiceButtons)
                 if (button != null)
                     Destroy(button);
 
-            currentChoiceButtons.Clear();
+currentChoiceButtons.Clear();
             choiceButtonIndexMap.Clear();
         }
 
-        public virtual void SetSpeakerName(string speakerName)
+public virtual void SetSpeakerName(string speakerName)
         {
             if (speakerNameText != null) speakerNameText.text = speakerName;
         }
 
-        public void Init()
+public void Init()
         {
             typeWriterEffect = dialogueText?.GetComponent<TypeWriterEffect>();
             currentTypingSpeed = defaultTypingSpeed;
         }
 
-        /// <summary>
+/// <summary>
         /// 设置选择按钮预制体
         /// </summary>
         public void SetChoiceButtonPrefab(GameObject prefab)
@@ -128,7 +128,7 @@ namespace HotUpdate.Dialogue.View
             choiceButtonPrefab = prefab;
         }
 
-        protected virtual void CreateChoiceButton(ChoiceData choice, int index)
+protected virtual void CreateChoiceButton(ChoiceData choice, int index)
         {
             if (choiceButtonPrefab == null || choicesContainer == null)
             {
@@ -136,25 +136,25 @@ namespace HotUpdate.Dialogue.View
                 return;
             }
 
-            var buttonObj = Instantiate(choiceButtonPrefab, choicesContainer);
+var buttonObj = Instantiate(choiceButtonPrefab, choicesContainer);
             currentChoiceButtons.Add(buttonObj);
             choiceButtonIndexMap[buttonObj] = index;
 
-            var button = buttonObj.GetComponent<Button>();
+var button = buttonObj.GetComponent<Button>();
             if (button != null)
             {
                 var capturedIndex = index; // 捕获索引
                 button.onClick.AddListener(() => OnChoiceClicked(capturedIndex));
             }
 
-            // 设置按钮文本
+// 设置按钮文本
             var buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
             if (buttonText != null)
                 // TODO: 使用本地化系统获取文本
                 buttonText.text = choice.textKey;
         }
 
-        protected virtual void OnChoiceClicked(int choiceIndex)
+protected virtual void OnChoiceClicked(int choiceIndex)
         {
             onChoiceSelectedCallback?.Invoke(choiceIndex);
         }

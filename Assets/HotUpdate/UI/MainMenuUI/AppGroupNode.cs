@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using HotUpdate.Browser;
 using HotUpdate.Core;
@@ -10,42 +10,42 @@ using HotUpdate.Utility;
 using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
-
+
 public class AppGroupNode : MonoBehaviour, IController
 {
     private Button[] buttons;
     private FileDragAndDrop fileDragAndDrop;
     private GameData gameData;
     private MainMenu mainMenu;
-
-    public IArchitecture GetArchitecture()
+
+public IArchitecture GetArchitecture()
     {
         return TheWorstGameInHistory.Interface;
     }
-
-    public void Init(MainMenu mainMenuVar)
+
+public void Init(MainMenu mainMenuVar)
     {
         mainMenu = mainMenuVar;
         gameData = mainMenu.GameData;
-
-        fileDragAndDrop = gameObject.AddComponent<FileDragAndDrop>();
+
+fileDragAndDrop = gameObject.AddComponent<FileDragAndDrop>();
         fileDragAndDrop.OnFilesDropped += OnFilesDropped;
-
-        buttons = GetComponentsInChildren<Button>();
+
+buttons = GetComponentsInChildren<Button>();
         buttons[0].GetComponent<TheLastKnight1789AppButton>()?.Init(mainMenu);
         buttons[1].onClick.AddListener(() => mainMenu.OpenWindow(AddressableKeys.SettingWindow_Prefab, _ => { }));
         buttons[2].onClick.AddListener(() => mainMenu.OpenWindow(AddressableKeys.CreditWindow_Prefab, _ => { }));
         buttons[3].onClick.AddListener(() => mainMenu.OpenWindow(AddressableKeys.FutureUpdatePlanWindow_Prefab, _ => { }));
         buttons[4].onClick.AddListener(() => mainMenu.OpenWindow(AddressableKeys.RubbishCanWindow_Prefab, _ => { }));
         buttons[5].onClick.AddListener(() => this.SendCommand(new OpenURLCommand(URLKeys.WorldBrowser)));
-
-        buttons[6].gameObject.SetActive(gameData.software.Contains(SoftwareName.IceBreaker));
+
+buttons[6].gameObject.SetActive(gameData.software.Contains(SoftwareName.IceBreaker));
         buttons[6].onClick.AddListener(() => mainMenu.OpenWindow(AddressableKeys.IceBreakerPreWindow_Prefab, _ => { }));
-
-        buttons[7].gameObject.SetActive(gameData.software.Contains(SoftwareName.TLH_1793));
+
+buttons[7].gameObject.SetActive(gameData.software.Contains(SoftwareName.TLH_1793));
         buttons[7].onClick.AddListener(() => this.SendCommand(new LoadSceneCommand(AddressableKeys.OpenVideo1_Unity, false)));
-
-        if (!Application.isEditor)
+
+if (!Application.isEditor)
         {
             buttons[8].gameObject.SetActive(false);
         }
@@ -54,8 +54,8 @@ public class AppGroupNode : MonoBehaviour, IController
             buttons[8].onClick.AddListener(() => this.SendCommand(new LoadSceneCommand(AddressableKeys.Login_Unity, false)));
         }
     }
-
-    private void OnFilesDropped(List<string> files)
+
+private void OnFilesDropped(List<string> files)
     {
         foreach (var file in files)
         {
@@ -73,15 +73,15 @@ public class AppGroupNode : MonoBehaviour, IController
             }
         }
     }
-
-    public void EnableSoftware(SoftwareName softwareName)
+
+public void EnableSoftware(SoftwareName softwareName)
     {
         var index = GetSoftwareIndex(softwareName);
         buttons[index].gameObject.SetActive(true);
         this.SendCommand(new AddSoftwareCommand(softwareName));
     }
-
-    private int GetSoftwareIndex(SoftwareName softwareName)
+
+private int GetSoftwareIndex(SoftwareName softwareName)
     {
         switch (softwareName)
         {

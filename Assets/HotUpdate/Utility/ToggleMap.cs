@@ -1,4 +1,4 @@
-using HotUpdate.UI;
+﻿using HotUpdate.UI;
 using UnityEngine;
 
 namespace HotUpdate.Utility
@@ -7,7 +7,7 @@ namespace HotUpdate.Utility
     {
         public bool wantToOpen;
 
-        public void Toggle()
+public void Toggle()
         {
             if (UIManager.Instance is UIManager1 uiManager1)
             {
@@ -22,7 +22,7 @@ namespace HotUpdate.Utility
             }
         }
 
-        public void ToggleWithItemData(IItemEventData itemEventData)
+public void ToggleWithItemData(IItemEventData itemEventData)
         {
             Toggle();
             itemEventData.SetSuccess(true);

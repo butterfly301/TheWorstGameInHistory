@@ -1,4 +1,4 @@
-// IMPORTANT
+﻿// IMPORTANT
 // force all thread functions to be STATIC.
 // => Common.Send/ReceiveLoop is EXTREMELY DANGEROUS because it's too easy to
 //    accidentally share Common state between threads.
@@ -44,21 +44,21 @@ namespace Telepathy
         {
             size = 0;
 
-            // buffer needs to be of Header + MaxMessageSize
+// buffer needs to be of Header + MaxMessageSize
             if (payloadBuffer.Length != 4 + MaxMessageSize)
             {
                 Log.Error($"[Telepathy] ReadMessageBlocking: payloadBuffer needs to be of size 4 + MaxMessageSize = {4 + MaxMessageSize} instead of {payloadBuffer.Length}");
                 return false;
             }
 
-            // read exactly 4 bytes for header (blocking)
+// read exactly 4 bytes for header (blocking)
             if (!stream.ReadExactly(headerBuffer, 4))
                 return false;
 
-            // convert to int
+// convert to int
             size = Utils.BytesToIntBigEndian(headerBuffer);
 
-            // protect against allocation attacks. an attacker might send
+// protect against allocation attacks. an attacker might send
             // multiple fake '2GB header' packets in a row, causing the server
             // to allocate multiple 2GB byte arrays and run out of memory.
             //
@@ -72,13 +72,13 @@ namespace Telepathy
             return false;
         }
 
-        // thread receive function is the same for client and server's clients
+// thread receive function is the same for client and server's clients
         public static void ReceiveLoop(int connectionId, TcpClient client, int MaxMessageSize, MagnificentReceivePipe receivePipe, int QueueLimit)
         {
             // get NetworkStream from client
             NetworkStream stream = client.GetStream();
 
-            // every receive loop needs it's own receive buffer of
+// every receive loop needs it's own receive buffer of
             // HeaderSize + MaxMessageSize
             // to avoid runtime allocations.
             //
@@ -86,20 +86,20 @@ namespace Telepathy
             //            on the server would use the same buffer simulatenously
             byte[] receiveBuffer = new byte[4 + MaxMessageSize];
 
-            // avoid header[4] allocations
+// avoid header[4] allocations
             //
             // IMPORTANT: DO NOT make this a member, otherwise every connection
             //            on the server would use the same buffer simulatenously
             byte[] headerBuffer = new byte[4];
 
-            // absolutely must wrap with try/catch, otherwise thread exceptions
+// absolutely must wrap with try/catch, otherwise thread exceptions
             // are silent
             try
             {
                 // add connected event to pipe
                 receivePipe.Enqueue(connectionId, EventType.Connected, default);
 
-                // let's talk about reading data.
+// let's talk about reading data.
                 // -> normally we would read as much as possible and then
                 //    extract as many <size,content>,<size,content> messages
                 //    as we received this time. this is really complicated
@@ -122,15 +122,15 @@ namespace Telepathy
                         // break instead of return so stream close still happens!
                         break;
 
-                    // create arraysegment for the read message
+// create arraysegment for the read message
                     ArraySegment<byte> message = new ArraySegment<byte>(receiveBuffer, 0, size);
 
-                    // send to main thread via pipe
+// send to main thread via pipe
                     // -> it'll copy the message internally so we can reuse the
                     //    receive buffer for next read!
                     receivePipe.Enqueue(connectionId, EventType.Data, message);
 
-                    // disconnect if receive pipe gets too big for this connectionId.
+// disconnect if receive pipe gets too big for this connectionId.
                     // -> avoids ever growing queue memory if network is slower
                     //    than input
                     // -> disconnecting is great for load balancing. better to
@@ -141,11 +141,11 @@ namespace Telepathy
                         // log the reason
                         Log.Warning($"[Telepathy] receivePipe reached limit of {QueueLimit} for connectionId {connectionId}. This can happen if network messages come in way faster than we manage to process them. Disconnecting this connection for load balancing.");
 
-                        // IMPORTANT: do NOT clear the whole queue. we use one
+// IMPORTANT: do NOT clear the whole queue. we use one
                         // queue for all connections.
                         //receivePipe.Clear();
 
-                        // just break. the finally{} will close everything.
+// just break. the finally{} will close everything.
                         break;
                     }
                 }
@@ -163,7 +163,7 @@ namespace Telepathy
                 stream.Close();
                 client.Close();
 
-                // add 'Disconnected' message after disconnecting properly.
+// add 'Disconnected' message after disconnecting properly.
                 // -> always AFTER closing the streams to avoid a race condition
                 //    where Disconnected -> Reconnect wouldn't work because
                 //    Connected is still true for a short moment before the stream
@@ -179,14 +179,14 @@ namespace Telepathy
             // get NetworkStream from client
             NetworkStream stream = client.GetStream();
 
-            // avoid payload[packetSize] allocations. size increases dynamically as
+// avoid payload[packetSize] allocations. size increases dynamically as
             // needed for batching.
             //
             // IMPORTANT: DO NOT make this a member, otherwise every connection
             //            on the server would use the same buffer simulatenously
             byte[] payload = null;
 
-            try
+try
             {
                 while (client.Connected) // try this. client will get closed eventually.
                 {
@@ -198,7 +198,7 @@ namespace Telepathy
                     //    the next Send call.
                     sendPending.Reset(); // WaitOne() blocks until .Set() again
 
-                    // dequeue & serialize all
+// dequeue & serialize all
                     // a locked{} TryDequeueAll is twice as fast as
                     // ConcurrentQueue, see SafeQueue.cs!
                     if (sendPipe.DequeueAndSerializeAll(ref payload, out int packetSize))
@@ -209,7 +209,7 @@ namespace Telepathy
                             break;
                     }
 
-                    // don't choke up the CPU: wait until queue not empty anymore
+// don't choke up the CPU: wait until queue not empty anymore
                     sendPending.WaitOne();
                 }
             }

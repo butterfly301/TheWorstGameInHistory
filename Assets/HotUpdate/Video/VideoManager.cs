@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using HotUpdate.Core;
 using HotUpdate.Interface;
@@ -9,31 +9,31 @@ using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 using UnityEngine.Video;
-
+
 namespace HotUpdate.Video
 {
     public class VideoManager : MonoSingleton<VideoManager>, IController,IAutoBind
     {
         private GameName gameName;
         private bool hasSkipButton;
-
-        private bool isPlaying;
+
+private bool isPlaying;
         public Action OnVideoEndEvent;
         [SerializeField]private GameObject pauseIcon;
         [SerializeField]private RawImage rawImage;
         private GameObject skipButton;
         private VideoPlayer videoPlayer;
         public bool hasTriggeredSkipButton = false; // New field to track if TriggerSkipButton has been called
-
-        private void Update()
+
+private void Update()
         {
             if (Input.anyKeyDown)
                 if (isPlaying)
                     if (!hasSkipButton)
                         TriggerSkipButton();
         }
-
-        protected override void OnDestroy()
+
+protected override void OnDestroy()
         {
             OnVideoEndEvent = null;
             if (videoPlayer != null)
@@ -42,36 +42,36 @@ namespace HotUpdate.Video
                 videoPlayer.errorReceived -= OnVideoError;
                 videoPlayer.loopPointReached -= OnVideoEnd;
             }
-
-            base.OnDestroy();
+
+base.OnDestroy();
         }
-
-        public IArchitecture GetArchitecture()
+
+public IArchitecture GetArchitecture()
         {
             return TheWorstGameInHistory.Interface;
         }
-
-        public void Init(GameName gameNameVar = GameName.None)
+
+public void Init(GameName gameNameVar = GameName.None)
         {
             gameName = gameNameVar;
-
-            AddressablesManager.Instance.LoadAssetAsync<RenderTexture>(
+
+AddressablesManager.Instance.LoadAssetAsync<RenderTexture>(
                 AddressableKeys.Video_Render_Texture_RenderTexture,
                 handle =>
                 {
                     rawImage.texture = handle.Result;
                 });
             pauseIcon.SetActive(false);
-
-            LoadSkipButtonByGameName();
-
-            videoPlayer = GetComponent<VideoPlayer>();
+
+LoadSkipButtonByGameName();
+
+videoPlayer = GetComponent<VideoPlayer>();
             videoPlayer.prepareCompleted += OnVideoPrepared;
             videoPlayer.errorReceived += OnVideoError;
             videoPlayer.loopPointReached += OnVideoEnd;
         }
-
-        private void LoadSkipButtonByGameName()
+
+private void LoadSkipButtonByGameName()
         {
             switch (gameName)
             {
@@ -90,21 +90,21 @@ namespace HotUpdate.Video
                     break;
             }
         }
-
-        private void TriggerSkipButton()
+
+private void TriggerSkipButton()
         {
             if (hasTriggeredSkipButton) return;
-
-            if (skipButton != null)
+
+if (skipButton != null)
             {
                 var skipButtonObj = Instantiate(skipButton, transform);
                 skipButtonObj.GetComponent<SkipButton>()?.Init();
             }
-
-            hasTriggeredSkipButton = true; 
+
+hasTriggeredSkipButton = true; 
         }
-
-        /// <summary>
+
+/// <summary>
         ///     播放视频，现在会根据当前语言动态选择文件
         /// </summary>
         /// <param name="baseVideoName">视频的基础名称，不带语言后缀和扩展名 (例如 "OpenVideo0")</param>
@@ -112,74 +112,74 @@ namespace HotUpdate.Video
         {
             // 获取当前语言代码
             var langCode = LocalizationSettings.SelectedLocale.Identifier.Code;
-
-            //构建完整文件名 (例如 "OpenVideo0_zh-CN.mp4")
+
+//构建完整文件名 (例如 "OpenVideo0_zh-CN.mp4")
             var fullFileName = $"{baseVideoName}_{langCode}.mp4";
-
-            // 组合StreamingAssets路径
+
+// 组合StreamingAssets路径
             var videoPath = Path.Combine(Application.streamingAssetsPath, "Videos", fullFileName);
-
-            // 检查文件是否存在，并提供回退机制
+
+// 检查文件是否存在，并提供回退机制
             if (!File.Exists(videoPath))
             {
                 Debug.LogWarning($"未找到当前语言 '{langCode}' 的视频文件，尝试使用默认英文版。");
                 fullFileName = $"{baseVideoName}_en-US.mp4"; // 默认回退到英文版
                 videoPath = Path.Combine(Application.streamingAssetsPath, "Videos", fullFileName);
-
-                if (!File.Exists(videoPath))
+
+if (!File.Exists(videoPath))
                 {
                     Debug.LogError($"连默认的英文版视频文件都找不到: {videoPath}");
                     return;
                 }
             }
-
-            // 设置URL并准备播放
+
+// 设置URL并准备播放
             videoPlayer.url = videoPath;
             videoPlayer.Prepare();
         }
-
-        private void OnVideoPrepared(VideoPlayer source)
+
+private void OnVideoPrepared(VideoPlayer source)
         {
             rawImage.gameObject.SetActive(true);
             isPlaying = true;
             videoPlayer.Play();
         }
-
-        private void OnVideoError(VideoPlayer source, string message)
+
+private void OnVideoError(VideoPlayer source, string message)
         {
             Debug.LogError($"视频播放错误: {message}");
             Debug.LogError($"URL: {source.url}");
         }
-
-        private void OnVideoEnd(VideoPlayer source)
+
+private void OnVideoEnd(VideoPlayer source)
         {
             rawImage.gameObject.SetActive(false);
             isPlaying = false;
             OnVideoEndEvent?.Invoke();
         }
-
-        public void Play()
+
+public void Play()
         {
             isPlaying = true;
             pauseIcon.SetActive(false);
             videoPlayer.Play();
         }
-
-        public void PauseVideo()
+
+public void PauseVideo()
         {
             isPlaying = false;
             pauseIcon.SetActive(true);
             videoPlayer.Pause();
         }
-
-        public void StopVideo()
+
+public void StopVideo()
         {
             isPlaying = false;
             pauseIcon.SetActive(true);
             videoPlayer.Stop();
         }
-
-        public void SkipVideo()
+
+public void SkipVideo()
         {
             if (videoPlayer != null && videoPlayer.isPlaying)
             {
@@ -189,14 +189,14 @@ namespace HotUpdate.Video
                 OnVideoEndEvent?.Invoke();
             }
         }
-
-        public void SetHasSkipButton(bool hasSkipButtonBoolValue)
+
+public void SetHasSkipButton(bool hasSkipButtonBoolValue)
         {
             hasSkipButton = hasSkipButtonBoolValue;
         }
     }
-
-    public enum GameName
+
+public enum GameName
     {
         None,
         TLH1,

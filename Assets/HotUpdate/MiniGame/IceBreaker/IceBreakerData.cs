@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace HotUpdate.MiniGame.IceBreaker
         public float explosionForce;
     }
 
-    [Serializable]
+[Serializable]
     public class LevelData
     {
         public float levelDuration;
@@ -33,7 +33,7 @@ namespace HotUpdate.MiniGame.IceBreaker
         public float maxZ;
     }
 
-    [Serializable]
+[Serializable]
     public class EnemyData
     {
         public float speed;
@@ -42,7 +42,7 @@ namespace HotUpdate.MiniGame.IceBreaker
         public float explosionForce;
     }
 
-    [Serializable]
+[Serializable]
     public class DownloadData
     {
         public List<string> downloadTLH2Urls;
@@ -50,7 +50,7 @@ namespace HotUpdate.MiniGame.IceBreaker
         public string targetSubFolder;
     }
 
-    [Serializable]
+[Serializable]
     public class IceBreakerData
     {
         public PlayerData playerData;

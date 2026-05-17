@@ -1,10 +1,10 @@
-using HotUpdate.Interface;
+﻿using HotUpdate.Interface;
 using HotUpdate.UI;
 using HotUpdate.Utility;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+
 public class SystemAttribute : MonoBehaviour, IAutoBind
 {
     private WindowBase audioWindow;
@@ -12,15 +12,15 @@ public class SystemAttribute : MonoBehaviour, IAutoBind
     private MainMenu mainMenu;
     [SerializeField] private Button sound;
     [SerializeField] private TextMeshProUGUI date;
-
-    public void Init(MainMenu mainMenuVar)
+
+public void Init(MainMenu mainMenuVar)
     {
         mainMenu = mainMenuVar;
         sound.onClick.AddListener(ToggleAudioWindow);
         date.SetText(CurrentTimeUtility.GetCurrentDateString());
     }
-
-    private void ToggleAudioWindow()
+
+private void ToggleAudioWindow()
     {
         isAudioWindowOpen = !isAudioWindowOpen;
         if (isAudioWindowOpen)

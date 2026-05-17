@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,74 +26,74 @@ namespace HotUpdate.Dialogue.Controller
         /// </summary>
         public Action<string> OnDialogueComplete;
 
-        /// <summary>
+/// <summary>
         ///     是否可以跳过打字
         /// </summary>
         private bool canSkipTyping = true;
 
-        /// <summary>
+/// <summary>
         ///     当前对话数据
         /// </summary>
         private DialogueData currentDialogueData;
 
-        /// <summary>
+/// <summary>
         ///     当前对话ID
         /// </summary>
         private string currentDialogueId;
 
-        /// <summary>
+/// <summary>
         ///     当前节点ID
         /// </summary>
         private string currentNodeId;
 
-        /// <summary>
+/// <summary>
         ///     当前对话状态
         /// </summary>
         private DialogueState currentState = DialogueState.Idle;
 
-        /// <summary>
+/// <summary>
         ///     当前对话视图
         /// </summary>
         private IDialogueView currentView;
 
-        /// <summary>
+/// <summary>
         ///     对话模型
         /// </summary>
         private DialogueModel dialogueModel;
 
-        /// <summary>
+/// <summary>
         ///     对话系统
         /// </summary>
         private DialogueSystem dialogueSystem;
 
-        /// <summary>
+/// <summary>
         ///     获取当前状态
         /// </summary>
         public DialogueState CurrentState => currentState;
 
-        /// <summary>
+/// <summary>
         ///     获取当前对话ID
         /// </summary>
         public string CurrentDialogueId => currentDialogueId;
 
-        private void Awake()
+private void Awake()
         {
             // 获取系统和模型
             dialogueSystem = this.GetSystem<DialogueSystem>();
             dialogueModel = this.GetModel<DialogueModel>();
 
-            // 监听系统事件
+// 监听系统事件
             dialogueSystem.OnDialogueStart.AddListener(OnDialogueStartEvent);
             dialogueSystem.OnDialogueEnd.AddListener(OnDialogueEndEvent);
         }
 
-        private void Update()
+private void Update()
         {
             // 处理用户输入
             HandleInput();
         }
 
-        private void OnDestroy()
+private void OnDestroy()
         {
             // 取消监听系统事件
             if (dialogueSystem != null)
@@ -103,12 +103,12 @@ namespace HotUpdate.Dialogue.Controller
             }
         }
 
-        public IArchitecture GetArchitecture()
+public IArchitecture GetArchitecture()
         {
             return TheWorstGameInHistory.Interface;
         }
 
-        /// <summary>
+/// <summary>
         ///     开始对话
         /// </summary>
         public void StartDialogue(string dialogueId)
@@ -119,10 +119,10 @@ namespace HotUpdate.Dialogue.Controller
                 return;
             }
 
-            currentDialogueId = dialogueId;
+currentDialogueId = dialogueId;
             ChangeState(DialogueState.Loading);
 
-            // 加载对话数据
+// 加载对话数据
             dialogueSystem.LoadDialogueDataAsync(
                 dialogueId,
                 data =>
@@ -133,17 +133,17 @@ namespace HotUpdate.Dialogue.Controller
                         return;
                     }
 
-                    currentDialogueData = data;
+currentDialogueData = data;
 
-                    if (data.config == null)
+if (data.config == null)
                     {
                         Debug.LogError($"[DialogueController] data.config 为null!");
                         return;
                     }
 
-                    canSkipTyping = data.config.canSkip;
+canSkipTyping = data.config.canSkip;
 
-                    // 检查是否需要恢复进度
+// 检查是否需要恢复进度
                     if (data.config.saveProgress && dialogueModel.HasDialogueProgress(dialogueId))
                     {
                         var progress = dialogueModel.GetDialogueProgress(dialogueId);
@@ -154,10 +154,10 @@ namespace HotUpdate.Dialogue.Controller
                         currentNodeId = data.config.startNodeId;
                     }
 
-                    // 创建视图
+// 创建视图
                     CreateDialogueView();
 
-                    // 检查视图是否创建成功
+// 检查视图是否创建成功
                     if (currentView == null)
                     {
                         Debug.LogError($"[DialogueController] 视图创建失败，无法启动对话");
@@ -168,7 +168,7 @@ namespace HotUpdate.Dialogue.Controller
                         return;
                     }
 
-                    // 开始对话
+// 开始对话
                     StartDialogueInternal();
                 },
                 error =>
@@ -178,13 +178,13 @@ namespace HotUpdate.Dialogue.Controller
                     currentDialogueId = null;
                     currentDialogueData = null;
 
-                    // 加载失败也触发完成回调
+// 加载失败也触发完成回调
                     OnDialogueComplete?.Invoke(dialogueId);
                 }
             );
         }
 
-        /// <summary>
+/// <summary>
         ///     继续对话（按继续键）
         /// </summary>
         public void ContinueDialogue()
@@ -205,7 +205,7 @@ namespace HotUpdate.Dialogue.Controller
             }
         }
 
-        /// <summary>
+/// <summary>
         ///     选择选项
         /// </summary>
         public void SelectChoice(int choiceIndex)
@@ -216,25 +216,25 @@ namespace HotUpdate.Dialogue.Controller
                 return;
             }
 
-            var currentNode = currentDialogueData.config.nodes[currentNodeId];
+var currentNode = currentDialogueData.config.nodes[currentNodeId];
 
-            if (choiceIndex < 0 || choiceIndex >= currentNode.choices.Count)
+if (choiceIndex < 0 || choiceIndex >= currentNode.choices.Count)
             {
                 Debug.LogError($"[DialogueController] 选项索引超出范围: {choiceIndex}");
                 return;
             }
 
-            var selectedChoice = currentNode.choices[choiceIndex];
+var selectedChoice = currentNode.choices[choiceIndex];
 
-            // 触发选项选择事件
+// 触发选项选择事件
             dialogueSystem.TriggerChoiceSelected(currentDialogueId, choiceIndex);
 
-            // 跳转到下一个节点
+// 跳转到下一个节点
             currentNodeId = selectedChoice.nextNodeId;
             ShowNode();
         }
 
-        /// <summary>
+/// <summary>
         ///     跳过打字
         /// </summary>
         public void SkipTyping()
@@ -246,57 +246,57 @@ namespace HotUpdate.Dialogue.Controller
             }
         }
 
-        /// <summary>
+/// <summary>
         ///     结束对话
         /// </summary>
         public void EndDialogue()
         {
             if (currentState == DialogueState.Idle || currentState == DialogueState.Ended) return;
 
-            // 保存进度
+// 保存进度
             if (currentDialogueData != null && currentDialogueData.config.saveProgress)
                 dialogueModel.UpdateDialogueProgress(currentDialogueId, currentNodeId, true);
 
-            // 隐藏视图
+// 隐藏视图
             if (currentView != null) currentView.Hide();
 
-            // 触发对话结束事件
+// 触发对话结束事件
             dialogueSystem.TriggerDialogueEnd(currentDialogueId);
 
-            // 清理数据
+// 清理数据
             var completedDialogueId = currentDialogueId;
             currentDialogueId = null;
             currentDialogueData = null;
             currentNodeId = null;
             currentView = null;
 
-            ChangeState(DialogueState.Ended);
+ChangeState(DialogueState.Ended);
 
-            // 触发完成回调
+// 触发完成回调
             OnDialogueComplete?.Invoke(completedDialogueId);
 
-            // 延迟后返回空闲状态
+// 延迟后返回空闲状态
             StartCoroutine(ReturnToIdleDelayed());
         }
 
-        /// <summary>
+/// <summary>
         ///     暂停对话
         /// </summary>
         public void PauseDialogue()
         {
             if (currentState == DialogueState.Idle || currentState == DialogueState.Ended) return;
 
-            ChangeState(DialogueState.Paused);
+ChangeState(DialogueState.Paused);
         }
 
-        /// <summary>
+/// <summary>
         ///     恢复对话
         /// </summary>
         public void ResumeDialogue()
         {
             if (currentState != DialogueState.Paused) return;
 
-            // 根据视图状态恢复
+// 根据视图状态恢复
             if (currentView != null && currentView.IsTyping())
                 ChangeState(DialogueState.Typing);
             else if (currentDialogueData != null && currentDialogueData.config.nodes[currentNodeId].choices != null &&
@@ -306,7 +306,7 @@ namespace HotUpdate.Dialogue.Controller
                 ChangeState(DialogueState.Waiting);
         }
 
-        /// <summary>
+/// <summary>
         ///     内部开始对话
         /// </summary>
         private void StartDialogueInternal()
@@ -314,16 +314,16 @@ namespace HotUpdate.Dialogue.Controller
             // 触发对话开始事件
             dialogueSystem.TriggerDialogueStart(currentDialogueId);
 
-            // 执行对话开始时的事件
+// 执行对话开始时的事件
             if (currentDialogueData.config.events?.onStart != null)
                 foreach (var eventData in currentDialogueData.config.events.onStart)
                     dialogueSystem.ExecuteDialogueEvents(eventData, currentDialogueId);
 
-            // 显示第一个节点
+// 显示第一个节点
             ShowNode();
         }
 
-        /// <summary>
+/// <summary>
         ///     显示节点
         /// </summary>
         private void ShowNode()
@@ -335,21 +335,21 @@ namespace HotUpdate.Dialogue.Controller
                 return;
             }
 
-            if (!currentDialogueData.config.nodes.ContainsKey(currentNodeId))
+if (!currentDialogueData.config.nodes.ContainsKey(currentNodeId))
             {
                 Debug.LogError($"[DialogueController] 节点不存在: {currentNodeId}");
                 EndDialogue();
                 return;
             }
 
-            var node = currentDialogueData.config.nodes[currentNodeId];
+var node = currentDialogueData.config.nodes[currentNodeId];
             // 触发节点切换事件
             dialogueSystem.TriggerNodeChanged(currentDialogueId, currentNodeId);
 
-            // 检查节点条件（条件分支）
+// 检查节点条件（条件分支）
             var conditionResult = DialogueCondition.CheckNodeConditions(node.conditions);
 
-            if (!string.IsNullOrEmpty(conditionResult))
+if (!string.IsNullOrEmpty(conditionResult))
             {
                 // 跳转到条件指定的节点
                 currentNodeId = conditionResult;
@@ -357,21 +357,21 @@ namespace HotUpdate.Dialogue.Controller
                 return;
             }
 
-            // 执行节点事件（包括播放语音、自定义事件等）
+// 执行节点事件（包括播放语音、自定义事件等）
             if (node.events != null)
                 foreach (var eventData in node.events)
                     dialogueSystem.ExecuteDialogueEvents(eventData, currentDialogueId);
 
-            // 获取本地化文本
+// 获取本地化文本
             var localizedText = dialogueSystem.GetLocalizedText(node.textKey);
 
-            // 显示对话
+// 显示对话
             currentView.ShowDialogue(node.speaker, localizedText);
 
-            // 设置打字速度
+// 设置打字速度
             currentView.SetTypingSpeed(currentDialogueData.config.typingSpeed);
 
-            // 检查是否有选项
+// 检查是否有选项
             if (node.choices != null && node.choices.Count > 0)
                 // 等待打字完成后显示选项
                 StartCoroutine(ShowChoicesAfterTyping(node.choices));
@@ -380,22 +380,22 @@ namespace HotUpdate.Dialogue.Controller
                 ChangeState(DialogueState.Typing);
         }
 
-        /// <summary>
+/// <summary>
         ///     等待打字完成后显示选项
         /// </summary>
         private IEnumerator ShowChoicesAfterTyping(List<ChoiceData> choices)
         {
             ChangeState(DialogueState.Typing);
 
-            // 等待打字完成
+// 等待打字完成
             while (currentView != null && currentView.IsTyping()) yield return null;
 
-            // 过滤和显示选项
+// 过滤和显示选项
             var availableChoices = choices.Where(c =>
                 DialogueCondition.CheckChoiceCondition(c.condition)
             ).ToArray();
 
-            if (availableChoices.Length > 0)
+if (availableChoices.Length > 0)
             {
                 currentView.ShowChoices(availableChoices, SelectChoice);
                 ChangeState(DialogueState.ShowingChoices);
@@ -407,23 +407,23 @@ namespace HotUpdate.Dialogue.Controller
             }
         }
 
-        /// <summary>
+/// <summary>
         ///     进入下一个节点
         /// </summary>
         private void NextNode()
         {
             var currentNode = currentDialogueData.config.nodes[currentNodeId];
 
-            if (!string.IsNullOrEmpty(currentNode.nextNodeId))
+if (!string.IsNullOrEmpty(currentNode.nextNodeId))
             {
                 // 有下一个节点
                 currentNodeId = currentNode.nextNodeId;
 
-                // 保存进度
+// 保存进度
                 if (currentDialogueData.config.saveProgress)
                     dialogueModel.UpdateDialogueProgress(currentDialogueId, currentNodeId);
 
-                ShowNode();
+ShowNode();
             }
             else
             {
@@ -432,7 +432,7 @@ namespace HotUpdate.Dialogue.Controller
             }
         }
 
-        /// <summary>
+/// <summary>
         ///     创建对话视图
         /// </summary>
         private void CreateDialogueView()
@@ -440,7 +440,7 @@ namespace HotUpdate.Dialogue.Controller
             // 获取视图类型
             DialogueViewType viewType = currentDialogueData.config.viewType;
 
-            // 通过 UIManager1 暴露的子组件入口获取并显示对话视图
+// 通过 UIManager1 暴露的子组件入口获取并显示对话视图
             if (UIManager.Instance is UIManager1 uiManager1)
             {
                 currentView = viewType switch
@@ -462,7 +462,7 @@ namespace HotUpdate.Dialogue.Controller
             }
         }
 
-        /// <summary>
+/// <summary>
         ///     处理用户输入
         /// </summary>
         private void HandleInput()
@@ -471,23 +471,23 @@ namespace HotUpdate.Dialogue.Controller
                 currentState == DialogueState.Loading || currentState == DialogueState.Paused)
                 return;
 
-            // 检查继续键（可以根据项目需求修改按键）
+// 检查继续键（可以根据项目需求修改按键）
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) ||
                 Input.GetMouseButtonDown(0))
                 ContinueDialogue();
         }
 
-        /// <summary>
+/// <summary>
         ///     改变状态
         /// </summary>
         private void ChangeState(DialogueState newState)
         {
             if (currentState == newState) return;
 
-            currentState = newState;
+currentState = newState;
         }
 
-        /// <summary>
+/// <summary>
         ///     延迟返回空闲状态
         /// </summary>
         private IEnumerator ReturnToIdleDelayed()
@@ -496,14 +496,14 @@ namespace HotUpdate.Dialogue.Controller
             ChangeState(DialogueState.Idle);
         }
 
-        /// <summary>
+/// <summary>
         ///     对话开始事件回调
         /// </summary>
         private void OnDialogueStartEvent(string dialogueId)
         {
         }
 
-        /// <summary>
+/// <summary>
         ///     对话结束事件回调
         /// </summary>
         private void OnDialogueEndEvent(string dialogueId)

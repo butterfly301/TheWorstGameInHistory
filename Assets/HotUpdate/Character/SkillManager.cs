@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using HotUpdate.Core;
@@ -15,12 +15,12 @@ namespace HotUpdate.Manager
     {
         public static SkillManager Instance;
 
-        static SkillManager()
+static SkillManager()
         {
             Instance = new SkillManager();
         }
 
-        public bool IsSkillUnlocked(CharacterName name, SkillType type)
+public bool IsSkillUnlocked(CharacterName name, SkillType type)
         {
             var data = this.GetModel<GameDataModel>().CurrentGameData.Value;
             for (int i = 0; i < data.skillData.Count; ++i)
@@ -29,10 +29,10 @@ namespace HotUpdate.Manager
                 if (data.skillData[i].skills.Contains(type)) return true;
             }
 
-            return false;
+return false;
         }
 
-        public void UnlockSkill(CharacterName name, SkillType type)
+public void UnlockSkill(CharacterName name, SkillType type)
         {
             var data = this.GetModel<GameDataModel>().CurrentGameData.Value;
             Debug.Log(JsonUtility.ToJson(data));
@@ -44,12 +44,12 @@ namespace HotUpdate.Manager
                 return;
             }
 
-            SkillData newData = new SkillData { name = name, skills = new List<SkillType>() };
+SkillData newData = new SkillData { name = name, skills = new List<SkillType>() };
             newData.skills.Add(type);
             data.skillData.Add(newData);
         }
 
-        public IArchitecture GetArchitecture()
+public IArchitecture GetArchitecture()
         {
             return TheWorstGameInHistory.Interface;
         }

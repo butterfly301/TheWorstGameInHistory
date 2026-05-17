@@ -1,4 +1,4 @@
-// a magnificent send pipe to shield us from all of life's complexities.
+﻿// a magnificent send pipe to shield us from all of life's complexities.
 // safely sends messages from main thread to send thread.
 // -> thread safety built in
 // -> byte[] pooling coming in the future
@@ -22,7 +22,7 @@ namespace Telepathy
         // IMPORTANT: lock{} all usages!
         readonly Queue<ArraySegment<byte>> queue = new Queue<ArraySegment<byte>>();
 
-        // byte[] pool to avoid allocations
+// byte[] pool to avoid allocations
         // Take & Return is beautifully encapsulated in the pipe.
         // the outside does not need to worry about anything.
         // and it can be tested easily.
@@ -30,27 +30,27 @@ namespace Telepathy
         // IMPORTANT: lock{} all usages!
         Pool<byte[]> pool;
 
-        // constructor
+// constructor
         public MagnificentSendPipe(int MaxMessageSize)
         {
             // initialize pool to create max message sized byte[]s each time
             pool = new Pool<byte[]>(() => new byte[MaxMessageSize]);
         }
 
-        // for statistics. don't call Count and assume that it's the same after
+// for statistics. don't call Count and assume that it's the same after
         // the call.
         public int Count
         {
             get { lock (this) { return queue.Count; } }
         }
 
-        // pool count for testing
+// pool count for testing
         public int PoolCount
         {
             get { lock (this) { return pool.Count(); } }
         }
 
-        // enqueue a message
+// enqueue a message
         // arraysegment for allocation free sends later.
         // -> the segment's array is only used until Enqueue() returns!
         public void Enqueue(ArraySegment<byte> message)
@@ -61,21 +61,21 @@ namespace Telepathy
                 // ArraySegment array is only valid until returning, so copy
                 // it into a byte[] that we can queue safely.
 
-                // get one from the pool first to avoid allocations
+// get one from the pool first to avoid allocations
                 byte[] bytes = pool.Take();
 
-                // copy into it
+// copy into it
                 Buffer.BlockCopy(message.Array, message.Offset, bytes, 0, message.Count);
 
-                // indicate which part is the message
+// indicate which part is the message
                 ArraySegment<byte> segment = new ArraySegment<byte>(bytes, 0, message.Count);
 
-                // now enqueue it
+// now enqueue it
                 queue.Enqueue(segment);
             }
         }
 
-        // send threads need to dequeue each byte[] and write it into the socket
+// send threads need to dequeue each byte[] and write it into the socket
         // -> dequeueing one byte[] after another works, but it's WAY slower
         //    than dequeueing all immediately (locks only once)
         //    lock{} & DequeueAll is WAY faster than ConcurrentQueue & dequeue
@@ -108,7 +108,7 @@ namespace Telepathy
                 if (queue.Count == 0)
                     return false;
 
-                // we might have multiple pending messages. merge into one
+// we might have multiple pending messages. merge into one
                 // packet to avoid TCP overheads and improve performance.
                 //
                 // IMPORTANT: Mirror & DOTSNET already batch into MaxMessageSize
@@ -119,37 +119,37 @@ namespace Telepathy
                 foreach (ArraySegment<byte> message in queue)
                     packetSize += 4 + message.Count; // header + content
 
-                // create payload buffer if not created yet or previous one is
+// create payload buffer if not created yet or previous one is
                 // too small
                 // IMPORTANT: payload.Length might be > packetSize! don't use it!
                 if (payload == null || payload.Length < packetSize)
                     payload = new byte[packetSize];
 
-                // dequeue all byte[] messages and serialize into the packet
+// dequeue all byte[] messages and serialize into the packet
                 int position = 0;
                 while (queue.Count > 0)
                 {
                     // dequeue
                     ArraySegment<byte> message = queue.Dequeue();
 
-                    // write header (size) into buffer at position
+// write header (size) into buffer at position
                     Utils.IntToBytesBigEndianNonAlloc(message.Count, payload, position);
                     position += 4;
 
-                    // copy message into payload at position
+// copy message into payload at position
                     Buffer.BlockCopy(message.Array, message.Offset, payload, position, message.Count);
                     position += message.Count;
 
-                    // return to pool so it can be reused (avoids allocations!)
+// return to pool so it can be reused (avoids allocations!)
                     pool.Return(message.Array);
                 }
 
-                // we did serialize something
+// we did serialize something
                 return true;
             }
         }
 
-        public void Clear()
+public void Clear()
         {
             // pool & queue usage always needs to be locked
             lock (this)

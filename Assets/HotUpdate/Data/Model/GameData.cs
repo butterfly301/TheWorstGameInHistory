@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace HotUpdate.Data.Model
@@ -11,7 +11,7 @@ namespace HotUpdate.Data.Model
         public List<SkillData> skillData = new();
     }
 
-    public enum SoftwareName
+public enum SoftwareName
     {
         IceBreaker,
         TLH_1793

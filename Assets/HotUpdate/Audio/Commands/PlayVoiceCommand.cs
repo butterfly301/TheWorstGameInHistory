@@ -1,4 +1,4 @@
-using HotUpdate.Audio.System;
+﻿using HotUpdate.Audio.System;
 using QFramework;
 
 namespace HotUpdate.Audio.Commands
@@ -7,12 +7,12 @@ namespace HotUpdate.Audio.Commands
     {
         private readonly string voiceName;
 
-        public PlayVoiceCommand(string name)
+public PlayVoiceCommand(string name)
         {
             voiceName = name;
         }
 
-        protected override void OnExecute()
+protected override void OnExecute()
         {
             this.GetSystem<AudioSystem>().PlayVoice(voiceName);
         }

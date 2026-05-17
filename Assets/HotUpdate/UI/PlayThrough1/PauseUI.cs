@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using HotUpdate.Enums;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
 using UnityEngine;
 using Object = UnityEngine.Object;
-
+
 namespace HotUpdate.UI
 {
     /// <summary>
@@ -16,13 +16,13 @@ namespace HotUpdate.UI
         private readonly Transform parentTransform;
         private GameObject pauseUIPrefab;
         private GameObject pauseUIObj;
-
-        public PauseUI(Transform parent)
+
+public PauseUI(Transform parent)
         {
             parentTransform = parent;
         }
-
-        /// <summary>
+
+/// <summary>
         /// 初始化暂停UI系统
         /// </summary>
         public void Init()
@@ -37,27 +37,27 @@ namespace HotUpdate.UI
                     ClosePausePanel();
                 }
             );
-
-            RegisterPauseEvent();
+
+RegisterPauseEvent();
         }
-
-        /// <summary>
+
+/// <summary>
         /// 打开暂停面板
         /// </summary>
         public void OpenPausePanel()
         {
             if (pauseUIObj != null) pauseUIObj.SetActive(true);
         }
-
-        /// <summary>
+
+/// <summary>
         /// 关闭暂停面板
         /// </summary>
         public void ClosePausePanel()
         {
             if (pauseUIObj != null) pauseUIObj.SetActive(false);
         }
-
-        /// <summary>
+
+/// <summary>
         /// 注册暂停事件
         /// </summary>
         private void RegisterPauseEvent()

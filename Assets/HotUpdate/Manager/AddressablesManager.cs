@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -12,122 +12,122 @@ namespace HotUpdate.Manager
         public uint count;
         public AsyncOperationHandle handle;
 
-        public AddressablesInfo(AsyncOperationHandle handle)
+public AddressablesInfo(AsyncOperationHandle handle)
         {
             this.handle = handle;
             count = 1;
         }
     }
 
-    public class AddressablesManager
+public class AddressablesManager
     {
         private readonly Dictionary<string, AddressablesInfo> resDic = new();
 
-        private AddressablesManager()
+private AddressablesManager()
         {
         }
 
-        public static AddressablesManager Instance { get; } = new();
+public static AddressablesManager Instance { get; } = new();
 
-        #region Synchronous Loading Method
+#region Synchronous Loading Method
 
-        /// <summary>
+/// <summary>
         ///     Load an Addressables asset synchronously. This will block the caller until completion.
         /// </summary>
         public T LoadAssetSynchronously<T>(string name) where T : class
         {
             var keyName = name + "_" + typeof(T).Name;
 
-            if (resDic.ContainsKey(keyName))
+if (resDic.ContainsKey(keyName))
             {
                 resDic[keyName].count++;
                 Debug.Log(keyName + " already loaded (sync), ref count: " + resDic[keyName].count);
                 return resDic[keyName].handle.Convert<T>().Result;
             }
 
-            var handle = Addressables.LoadAssetAsync<T>(name);
+var handle = Addressables.LoadAssetAsync<T>(name);
             var result = handle.WaitForCompletion(); // This blocks until the load finishes.
 
-            if (handle.Status == AsyncOperationStatus.Succeeded)
+if (handle.Status == AsyncOperationStatus.Succeeded)
             {
                 var info = new AddressablesInfo(handle);
                 resDic.Add(keyName, info);
                 return result;
             }
 
-            Debug.LogError($"Synchronous load failed: {keyName}");
+Debug.LogError($"Synchronous load failed: {keyName}");
             return null;
         }
 
-        #endregion
+#endregion
 
-        #region New Task-based (async/await) Methods
+#region New Task-based (async/await) Methods
 
-        public async Task<T> LoadAssetTaskAsync<T>(string name) where T : class
+public async Task<T> LoadAssetTaskAsync<T>(string name) where T : class
         {
             var keyName = name + "_" + typeof(T).Name;
 
-            if (resDic.ContainsKey(keyName))
+if (resDic.ContainsKey(keyName))
             {
                 resDic[keyName].count++;
                 var handle = resDic[keyName].handle.Convert<T>();
                 return await handle.Task;
             }
 
-            var newHandle = Addressables.LoadAssetAsync<T>(name);
+var newHandle = Addressables.LoadAssetAsync<T>(name);
             var result = await newHandle.Task;
 
-            if (newHandle.Status == AsyncOperationStatus.Succeeded)
+if (newHandle.Status == AsyncOperationStatus.Succeeded)
             {
                 var info = new AddressablesInfo(newHandle);
                 resDic.Add(keyName, info);
                 return result;
             }
 
-            Debug.LogError($"Load failed: {keyName}");
+Debug.LogError($"Load failed: {keyName}");
             return null;
         }
 
-        public async Task<IList<T>> LoadAssetsByLabelTaskAsync<T>(string label) where T : class
+public async Task<IList<T>> LoadAssetsByLabelTaskAsync<T>(string label) where T : class
         {
             var keyName = "label_" + label + "_" + typeof(T).Name;
 
-            if (resDic.ContainsKey(keyName))
+if (resDic.ContainsKey(keyName))
             {
                 resDic[keyName].count++;
                 var handle = resDic[keyName].handle.Convert<IList<T>>();
                 return await handle.Task;
             }
 
-            var newHandle = Addressables.LoadAssetsAsync<T>(label, null);
+var newHandle = Addressables.LoadAssetsAsync<T>(label, null);
             var result = await newHandle.Task;
 
-            if (newHandle.Status == AsyncOperationStatus.Succeeded)
+if (newHandle.Status == AsyncOperationStatus.Succeeded)
             {
                 var info = new AddressablesInfo(newHandle);
                 resDic.Add(keyName, info);
                 return result;
             }
 
-            Debug.LogError($"Load by label failed: {keyName}");
+Debug.LogError($"Load by label failed: {keyName}");
             return null;
         }
 
-        #endregion
+#endregion
 
-        #region Existing Callback-based Methods
+#region Existing Callback-based Methods
 
-        public void LoadAssetAsync<T>(string name, Action<AsyncOperationHandle<T>> callBack)
+public void LoadAssetAsync<T>(string name, Action<AsyncOperationHandle<T>> callBack)
         {
             var keyName = name + "_" + typeof(T).Name;
             AsyncOperationHandle<T> handle;
 
-            if (resDic.ContainsKey(keyName))
+if (resDic.ContainsKey(keyName))
             {
                 handle = resDic[keyName].handle.Convert<T>();
                 resDic[keyName].count += 1;
 
-                if (handle.IsDone)
+if (handle.IsDone)
                     callBack(handle);
                 else
                     handle.Completed += obj =>
@@ -138,7 +138,7 @@ namespace HotUpdate.Manager
                 return;
             }
 
-            handle = Addressables.LoadAssetAsync<T>(name);
+handle = Addressables.LoadAssetAsync<T>(name);
             handle.Completed += obj =>
             {
                 if (obj.Status == AsyncOperationStatus.Succeeded)
@@ -154,7 +154,7 @@ namespace HotUpdate.Manager
             };
         }
 
-        public void Release<T>(string name)
+public void Release<T>(string name)
         {
             var keyName = name + "_" + typeof(T).Name;
             if (resDic.ContainsKey(keyName))
@@ -170,7 +170,7 @@ namespace HotUpdate.Manager
             }
         }
 
-        public void Clear()
+public void Clear()
         {
             foreach (var item in resDic.Values) Addressables.Release(item.handle);
             resDic.Clear();
@@ -180,6 +180,6 @@ namespace HotUpdate.Manager
             Debug.Log("AddressablesManager cleared all cached resources");
         }
 
-        #endregion
+#endregion
     }
 }

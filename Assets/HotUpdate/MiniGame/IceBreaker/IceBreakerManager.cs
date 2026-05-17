@@ -1,4 +1,4 @@
-using HotUpdate.Core;
+﻿using HotUpdate.Core;
 using HotUpdate.Interface;
 using HotUpdate.Manager;
 using HotUpdate.SceneLoad.Commands;
@@ -6,7 +6,7 @@ using HotUpdate.Utility;
 using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
-
+
 namespace HotUpdate.MiniGame.IceBreaker
 {
     public class IceBreakerManager : MonoSingleton<IceBreakerManager>, IController,IAutoBind
@@ -16,21 +16,21 @@ namespace HotUpdate.MiniGame.IceBreaker
             Playing,
             Paused
         }
-
-        private GameState currentState = GameState.Playing;
+
+private GameState currentState = GameState.Playing;
         private IceBreakerData data;
         private GameObject enemyShardPrefab;
         private Button exitButton;
-
-        //UI相关
+
+//UI相关
         [SerializeField]private Transform iceBreakerCanvas;
         private bool isPaused;
         private LevelGenerator levelGenerator;
         [SerializeField]private Transform pausePanel;
         private IceBreakerPlayerController playerController;
         private GameObject playerShardPrefab;
-
-        private void Awake()
+
+private void Awake()
         {
             // 初始化
             Time.timeScale = 1f;
@@ -42,18 +42,18 @@ namespace HotUpdate.MiniGame.IceBreaker
             });
             pausePanel.gameObject.SetActive(false);
         }
-
-        private void Update()
+
+private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseGame();
         }
-
-        public IArchitecture GetArchitecture()
+
+public IArchitecture GetArchitecture()
         {
             return TheWorstGameInHistory.Interface;
         }
-
-        private void LoadGameAssets()
+
+private void LoadGameAssets()
         {
             AddressablesManager.Instance.LoadAssetAsync<TextAsset>(
                 AddressableKeys.IceBreakerData_Json,
@@ -62,16 +62,16 @@ namespace HotUpdate.MiniGame.IceBreaker
                     var json = handle.Result.text;
                     data = JsonUtility.FromJson<IceBreakerData>(json);
                 });
-
-            AddressablesManager.Instance.LoadAssetAsync<GameObject>(
+
+AddressablesManager.Instance.LoadAssetAsync<GameObject>(
                 AddressableKeys.PlayerShard_Prefab,
                 handle =>
                 {
                     playerShardPrefab = handle.Result;
                     ObjectPoolManager.Instance.CreatePool(PoolTag.PlayerShard, playerShardPrefab, 27);
                 });
-
-            AddressablesManager.Instance.LoadAssetAsync<GameObject>(
+
+AddressablesManager.Instance.LoadAssetAsync<GameObject>(
                 AddressableKeys.EnemyShard_Prefab,
                 handle =>
                 {
@@ -79,16 +79,16 @@ namespace HotUpdate.MiniGame.IceBreaker
                     ObjectPoolManager.Instance.CreatePool(PoolTag.EnemyShard, enemyShardPrefab, 27);
                 });
         }
-
-        /// <summary>
+
+/// <summary>
         ///     开始游戏，这个方法由UI按钮调用
         /// </summary>
         public void StartGame()
         {
             if (playerController != null) playerController.SwitchState(IceBreakerPlayerController.PlayerState.Playing);
         }
-
-        /// <summary>
+
+/// <summary>
         ///     重新开始游戏
         /// </summary>
         public void RestartGame()
@@ -96,11 +96,11 @@ namespace HotUpdate.MiniGame.IceBreaker
             // 确保时间恢复正常
             Time.timeScale = 1f;
             if (playerController != null) playerController.ResetPlayer();
-
-            if (levelGenerator != null) levelGenerator.ResetLevel();
+
+if (levelGenerator != null) levelGenerator.ResetLevel();
         }
-
-        /// <summary>
+
+/// <summary>
         ///     切换游戏暂停状态
         /// </summary>
         private void TogglePauseGame()
@@ -110,23 +110,23 @@ namespace HotUpdate.MiniGame.IceBreaker
             pausePanel.gameObject.SetActive(isPaused);
             currentState = isPaused ? GameState.Paused : GameState.Playing;
         }
-
-        public void SetIceBreakerPlayer(IceBreakerPlayerController iceBreakerPlayerController)
+
+public void SetIceBreakerPlayer(IceBreakerPlayerController iceBreakerPlayerController)
         {
             playerController = iceBreakerPlayerController;
         }
-
-        public void SetLevelGenerator(LevelGenerator iceBreakerLevelGenerator)
+
+public void SetLevelGenerator(LevelGenerator iceBreakerLevelGenerator)
         {
             levelGenerator = iceBreakerLevelGenerator;
         }
-
-        public IceBreakerData GetIceBreakerData()
+
+public IceBreakerData GetIceBreakerData()
         {
             return data;
         }
-
-        public GameState GetCurrentGameState()
+
+public GameState GetCurrentGameState()
         {
             return currentState;
         }

@@ -14,12 +14,12 @@ public class LoginForm : MonoBehaviour, IAutoBind, IController
 {
     private const string StringTableName = "String Table";
 
-    private bool isIn;
+private bool isIn;
     private int currentServerIndex;
 
-    private static readonly int Click = Animator.StringToHash("click");
+private static readonly int Click = Animator.StringToHash("click");
 
-    [SerializeField] private Animator canvas;
+[SerializeField] private Animator canvas;
     [SerializeField] private Button start;
     [SerializeField] private Button select;
     [SerializeField] private Button left;
@@ -27,7 +27,7 @@ public class LoginForm : MonoBehaviour, IAutoBind, IController
     [SerializeField] private Button quit;
     [SerializeField] private TextMeshProUGUI serverName;
 
-    private readonly string[] serverNames =
+private readonly string[] serverNames =
     {
         "XuzhouCity",
         "JingXiangNineCommanderies",
@@ -36,26 +36,26 @@ public class LoginForm : MonoBehaviour, IAutoBind, IController
         "MangdangMountain"
     };
 
-    public void Init()
+public void Init()
     {
         isIn = false;
         currentServerIndex = 0;
 
-        start.onClick.AddListener(EnterGame);
+start.onClick.AddListener(EnterGame);
         left.onClick.AddListener(SelectPreviousServer);
         right.onClick.AddListener(SelectNextServer);
         quit.onClick.AddListener(QuitGame);
         LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
 
-        RefreshServerName();
+RefreshServerName();
     }
 
-    private void OnDestroy()
+private void OnDestroy()
     {
         LocalizationSettings.SelectedLocaleChanged -= OnSelectedLocaleChanged;
     }
 
-    private void Update()
+private void Update()
     {
         if (Input.anyKeyDown)
         {
@@ -63,7 +63,7 @@ public class LoginForm : MonoBehaviour, IAutoBind, IController
         }
     }
 
-    private void EnterRealLogin()
+private void EnterRealLogin()
     {
         if (!isIn)
         {
@@ -72,64 +72,64 @@ public class LoginForm : MonoBehaviour, IAutoBind, IController
         }
     }
 
-    private void EnterGame()
+private void EnterGame()
     {
         this.SendCommand(new LoadSceneCommand(AddressableKeys.Lobby_Unity, true, LoadingScreenType.PlayThrough3));
     }
 
-    private void QuitGame()
+private void QuitGame()
     {
         this.SendCommand(new LoadSceneCommand(AddressableKeys.MainMenu_Unity, false));
     }
 
-    private void SelectPreviousServer()
+private void SelectPreviousServer()
     {
         if (serverNames.Length == 0)
         {
             return;
         }
 
-        currentServerIndex = (currentServerIndex - 1 + serverNames.Length) % serverNames.Length;
+currentServerIndex = (currentServerIndex - 1 + serverNames.Length) % serverNames.Length;
         RefreshServerName();
     }
 
-    private void SelectNextServer()
+private void SelectNextServer()
     {
         if (serverNames.Length == 0)
         {
             return;
         }
 
-        currentServerIndex = (currentServerIndex + 1) % serverNames.Length;
+currentServerIndex = (currentServerIndex + 1) % serverNames.Length;
         RefreshServerName();
     }
 
-    private void RefreshServerName()
+private void RefreshServerName()
     {
         if (serverName == null || serverNames.Length == 0)
         {
             return;
         }
 
-        var stringTable = LocalizationSettings.StringDatabase.GetTable(StringTableName, LocalizationSettings.SelectedLocale);
+var stringTable = LocalizationSettings.StringDatabase.GetTable(StringTableName, LocalizationSettings.SelectedLocale);
         if (stringTable == null)
         {
             serverName.text = serverNames[currentServerIndex];
             return;
         }
 
-        var entry = stringTable.GetEntry(serverNames[currentServerIndex]);
+var entry = stringTable.GetEntry(serverNames[currentServerIndex]);
         serverName.text = entry == null ? serverNames[currentServerIndex] : entry.GetLocalizedString();
     }
 
-    private void OnSelectedLocaleChanged(UnityEngine.Localization.Locale locale)
+private void OnSelectedLocaleChanged(UnityEngine.Localization.Locale locale)
     {
         RefreshServerName();
     }
 
-    public IArchitecture GetArchitecture()
+public IArchitecture GetArchitecture()
     {
         return TheWorstGameInHistory.Interface;
     }
 }
-
+

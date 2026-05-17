@@ -1,8 +1,8 @@
-public class DownloadIcebreakerWindow : DownloadWindow
+﻿public class DownloadIcebreakerWindow : DownloadWindow
 {
     private int playThroughCount;
 
-    protected override void OnDownloadComplete()
+protected override void OnDownloadComplete()
     {
         base.OnDownloadComplete();
         playThroughCount = gameData.playThrough;

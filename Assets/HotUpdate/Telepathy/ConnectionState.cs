@@ -1,4 +1,4 @@
-// both server and client need a connection state object.
+﻿// both server and client need a connection state object.
 // -> server needs it to keep track of multiple connections
 // -> client needs it to safely create a new connection state on every new
 //    connect in order to avoid data races where a dieing thread might still
@@ -15,20 +15,20 @@ namespace Telepathy
     {
         public TcpClient client;
 
-        // thread safe pipe to send messages from main thread to send thread
+// thread safe pipe to send messages from main thread to send thread
         public readonly MagnificentSendPipe sendPipe;
 
-        // ManualResetEvent to wake up the send thread. better than Thread.Sleep
+// ManualResetEvent to wake up the send thread. better than Thread.Sleep
         // -> call Set() if everything was sent
         // -> call Reset() if there is something to send again
         // -> call WaitOne() to block until Reset was called
         public ManualResetEvent sendPending = new ManualResetEvent(false);
 
-        public ConnectionState(TcpClient client, int MaxMessageSize)
+public ConnectionState(TcpClient client, int MaxMessageSize)
         {
             this.client = client;
 
-            // create send pipe with max message size for pooling
+// create send pipe with max message size for pooling
             sendPipe = new MagnificentSendPipe(MaxMessageSize);
         }
     }

@@ -1,4 +1,4 @@
-
+﻿
 using HotUpdate.Core;
 using HotUpdate.Dialogue.Commands;
 using HotUpdate.Utility;
@@ -17,7 +17,7 @@ namespace HotUpdate.Video
             GetComponent<DestroyAfterDelay>()?.DestroyMyself();
         }
 
-        public IArchitecture GetArchitecture()
+public IArchitecture GetArchitecture()
         {
             return TheWorstGameInHistory.Interface;
         }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace HotUpdate.Dialogue.Data
 {
@@ -13,18 +13,18 @@ namespace HotUpdate.Dialogue.Data
         /// </summary>
         public string textKey;
 
-        /// <summary>
+/// <summary>
         ///     选择此选项后跳转的节点ID
         /// </summary>
         public string nextNodeId;
 
-        /// <summary>
+/// <summary>
         ///     选项显示条件（可选，不填则总是显示）
         /// </summary>
         public ChoiceCondition condition;
     }
 
-    /// <summary>
+/// <summary>
     ///     选项显示条件
     /// </summary>
     [Serializable]
@@ -35,12 +35,12 @@ namespace HotUpdate.Dialogue.Data
         /// </summary>
         public string type;
 
-        /// <summary>
+/// <summary>
         ///     条件参数（根据类型不同，参数含义不同）
         /// </summary>
         public string target;
 
-        /// <summary>
+/// <summary>
         ///     比较值（用于数值比较）
         /// </summary>
         public int value;

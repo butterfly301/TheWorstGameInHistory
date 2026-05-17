@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using Newtonsoft.Json;
 using QFramework;
@@ -12,7 +12,7 @@ namespace HotUpdate.Data.Utility
         T Load<T>(string key) where T : class;
     }
 
-    public class JsonStorage : IStorage
+public class JsonStorage : IStorage
     {
         public void Save<T>(string key, T data)
         {
@@ -22,13 +22,13 @@ namespace HotUpdate.Data.Utility
             Debug.Log($"游戏已保存至: {path}");
         }
 
-        public T Load<T>(string key) where T : class
+public T Load<T>(string key) where T : class
         {
             var path = Path.Combine(Application.persistentDataPath, $"{key}.json");
 
-            if (!File.Exists(path)) return null;
+if (!File.Exists(path)) return null;
 
-            try
+try
             {
                 var json = File.ReadAllText(path);
                 return JsonConvert.DeserializeObject<T>(json);

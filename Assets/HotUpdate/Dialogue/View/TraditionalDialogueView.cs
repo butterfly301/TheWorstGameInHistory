@@ -1,4 +1,4 @@
-using HotUpdate.Interface;
+﻿using HotUpdate.Interface;
 
 namespace HotUpdate.Dialogue.View
 {

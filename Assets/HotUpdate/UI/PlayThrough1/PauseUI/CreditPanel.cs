@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CreditPanel : MonoBehaviour
@@ -6,7 +6,7 @@ public class CreditPanel : MonoBehaviour
     private PauseForm m_PauseForm;
     private Button quitButton;
 
-    public void Init(PauseForm varPauseForm)
+public void Init(PauseForm varPauseForm)
     {
         m_PauseForm = varPauseForm;
         quitButton = transform.Find("Quit").GetComponent<Button>();

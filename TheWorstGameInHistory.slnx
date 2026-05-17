@@ -76,6 +76,7 @@
   <Project Path="Unity.Sysroot.Linux_x86_64.csproj" />
   <Project Path="UIKit.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
+  <Project Path="Kamgam.UIToolkitBlurredBackground.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />
   <Project Path="Unity.InternalAPIEditorBridge.013.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.2D.Internal.csproj" />

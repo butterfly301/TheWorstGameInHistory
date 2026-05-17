@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using HotUpdate.Interface;
 using HotUpdate.Manager;
@@ -6,7 +6,7 @@ using HotUpdate.Utility;
 using Tiny;
 using UnityEngine;
 using UnityEngine.Serialization;
-
+
 namespace HotUpdate.MiniGame.IceBreaker
 {
     public class IceBreakerPlayerController : MonoBehaviour,IAutoBind
@@ -20,58 +20,58 @@ namespace HotUpdate.MiniGame.IceBreaker
             Revive,
             Success
         }
-
-        private static readonly int AttackTrigger = Animator.StringToHash("Attack");
-
-        // 状态机相关
+
+private static readonly int AttackTrigger = Animator.StringToHash("Attack");
+
+// 状态机相关
         public PlayerState currentState;
-
-        //地面检测相关
+
+//地面检测相关
         private readonly float groundCheckRadius = 0.25f;
         private readonly float rearrangeDuration = 1.5f;
         private readonly float returnDuration = 1.0f;
         private readonly float shardSpacing = 0.33f;
         private float acceleration;
-
-        //动画机相关
+
+//动画机相关
         [SerializeField]private Transform groundCheck;
         [SerializeField]private Animator animator;
         private Material attackMaterial;
         private float explosionForce;
-
-        private LayerMask groundLayer;
+
+private LayerMask groundLayer;
         private Material idleMaterial;
         private float initialAcceleration;
         private float initialMoveSpeed;
-
-        //战斗相关
+
+//战斗相关
         private bool isDashing;
-
-        private float jerk;
-
-        private int jumpCount;
+
+private float jerk;
+
+private int jumpCount;
         private float jumpForce;
-
-        //数值相关
+
+//数值相关
         private float moveSpeed;
         private Vector3 playerReturnStartPosition;
-
-        //移动相关
+
+//移动相关
         [SerializeField]private Rigidbody2D rigidbody2d;
         private float returnTimer;
         private readonly List<Transform> shards = new();
-
-        private Vector3 shardSize;
+
+private Vector3 shardSize;
         private readonly List<Vector3> shardStartPositions = new();
-
-        private IShakeStateSaved smallShakeSo;
-
-        //显示相关
+
+private IShakeStateSaved smallShakeSo;
+
+//显示相关
         [SerializeField]private SpriteRenderer spriteRenderer;
         private Vector3 startPosition;
         private Trail trail;
-
-        private void Update()
+
+private void Update()
         {
             switch (currentState)
             {
@@ -89,8 +89,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                     break;
             }
         }
-
-        private void FixedUpdate()
+
+private void FixedUpdate()
         {
             switch (currentState)
             {
@@ -102,8 +102,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                     break;
             }
         }
-
-        private void OnDrawGizmosSelected()
+
+private void OnDrawGizmosSelected()
         {
             if (groundCheck != null)
             {
@@ -111,8 +111,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                 Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
             }
         }
-
-        private void OnTriggerEnter2D(Collider2D other)
+
+private void OnTriggerEnter2D(Collider2D other)
         {
             if (currentState == PlayerState.Playing)
                 // 碰到障碍物或敌人就通知管理器
@@ -129,8 +129,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                     }
                 }
         }
-
-        public void Init()
+
+public void Init()
         {
             IceBreakerManager.Instance.SetIceBreakerPlayer(this);
             var data = IceBreakerManager.Instance.GetIceBreakerData();
@@ -142,25 +142,25 @@ namespace HotUpdate.MiniGame.IceBreaker
             jumpForce = data.playerData.jumpForce;
             explosionForce = data.playerData.explosionForce;
             groundLayer = LayerMask.GetMask("Platform");
-
-            AddressablesManager.Instance.LoadAssetAsync<RuntimeAnimatorController>(
+
+AddressablesManager.Instance.LoadAssetAsync<RuntimeAnimatorController>(
                 AddressableKeys.Player_Controller,
                 handle =>
                 {
                     animator = GetComponent<Animator>();
                     animator.runtimeAnimatorController = handle.Result;
                 });
-
-            rigidbody2d = GetComponent<Rigidbody2D>();
-
-            AddressablesManager.Instance.LoadAssetAsync<IShakeStateSaved>(
+
+rigidbody2d = GetComponent<Rigidbody2D>();
+
+AddressablesManager.Instance.LoadAssetAsync<IShakeStateSaved>(
                 AddressableKeys.Shakes_Asset,
                 handle => { smallShakeSo = handle.Result; });
-
-            spriteRenderer = GetComponent<SpriteRenderer>();
+
+spriteRenderer = GetComponent<SpriteRenderer>();
             shardSize = spriteRenderer.bounds.size / 3f;
-
-            trail = GetComponent<Trail>();
+
+trail = GetComponent<Trail>();
             AddressablesManager.Instance.LoadAssetAsync<Material>(
                 AddressableKeys.TrailPlayerAttack_Mat,
                 handle =>
@@ -170,11 +170,11 @@ namespace HotUpdate.MiniGame.IceBreaker
                         AddressableKeys.TrailPlayerIdle_Mat,
                         handle2 => { idleMaterial = handle2.Result; });
                 });
-
-            SwitchState(PlayerState.Idle);
+
+SwitchState(PlayerState.Idle);
         }
-
-        public void SwitchState(PlayerState newState)
+
+public void SwitchState(PlayerState newState)
         {
             switch (newState)
             {
@@ -202,8 +202,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                     playerReturnStartPosition = transform.position;
                     shardStartPositions.Clear();
                     foreach (var shard in shards) shardStartPositions.Add(shard.position);
-
-                    currentState = PlayerState.Returning;
+
+currentState = PlayerState.Returning;
                     break;
                 case PlayerState.Shattered:
                     // 进入碎裂状态的逻辑
@@ -220,8 +220,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                     rigidbody2d.velocity = Vector2.zero;
                     rigidbody2d.bodyType = RigidbodyType2D.Static;
                     foreach (var shard in shards) ObjectPoolManager.Instance.ReturnToPool(shard.gameObject);
-
-                    currentState = PlayerState.Revive;
+
+currentState = PlayerState.Revive;
                     break;
                 case PlayerState.Success:
                     Shatter();
@@ -231,60 +231,60 @@ namespace HotUpdate.MiniGame.IceBreaker
                     break;
             }
         }
-
-        private void PlayingStateUpdate()
+
+private void PlayingStateUpdate()
         {
             if (IceBreakerManager.Instance.GetCurrentGameState() != IceBreakerManager.GameState.Playing)
                 return;
             acceleration += jerk * Time.deltaTime;
             moveSpeed += acceleration * Time.deltaTime;
-
-            bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
             if (isGrounded) jumpCount = 0;
 #if PLATFORM_STANDALONE_WIN
             // 跳跃 - 鼠标右键
             if (Input.GetMouseButtonDown(1)) Jump();
-
-            // 攻击 - 鼠标左键
+
+// 攻击 - 鼠标左键
             if (Input.GetMouseButtonDown(0)) Attack();
 #endif
         }
-
-        private void ShatteredStateUpdate()
+
+private void ShatteredStateUpdate()
         {
             // 碎裂状态下的逻辑
 #if PLATFORM_STANDALONE_WIN
             if (Input.GetMouseButtonDown(0)) IceBreakerManager.Instance.RestartGame();
 #endif
         }
-
-        private void ReviveStateUpdate()
+
+private void ReviveStateUpdate()
         {
 #if PLATFORM_STANDALONE_WIN
             if (Input.GetMouseButtonDown(0)) SwitchState(PlayerState.Playing);
 #endif
         }
-
-        private void SuccessStateUpdate()
+
+private void SuccessStateUpdate()
         {
             // 成功状态下的逻辑
         }
-
-        private void PlayingStateFixUpdate()
+
+private void PlayingStateFixUpdate()
         {
             // 持续向右移动
             rigidbody2d.velocity = new Vector2(moveSpeed, rigidbody2d.velocity.y);
         }
-
-        private void ReturningStateFixUpdate()
+
+private void ReturningStateFixUpdate()
         {
             returnTimer += Time.fixedDeltaTime;
             var t = Mathf.Clamp01(returnTimer / returnDuration);
-
-            // 在 returnDuration 时间内将玩家主体插值到其起始位置
+
+// 在 returnDuration 时间内将玩家主体插值到其起始位置
             transform.position = Vector3.Lerp(playerReturnStartPosition, startPosition, t);
-
-            if (shards.Count == 0)
+
+if (shards.Count == 0)
             {
                 // 如果没有碎片，检查主体位置后直接重启
                 if (t >= 1.0f)
@@ -292,23 +292,23 @@ namespace HotUpdate.MiniGame.IceBreaker
                     transform.position = startPosition;
                     IceBreakerManager.Instance.RestartGame();
                 }
-
-                return;
+
+return;
             }
-
-            for (var i = 0; i < shards.Count; i++)
+
+for (var i = 0; i < shards.Count; i++)
             {
                 // 计算每个碎片在3x3网格中的目标位置
                 var x = (i % 3 - 1) * shardSize.x;
                 var y = (i / 3 - 1) * shardSize.y;
                 var returnPos = startPosition + new Vector3(x, y, 0);
-
-                // 在 returnDuration 时间内将碎片从其起始位置插值到目标位置
+
+// 在 returnDuration 时间内将碎片从其起始位置插值到目标位置
                 if (i < shardStartPositions.Count)
                     shards[i].position = Vector3.Lerp(shardStartPositions[i], returnPos, t);
             }
-
-            // 如果计时器完成
+
+// 如果计时器完成
             if (t >= 1.0f)
             {
                 // 到达后，重置并切换到 Revive 状态
@@ -316,8 +316,8 @@ namespace HotUpdate.MiniGame.IceBreaker
                 SwitchState(PlayerState.Revive);
             }
         }
-
-        private void Jump()
+
+private void Jump()
         {
             if (jumpCount < 1)
             {
@@ -325,18 +325,18 @@ namespace HotUpdate.MiniGame.IceBreaker
                 jumpCount++;
             }
         }
-
-        private void Attack()
+
+private void Attack()
         {
             if (!isDashing) animator.SetTrigger(AttackTrigger);
         }
-
-        public void TakeDamage()
+
+public void TakeDamage()
         {
             SwitchState(PlayerState.Shattered);
         }
-
-        private void Shatter()
+
+private void Shatter()
         {
             smallShakeSo.Shake("SmallShake");
             // 获取敌人自身的尺寸，用于计算碎片位置
@@ -351,100 +351,100 @@ namespace HotUpdate.MiniGame.IceBreaker
                     ObjectPoolManager.Instance.SpawnFromPool(PoolTag.PlayerShard, spawnPos, Quaternion.identity);
                 shards.Add(shard.transform);
                 var shardRb = shard.GetComponent<Rigidbody2D>();
-
-                if (shardRb != null)
+
+if (shardRb != null)
                 {
                     Vector2 direction = (shard.transform.position - transform.position).normalized;
                     if (direction.sqrMagnitude < 0.01f) // 中心碎片
                         direction = Random.insideUnitCircle.normalized;
-
-                    shardRb.AddForce(direction * explosionForce, ForceMode2D.Impulse);
+
+shardRb.AddForce(direction * explosionForce, ForceMode2D.Impulse);
                     spriteRenderer.enabled = false;
                 }
             }
         }
-
-        public void ResetPlayer()
+
+public void ResetPlayer()
         {
             moveSpeed = initialMoveSpeed;
             acceleration = initialAcceleration;
             SwitchState(PlayerState.Returning);
         }
-
-        public void RearrangeShards(Vector3 centerPosition)
+
+public void RearrangeShards(Vector3 centerPosition)
         {
             if (currentState == PlayerState.Success) StartCoroutine(RearrangeShardsCoroutine(centerPosition));
         }
-
-        private IEnumerator RearrangeShardsCoroutine(Vector3 centerPosition)
+
+private IEnumerator RearrangeShardsCoroutine(Vector3 centerPosition)
         {
             var totalWidth = (shards.Count - 1) * shardSpacing;
             var startOffset = new Vector3(-totalWidth / 2, 0, 0);
-
-            var startPositions = new List<Vector3>();
+
+var startPositions = new List<Vector3>();
             var startRotations = new List<Quaternion>();
             var targetPositions = new List<Vector3>();
-
-            for (var i = 0; i < shards.Count; i++)
+
+for (var i = 0; i < shards.Count; i++)
             {
                 if (shards[i] == null) continue;
-
-                var shardRb = shards[i].GetComponent<Rigidbody2D>();
+
+var shardRb = shards[i].GetComponent<Rigidbody2D>();
                 if (shardRb != null)
                 {
                     shardRb.velocity = Vector2.zero;
                     shardRb.angularVelocity = 0;
                     shardRb.bodyType = RigidbodyType2D.Kinematic;
                 }
-
-                var shardRenderer = shards[i].GetComponent<SpriteRenderer>();
+
+var shardRenderer = shards[i].GetComponent<SpriteRenderer>();
                 if (shardRenderer != null) shardRenderer.sortingOrder = 5;
-
-                startPositions.Add(shards[i].position);
+
+startPositions.Add(shards[i].position);
                 startRotations.Add(shards[i].rotation);
-
-                var targetPos = centerPosition + startOffset + new Vector3(i * shardSpacing, 0, 0);
+
+var targetPos = centerPosition + startOffset + new Vector3(i * shardSpacing, 0, 0);
                 targetPositions.Add(targetPos);
             }
-
-            var elapsedTime = 0f;
+
+var elapsedTime = 0f;
             while (elapsedTime < rearrangeDuration)
             {
                 elapsedTime += Time.deltaTime;
                 var t = Mathf.Clamp01(elapsedTime / rearrangeDuration);
                 t = t * t * (3f - 2f * t); // SmoothStep
-
-                for (var i = 0; i < shards.Count; i++)
+
+for (var i = 0; i < shards.Count; i++)
                     if (shards[i] != null)
                     {
                         shards[i].position = Vector3.Lerp(startPositions[i], targetPositions[i], t);
                         shards[i].rotation = Quaternion.Lerp(startRotations[i], Quaternion.identity, t);
                     }
-
-                yield return null;
+
+yield return null;
             }
-
-            for (var i = 0; i < shards.Count; i++)
+
+for (var i = 0; i < shards.Count; i++)
                 if (shards[i] != null)
                 {
                     shards[i].position = targetPositions[i];
                     shards[i].rotation = Quaternion.identity;
                 }
         }
-
-        public void SetIsDashing(bool value)
+
+public void SetIsDashing(bool value)
         {
             isDashing = value;
             trail?.SetMaterial(isDashing ? attackMaterial : idleMaterial);
         }
-
-        public void SetStartPosition(Vector3 startPos)
+
+public void SetStartPosition(Vector3 startPos)
         {
             transform.position = startPos;
             startPosition = startPos;
         }
-
-        public PlayerState GetCurrentState()
+
+public PlayerState GetCurrentState()
         {
             return currentState;
         }

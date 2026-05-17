@@ -10,17 +10,17 @@ namespace HotUpdate.UI
     /// </summary>
     public class SkillTreeUI
     {
-        
-        // TODO: 添加技能树相关的字段
+
+// TODO: 添加技能树相关的字段
         // private GameObject skillTreePanelPrefab;
         // private GameObject skillTreePanelObj;
 
-        public SkillTreeUI(Transform layerTrans)
+public SkillTreeUI(Transform layerTrans)
         {
-            
-        }
 
-        /// <summary>
+}
+
+/// <summary>
         /// 初始化技能树UI系统
         /// </summary>
         public void Init()
@@ -32,7 +32,7 @@ namespace HotUpdate.UI
             // );
         }
 
-        /// <summary>
+/// <summary>
         /// 打开技能树面板
         /// </summary>
         public void OpenSkillTreePanel()
@@ -40,7 +40,7 @@ namespace HotUpdate.UI
             // TODO: 实现打开技能树面板逻辑
         }
 
-        /// <summary>
+/// <summary>
         /// 关闭技能树面板
         /// </summary>
         public void CloseSkillTreePanel()
@@ -48,6 +48,6 @@ namespace HotUpdate.UI
             // TODO: 实现关闭技能树面板逻辑
         }
 
-        // TODO: 添加其他技能树相关方法...
+// TODO: 添加其他技能树相关方法...
     }
 }

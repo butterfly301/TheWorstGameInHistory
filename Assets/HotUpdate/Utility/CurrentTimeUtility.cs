@@ -1,4 +1,4 @@
-// csharp
+﻿// csharp
 
 using System;
 
@@ -14,7 +14,7 @@ namespace HotUpdate.Utility
             return DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         }
 
-        /// <summary>
+/// <summary>
         ///     新增：获取本地当前日期字符串，格式为 yyyy/MM/dd（例如 2025/12/26）。
         /// </summary>
         public static string GetCurrentDateString()
@@ -22,7 +22,7 @@ namespace HotUpdate.Utility
             return DateTime.Now.ToString("yyyy/MM/dd");
         }
 
-        /// <summary>
+/// <summary>
         ///     获取指定时间的格式化字符串，格式为 yyyy/MM/dd HH:mm:ss。
         /// </summary>
         public static string GetTimeString(DateTime time)
@@ -30,7 +30,7 @@ namespace HotUpdate.Utility
             return time.ToString("yyyy/MM/dd HH:mm:ss");
         }
 
-        /// <summary>
+/// <summary>
         ///     新增：获取指定时间的日期字符串，格式为 yyyy/MM/dd（例如 2025/12/26）。
         /// </summary>
         public static string GetDateString(DateTime time)

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using HotUpdate.Audio.Commands;
 using HotUpdate.Core;
@@ -9,7 +9,7 @@ using HotUpdate.Utility;
 using QFramework;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
-
+
 namespace HotUpdate.UI
 {
     public class MainMenu : MonoBehaviour, IController, IAutoBind
@@ -17,25 +17,25 @@ namespace HotUpdate.UI
         [SerializeField] private Canvas canvas;
         [SerializeField] private BottomMenuNode bottomMenuNode;
         [SerializeField] private AppGroupNode appGroupNode;
-
-        public GameData GameData { get; private set; }
+
+public GameData GameData { get; private set; }
         public MainMenuData MainMenuData { get; private set; }
         public Dictionary<string, GameObject> Windows { get; } = new();
-
-        private void Update()
+
+private void Update()
         {
             if (Input.GetMouseButtonDown(0))
             {
                 this.SendCommand(new PlaySoundCommand(AddressableKeys.MouseClick_Wav));
             }
         }
-
-        public IArchitecture GetArchitecture()
+
+public IArchitecture GetArchitecture()
         {
             return TheWorstGameInHistory.Interface;
         }
-
-        public void Init()
+
+public void Init()
         {
             GameData = this.GetModel<GameDataModel>().CurrentGameData.Value;
             appGroupNode.Init(this);
@@ -48,59 +48,59 @@ namespace HotUpdate.UI
                     MainMenuData = JsonUtility.FromJson<MainMenuData>(json);
                 });
         }
-
-        public WindowBase OpenWindow(string windowAddress)
+
+public WindowBase OpenWindow(string windowAddress)
         {
             if (Windows.TryGetValue(windowAddress, out var existingGo))
             {
                 existingGo.SetActive(true);
                 return existingGo.GetComponent<WindowBase>();
             }
-
-            AddressablesManager.Instance.LoadAssetAsync<GameObject>(windowAddress, handle =>
+
+AddressablesManager.Instance.LoadAssetAsync<GameObject>(windowAddress, handle =>
             {
                 if (!handle.IsValid() || handle.Status != AsyncOperationStatus.Succeeded || handle.Result == null)
                 {
                     return;
                 }
-
-                var go = Instantiate(handle.Result, canvas.transform);
+
+var go = Instantiate(handle.Result, canvas.transform);
                 var windowBase = go.GetComponent<WindowBase>();
                 windowBase.Init(this);
                 Windows[windowAddress] = go;
             });
-
-            return null;
+
+return null;
         }
-
-        public void OpenWindow(string windowAddress, Action<WindowBase> onLoaded)
+
+public void OpenWindow(string windowAddress, Action<WindowBase> onLoaded)
         {
             onLoaded ??= _ => { };
-
-            if (Windows.TryGetValue(windowAddress, out var existingGo))
+
+if (Windows.TryGetValue(windowAddress, out var existingGo))
             {
                 existingGo.SetActive(true);
                 onLoaded(existingGo.GetComponent<WindowBase>());
                 return;
             }
-
-            AddressablesManager.Instance.LoadAssetAsync<GameObject>(windowAddress, handle =>
+
+AddressablesManager.Instance.LoadAssetAsync<GameObject>(windowAddress, handle =>
             {
                 if (!handle.IsValid() || handle.Status != AsyncOperationStatus.Succeeded || handle.Result == null)
                 {
                     onLoaded(null);
                     return;
                 }
-
-                var go = Instantiate(handle.Result, canvas.transform);
+
+var go = Instantiate(handle.Result, canvas.transform);
                 var windowBase = go.GetComponent<WindowBase>();
                 windowBase.Init(this);
                 Windows[windowAddress] = go;
                 onLoaded(windowBase);
             });
         }
-
-        public AppGroupNode GetAppGroup()
+
+public AppGroupNode GetAppGroup()
         {
             return appGroupNode;
         }

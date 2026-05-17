@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using HotUpdate.Data.Model;
 using QFramework;
@@ -18,7 +18,7 @@ namespace HotUpdate.Core.Condition
         /// </summary>
         private static readonly Dictionary<string, Func<ConditionData, bool>> RegisteredCheckers = new();
 
-        /// <summary>
+/// <summary>
         /// 静态构造函数，注册默认的条件类型
         /// </summary>
         static ConditionChecker()
@@ -26,7 +26,7 @@ namespace HotUpdate.Core.Condition
             RegisterDefaultConditionTypes();
         }
 
-        /// <summary>
+/// <summary>
         /// 检查单个条件是否满足
         /// </summary>
         public static bool CheckCondition(ConditionData condition)
@@ -37,7 +37,7 @@ namespace HotUpdate.Core.Condition
                 return true;
             }
 
-            // 查找注册的检查器
+// 查找注册的检查器
             if (RegisteredCheckers.TryGetValue(condition.type, out var checker))
             {
                 try
@@ -51,11 +51,11 @@ namespace HotUpdate.Core.Condition
                 }
             }
 
-            Debug.LogWarning($"[ConditionChecker] 未知的条件类型: {condition.type}");
+Debug.LogWarning($"[ConditionChecker] 未知的条件类型: {condition.type}");
             return false;
         }
 
-        /// <summary>
+/// <summary>
         /// 获取已注册的条件类型数量
         /// </summary>
         public static int GetRegisteredConditionTypesCount()
@@ -63,7 +63,7 @@ namespace HotUpdate.Core.Condition
             return RegisteredCheckers.Count;
         }
 
-        /// <summary>
+/// <summary>
         /// 检查条件组是否满足
         /// </summary>
         public static bool CheckConditionGroup(ConditionGroup group)
@@ -73,29 +73,29 @@ namespace HotUpdate.Core.Condition
                 return true;
             }
 
-            // 根据条件组类型决定检查方式
+// 根据条件组类型决定检查方式
             foreach (var condition in group.conditions)
             {
                 var result = CheckCondition(condition);
 
-                if (group.type == ConditionGroupType.Any && result)
+if (group.type == ConditionGroupType.Any && result)
                 {
                     // Any模式：只要有一个满足就返回true
                     return true;
                 }
 
-                if (group.type == ConditionGroupType.All && !result)
+if (group.type == ConditionGroupType.All && !result)
                 {
                     // All模式：只要有一个不满足就返回false
                     return false;
                 }
             }
 
-            // All模式全部满足，或Any模式全部不满足
+// All模式全部满足，或Any模式全部不满足
             return group.type == ConditionGroupType.All;
         }
 
-        /// <summary>
+/// <summary>
         /// 检查条件列表（OR关系，返回第一个满足条件的索引）
         /// 返回值：满足条件的索引，-1表示都不满足
         /// </summary>
@@ -106,7 +106,7 @@ namespace HotUpdate.Core.Condition
                 return -1;
             }
 
-            for (var i = 0; i < conditions.Count; i++)
+for (var i = 0; i < conditions.Count; i++)
             {
                 if (CheckCondition(conditions[i]))
                 {
@@ -114,10 +114,10 @@ namespace HotUpdate.Core.Condition
                 }
             }
 
-            return -1;
+return -1;
         }
 
-        /// <summary>
+/// <summary>
         /// 注册自定义条件类型
         /// </summary>
         public static void RegisterConditionType(string typeName, Func<ConditionData, bool> checker)
@@ -128,16 +128,16 @@ namespace HotUpdate.Core.Condition
                 return;
             }
 
-            if (RegisteredCheckers.ContainsKey(typeName))
+if (RegisteredCheckers.ContainsKey(typeName))
             {
                 Debug.LogWarning($"[ConditionChecker] 条件类型已存在，将被覆盖: {typeName}");
             }
 
-            RegisteredCheckers[typeName] = checker;
+RegisteredCheckers[typeName] = checker;
             Debug.Log($"[ConditionChecker] 已注册条件类型: {typeName}");
         }
 
-        /// <summary>
+/// <summary>
         /// 取消注册条件类型
         /// </summary>
         public static void UnregisterConditionType(string typeName)
@@ -148,7 +148,7 @@ namespace HotUpdate.Core.Condition
             }
         }
 
-        /// <summary>
+/// <summary>
         /// 注册默认的条件类型
         /// </summary>
         private static void RegisterDefaultConditionTypes()
@@ -159,53 +159,53 @@ namespace HotUpdate.Core.Condition
                 return CheckHasItem(condition.target);
             });
 
-            // GreaterThan：检查数值是否大于指定值
+// GreaterThan：检查数值是否大于指定值
             RegisterConditionType("GreaterThan", condition =>
             {
                 var currentValue = GetNumericValue(condition.target);
                 return currentValue > condition.value;
             });
 
-            // LessThan：检查数值是否小于指定值
+// LessThan：检查数值是否小于指定值
             RegisterConditionType("LessThan", condition =>
             {
                 var currentValue = GetNumericValue(condition.target);
                 return currentValue < condition.value;
             });
 
-            // Equal：检查数值是否等于指定值
+// Equal：检查数值是否等于指定值
             RegisterConditionType("Equal", condition =>
             {
                 var currentValue = GetNumericValue(condition.target);
                 return currentValue == condition.value;
             });
 
-            // GreaterThanOrEqual：检查数值是否大于等于指定值
+// GreaterThanOrEqual：检查数值是否大于等于指定值
             RegisterConditionType("GreaterThanOrEqual", condition =>
             {
                 var currentValue = GetNumericValue(condition.target);
                 return currentValue >= condition.value;
             });
 
-            // LessThanOrEqual：检查数值是否小于等于指定值
+// LessThanOrEqual：检查数值是否小于等于指定值
             RegisterConditionType("LessThanOrEqual", condition =>
             {
                 var currentValue = GetNumericValue(condition.target);
                 return currentValue <= condition.value;
             });
 
-            // HasCompletedDialogue：检查是否已完成指定对话
+// HasCompletedDialogue：检查是否已完成指定对话
             RegisterConditionType("HasCompletedDialogue", condition =>
             {
                 return CheckHasCompletedDialogue(condition.target);
             });
 
-            Debug.Log("[ConditionChecker] 默认条件类型注册完成");
+Debug.Log("[ConditionChecker] 默认条件类型注册完成");
         }
 
-        #region 默认条件检查实现
+#region 默认条件检查实现
 
-        /// <summary>
+/// <summary>
         /// 检查是否拥有物品
         /// TODO: 需要集成背包系统后实现
         /// </summary>
@@ -215,11 +215,11 @@ namespace HotUpdate.Core.Condition
             // var inventoryModel = TheWorstGameInHistory.Interface.GetModel<InventoryModel>();
             // return inventoryModel.HasItem(itemId);
 
-            Debug.LogWarning($"[ConditionChecker] CheckHasItem 未实现，物品ID: {itemId}");
+Debug.LogWarning($"[ConditionChecker] CheckHasItem 未实现，物品ID: {itemId}");
             return false;
         }
 
-        /// <summary>
+/// <summary>
         /// 获取数值类型的游戏数据
         /// target 格式：类型:键值，例如 "playthrough"、"level"、"item:wood" 等
         /// TODO: 需要根据实际游戏数据结构实现
@@ -231,23 +231,23 @@ namespace HotUpdate.Core.Condition
                 return 0;
             }
 
-            // 尝试从 GameDataModel 获取数据
+// 尝试从 GameDataModel 获取数据
             try
             {
                 var gameDataModel = TheWorstGameInHistory.Interface.GetModel<GameDataModel>();
                 var gameData = gameDataModel.CurrentGameData.Value;
 
-                if (gameData == null)
+if (gameData == null)
                 {
                     return 0;
                 }
 
-                // TODO: 根据target的格式解析并返回对应的数值
+// TODO: 根据target的格式解析并返回对应的数值
                 // 例如：
                 // if (target == "playthrough") return gameData.playthrough;
                 // if (target.StartsWith("item:")) return GetItemCount(target.Substring(5), gameData.inventory);
 
-                Debug.LogWarning($"[ConditionChecker] GetNumericValue 未完全实现，target: {target}");
+Debug.LogWarning($"[ConditionChecker] GetNumericValue 未完全实现，target: {target}");
                 return 0;
             }
             catch (Exception e)
@@ -257,7 +257,7 @@ namespace HotUpdate.Core.Condition
             }
         }
 
-        /// <summary>
+/// <summary>
         /// 检查是否已完成指定对话
         /// </summary>
         private static bool CheckHasCompletedDialogue(string dialogueId)
@@ -274,6 +274,6 @@ namespace HotUpdate.Core.Condition
             }
         }
 
-        #endregion
+#endregion
     }
 }

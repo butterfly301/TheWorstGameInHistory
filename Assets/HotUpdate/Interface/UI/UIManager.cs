@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HotUpdate.Interface;
 using QFramework;
 using UnityEngine;
@@ -12,7 +12,7 @@ namespace HotUpdate.UI
         /// </summary>
         protected Dictionary<object, Transform> uiLayerTrans = new();
 
-        /// <summary>
+/// <summary>
         /// 初始化UI管理器
         /// </summary>
         public abstract void Init();

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace HotUpdate.Dialogue.Data
 {
@@ -13,7 +13,7 @@ namespace HotUpdate.Dialogue.Data
         /// </summary>
         public DialogueConfig config;
 
-        /// <summary>
+/// <summary>
         ///     获取对话ID
         /// </summary>
         public string DialogueId => config.dialogueId;

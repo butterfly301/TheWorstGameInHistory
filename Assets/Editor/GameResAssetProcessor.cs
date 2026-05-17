@@ -20,16 +20,6 @@ namespace HotUpdate.Utility.Editor
         private static readonly string AutoGenHeader = "// 此文件由 GameResAssetProcessor 自动生成\n// 请勿手动修改此文件\n";
         private static readonly string DefaultGroupName = "Default Local Group";
 
-        [InitializeOnLoadMethod]
-        static void InitializeOnLoad()
-        {
-            // 编辑器启动时生成一次
-            if (!EditorApplication.isPlayingOrWillChangePlaymode)
-            {
-                GenerateAddressableKeys();
-            }
-        }
-
         static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
         {
             bool shouldRegenerate = false;

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
 using Object = UnityEngine.Object;
@@ -9,17 +9,16 @@ public class LobbyUI
     private GameObject lobbyFormPrefab;
     private LobbyForm lobbyForm;
 
-    public LobbyUI(Transform parent)
+public LobbyUI(Transform parent)
     {
         parentTransform = parent;
     }
 
-    /// <summary>
+/// <summary>
     /// 初始化大厅UI系统
     /// </summary>
     public void Init()
     {
-        Debug.Log("Initializing LobbyUI...");
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
             AddressableKeys.LobbyForm_Prefab,
             handle =>

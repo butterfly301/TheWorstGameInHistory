@@ -105,9 +105,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0994c12e202f342459a4212e7287f7e8
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-40.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-40.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 09a8cf358b24173479d376dd7a9c9c39
     m_Address: Assets/GameRes/Prefabs/Dialogue/Dialogue1.prefab
@@ -127,9 +128,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c008ee3ee72a4362a35be25fa5de043
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-15.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-15.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c1d8b259477bec43b93081e034aecbf
     m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/SmallEntryCell.prefab
@@ -193,9 +195,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 130a177e727814a2ea78a886ab72213d
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-30.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-30.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1509360826d6bb34587310ad4949fdd5
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Barrel.prefab
@@ -264,9 +267,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 19f89c6e740e7447f9e12a8310d3e973
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-03.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-03.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1aeefc9f784f3fc4a9c6f87e54d0ea6f
     m_Address: Assets/GameRes/Prefabs/Video
@@ -351,6 +355,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2542dfb8d692eec4fb47f73f846e5ab1
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/notice.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 25f9f2235afcaca429284c9aec8982df
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Gunny Bag
       02.prefab
@@ -358,9 +368,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2667a0a008b044e218b63df62e2be749
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-18.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-18.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27277137d0605bd45bd741cdb791e0c1
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Arrow.prefab
@@ -371,6 +382,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes/Audio
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27740e1687a3c9d4ea1e9920146ff8b3
+    m_Address: Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 282d10bd840f2244d993130a17f23515
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Pot 02.prefab
@@ -389,9 +406,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 29bde6326b4c34ad8a12da475f79b50a
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-32.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-32.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 29ed8b9da25e44c4ea767e3083fa014f
     m_Address: Assets/GameRes/Prefabs/IceBreaker/Level/GoalPrefab.prefab
@@ -403,6 +421,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes/Art
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a7a4391d5faf334fb9594aa6c2c3ec0
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/BlurForm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2b7100ec099cb1140976d78fd7543102
     m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/DownloadIcebreakerWindow.prefab
@@ -428,9 +452,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2c5292ba5cf254919a6b9e2b18e04f49
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-07.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-07.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2c65f85fa477a5b48aed763873e8bd2a
     m_Address: Assets/GameRes/Animations/MiniGame/IceBreaker/OpenAnim/Controller/OpenAnim.controller
@@ -481,9 +506,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 32d4b1811dda14a6cb9e059ee8ad17d2
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-01.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-01.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 33241a27fe2ed314792df4e5569f5811
     m_Address: Assets/GameRes/Data/Enemy
@@ -525,9 +551,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 35fbad8cdde724f11ba6481f1e64af71
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-33.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-33.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 35ff5f2cc18840a4ca4ecf97ed2779c2
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
@@ -568,9 +595,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 38a17a92b9d9748c6a1e67972041b833
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-42.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-42.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3a33349c57065cc4999beb2119ce1fff
     m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Regular.otf
@@ -579,9 +607,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3becec1909f194046945d85ac1077772
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-39.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-39.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3c079d50c364c5a48bb8262ada5cf33a
     m_Address: Assets/GameRes/Animations/UI/Narrator
@@ -702,9 +731,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4b4dd7245f6104c8c8eb07ccf6b386ed
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-43.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-43.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4b666403bba7a814e99834b66da8cb8c
     m_Address: Assets/GameRes/Audio/Voice/CatTalk2.mp3
@@ -771,9 +801,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e1ff8faed12a475eba9be0e46072269
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-08.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-08.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4f5c1ade11ab96e49b0d2d59f67fbeab
     m_Address: Assets/GameRes/Animations/UI/PauseUIButton/OptionUIButton.controller
@@ -786,9 +817,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5039414d94a6e4e70a5ab9e8833e992a
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-27.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-27.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 50a2e78df10c7ee488a4a09a1e7c8a6b
     m_Address: Assets/GameRes/Art/Font/Cartoon/MuseoModerno-ExtraBold SDF.asset
@@ -802,10 +834,17 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 52320e590bf774734a288886eba557ba
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-45.wav
+  - m_GUID: 51a64a2f2baaf7045a685442b96ac550
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/PopUp.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52320e590bf774734a288886eba557ba
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-45.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52e5911430a75d8489ccca90a22d9483
     m_Address: Assets/GameRes/Art/Font/Cartoon/MuseoModerno-ExtraBold.ttf
@@ -936,9 +975,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5fdb13d3756c84fecac96f5a2d124370
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-25.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-25.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 61587dd648526a7488c0aafe52814762
     m_Address: Assets/GameRes/Prefabs/DialogueBubbles/DialogueBubble0.prefab
@@ -986,9 +1026,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 657578e4be6b64dbf9b09deada272e55
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-24.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-24.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 67c577e73adf2b44f9d891bb36856eba
     m_Address: Assets/GameRes/Prefabs/UI
@@ -1046,9 +1087,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6e8772b49f34d402a90016ed445d8a2f
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-20.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-20.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6ecf5bcec20adfa429a788f660f29ff5
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Billboard.prefab
@@ -1081,14 +1123,16 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 72127805eb2bc4e7fbf2e02eca266cfa
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-13.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-13.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 724131bc8a7f34041bb9f1701f0cb58d
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-16.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-16.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 72a905bcc22e3e443be6f48bfb173c00
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 05.prefab
@@ -1114,9 +1158,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7478151cf36724a7dada558f746c3633
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-12.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-12.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7484ae744365bf147a033e1d66fb6a98
     m_Address: Assets/GameRes/Audio/BGM/Lantern.mp3
@@ -1172,9 +1217,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 79180f511d89441b9aa23ccae1992fe0
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-28.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-28.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 792781d5e73fc6d4a8c78e7529c991a9
     m_Address: Assets/GameRes/Data/Enemy/EnemyData.json
@@ -1187,9 +1233,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 79e6baad2fd414b82a6d49ce1568d2e5
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-50.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-50.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7aa243ffd7c1aed45ae1350dce07b640
     m_Address: Assets/GameRes/Art/Font/Cartoon/Quicksand-SemiBold.ttf
@@ -1203,14 +1250,16 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7bd6b897eb5ca4b7d88a205c4a51640c
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-26.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-26.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7bef0064f8567430cac22499c6b93d4f
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-49.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-49.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7daef439607990447ba6a50785583a93
     m_Address: Assets/GameRes/Prefabs/IceBreaker/Level/EnemyPrefab.prefab
@@ -1219,9 +1268,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e26c9daf4c32483b9c2790e662d3f1b
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-48.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-48.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e29e219b59dbc2438e19d7f4c136d66
     m_Address: Assets/GameRes/Prefabs/UI/Playthrough1/SkipButtonPlaythrough1.prefab
@@ -1235,9 +1285,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e9ee6dc04a5d40d1a5dfc4beb9865e7
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-41.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-41.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f2681b23c23afc4fbb43c6dca9f41f9
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Chest Silver.prefab
@@ -1262,9 +1313,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80e397195ea2940b69ee7bdbded856a5
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-29.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-29.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80e52ac4fd44898469552aaa2734cc71
     m_Address: Assets/GameRes/Prefabs/UI/MainMenu/Window/SettingWindow.prefab
@@ -1273,9 +1325,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81652031b64c342cc8dbc59c138d77c5
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-19.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-19.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 821ab2ee5a45f16458b23919f211dcaf
     m_Address: Assets/GameRes/Art/Playthrough3/Login/LoginBg2ServerBtn.png
@@ -1309,9 +1362,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 84e427d6b66ab4066b6a4dcd0ce819ee
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-38.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-38.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 851fb730285011e47b696310dadf3ffb
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Stairs X64.prefab
@@ -1347,14 +1401,16 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 881e3f52c86c94f26a60718d35627cd8
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-34.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-34.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 89e6bc608da7b47d4914f3d9c2484e48
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-35.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-35.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8b196d74cd9e8d8458a2bb37a446fbc6
     m_Address: Assets/GameRes/Art/Materials
@@ -1509,7 +1565,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 96ab13eb6f1230347867b81c27ed59ac
-    m_Address: Assets/GameRes/Prefabs/UI/GlitchEffect.prefab
+    m_Address: Assets/GameRes/Prefabs/UI/GlitchEffectForm.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -1577,9 +1633,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a0010a1a0c474473b81729eb770c485f
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-11.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-11.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a0104c4ed513646498ea06ca9cadf9e7
     m_Address: Assets/GameRes/Prefabs/IceBreaker/LevelGenerator.prefab
@@ -1588,9 +1645,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a0ca8964c08d54c5dbebf245bdc474ca
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-23.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-23.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1f406e4f35f14141ad484be5b60197b
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
@@ -1599,9 +1657,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a235d590ef2a04d1b85b61ef4c21337c
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-06.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-06.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a44b83072b6e3dc4087324d363969e90
     m_Address: Assets/GameRes/Animations/UI
@@ -1643,15 +1702,16 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a899658a9b4fce64394a80da06dfb528
-    m_Address: Assets/GameRes/Art/Playthrough3/Character/XunYu.png
+    m_Address: Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/XunYu.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a931da70ee74947d5a047de583170ade
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-37.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-37.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa2214c04d2c2dd48b4b1aa8174c577e
     m_Address: Assets/GameRes/ScriptableObjects/Quest
@@ -1752,9 +1812,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b43d102aac6b145468dcaa94a5cccae1
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-44.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-44.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b51901e6748833e4695e0c1db509dcd4
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Grass 02.prefab
@@ -1767,9 +1828,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b6428d4edb06344ba829da4edd9967c1
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-14.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-14.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b66942e8458865e4990a5fc39874e9a1
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Platform
@@ -1800,9 +1862,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b99da9a57308d4ba1bee1cf1d9038376
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-05.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-05.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b9d81364c34bcf8479488485b520798d
     m_Address: Assets/GameRes/Prefabs/Environment/3D/Toilet.prefab
@@ -1811,9 +1874,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b9eff218e132a4e76be78840eca96fb2
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-17.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-17.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b9fdd7e1c7a4ba049a8021eba68839aa
     m_Address: Assets/GameRes/Prefabs/Enemy/BugToiletVillage.prefab
@@ -1893,6 +1957,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0979f5fe3604c849bb9c28b5e71107d
+    m_Address: Assets/GameRes/Audio/Voice/XunYu_1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c13263f1f05170f4e849875cee5c46d0
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Road Lamp.prefab
     m_ReadOnly: 0
@@ -1947,9 +2017,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c5e2a73ad4706440f93bf05df0b465fe
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-04.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-04.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c5f8f079905bce04f945cd8ff4ba545a
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Tree 02.prefab
@@ -2008,9 +2079,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cabfae866cab347928b74b7d0ca6bfa9
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-10.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-10.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cac559d4d356835428b1ef04256c4220
     m_Address: Assets/GameRes/Prefabs/Character/Player
@@ -2045,10 +2117,17 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cf6c0e7fbef9449c98a0cdb5ea0c4d9f
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-31.wav
+  - m_GUID: cf54361d86393934c998a93ff0433d95
+    m_Address: Assets/GameRes/Audio/Sound/ReplaceInTheFuture
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf6c0e7fbef9449c98a0cdb5ea0c4d9f
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-31.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cf7d519b952505c41ad3b7183232e2f4
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PlayThrough3/LobbyWorld.prefab
@@ -2088,9 +2167,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d46323e22e74e46baa241cbf48c85671
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-47.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-47.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d46aa8752258e00409ea662e05c4d955
     m_Address: Assets/GameRes/Art/Playthrough3/Loading
@@ -2120,6 +2200,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d750eeead3ef8f842a71a44d873bc509
+    m_Address: Assets/GameRes/Audio/Sound/ReplaceInTheFuture/huadongbianzuqi.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d75c8600bad32b24da39c73e07525d72
     m_Address: Assets/GameRes/Art/Playthrough3/Lobby/icon3.png
     m_ReadOnly: 0
@@ -2127,7 +2213,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d8287bcd41c024c4e82c61be96f9e922
-    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/MenuBg.png
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/LobbyBg.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -2143,9 +2229,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d8d04c6f80a1140db85ede568dab1f51
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-22.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-22.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d9997400142b1f14281284870012ac00
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Wooden Bridge
@@ -2170,6 +2257,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db8394bc9c636594580fc0dd0876c6a8
+    m_Address: Assets/GameRes/Prefabs/UI/Playthrough3/PopUpForm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: db9802aa66dead6419b8dfabba670977
     m_Address: Assets/GameRes/Prefabs/Dialogue
     m_ReadOnly: 0
@@ -2187,9 +2280,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dc6614beca09347ec9b258f12d154bdd
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-02.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-02.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dc6ff1ed93239ee49a8ec48a274e0fd4
     m_Address: Assets/GameRes/Art/RenderTexture/Water Render Texture 0.renderTexture
@@ -2218,9 +2312,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df729d213c4be44a9b55cd109f5cd4f9
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-36.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-36.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df8e0bc03401865478b55f798451377a
     m_Address: Assets/GameRes/Art/Playthrough3/Common/btn_round_corner.png
@@ -2237,6 +2332,12 @@ MonoBehaviour:
     m_Address: Assets/GameRes/Prefabs/Environment/2D/PF Village Props - Barricade.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e14684ae324b86a41be8fd9ac1a5c2e9
+    m_Address: Assets/GameRes/Art/Playthrough3/Lobby/email.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e190b8a97956901429eb7f8da5128a89
     m_Address: Assets/GameRes/Animations/Character/PlayerController.controller
@@ -2451,9 +2552,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fc408c908afdc4a7c9213c3bb144bbb9
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fc50b918c39dc66429985b3d59d44e3e
     m_Address: Assets/GameRes/Art/Materials/Baguette.mat
@@ -2487,9 +2589,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fe0b1f9aeb45b41b089175aeeabd5d95
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-46.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-46.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fe690cceaf261234183024fc4516e18d
     m_Address: Assets/GameRes/Prefabs/Character/NPC
@@ -2497,9 +2600,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ff5f85da24bc943d1abdc5760a22bc81
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-09.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-09.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ff7e14fe6ad8cc84ead1774ab576604c
     m_Address: Assets/GameRes/Art/Font/SourceHanSerifSC-Light.otf
@@ -2508,9 +2612,10 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ffb159a21c8a04135a5616979c828fab
-    m_Address: Assets/GameRes/Audio/Casual Game Sounds U6/CasualGameSounds/DM-CGS-21.wav
+    m_Address: Assets/GameRes/Audio/Sound/CasualGameSounds/DM-CGS-21.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 8942cdc2860880b43beef82aa6fab200, type: 2}

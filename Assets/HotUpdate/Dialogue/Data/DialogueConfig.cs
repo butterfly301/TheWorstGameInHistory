@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using HotUpdate.Utility;
 
@@ -15,43 +15,43 @@ namespace HotUpdate.Dialogue.Data
         /// </summary>
         public string dialogueId;
 
-        /// <summary>
+/// <summary>
         ///     起始节点ID
         /// </summary>
         public string startNodeId;
 
-        /// <summary>
+/// <summary>
         ///     视图类型：Traditional（传统对话框）或 Bubble（泡泡对话框）
         /// </summary>
         public DialogueViewType viewType;
 
-        /// <summary>
+/// <summary>
         ///     是否保存进度
         /// </summary>
         public bool saveProgress;
 
-        /// <summary>
+/// <summary>
         ///     打字速度（秒），可选，不填使用默认值
         /// </summary>
         public float typingSpeed = 0.05f;
 
-        /// <summary>
+/// <summary>
         ///     是否可以跳过打字（点击立即显示全部）
         /// </summary>
         public bool canSkip = true;
 
-        /// <summary>
+/// <summary>
         ///     对话事件配置
         /// </summary>
         public DialogueEventsConfig events;
 
-        /// <summary>
+/// <summary>
         ///     所有对话节点
         /// </summary>
         public Dictionary<string, DialogueNode> nodes;
     }
 
-    /// <summary>
+/// <summary>
     ///     对话事件配置
     /// </summary>
     [Serializable]
@@ -62,13 +62,13 @@ namespace HotUpdate.Dialogue.Data
         /// </summary>
         public List<DialogueEventData> onStart;
 
-        /// <summary>
+/// <summary>
         ///     对话结束时的事件列表
         /// </summary>
         public List<DialogueEventData> onEnd;
     }
 
-    /// <summary>
+/// <summary>
     ///     对话事件数据
     /// </summary>
     [Serializable]
@@ -79,7 +79,7 @@ namespace HotUpdate.Dialogue.Data
         /// </summary>
         public string type;
 
-        /// <summary>
+/// <summary>
         ///     事件参数（根据类型不同，参数含义不同）
         ///     例如：PlayVoice类型时，为语音地址
         ///     CustomEvent类型时，为事件名称

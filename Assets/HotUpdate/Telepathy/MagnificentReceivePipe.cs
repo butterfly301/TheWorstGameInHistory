@@ -1,4 +1,4 @@
-// a magnificent receive pipe to shield us from all of life's complexities.
+﻿// a magnificent receive pipe to shield us from all of life's complexities.
 // safely sends messages from receive thread to main thread.
 // -> thread safety built in
 // -> byte[] pooling coming in the future
@@ -29,13 +29,13 @@ namespace Telepathy
             }
         }
 
-        // message queue
+// message queue
         // ConcurrentQueue allocates. lock{} instead.
         //
         // IMPORTANT: lock{} all usages!
         readonly Queue<Entry> queue = new Queue<Entry>();
 
-        // byte[] pool to avoid allocations
+// byte[] pool to avoid allocations
         // Take & Return is beautifully encapsulated in the pipe.
         // the outside does not need to worry about anything.
         // and it can be tested easily.
@@ -43,7 +43,7 @@ namespace Telepathy
         // IMPORTANT: lock{} all usages!
         Pool<byte[]> pool;
 
-        // unfortunately having one receive pipe per connetionId is way slower
+// unfortunately having one receive pipe per connetionId is way slower
         // in CCU tests. right now we have one pipe for all connections.
         // => we still need to limit queued messages per connection to avoid one
         //    spamming connection being able to slow down everyone else since
@@ -51,14 +51,14 @@ namespace Telepathy
         // => let's use a simpler per-connectionId counter for now
         Dictionary<int, int> queueCounter = new Dictionary<int, int>();
 
-        // constructor
+// constructor
         public MagnificentReceivePipe(int MaxMessageSize)
         {
             // initialize pool to create max message sized byte[]s each time
             pool = new Pool<byte[]>(() => new byte[MaxMessageSize]);
         }
 
-        // return amount of queued messages for this connectionId.
+// return amount of queued messages for this connectionId.
         // for statistics. don't call Count and assume that it's the same after
         // the call.
         public int Count(int connectionId)
@@ -71,19 +71,19 @@ namespace Telepathy
             }
         }
 
-        // total count
+// total count
         public int TotalCount
         {
             get { lock (this) { return queue.Count; } }
         }
 
-        // pool count for testing
+// pool count for testing
         public int PoolCount
         {
             get { lock (this) { return pool.Count(); } }
         }
 
-        // enqueue a message
+// enqueue a message
         // -> ArraySegment to avoid allocations later
         // -> parameters passed directly so it's more obvious that we don't just
         //    queue a passed 'Message', instead we copy the ArraySegment into
@@ -102,29 +102,29 @@ namespace Telepathy
                     // ArraySegment array is only valid until returning, so copy
                     // it into a byte[] that we can queue safely.
 
-                    // get one from the pool first to avoid allocations
+// get one from the pool first to avoid allocations
                     byte[] bytes = pool.Take();
 
-                    // copy into it
+// copy into it
                     Buffer.BlockCopy(message.Array, message.Offset, bytes, 0, message.Count);
 
-                    // indicate which part is the message
+// indicate which part is the message
                     segment = new ArraySegment<byte>(bytes, 0, message.Count);
                 }
 
-                // enqueue it
+// enqueue it
                 // IMPORTANT: pass the segment around pool byte[],
                 //            NOT the 'message' that is only valid until returning!
                 Entry entry = new Entry(connectionId, eventType, segment);
                 queue.Enqueue(entry);
 
-                // increase counter for this connectionId
+// increase counter for this connectionId
                 int oldCount = Count(connectionId);
                 queueCounter[connectionId] = oldCount + 1;
             }
         }
 
-        // peek the next message
+// peek the next message
         // -> allows the caller to process it while pipe still holds on to the
         //    byte[]
         // -> TryDequeue should be called after processing, so that the message
@@ -138,7 +138,7 @@ namespace Telepathy
             eventType = EventType.Disconnected;
             data = default;
 
-            // pool & queue usage always needs to be locked
+// pool & queue usage always needs to be locked
             lock (this)
             {
                 if (queue.Count > 0)
@@ -153,7 +153,7 @@ namespace Telepathy
             }
         }
 
-        // dequeue the next message
+// dequeue the next message
         // -> simply dequeues and returns the byte[] to pool (if any)
         // -> use Peek to actually process the first element while the pipe
         //    still holds on to the byte[]
@@ -174,28 +174,28 @@ namespace Telepathy
                     // dequeue from queue
                     Entry entry = queue.Dequeue();
 
-                    // return byte[] to pool (if any).
+// return byte[] to pool (if any).
                     // not all message types have byte[] contents.
                     if (entry.data != default)
                     {
                         pool.Return(entry.data.Array);
                     }
 
-                    // decrease counter for this connectionId
+// decrease counter for this connectionId
                     queueCounter[entry.connectionId]--;
 
-                    // remove if zero. don't want to keep old connectionIds in
+// remove if zero. don't want to keep old connectionIds in
                     // there forever, it would cause slowly growing memory.
                     if (queueCounter[entry.connectionId] == 0)
                         queueCounter.Remove(entry.connectionId);
 
-                    return true;
+return true;
                 }
                 return false;
             }
         }
 
-        public void Clear()
+public void Clear()
         {
             // pool & queue usage always needs to be locked
             lock (this)
@@ -206,7 +206,7 @@ namespace Telepathy
                     // dequeue
                     Entry entry = queue.Dequeue();
 
-                    // return byte[] to pool (if any).
+// return byte[] to pool (if any).
                     // not all message types have byte[] contents.
                     if (entry.data != default)
                     {
@@ -214,7 +214,7 @@ namespace Telepathy
                     }
                 }
 
-                // clear counter too
+// clear counter too
                 queueCounter.Clear();
             }
         }

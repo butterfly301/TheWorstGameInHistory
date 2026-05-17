@@ -1,4 +1,4 @@
-using HotUpdate.Audio.Commands;
+﻿using HotUpdate.Audio.Commands;
 using HotUpdate.Browser;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
@@ -16,7 +16,7 @@ namespace HotUpdate.UI.MainMenuUI
             quit.onClick.AddListener(PlayIceBreakerVideo);
         }
 
-        private void PlayIceBreakerVideo()
+private void PlayIceBreakerVideo()
         {
             this.SendCommand(new PauseMusicCommand());
             this.SendCommand(new OpenURLCommand(URLKeys.IceBreakerDownloadPage));

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using HotUpdate.Manager;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,24 +10,24 @@ namespace HotUpdate.Utility
         public UnityEvent onSpawn;
         public UnityEvent onDespawn;
 
-        public string[] assetNames;
+public string[] assetNames;
 
-        private void Start()
+private void Start()
         {
             onSpawn.Invoke();
         }
 
-        private void OnDestroy()
+private void OnDestroy()
         {
             onDespawn.Invoke();
         }
 
-        public void DestroyMyself(float seconds = 0f)
+public void DestroyMyself(float seconds = 0f)
         {
             StartCoroutine(DestroyAfterDelayCoroutine(seconds));
         }
 
-        private IEnumerator DestroyAfterDelayCoroutine(float seconds)
+private IEnumerator DestroyAfterDelayCoroutine(float seconds)
         {
             yield return new WaitForSeconds(seconds);
             if (assetNames.Length > 0)
@@ -36,7 +36,7 @@ namespace HotUpdate.Utility
                 Destroy(gameObject);
         }
 
-        public void Release()
+public void Release()
         {
             foreach (var assetName in assetNames) AddressablesManager.Instance.Release<GameObject>(assetName);
         }

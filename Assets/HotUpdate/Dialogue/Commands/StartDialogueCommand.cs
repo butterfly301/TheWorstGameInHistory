@@ -1,4 +1,4 @@
-using HotUpdate.Dialogue.Controller;
+﻿using HotUpdate.Dialogue.Controller;
 using QFramework;
 using UnityEngine;
 
@@ -11,19 +11,19 @@ namespace HotUpdate.Dialogue.Commands
     {
         private readonly string dialogueId;
 
-        public StartDialogueCommand(string dialogueId)
+public StartDialogueCommand(string dialogueId)
         {
             this.dialogueId = dialogueId;
         }
 
-        protected override void OnExecute()
+protected override void OnExecute()
         {
             var go = new GameObject($"Dialogue_{dialogueId}");
             var controller = go.AddComponent<DialogueController>();
 
-            controller.OnDialogueComplete = (id) => Object.Destroy(go, 0.5f);
-            
-            controller.StartDialogue(dialogueId);
+controller.OnDialogueComplete = (id) => Object.Destroy(go, 0.5f);
+
+controller.StartDialogue(dialogueId);
         }
     }
 }

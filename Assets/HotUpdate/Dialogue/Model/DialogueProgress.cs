@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace HotUpdate.Dialogue.Model
 {
@@ -13,26 +13,26 @@ namespace HotUpdate.Dialogue.Model
         /// </summary>
         public string dialogueId;
 
-        /// <summary>
+/// <summary>
         ///     当前节点ID
         /// </summary>
         public string currentNodeId;
 
-        /// <summary>
+/// <summary>
         ///     对话是否已完成
         /// </summary>
         public bool isCompleted;
 
-        /// <summary>
+/// <summary>
         ///     上次播放时间
         /// </summary>
         public string lastPlayTime;
 
-        public DialogueProgress()
+public DialogueProgress()
         {
         }
 
-        public DialogueProgress(string dialogueId, string currentNodeId)
+public DialogueProgress(string dialogueId, string currentNodeId)
         {
             this.dialogueId = dialogueId;
             this.currentNodeId = currentNodeId;

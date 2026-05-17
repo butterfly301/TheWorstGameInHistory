@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HotUpdate.Enums;
 using HotUpdate.Interface;
 using HotUpdate.Manager;
@@ -17,14 +17,14 @@ namespace HotUpdate.UI
         private GameObject mapPanelPrefab;
         private GameObject mapPanelObj;
 
-        public List<IInventory> Inventory { get; set; }
+public List<IInventory> Inventory { get; set; }
 
-        public MapUI(Transform parent)
+public MapUI(Transform parent)
         {
             parentTransform = parent;
         }
 
-        /// <summary>
+/// <summary>
         /// 初始化地图面板系统
         /// </summary>
         public void Init()
@@ -36,7 +36,7 @@ namespace HotUpdate.UI
             }
         }
 
-        /// <summary>
+/// <summary>
         /// 加载指定索引的地图面板Prefab
         /// </summary>
         public void LoadMapPanelPrefab(string index)
@@ -47,7 +47,7 @@ namespace HotUpdate.UI
             );
         }
 
-        /// <summary>
+/// <summary>
         /// 打开地图面板
         /// </summary>
         public void OpenMapPanel()
@@ -56,7 +56,7 @@ namespace HotUpdate.UI
                 mapPanelObj = Object.Instantiate(mapPanelPrefab, parentTransform);
         }
 
-        /// <summary>
+/// <summary>
         /// 关闭地图面板
         /// </summary>
         public void CloseMapPanel()
@@ -68,7 +68,7 @@ namespace HotUpdate.UI
             }
         }
 
-        /// <summary>
+/// <summary>
         /// 获取背包物品列表
         /// </summary>
         public List<IInventory> GetInventory()

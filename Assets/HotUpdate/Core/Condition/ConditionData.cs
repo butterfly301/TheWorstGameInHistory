@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +17,7 @@ namespace HotUpdate.Core.Condition
         /// </summary>
         public string type;
 
-        /// <summary>
+/// <summary>
         /// 条件参数（根据类型不同，参数含义不同）
         /// 例如：
         /// - HasItem类型时，为物品ID
@@ -25,18 +25,18 @@ namespace HotUpdate.Core.Condition
         /// </summary>
         public string target;
 
-        /// <summary>
+/// <summary>
         /// 比较值（用于数值比较）
         /// </summary>
         public int value;
 
-        /// <summary>
+/// <summary>
         /// 额外的字符串参数（可选，用于某些特殊条件类型）
         /// </summary>
         public string extraParam;
     }
 
-    /// <summary>
+/// <summary>
     /// 条件组（多个条件的AND/OR关系）
     /// </summary>
     [Serializable]
@@ -47,13 +47,13 @@ namespace HotUpdate.Core.Condition
         /// </summary>
         public ConditionGroupType type;
 
-        /// <summary>
+/// <summary>
         /// 条件列表
         /// </summary>
         public List<ConditionData> conditions;
     }
 
-    /// <summary>
+/// <summary>
     /// 条件组类型
     /// </summary>
     public enum ConditionGroupType
@@ -62,7 +62,7 @@ namespace HotUpdate.Core.Condition
         Any  // 满足任意一个条件（OR）
     }
 
-    /// <summary>
+/// <summary>
     /// 条件判断结果
     /// </summary>
     public class ConditionResult
@@ -72,12 +72,12 @@ namespace HotUpdate.Core.Condition
         /// </summary>
         public bool isMet;
 
-        /// <summary>
+/// <summary>
         /// 不满足的原因（可选，用于调试）
         /// </summary>
         public string reason;
 
-        public ConditionResult(bool isMet, string reason = null)
+public ConditionResult(bool isMet, string reason = null)
         {
             this.isMet = isMet;
             this.reason = reason;

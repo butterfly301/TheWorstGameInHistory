@@ -1,4 +1,4 @@
-using HotUpdate.Enums;
+﻿using HotUpdate.Enums;
 using HotUpdate.Manager;
 using HotUpdate.UI;
 using UnityEngine;
@@ -11,19 +11,19 @@ namespace HotUpdate.Utility
         public CharacterName[] speakerNames;
         private IDialogueBubble dialogueBubble;
 
-        private IBubble[] dialogueBubbles;
+private IBubble[] dialogueBubbles;
 
-        private string totalDialogueBubblePath;
+private string totalDialogueBubblePath;
 
-        public void Trigger()
+public void Trigger()
         {
             totalDialogueBubblePath = "Assets/Prefabs/DialogueBubbles/DialogueBubble" + dialogueBubbleIndex + ".prefab";
             dialogueBubbles = new IBubble[speakerNames.Length];
 
-            //for (var i = 0; i < speakerNames.Length; i++)
+//for (var i = 0; i < speakerNames.Length; i++)
                 //dialogueBubbles[i] = UIManager.Instance.GetSpeakerBubble(speakerNames[i]);
 
-            AddressablesManager.Instance.LoadAssetAsync<GameObject>(totalDialogueBubblePath, handle =>
+AddressablesManager.Instance.LoadAssetAsync<GameObject>(totalDialogueBubblePath, handle =>
             {
                 var dialogueBubbleObj = Instantiate(handle.Result);
                 dialogueBubble = dialogueBubbleObj.GetComponent<IDialogueBubble>();

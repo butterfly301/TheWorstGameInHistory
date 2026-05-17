@@ -1,8 +1,8 @@
-using HotUpdate.Enums;
+﻿using HotUpdate.Enums;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
 using UnityEngine;
-
+
 namespace HotUpdate.UI
 {
     /// <summary>
@@ -14,21 +14,21 @@ namespace HotUpdate.UI
         private readonly Transform parentTransform;
         private GameObject touchControlsPrefab;
         private GameObject touchControlsObj;
-
-        public TouchControlUI(Transform parent)
+
+public TouchControlUI(Transform parent)
         {
             parentTransform = parent;
         }
-
-        /// <summary>
+
+/// <summary>
         /// 初始化触屏控制系统
         /// </summary>
         public void Init()
         {
             if (!Application.isMobilePlatform)
                 return;
-
-            AddressablesManager.Instance.LoadAssetAsync<GameObject>(
+
+AddressablesManager.Instance.LoadAssetAsync<GameObject>(
                 AddressableKeys.TouchControls_Prefab,
                 handle =>
                 {
@@ -37,8 +37,8 @@ namespace HotUpdate.UI
                 }
             );
         }
-
-        /// <summary>
+
+/// <summary>
         /// 显示触屏控制器
         /// </summary>
         public void ShowTouchControls()
@@ -46,8 +46,8 @@ namespace HotUpdate.UI
             if (touchControlsObj != null)
                 touchControlsObj.SetActive(true);
         }
-
-        /// <summary>
+
+/// <summary>
         /// 隐藏触屏控制器
         /// </summary>
         public void HideTouchControls()

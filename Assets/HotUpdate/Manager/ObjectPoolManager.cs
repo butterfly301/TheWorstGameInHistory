@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,19 +11,19 @@ namespace HotUpdate.Manager
         private readonly Dictionary<PoolTag, Queue<GameObject>> poolDictionary = new();
         private readonly Dictionary<PoolTag, GameObject> prefabDictionary = new();
 
-        protected override void OnDestroy()
+protected override void OnDestroy()
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
             base.OnDestroy();
         }
 
-        public override void OnSingletonInit()
+public override void OnSingletonInit()
         {
             base.OnSingletonInit();
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             // Clear all pools and dictionaries when a new scene is loaded
             // to prevent references to destroyed objects.
@@ -32,14 +32,14 @@ namespace HotUpdate.Manager
             activeObjects.Clear();
         }
 
-        public void CreatePool(PoolTag poolTag, GameObject prefab, int initialSize)
+public void CreatePool(PoolTag poolTag, GameObject prefab, int initialSize)
         {
             if (poolDictionary.ContainsKey(poolTag)) return;
 
-            poolDictionary[poolTag] = new Queue<GameObject>();
+poolDictionary[poolTag] = new Queue<GameObject>();
             prefabDictionary[poolTag] = prefab;
 
-            for (var i = 0; i < initialSize; i++)
+for (var i = 0; i < initialSize; i++)
             {
                 var obj = Instantiate(prefab);
                 obj.SetActive(false);
@@ -47,7 +47,7 @@ namespace HotUpdate.Manager
             }
         }
 
-        public GameObject SpawnFromPool(PoolTag poolTag, Vector3 position, Quaternion rotation)
+public GameObject SpawnFromPool(PoolTag poolTag, Vector3 position, Quaternion rotation)
         {
             if (!poolDictionary.ContainsKey(poolTag))
             {
@@ -55,9 +55,9 @@ namespace HotUpdate.Manager
                 return null;
             }
 
-            GameObject objectToSpawn = null;
+GameObject objectToSpawn = null;
 
-            // Dequeue until a valid (non-destroyed) object is found
+// Dequeue until a valid (non-destroyed) object is found
             while (poolDictionary[poolTag].Count > 0)
             {
                 objectToSpawn = poolDictionary[poolTag].Dequeue();
@@ -65,23 +65,23 @@ namespace HotUpdate.Manager
                 // If null, the object was destroyed; loop continues to the next one.
             }
 
-            // If the pool was empty or only contained destroyed objects, create a new one
+// If the pool was empty or only contained destroyed objects, create a new one
             if (objectToSpawn == null) objectToSpawn = Instantiate(prefabDictionary[poolTag]);
 
-            objectToSpawn.transform.position = position;
+objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
             objectToSpawn.SetActive(true);
 
-            activeObjects[objectToSpawn] = poolTag;
+activeObjects[objectToSpawn] = poolTag;
 
-            return objectToSpawn;
+return objectToSpawn;
         }
 
-        public void ReturnToPool(GameObject objectToReturn)
+public void ReturnToPool(GameObject objectToReturn)
         {
             if (objectToReturn == null) return; // Safety check
 
-            if (activeObjects.TryGetValue(objectToReturn, out var poolTag))
+if (activeObjects.TryGetValue(objectToReturn, out var poolTag))
             {
                 objectToReturn.SetActive(false);
                 poolDictionary[poolTag].Enqueue(objectToReturn);
@@ -95,7 +95,7 @@ namespace HotUpdate.Manager
             }
         }
 
-        public void ReturnToPool(PoolTag poolTag)
+public void ReturnToPool(PoolTag poolTag)
         {
             // 创建一个列表来存储需要回收的对象，以避免在遍历时修改 activeObjects 字典
             var objectsToReturn = new List<GameObject>();
@@ -103,12 +103,11 @@ namespace HotUpdate.Manager
                 if (pair.Value == poolTag)
                     objectsToReturn.Add(pair.Key);
 
-            // 遍历列表，将对象逐个返还给对象池
+// 遍历列表，将对象逐个返还给对象池
             foreach (var obj in objectsToReturn) ReturnToPool(obj);
         }
 
-
-        public void ReturnAllToPool()
+public void ReturnAllToPool()
         {
             // Create a copy of the keys to avoid modification during iteration
             var objectsToReturn = new List<GameObject>(activeObjects.Keys);

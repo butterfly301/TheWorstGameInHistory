@@ -1,4 +1,4 @@
-using HotUpdate.Enemy;
+﻿using HotUpdate.Enemy;
 using HotUpdate.World;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ namespace HotUpdate.Utility
     {
         public int spawnPointIndex;
 
-        public void Spawn()
+public void Spawn()
         {
             var spawnPoints = WorldConfigManager1.Instance.GetEnemySpawnPoints(spawnPointIndex);
             EnemyManager.Instance.SpawnEnemy("BugToiletVillage", spawnPoints.position, Quaternion.identity);

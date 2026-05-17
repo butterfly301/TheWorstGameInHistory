@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (c) 2023 MiniGames
  *
  * Check out how to use it here.
@@ -36,34 +36,34 @@ namespace Tiny
         [SerializeField] [Tooltip("The material to apply to the trail.")]
         private Material material;
 
-        [SerializeField] [Tooltip("Define the lifetime of a point in the trail, in seconds.")]
+[SerializeField] [Tooltip("Define the lifetime of a point in the trail, in seconds.")]
         private float duration = 0.1f;
 
-        [SerializeField] [Tooltip("Increase this value to make the trail corners appear rounder.")]
+[SerializeField] [Tooltip("Increase this value to make the trail corners appear rounder.")]
         private int corner = 1;
 
-        [SerializeField]
+[SerializeField]
         [Tooltip("Enable this to connect the first and last positions of the line, and form a closed loop.")]
         private bool loop;
 
-        [SerializeField] [Tooltip("The array of Vector3 points to connect.")]
+[SerializeField] [Tooltip("The array of Vector3 points to connect.")]
         private Vector3[] points = { new(0f, 0f, -1f), new(0f, 0f, 1f) };
 
-        [NonSerialized] private Transform cacheTM;
+[NonSerialized] private Transform cacheTM;
         [NonSerialized] private int lastCorner = -1;
 
-        [NonSerialized] private int lastSegmentCount = -1;
+[NonSerialized] private int lastSegmentCount = -1;
         [NonSerialized] private Mesh mesh;
         [NonSerialized] private int pointCount = -1;
         [NonSerialized] private float toCornerT;
 
-        [NonSerialized] private GameObject trailGo;
+[NonSerialized] private GameObject trailGo;
 
-        private Coroutine update;
+private Coroutine update;
 
-        [NonSerialized] private Vector3[] vertices;
+[NonSerialized] private Vector3[] vertices;
 
-        /// <summary>
+/// <summary>
         ///     The array of Vector3 points to connect.
         /// </summary>
         public Vector3[] Points
@@ -72,70 +72,70 @@ namespace Tiny
             set => points = value;
         }
 
-        /// <summary>
+/// <summary>
         ///     Enable this to connect the first and last positions of the line, and form a closed loop.
         /// </summary>
         public bool Loop => loop && points.Length >= 3;
 
-        private void Start()
+private void Start()
         {
             cacheTM = transform;
 
-            trailGo = new GameObject(name + "Trail", typeof(MeshFilter), typeof(MeshRenderer));
+trailGo = new GameObject(name + "Trail", typeof(MeshFilter), typeof(MeshRenderer));
             DontDestroyOnLoad(trailGo);
 
-            mesh = new Mesh { name = "Trail Effect" };
+mesh = new Mesh { name = "Trail Effect" };
             mesh.MarkDynamic();
             trailGo.GetComponent<MeshFilter>().sharedMesh = mesh;
             trailGo.layer = gameObject.layer;
 
-            var meshRenderer = trailGo.GetComponent<MeshRenderer>();
+var meshRenderer = trailGo.GetComponent<MeshRenderer>();
             meshRenderer.material = material;
             meshRenderer.shadowCastingMode = ShadowCastingMode.Off;
 
-            Initialize((int)(duration / Time.fixedDeltaTime));
+Initialize((int)(duration / Time.fixedDeltaTime));
         }
 
-        private void LateUpdate()
+private void LateUpdate()
         {
             if (cacheTM.hasChanged)
                 TransformVertices();
 
-            mesh.vertices = vertices;
+mesh.vertices = vertices;
             mesh.RecalculateBounds();
         }
 
-        private void OnEnable()
+private void OnEnable()
         {
             if (trailGo == null)
                 return;
 
-            trailGo.SetActive(true);
+trailGo.SetActive(true);
             Initialize((int)(duration / Time.fixedDeltaTime));
         }
 
-        private void OnDisable()
+private void OnDisable()
         {
             if (trailGo)
                 trailGo.SetActive(false);
 
-            if (update != null)
+if (update != null)
                 StopCoroutine(update);
             update = null;
         }
 
-        private void OnDestroy()
+private void OnDestroy()
         {
             if (mesh != null)
                 DestroyImmediate(mesh);
             mesh = null;
 
-            if (trailGo != null)
+if (trailGo != null)
                 DestroyImmediate(trailGo);
             trailGo = null;
         }
 
-        /// <summary>
+/// <summary>
         ///     Removes all points from the TrailRenderer. Useful for restarting a trail from a new position.
         /// </summary>
         public void Clear()
@@ -143,33 +143,33 @@ namespace Tiny
             if (!enabled || pointCount <= 1 || !trailGo)
                 return;
 
-            if (update != null)
+if (update != null)
                 StopCoroutine(update);
 
-            ClearVertices();
+ClearVertices();
 
-            update = StartCoroutine(PhysicsUpdate());
+update = StartCoroutine(PhysicsUpdate());
         }
 
-        private void SetVerticesAndCorner()
+private void SetVerticesAndCorner()
         {
             var nextSegmentPoint = pointCount + pointCount * corner;
 
-            Array.Copy(vertices, 0, vertices, nextSegmentPoint, vertices.Length - nextSegmentPoint);
+Array.Copy(vertices, 0, vertices, nextSegmentPoint, vertices.Length - nextSegmentPoint);
 
-            TransformVertices();
+TransformVertices();
 
-            var next2 = nextSegmentPoint * 2;
+var next2 = nextSegmentPoint * 2;
             var next3 = nextSegmentPoint * 3;
 
-            for (var x = -1; ++x < pointCount;)
+for (var x = -1; ++x < pointCount;)
             {
                 var a = vertices[x];
                 var b = vertices[x + nextSegmentPoint];
                 var c = vertices[x + next2];
                 var d = vertices[x + next3];
 
-                for (int n = -1, index = pointCount + x; ++n < corner; index += pointCount)
+for (int n = -1, index = pointCount + x; ++n < corner; index += pointCount)
                 {
                     var t = (n + 1) * toCornerT;
                     vertices[index] = CatmullRomSpline(a, a, b, c, t);
@@ -178,19 +178,19 @@ namespace Tiny
             }
         }
 
-        private void SetVertices()
+private void SetVertices()
         {
             Array.Copy(vertices, 0, vertices, pointCount, vertices.Length - pointCount);
             TransformVertices();
         }
 
-        private IEnumerator PhysicsUpdate()
+private IEnumerator PhysicsUpdate()
         {
             YieldInstruction wait = new WaitForFixedUpdate();
 
-            Action action = corner > 0 ? SetVerticesAndCorner : SetVertices;
+Action action = corner > 0 ? SetVerticesAndCorner : SetVertices;
 
-            while (true)
+while (true)
             {
                 yield return wait;
                 action();
@@ -198,60 +198,60 @@ namespace Tiny
             }
         }
 
-        private void TransformVertices()
+private void TransformVertices()
         {
             var localToWorldMatrix = cacheTM.localToWorldMatrix;
             for (var i = -1; ++i < pointCount;)
                 vertices[i] = localToWorldMatrix.MultiplyPoint3x4(points[i]);
         }
 
-        private void ClearVertices()
+private void ClearVertices()
         {
             TransformVertices();
 
-            for (var i = pointCount; i < vertices.Length; i += pointCount)
+for (var i = pointCount; i < vertices.Length; i += pointCount)
                 Array.Copy(vertices, 0, vertices, i, pointCount);
         }
 
-        private void Initialize(int segment)
+private void Initialize(int segment)
         {
             var corner = segment >= 3 ? this.corner : 0;
 
-            if (lastSegmentCount == segment && pointCount == points.Length && lastCorner == corner)
+if (lastSegmentCount == segment && pointCount == points.Length && lastCorner == corner)
             {
                 ClearVertices();
 
-                update = StartCoroutine(PhysicsUpdate());
+update = StartCoroutine(PhysicsUpdate());
                 return;
             }
 
-            pointCount = points.Length;
+pointCount = points.Length;
             lastCorner = corner;
             lastSegmentCount = segment;
 
-            if (pointCount <= 1)
+if (pointCount <= 1)
             {
                 mesh.Clear();
                 return;
             }
 
-            var segmentAndCorner = segment + segment * corner;
+var segmentAndCorner = segment + segment * corner;
 
-            var uvs = new Vector2[pointCount * (segmentAndCorner + 1)];
+var uvs = new Vector2[pointCount * (segmentAndCorner + 1)];
 
-            var isLoop = Loop;
+var isLoop = Loop;
 
-            var indexs = new int[(isLoop ? pointCount : pointCount - 1) * 6 * segmentAndCorner];
+var indexs = new int[(isLoop ? pointCount : pointCount - 1) * 6 * segmentAndCorner];
 
-            var uv = new Vector2();
+var uv = new Vector2();
 
-            var endPoint = pointCount - 1;
+var endPoint = pointCount - 1;
 
-            var invSegment = 1f / segment;
+var invSegment = 1f / segment;
             var invEnd = 1f / endPoint;
             toCornerT = 1f / (corner + 1);
 
-            for (int y = -1, i = -1; ++y <= segment;)
+for (int y = -1, i = -1; ++y <= segment;)
             {
                 uv.y = y * invSegment;
                 for (var x = -1; ++x < pointCount;)
@@ -260,14 +260,14 @@ namespace Tiny
                     uvs[++i] = uv;
                 }
 
-                if (y == segment)
+if (y == segment)
                     continue;
 
-                for (var n = -1; ++n < corner;)
+for (var n = -1; ++n < corner;)
                 {
                     uv.y = Mathf.Lerp(y * invSegment, (y + 1) * invSegment, (n + 1) * toCornerT);
 
-                    for (var x = -1; ++x < pointCount;)
+for (var x = -1; ++x < pointCount;)
                     {
                         uv.x = x * invEnd;
                         uvs[++i] = uv;
@@ -275,10 +275,10 @@ namespace Tiny
                 }
             }
 
-            var index = 0;
+var index = 0;
             var lineCount = isLoop ? endPoint + 1 : endPoint;
 
-            for (var y = -1; ++y < segmentAndCorner;)
+for (var y = -1; ++y < segmentAndCorner;)
             {
                 var beginIndex = y * pointCount;
                 var nextIndex = y * pointCount;
@@ -287,7 +287,7 @@ namespace Tiny
                 else
                     nextIndex += 1;
 
-                for (var x = -1; ++x < lineCount; index += 6, beginIndex = nextIndex++)
+for (var x = -1; ++x < lineCount; index += 6, beginIndex = nextIndex++)
                 {
                     indexs[index + 0] = beginIndex;
                     indexs[index + 1] = beginIndex + pointCount;
@@ -298,17 +298,17 @@ namespace Tiny
                 }
             }
 
-            vertices = new Vector3[uvs.Length];
+vertices = new Vector3[uvs.Length];
             ClearVertices();
 
-            mesh.vertices = vertices;
+mesh.vertices = vertices;
             mesh.uv = uvs;
             mesh.SetIndices(indexs, MeshTopology.Triangles, 0);
 
-            update = StartCoroutine(PhysicsUpdate());
+update = StartCoroutine(PhysicsUpdate());
         }
 
-        /// <summary>
+/// <summary>
         ///     p1 과 p2 사이에 곡선을 생성한다.
         ///     t == 0 일 때 p1을, t == 1 일 때 p2를 리턴한다.
         /// </summary>
@@ -320,7 +320,7 @@ namespace Tiny
                            (-p0 + 3 * p1 - 3 * p2 + p3) * t3);
         }
 
-        public void SetMaterial(Material value)
+public void SetMaterial(Material value)
         {
             material = value;
             if (trailGo != null) trailGo.GetComponent<MeshRenderer>().material = material;

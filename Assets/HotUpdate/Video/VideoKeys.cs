@@ -1,4 +1,4 @@
-namespace HotUpdate.Video
+﻿namespace HotUpdate.Video
 {
     /// <summary>
     ///     存放所有视频文件基础名称的静态常量类
@@ -13,7 +13,7 @@ namespace HotUpdate.Video
             /// </summary>
             public const string OpenVideo0 = "OpenVideo0";
 
-            public const string OpenVideo1 = "OpenVideo1";
+public const string OpenVideo1 = "OpenVideo1";
         }
     }
 }

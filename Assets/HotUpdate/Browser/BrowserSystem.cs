@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using QFramework;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
@@ -14,15 +14,15 @@ namespace HotUpdate.Browser
         {
             if (string.IsNullOrEmpty(url)) return;
 
-            // 现在的逻辑是，所有传入的URL都被视为一个需要打开的本地HTML文件名。
+// 现在的逻辑是，所有传入的URL都被视为一个需要打开的本地HTML文件名。
             OpenExternalFile(url);
         }
 
-        protected override void OnInit()
+protected override void OnInit()
         {
         }
 
-        private void OpenExternalFile(string baseFileName)
+private void OpenExternalFile(string baseFileName)
         {
             var langCode = LocalizationSettings.SelectedLocale.Identifier.Code;
             var filePath = Path.Combine(Application.streamingAssetsPath, "htmls", langCode, baseFileName);
@@ -31,7 +31,7 @@ namespace HotUpdate.Browser
                 filePath = "file://" + filePath;
 #endif
 
-            Application.OpenURL(filePath);
+Application.OpenURL(filePath);
             Debug.Log($"[BrowserSystem] Opening external file: {filePath}");
         }
     }

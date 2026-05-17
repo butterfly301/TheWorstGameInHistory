@@ -1,4 +1,4 @@
-using HotUpdate.Dialogue.View;
+﻿using HotUpdate.Dialogue.View;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
 using UnityEngine;
@@ -11,18 +11,18 @@ public class TraditionalDialogueUI
     private DialogueViewBase traditionalView;
     private GameObject choiceButtonPrefab;
 
-    public TraditionalDialogueUI(Transform transform)
+public TraditionalDialogueUI(Transform transform)
     {
         trans = transform;
     }
 
-    public void Init()
+public void Init()
     {
         LoadChoiceButtonPrefab();
         LoadTraditionalView();
     }
 
-    private void LoadChoiceButtonPrefab()
+private void LoadChoiceButtonPrefab()
     {
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
             AddressableKeys.Choice_Prefab,
@@ -30,7 +30,7 @@ public class TraditionalDialogueUI
         );
     }
 
-    private void LoadTraditionalView()
+private void LoadTraditionalView()
     {
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
             AddressableKeys.TraditionalView_Prefab,
@@ -46,11 +46,10 @@ public class TraditionalDialogueUI
         );
     }
 
-    public DialogueViewBase GetDialogueView()
+public DialogueViewBase GetDialogueView()
     {
         traditionalViewObj.SetActive(true);
         return traditionalView;
     }
 }
-
 

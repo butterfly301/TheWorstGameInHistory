@@ -1,4 +1,4 @@
-namespace Telepathy
+﻿namespace Telepathy
 {
     public static class Utils
     {
@@ -12,7 +12,7 @@ namespace Telepathy
             bytes[offset + 3] = (byte)value;
         }
 
-        public static int BytesToIntBigEndian(byte[] bytes)
+public static int BytesToIntBigEndian(byte[] bytes)
         {
             return (bytes[0] << 24) |
                    (bytes[1] << 16) |

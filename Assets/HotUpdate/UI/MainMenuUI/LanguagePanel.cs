@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
@@ -8,11 +8,11 @@ public class LanguagePanel : MonoBehaviour, OptionPanelChildren
 {
     private Button[] languageButtons;
 
-    public void Init()
+public void Init()
     {
         languageButtons = transform.Find("Group").GetComponentsInChildren<Button>();
 
-        for (var i = 0; i < languageButtons.Length; i++)
+for (var i = 0; i < languageButtons.Length; i++)
         {
             var index = i;
             languageButtons[i].onClick.RemoveAllListeners(); // 清除旧监听
@@ -20,7 +20,7 @@ public class LanguagePanel : MonoBehaviour, OptionPanelChildren
         }
     }
 
-    private void OnLanguageButtonClick(int index)
+private void OnLanguageButtonClick(int index)
     {
         switch (index)
         {
@@ -35,7 +35,7 @@ public class LanguagePanel : MonoBehaviour, OptionPanelChildren
         }
     }
 
-    // 方法一：通过语言标识符切换（推荐）
+// 方法一：通过语言标识符切换（推荐）
     private void SwitchToLanguage(string languageCode)
     {
         // 遍历所有可用的语言环境
@@ -47,6 +47,6 @@ public class LanguagePanel : MonoBehaviour, OptionPanelChildren
                 return;
             }
 
-        Debug.LogError($"未找到对应的语言设置: {languageCode}");
+Debug.LogError($"未找到对应的语言设置: {languageCode}");
     }
 }

@@ -1,4 +1,4 @@
-using HotUpdate.Audio.System;
+﻿using HotUpdate.Audio.System;
 using HotUpdate.Browser;
 using HotUpdate.Console;
 using HotUpdate.Data.Model;
@@ -24,12 +24,12 @@ namespace HotUpdate.Core
             RegisterSystem(new DownloadSystem());
             RegisterSystem(new DialogueSystem());
 
-            // 注册数据模型
+// 注册数据模型
             RegisterModel(new GameDataModel());
             RegisterModel(new DialogueModel());
             RegisterModel(new EnemyDataModel());
 
-            // 注册存储工具
+// 注册存储工具
             RegisterUtility<IStorage>(new JsonStorage());
         }
     }

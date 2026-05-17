@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HotUpdate.UI;
 
 namespace HotUpdate.Character.Player
@@ -8,7 +8,7 @@ namespace HotUpdate.Character.Player
         private List<IInventory> inventory = new();
         private IPickUpItems pickUpItems;
 
-        public override void Init()
+public override void Init()
         {
             base.Init();
             if (UIManager.Instance is UIManager1 uiManager1)

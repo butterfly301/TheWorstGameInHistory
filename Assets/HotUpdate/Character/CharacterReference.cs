@@ -1,4 +1,4 @@
-using HotUpdate.Enums;
+﻿using HotUpdate.Enums;
 using HotUpdate.UI;
 using UnityEngine;
 
@@ -8,9 +8,9 @@ namespace HotUpdate.Character
     {
         public CharacterName characterName;
 
-        private IBubble bubble;
+private IBubble bubble;
 
-        public virtual void Init()
+public virtual void Init()
         {
             var bubbleObj = transform.Find("Bubble").gameObject;
             bubble = bubbleObj.GetComponent<IBubble>();

@@ -1,4 +1,4 @@
-using HotUpdate.Core;
+﻿using HotUpdate.Core;
 using HotUpdate.Data.Model;
 using HotUpdate.Interface;
 using HotUpdate.UI;
@@ -15,31 +15,31 @@ public class WindowBase : MonoBehaviour, IController,IAutoBind
     [SerializeField]protected Button quit;
     private RectTransform rectTransform;
 
-    private void Awake()
+private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         initialRectTransformPosition = rectTransform.anchoredPosition;
     }
 
-    protected virtual void OnEnable()
+protected virtual void OnEnable()
     {
         //每次启用时使其复位
         rectTransform.anchoredPosition = initialRectTransformPosition;
     }
 
-    public IArchitecture GetArchitecture()
+public IArchitecture GetArchitecture()
     {
         return TheWorstGameInHistory.Interface;
     }
 
-    public virtual void Init(MainMenu mainMenuVar)
+public virtual void Init(MainMenu mainMenuVar)
     {
         mainMenu = mainMenuVar;
         gameData = mainMenu.GameData;
         quit.onClick.AddListener(CloseWindow);
     }
 
-    public void CloseWindow()
+public void CloseWindow()
     {
         gameObject.SetActive(false);
     }

@@ -1,4 +1,4 @@
-using HotUpdate.Audio.Commands;
+﻿using HotUpdate.Audio.Commands;
 using HotUpdate.Core;
 using QFramework;
 using UnityEngine;
@@ -12,17 +12,17 @@ namespace HotUpdate.Audio.Controller
             return TheWorstGameInHistory.Interface;
         }
 
-        public void PlayMusic(string musicName)
+public void PlayMusic(string musicName)
         {
             this.SendCommand(new PlayMusicCommand(musicName));
         }
 
-        public void PlaySound(string soundName)
+public void PlaySound(string soundName)
         {
             this.SendCommand(new PlaySoundCommand(soundName));
         }
 
-        public void PlayVoice(string voiceName)
+public void PlayVoice(string voiceName)
         {
             this.SendCommand(new PlayVoiceCommand(voiceName));
         }

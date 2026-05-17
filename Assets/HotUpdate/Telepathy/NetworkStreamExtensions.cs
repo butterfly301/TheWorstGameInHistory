@@ -31,7 +31,7 @@ namespace Telepathy
             }
         }
 
-        // helper function to read EXACTLY 'n' bytes
+// helper function to read EXACTLY 'n' bytes
         // -> default .Read reads up to 'n' bytes. this function reads exactly
         //    'n' bytes
         // -> this is blocking until 'n' bytes were received
@@ -54,11 +54,11 @@ namespace Telepathy
                 int remaining = amount - bytesRead;
                 int result = stream.ReadSafely(buffer, bytesRead, remaining);
 
-                // .Read returns 0 if disconnected
+// .Read returns 0 if disconnected
                 if (result == 0)
                     return false;
 
-                // otherwise add to bytes read
+// otherwise add to bytes read
                 bytesRead += result;
             }
             return true;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using QFramework;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ namespace HotUpdate.Core.Condition
             Debug.Log($"[ConditionSystem] 当前支持的条件类型: {ConditionChecker.GetRegisteredConditionTypesCount()}");
         }
 
-        /// <summary>
+/// <summary>
         /// 快捷方法：检查单个条件
         /// </summary>
         public bool Check(ConditionData condition)
@@ -24,7 +24,7 @@ namespace HotUpdate.Core.Condition
             return ConditionChecker.CheckCondition(condition);
         }
 
-        /// <summary>
+/// <summary>
         /// 快捷方法：检查条件组
         /// </summary>
         public bool CheckGroup(ConditionGroup group)
@@ -32,7 +32,7 @@ namespace HotUpdate.Core.Condition
             return ConditionChecker.CheckConditionGroup(group);
         }
 
-        /// <summary>
+/// <summary>
         /// 注册自定义条件类型
         /// </summary>
         public void RegisterConditionType(string typeName, Func<ConditionData, bool> checker)
@@ -40,7 +40,7 @@ namespace HotUpdate.Core.Condition
             ConditionChecker.RegisterConditionType(typeName, checker);
         }
 
-        /// <summary>
+/// <summary>
         /// 取消注册条件类型
         /// </summary>
         public void UnregisterConditionType(string typeName)

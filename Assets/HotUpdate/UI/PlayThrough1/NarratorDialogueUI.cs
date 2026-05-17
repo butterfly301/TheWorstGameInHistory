@@ -1,4 +1,4 @@
-using HotUpdate.Dialogue.View;
+﻿using HotUpdate.Dialogue.View;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
 using UnityEngine;
@@ -16,18 +16,18 @@ namespace HotUpdate.UI
         private DialogueViewBase narratorView;
         private GameObject choiceButtonPrefab;
 
-        public NarratorDialogueUI(Transform layerTrans)
+public NarratorDialogueUI(Transform layerTrans)
         {
             trans = layerTrans;
         }
 
-        public void Init()
+public void Init()
         {
             LoadChoiceButtonPrefab();
             LoadNarratorView();
         }
 
-        private void LoadChoiceButtonPrefab()
+private void LoadChoiceButtonPrefab()
         {
             AddressablesManager.Instance.LoadAssetAsync<GameObject>(
                 AddressableKeys.Choice_Prefab,
@@ -35,7 +35,7 @@ namespace HotUpdate.UI
             );
         }
 
-        private void LoadNarratorView()
+private void LoadNarratorView()
         {
             AddressablesManager.Instance.LoadAssetAsync<GameObject>(
                 AddressableKeys.NarratorView_Prefab,
@@ -51,12 +51,11 @@ namespace HotUpdate.UI
             );
         }
 
-        public DialogueViewBase GetDialogueView()
+public DialogueViewBase GetDialogueView()
         {
             narratorViewObj.SetActive(true);
             return narratorView;
         }
     }
 }
-
 

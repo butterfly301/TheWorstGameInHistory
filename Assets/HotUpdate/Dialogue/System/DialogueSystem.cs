@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using HotUpdate.Audio.System;
 using HotUpdate.Dialogue.Controller;
@@ -26,32 +26,32 @@ namespace HotUpdate.Dialogue.System
         /// </summary>
         private Dictionary<string, DialogueData> dialogueDataCache;
 
-        /// <summary>
+/// <summary>
         ///     选项被选择事件
         /// </summary>
         public UnityEvent<string, int> OnChoiceSelected = new();
 
-        /// <summary>
+/// <summary>
         ///     对话结束事件
         /// </summary>
         public UnityEvent<string> OnDialogueEnd = new();
 
-        /// <summary>
+/// <summary>
         ///     对话开始事件
         /// </summary>
         public UnityEvent<string> OnDialogueStart = new();
 
-        /// <summary>
+/// <summary>
         ///     节点切换事件
         /// </summary>
         public UnityEvent<string, string> OnNodeChanged = new();
 
-        protected override void OnInit()
+protected override void OnInit()
         {
             dialogueDataCache = new Dictionary<string, DialogueData>();
         }
 
-        /// <summary>
+/// <summary>
         ///     异步加载对话数据
         /// </summary>
         public void LoadDialogueDataAsync(string dialogueId, Action<DialogueData> onComplete,
@@ -64,10 +64,10 @@ namespace HotUpdate.Dialogue.System
             //     return;
             // }
 
-            // 构建Addressable地址
+// 构建Addressable地址
             var address = AddressableKeys.GetData_Dialogue(dialogueId);
 
-            // 使用 Addressables 加载 JSON
+// 使用 Addressables 加载 JSON
             AddressablesManager.Instance.LoadAssetAsync<TextAsset>(address,
                 handle =>
                 {
@@ -77,10 +77,10 @@ namespace HotUpdate.Dialogue.System
                         {
                             var json = handle.Result.text;
 
-                            // 使用 Newtonsoft.Json 替代 JsonUtility（支持Dictionary）
+// 使用 Newtonsoft.Json 替代 JsonUtility（支持Dictionary）
                             var dialogueData = JsonConvert.DeserializeObject<DialogueData>(json);
 
-                            if (dialogueData != null && dialogueData.config != null)
+if (dialogueData != null && dialogueData.config != null)
                             {
                                 // 加入缓存
                                 dialogueDataCache[dialogueId] = dialogueData;
@@ -106,7 +106,7 @@ namespace HotUpdate.Dialogue.System
                 });
         }
 
-        /// <summary>
+/// <summary>
         ///     获取对话数据（从缓存）
         /// </summary>
         public DialogueData GetDialogueData(string dialogueId)
@@ -116,7 +116,7 @@ namespace HotUpdate.Dialogue.System
             return null;
         }
 
-        /// <summary>
+/// <summary>
         ///     获取本地化文本
         /// </summary>
         public string GetLocalizedText(string textKey)
@@ -126,30 +126,30 @@ namespace HotUpdate.Dialogue.System
                 // 获取当前选中的语言
                 var selectedLocale = LocalizationSettings.SelectedLocale;
 
-                if (selectedLocale == null)
+if (selectedLocale == null)
                 {
                     Debug.LogWarning("[DialogueSystem] 未选择语言，使用默认文本");
                     return textKey;
                 }
 
-                // 从 String Table 获取本地化文本
+// 从 String Table 获取本地化文本
                 var stringTable = LocalizationSettings.StringDatabase.GetTable("String Table", selectedLocale);
 
-                if (stringTable == null)
+if (stringTable == null)
                 {
                     Debug.LogWarning("[DialogueSystem] 未找到对话文本表: Dialogue");
                     return textKey;
                 }
 
-                var entry = stringTable.GetEntry(textKey);
+var entry = stringTable.GetEntry(textKey);
 
-                if (entry == null)
+if (entry == null)
                 {
                     Debug.LogWarning($"[DialogueSystem] 未找到对话文本Key: {textKey}");
                     return textKey;
                 }
 
-                return entry.GetLocalizedString();
+return entry.GetLocalizedString();
             }
             catch (Exception e)
             {
@@ -158,7 +158,7 @@ namespace HotUpdate.Dialogue.System
             }
         }
 
-        /// <summary>
+/// <summary>
         ///     触发对话开始事件
         /// </summary>
         public void TriggerDialogueStart(string dialogueId)
@@ -166,7 +166,7 @@ namespace HotUpdate.Dialogue.System
             OnDialogueStart?.Invoke(dialogueId);
         }
 
-        /// <summary>
+/// <summary>
         ///     触发对话结束事件
         /// </summary>
         public void TriggerDialogueEnd(string dialogueId)
@@ -174,7 +174,7 @@ namespace HotUpdate.Dialogue.System
             OnDialogueEnd?.Invoke(dialogueId);
         }
 
-        /// <summary>
+/// <summary>
         ///     触发节点切换事件
         /// </summary>
         public void TriggerNodeChanged(string dialogueId, string nodeId)
@@ -182,7 +182,7 @@ namespace HotUpdate.Dialogue.System
             OnNodeChanged?.Invoke(dialogueId, nodeId);
         }
 
-        /// <summary>
+/// <summary>
         ///     触发选项选择事件
         /// </summary>
         public void TriggerChoiceSelected(string dialogueId, int choiceIndex)
@@ -190,14 +190,14 @@ namespace HotUpdate.Dialogue.System
             OnChoiceSelected?.Invoke(dialogueId, choiceIndex);
         }
 
-        /// <summary>
+/// <summary>
         ///     执行对话事件（播放语音、自定义事件等）
         /// </summary>
         public void ExecuteDialogueEvents(DialogueEventData eventData, string dialogueId)
         {
             if (eventData == null) return;
 
-            try
+try
             {
                 switch (eventData.type)
                 {
@@ -206,12 +206,12 @@ namespace HotUpdate.Dialogue.System
                         PlayVoice(eventData.value);
                         break;
 
-                    case "CustomEvent":
+case "CustomEvent":
                         // 自定义事件
                         TriggerCustomEvent(eventData.value, dialogueId);
                         break;
 
-                    default:
+default:
                         Debug.LogWarning($"[DialogueSystem] 未知的事件类型: {eventData.type}");
                         break;
                 }
@@ -222,7 +222,7 @@ namespace HotUpdate.Dialogue.System
             }
         }
 
-        /// <summary>
+/// <summary>
         ///     播放语音
         /// </summary>
         private void PlayVoice(string voiceClipAddress)
@@ -232,7 +232,7 @@ namespace HotUpdate.Dialogue.System
             audioSystem.PlayVoice(voiceClipAddress);
         }
 
-        /// <summary>
+/// <summary>
         ///     触发自定义事件
         /// </summary>
         private void TriggerCustomEvent(string eventName, string dialogueId)
@@ -241,7 +241,7 @@ namespace HotUpdate.Dialogue.System
             // TODO: 可以集成事件总线系统
         }
 
-        /// <summary>
+/// <summary>
         ///     清除对话数据缓存
         /// </summary>
         public void ClearCache()
@@ -249,7 +249,7 @@ namespace HotUpdate.Dialogue.System
             dialogueDataCache.Clear();
         }
 
-        /// <summary>
+/// <summary>
         ///     预加载对话数据
         /// </summary>
         public void PreloadDialogueData(string dialogueId)

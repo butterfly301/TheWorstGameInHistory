@@ -1,14 +1,19 @@
-using System.Collections;
+﻿using System.Collections;
+using HotUpdate.Utility;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+using QFramework;
+using HotUpdate.Audio.Commands;
+using HotUpdate.Core;
 
 namespace HotUpdate.UI
 {
-    public class LoadingScreen3 : LoadingScreen
+    public class LoadingScreen3 : LoadingScreen,IController
     {
         private const string StringTableName = "String Table";
+        private const string soundName=AddressableKeys.huadongbianzuqi_Mp3;
 
         [SerializeField] private Image progressFill;
         [SerializeField] private TextMeshProUGUI progressText;
@@ -20,6 +25,7 @@ namespace HotUpdate.UI
         public override void Init()
         {
             base.Init();
+            this.SendCommand(new PlayMusicCommand(soundName));
             StartFakeLoading();
         }
 
@@ -108,5 +114,11 @@ namespace HotUpdate.UI
             var entry = stringTable.GetEntry(key);
             return entry == null ? key : entry.GetLocalizedString();
         }
+
+        public IArchitecture GetArchitecture()
+        {
+            return TheWorstGameInHistory.Interface;
+        }
+
     }
 }

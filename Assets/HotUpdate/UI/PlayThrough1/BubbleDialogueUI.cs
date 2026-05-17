@@ -1,4 +1,4 @@
-using HotUpdate.Dialogue.View;
+﻿using HotUpdate.Dialogue.View;
 using HotUpdate.Manager;
 using HotUpdate.Utility;
 using UnityEngine;
@@ -11,18 +11,18 @@ public class BubbleDialogueUI
     private DialogueViewBase bubbleView;
     private GameObject choiceButtonPrefab;
 
-    public BubbleDialogueUI(Transform layerTrans)
+public BubbleDialogueUI(Transform layerTrans)
     {
         trans = layerTrans;
     }
 
-    public void Init()
+public void Init()
     {
         LoadChoiceButtonPrefab();
         LoadBubbleView();
     }
 
-    private void LoadChoiceButtonPrefab()
+private void LoadChoiceButtonPrefab()
     {
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
             AddressableKeys.Choice_Prefab,
@@ -30,7 +30,7 @@ public class BubbleDialogueUI
         );
     }
 
-    private void LoadBubbleView()
+private void LoadBubbleView()
     {
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
             AddressableKeys.BubbleView_Prefab,
@@ -46,11 +46,10 @@ public class BubbleDialogueUI
         );
     }
 
-    public DialogueViewBase GetDialogueView()
+public DialogueViewBase GetDialogueView()
     {
         bubbleViewObj.SetActive(true);
         return bubbleView;
     }
 }
-
 

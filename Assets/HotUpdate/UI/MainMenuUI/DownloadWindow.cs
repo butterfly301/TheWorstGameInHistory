@@ -1,4 +1,4 @@
-using HotUpdate.Data.Model;
+﻿using HotUpdate.Data.Model;
 using HotUpdate.UI;
 using HotUpdate.UI.MainMenuUI;
 using TMPro;
@@ -10,16 +10,16 @@ public class DownloadWindow : ConfirmWindow
 {
     [Header("下载所需时间(秒)")] [SerializeField] private float downloadDuration = 60f;
 
-    [Header("下载的是什么软件")] public SoftwareName softwareName;
+[Header("下载的是什么软件")] public SoftwareName softwareName;
 
-    private float currentDownloadTime;
+private float currentDownloadTime;
     [SerializeField]private Transform downloadingUI;
     [SerializeField]private LocalizeStringEvent downloadResultText;
     private bool isDownloading;
     [SerializeField]private Slider progressSlider;
     [SerializeField]private TextMeshProUGUI progressText;
 
-    protected virtual void Update()
+protected virtual void Update()
     {
         if (isDownloading)
         {
@@ -27,7 +27,7 @@ public class DownloadWindow : ConfirmWindow
             var progress = CalculateDeceptiveProgress(currentDownloadTime, downloadDuration);
             UpdateProgressUI(progress);
 
-            if (currentDownloadTime >= downloadDuration)
+if (currentDownloadTime >= downloadDuration)
             {
                 isDownloading = false;
                 UpdateProgressUI(1f); // 确保最后显示100%
@@ -36,13 +36,13 @@ public class DownloadWindow : ConfirmWindow
         }
     }
 
-    protected override void OnEnable()
+protected override void OnEnable()
     {
         base.OnEnable();
         StartDownload();
     }
 
-    public override void Init(MainMenu mainMenuVar)
+public override void Init(MainMenu mainMenuVar)
     {
         base.Init(mainMenuVar);
         confirm.onClick.AddListener(() => { gameObject.SetActive(false); });
@@ -51,27 +51,27 @@ public class DownloadWindow : ConfirmWindow
         downloadResultText.gameObject.SetActive(false);
     }
 
-    private void StartDownload()
+private void StartDownload()
     {
         currentDownloadTime = 0f;
         isDownloading = true;
         UpdateProgressUI(0f);
     }
 
-    private float CalculateDeceptiveProgress(float currentTime, float totalDuration)
+private float CalculateDeceptiveProgress(float currentTime, float totalDuration)
     {
         float progress;
 
-        // 定义时间点和进度点
+// 定义时间点和进度点
         var phase1Time = 1.0f; // 第一阶段持续1秒
         var phase2ProgressTarget = 0.95f; // 第二阶段目标进度95%
 
-        // 调整第二阶段的结束时间点，使其更快。让快速增长阶段在开始后5秒就完成。
+// 调整第二阶段的结束时间点，使其更快。让快速增长阶段在开始后5秒就完成。
         var phase2EndTime = 5.0f;
         // 确保总时长大于第二阶段的结束时间
         var phase3StartTime = Mathf.Max(phase2EndTime, totalDuration - totalDuration / 2f);
 
-        if (currentTime <= phase1Time)
+if (currentTime <= phase1Time)
         {
             // 阶段1: 开始的1秒，进度非常慢
             // 线性增长到1%，这样看起来没有卡住
@@ -98,17 +98,17 @@ public class DownloadWindow : ConfirmWindow
                 progress = 1f;
         }
 
-        return Mathf.Clamp01(progress);
+return Mathf.Clamp01(progress);
     }
 
-    private void UpdateProgressUI(float progress)
+private void UpdateProgressUI(float progress)
     {
         if (progressSlider != null) progressSlider.value = progress;
 
-        if (progressText != null) progressText.text = $"{(int)(progress * 100)}%";
+if (progressText != null) progressText.text = $"{(int)(progress * 100)}%";
     }
 
-    protected virtual void OnDownloadComplete()
+protected virtual void OnDownloadComplete()
     {
         // 下载完成后的逻辑，例如显示确认按钮或关闭窗口
         // 这里可以根据需求添加逻辑，比如显示确认按钮
@@ -117,13 +117,13 @@ public class DownloadWindow : ConfirmWindow
         confirm.gameObject.SetActive(true);
     }
 
-    protected void DownloadSuccess()
+protected void DownloadSuccess()
     {
         downloadResultText.SetEntry("Download Complete");
         mainMenu.GetAppGroup().EnableSoftware(softwareName);
     }
 
-    protected void DownloadFailure()
+protected void DownloadFailure()
     {
         downloadResultText.SetEntry("Download failed");
     }

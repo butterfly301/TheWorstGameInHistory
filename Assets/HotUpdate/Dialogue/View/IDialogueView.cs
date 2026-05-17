@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using HotUpdate.Dialogue.Data;
 
 namespace HotUpdate.Dialogue.View
@@ -13,42 +13,42 @@ namespace HotUpdate.Dialogue.View
         /// </summary>
         void ShowDialogue(string speaker, string text);
 
-        /// <summary>
+/// <summary>
         ///     显示选项
         /// </summary>
         void ShowChoices(ChoiceData[] choices, Action<int> onChoiceSelected);
 
-        /// <summary>
+/// <summary>
         ///     隐藏对话UI
         /// </summary>
         void Hide();
 
-        /// <summary>
+/// <summary>
         ///     设置打字机速度
         /// </summary>
         void SetTypingSpeed(float speed);
 
-        /// <summary>
+/// <summary>
         ///     开始打字效果
         /// </summary>
         void StartTyping(string text);
 
-        /// <summary>
+/// <summary>
         ///     立即完成打字
         /// </summary>
         void CompleteTyping();
 
-        /// <summary>
+/// <summary>
         ///     是否正在打字
         /// </summary>
         bool IsTyping();
 
-        /// <summary>
+/// <summary>
         ///     清空选项
         /// </summary>
         void ClearChoices();
 
-        /// <summary>
+/// <summary>
         ///     设置说话者名称
         /// </summary>
         void SetSpeakerName(string speakerName);
