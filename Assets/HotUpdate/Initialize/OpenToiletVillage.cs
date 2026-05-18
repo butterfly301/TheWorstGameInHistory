@@ -34,16 +34,13 @@ public class OpenToiletVillage : Open
     }
     IEnumerator InitializeUIManager()
     {
-        bool initCompleted = false;
-        AddressablesManager.Instance.LoadAssetAsync<GameObject>(AddressableKeys.UIManager1_Prefab, (handle) =>
+        if (UIManager1.HasInstance)
         {
-            GameObject uiManagerObj = Instantiate(handle.Result);
-            UIManager1 uiManager1 = uiManagerObj.GetComponent<UIManager1>();
-            uiManager1.Init();
-            initCompleted = true;
+            UIManager1.Instance.Init();
+            yield break;
+        }
 
-        });
-        yield return new WaitUntil(() => initCompleted);
+        Debug.LogError("[OpenToiletVillage] UIManager1 has not been initialized. Enter this chapter through OpenOpenVideo1 or OpenOpenVideo2 first.");
     }
     // **协程被简化为一个普通方法**
     IEnumerator InitializeEnemyManager()

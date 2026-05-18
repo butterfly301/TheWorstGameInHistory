@@ -182,6 +182,7 @@ public static class AddressableKeys
     public const string EnemyData_Json = "Assets/GameRes/Data/Enemy/EnemyData.json";
     public const string MainMenuData_Json = "Assets/GameRes/Data/MainMenu/MainMenuData.json";
     public const string IceBreakerData_Json = "Assets/GameRes/Data/MiniGame/IceBreaker/IceBreakerData.json";
+    public const string PlayThrough3Data_Json = "Assets/GameRes/Data/Playthrough3/PlayThrough3Data.json";
     public const string InitCamera_Prefab = "Assets/GameRes/Prefabs/Camera/InitCamera.prefab";
     public const string ToiletVillageCamera_Prefab = "Assets/GameRes/Prefabs/Camera/ToiletVillageCamera.prefab";
     public const string DaoshiLaoBa_Prefab = "Assets/GameRes/Prefabs/Character/NPC/DaoshiLaoBa.prefab";
@@ -376,6 +377,7 @@ public static class AddressableKeys
     public const string LobbyForm_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/LobbyForm.prefab";
     public const string LoginForm_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/LoginForm.prefab";
     public const string PopUpForm_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/PopUpForm.prefab";
+    public const string DoubleGuanYuPopUpForm_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/PopUpForms/DoubleGuanYuPopUpForm.prefab";
     public const string SmallEntryCell_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/SmallEntryCell.prefab";
     public const string UIManager3_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/UIManager3.prefab";
     public const string VideoManager_Prefab = "Assets/GameRes/Prefabs/Video/VideoManager.prefab";
@@ -439,6 +441,7 @@ public static class AddressableKeys
     public static string GetData_Enemy(string path) => "Assets/GameRes/Data/Enemy/" + path + ".json";
     public static string GetData_MainMenu(string path) => "Assets/GameRes/Data/MainMenu/" + path + ".json";
     public static string GetData_MiniGame_IceBreaker(string path) => "Assets/GameRes/Data/MiniGame/IceBreaker/" + path + ".json";
+    public static string GetData_Playthrough3(string path) => "Assets/GameRes/Data/Playthrough3/" + path + ".json";
     public static string GetPrefabs(string path) => "Assets/GameRes/Prefabs/" + path + ".prefab";
     public static string GetPrefabs_Camera(string path) => "Assets/GameRes/Prefabs/Camera/" + path + ".prefab";
     public static string GetPrefabs_Character_NPC(string path) => "Assets/GameRes/Prefabs/Character/NPC/" + path + ".prefab";
@@ -463,6 +466,7 @@ public static class AddressableKeys
     public static string GetPrefabs_UI_Playthrough1_Maps(string path) => "Assets/GameRes/Prefabs/UI/Playthrough1/Maps/" + path + ".prefab";
     public static string GetPrefabs_UI_Playthrough2(string path) => "Assets/GameRes/Prefabs/UI/Playthrough2/" + path + ".prefab";
     public static string GetPrefabs_UI_Playthrough3(string path) => "Assets/GameRes/Prefabs/UI/Playthrough3/" + path + ".prefab";
+    public static string GetPrefabs_UI_Playthrough3_PopUpForms(string path) => "Assets/GameRes/Prefabs/UI/Playthrough3/PopUpForms/" + path + ".prefab";
     public static string GetPrefabs_Video(string path) => "Assets/GameRes/Prefabs/Video/" + path + ".prefab";
     public static string GetPrefabs_World(string path) => "Assets/GameRes/Prefabs/World/" + path + ".prefab";
     public static string GetScenes(string path) => "Assets/GameRes/Scenes/" + path + ".unity";

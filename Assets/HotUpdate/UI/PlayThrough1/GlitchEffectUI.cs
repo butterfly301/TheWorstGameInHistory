@@ -13,6 +13,7 @@ namespace HotUpdate.UI
     {
         private readonly Transform parentTransform;
         private GameObject glitchEffectPrefab;
+        private GameObject glitchEffectObj;
         private GlitchEffectForm glitchEffectForm;
 
         public GlitchEffectUI(Transform parent)
@@ -25,16 +26,29 @@ namespace HotUpdate.UI
         /// </summary>
         public void Init()
         {
+            if (glitchEffectObj != null) return;
+
             AddressablesManager.Instance.LoadAssetAsync<GameObject>(
                 AddressableKeys.GlitchEffectForm_Prefab,
                 handle =>
                 {
                     glitchEffectPrefab = handle.Result;
-                    var glitchEffectObj = Object.Instantiate(glitchEffectPrefab, parentTransform);
+                    glitchEffectObj = Object.Instantiate(glitchEffectPrefab, parentTransform);
                     glitchEffectForm = glitchEffectObj.GetComponent<GlitchEffectForm>();
                     glitchEffectForm.Init();
+                    Close();
                 }
             );
+        }
+
+        public void Open()
+        {
+            glitchEffectObj?.SetActive(true);
+        }
+
+        public void Close()
+        {
+            glitchEffectObj?.SetActive(false);
         }
 
         /// <summary>

@@ -34,6 +34,8 @@ public MapUI(Transform parent)
             {
                 Inventory = new List<IInventory>();
             }
+
+            Close();
         }
 
 /// <summary>
@@ -43,28 +45,48 @@ public MapUI(Transform parent)
         {
             AddressablesManager.Instance.LoadAssetAsync<GameObject>(
                 AddressableKeys.GetPrefabs_UI_Playthrough1_Maps(index),
-                handle => { mapPanelPrefab = handle.Result; }
+                handle =>
+                {
+                    if (mapPanelPrefab == handle.Result)
+                    {
+                        return;
+                    }
+
+                    mapPanelPrefab = handle.Result;
+
+                    if (mapPanelObj != null)
+                    {
+                        Object.Destroy(mapPanelObj);
+                        mapPanelObj = null;
+                    }
+                }
             );
         }
 
 /// <summary>
         /// 打开地图面板
         /// </summary>
-        public void OpenMapPanel()
+        public void Open()
         {
             if (mapPanelPrefab != null)
-                mapPanelObj = Object.Instantiate(mapPanelPrefab, parentTransform);
+            {
+                if (mapPanelObj == null)
+                {
+                    mapPanelObj = Object.Instantiate(mapPanelPrefab, parentTransform);
+                }
+
+                mapPanelObj.SetActive(true);
+            }
         }
 
 /// <summary>
         /// 关闭地图面板
         /// </summary>
-        public void CloseMapPanel()
+        public void Close()
         {
             if (mapPanelObj != null)
             {
-                mapPanelObj.GetComponent<DestroyAfterDelay>()?.DestroyMyself();
-                mapPanelObj = null;
+                mapPanelObj.SetActive(false);
             }
         }
 

@@ -7,13 +7,16 @@ using HotUpdate.Core;
 using HotUpdate.Utility;
 using HotUpdate.Interface;
 
-public class LobbyRoleNode : MonoBehaviour,IController,IAutoBind
+public class LobbyRoleNode : MonoBehaviour, IController, IAutoBind
 {
-    private string voiceName=AddressableKeys.XunYu_1_Mp3;
-    [SerializeField]private RectTransform chatBubble;
+    private string voiceName = AddressableKeys.XunYu_1_Mp3;
+    [SerializeField] private RectTransform chatBubble;
+
     public void Init()
     {
         chatBubble.gameObject.SetActive(false);
+        this.RegisterEvent<PopUpSequenceFinishedEvent>(_ => { PlayCharacterVoice(); })
+            .UnRegisterWhenGameObjectDestroyed(gameObject);
     }
 
     public void PlayCharacterVoice()

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9212225552521864680}
   - component: {fileID: 8758503236943725153}
   m_Layer: 0
-  m_Name: role
+  m_Name: LobbyRoleNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a80fe0881c222f4a824c02e65624883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  role: {fileID: 0}
+  lobbyRoleNode: {fileID: 8758503236943725153}
 --- !u!1 &6355800040499326233
 GameObject:
   m_ObjectHideFlags: 0

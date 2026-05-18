@@ -6,11 +6,12 @@ using System.Collections;
 using HotUpdate.Audio.Commands;
 using HotUpdate.Manager;
 using HotUpdate.SceneLoad.Commands;
+
 public class OpenLobby : Open
 {
     private string BGMAddress = AddressableKeys.TheSongOfXiaoQiao_Mp3;
-    
     private LobbyWorldNode lobbyWorld;
+    private PlayThrough3Data playThrough3Data;
 
     protected override IEnumerator InitializeSequence()
     {
@@ -19,6 +20,8 @@ public class OpenLobby : Open
         this.SendCommand(new PlayMusicCommand(BGMAddress));
         // 初始化世界
         yield return StartCoroutine(InitializeLobbyWorld());
+        // 初始化三周目大厅数据
+        yield return StartCoroutine(LoadPlayThrough3Data());
         // 初始化ui管理器
         yield return StartCoroutine(InitializeUIManager());
         //全部加载完毕。拉开帷幕
@@ -41,16 +44,24 @@ public class OpenLobby : Open
 
     IEnumerator InitializeUIManager()
     {
-        bool initCompleted = false;
-        AddressablesManager.Instance.LoadAssetAsync<GameObject>(AddressableKeys.UIManager3_Prefab,
-            (handle) =>
+        if (UIManager3.HasInstance)
+        {
+            UIManager3.Instance.Lobby?.Open();
+            UIManager3.Instance.PopUp?.Init(playThrough3Data?.popUpData);
+            yield break;
+        }
+    }
+
+    IEnumerator LoadPlayThrough3Data()
+    {
+        bool loadCompleted = false;
+        AddressablesManager.Instance.LoadAssetAsync<TextAsset>(AddressableKeys.PlayThrough3Data_Json,
+            handle =>
             {
-                GameObject uiManagerObj = Instantiate(handle.Result);
-                UIManager3 uIManager3 = uiManagerObj.GetComponent<UIManager3>();
-                uIManager3?.Init();
-                initCompleted = true;
+                var json = handle.Result.text;
+                playThrough3Data = JsonUtility.FromJson<PlayThrough3Data>(json);
+                loadCompleted = true;
             });
-        yield return new WaitUntil(() => initCompleted);
+        yield return new WaitUntil(() => loadCompleted);
     }
 }
-

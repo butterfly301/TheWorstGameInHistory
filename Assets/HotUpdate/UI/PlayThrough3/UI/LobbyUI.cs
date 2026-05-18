@@ -7,6 +7,7 @@ public class LobbyUI
 {
     private readonly Transform parentTransform;
     private GameObject lobbyFormPrefab;
+    private GameObject lobbyFormObj;
     private LobbyForm lobbyForm;
 
     public LobbyUI(Transform parent)
@@ -19,15 +20,28 @@ public class LobbyUI
     /// </summary>
     public void Init()
     {
+        if (lobbyFormObj != null)   return;
+
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
             AddressableKeys.LobbyForm_Prefab,
             handle =>
             {
                 lobbyFormPrefab = handle.Result;
-                var lobbyFormObj = Object.Instantiate(lobbyFormPrefab, parentTransform);
+                lobbyFormObj = Object.Instantiate(lobbyFormPrefab, parentTransform);
                 lobbyForm = lobbyFormObj.GetComponent<LobbyForm>();
                 lobbyForm.Init();
+                Close();
             }
         );
+    }
+
+    public void Open()
+    {
+        lobbyFormObj?.SetActive(true);
+    }
+
+    public void Close()
+    {
+        lobbyFormObj?.SetActive(false);
     }
 }

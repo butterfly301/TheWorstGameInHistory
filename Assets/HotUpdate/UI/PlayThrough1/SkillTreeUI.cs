@@ -35,7 +35,7 @@ public SkillTreeUI(Transform layerTrans)
 /// <summary>
         /// 打开技能树面板
         /// </summary>
-        public void OpenSkillTreePanel()
+        public void Open()
         {
             // TODO: 实现打开技能树面板逻辑
         }
@@ -43,7 +43,7 @@ public SkillTreeUI(Transform layerTrans)
 /// <summary>
         /// 关闭技能树面板
         /// </summary>
-        public void CloseSkillTreePanel()
+        public void Close()
         {
             // TODO: 实现关闭技能树面板逻辑
         }

@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class LobbyWorldNode : MonoBehaviour,IAutoBind
 {
-    [SerializeField]private LobbyRoleNode role;
+    [SerializeField]private LobbyRoleNode lobbyRoleNode;
     public void Init()
     {
-        role?.Init();
+        lobbyRoleNode?.Init();
     }
     public LobbyRoleNode GetRole()
     {
-        return role;
+        return lobbyRoleNode;
     }
 }

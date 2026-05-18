@@ -18,6 +18,8 @@ public TraditionalDialogueUI(Transform transform)
 
 public void Init()
     {
+        if (traditionalViewObj != null) return;
+
         LoadChoiceButtonPrefab();
         LoadTraditionalView();
     }
@@ -46,10 +48,20 @@ private void LoadTraditionalView()
         );
     }
 
-public DialogueViewBase GetDialogueView()
+    public DialogueViewBase GetDialogueView()
     {
-        traditionalViewObj.SetActive(true);
+        Open();
         return traditionalView;
+    }
+
+public void Open()
+    {
+        traditionalViewObj?.SetActive(true);
+    }
+
+public void Close()
+    {
+        traditionalViewObj?.SetActive(false);
     }
 }
 

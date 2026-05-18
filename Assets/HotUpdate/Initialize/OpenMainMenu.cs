@@ -8,16 +8,12 @@ using QFramework;
 using UnityEngine;
 public class OpenMainMenu : Open
 {
-
-    private GameObject videoManagerObj;
-
-    private VideoManager _videoManager;
-
     private string musicName = AddressableKeys.Rest_time_Mp3;
 
     protected override IEnumerator InitializeSequence()
     {
         yield return null;
+        CleanupUIManagers();
         //播放bgm
         this.SendCommand(new PlayMusicCommand(musicName));
         //初始化摄像机
@@ -30,9 +26,26 @@ public class OpenMainMenu : Open
             GameObject mainMenuObj = Instantiate(handle.Result);
             MainMenuForm mainMenu = mainMenuObj.GetComponent<MainMenuForm>();
             mainMenu.Init();
-
         });
 
+    }
+
+    private void CleanupUIManagers()
+    {
+        if (UIManager1.HasInstance)
+        {
+            UIManager1.Instance.Dispose();
+        }
+
+        if (UIManager2.HasInstance)
+        {
+            UIManager2.Instance.Dispose();
+        }
+
+        if (UIManager3.HasInstance)
+        {
+            UIManager3.Instance.Dispose();
+        }
     }
 
 }

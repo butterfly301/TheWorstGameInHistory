@@ -10,14 +10,14 @@ public class SystemAttributeNode : MonoBehaviour, IAutoBind
     private WindowBase audioWindow;
     private bool isAudioWindowOpen;
     private MainMenuForm mainMenu;
-    [SerializeField] private Button sound;
-    [SerializeField] private TextMeshProUGUI date;
+    [SerializeField] private Button btnSound;
+    [SerializeField] private TextMeshProUGUI txtDate;
 
     public void Init(MainMenuForm mainMenuVar)
     {
         mainMenu = mainMenuVar;
-        sound.onClick.AddListener(ToggleAudioWindow);
-        date.SetText(CurrentTimeUtility.GetCurrentDateString());
+        btnSound.onClick.AddListener(ToggleAudioWindow);
+        txtDate.SetText(CurrentTimeUtility.GetCurrentDateString());
     }
 
     private void ToggleAudioWindow()

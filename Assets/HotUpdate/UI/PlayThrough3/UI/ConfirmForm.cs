@@ -22,6 +22,8 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
     [SerializeField] private TextMeshProUGUI txtContent;
     [SerializeField] private Button btnConfirm;
     [SerializeField] private Button btnCancel;
+    [SerializeField] private RectTransform trConfirm;
+    [SerializeField] private RectTransform trCancel;
 
     private RectTransform windowRectTransform;
     private RectTransform confirmButtonRectTransform;
@@ -33,6 +35,7 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
     private Vector2 cancelButtonTargetPosition;
     private Sequence showSequence;
     private bool hasCachedTargetPositions;
+    private bool hasCancelButton;
 
     public void Init()
     {
@@ -44,18 +47,32 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
     {
         txtTitle.text = data.title;
         txtContent.text = data.content;
+        hasCancelButton = HasCancelData(data.cancelData);
+        
+        btnConfirm.GetComponentInChildren<TextMeshProUGUI>().text = data.confirmData.confirmButtonText;
         btnConfirm.onClick.RemoveAllListeners();
-        btnCancel.onClick.RemoveAllListeners();
         btnConfirm.onClick.AddListener(() =>
         {
-            data.onConfirm?.Invoke();
+            data.confirmData.onConfirm?.Invoke();
             Hide();
         });
-        btnCancel.onClick.AddListener(() =>
+
+        btnCancel.onClick.RemoveAllListeners();
+        if (hasCancelButton)
         {
-            data.onCancel?.Invoke();
-            Hide();
-        });
+            trCancel.gameObject.SetActive(true);
+            btnCancel.GetComponentInChildren<TextMeshProUGUI>().text = data.cancelData.cancelButtonText;
+            btnCancel.onClick.AddListener(() =>
+            {
+                data.cancelData.onCancel?.Invoke();
+                Hide();
+            });
+        }
+        else
+        {
+            trCancel.gameObject.SetActive(false);
+        }
+
         Show();
     }
 
@@ -69,7 +86,6 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
         cgpBg.blocksRaycasts = true;
         cgpWindow.alpha = 0f;
         cgpWindow.blocksRaycasts = false;
-        
         confirmButtonCanvasGroup.alpha = 0f;
         cancelButtonCanvasGroup.alpha = 0f;
 
@@ -83,12 +99,14 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
             .Join(windowRectTransform.DOAnchorPos(windowTargetPosition, moveDuration).SetEase(Ease.OutCubic))
             .Insert(confirmButtonDelay, confirmButtonRectTransform.DOAnchorPos(confirmButtonTargetPosition, buttonMoveDuration).SetEase(Ease.OutCubic))
             .Insert(confirmButtonDelay, confirmButtonCanvasGroup.DOFade(1f, buttonMoveDuration))
-            .Insert(cancelButtonDelay, cancelButtonRectTransform.DOAnchorPos(cancelButtonTargetPosition, buttonMoveDuration).SetEase(Ease.OutCubic))
-            .Insert(cancelButtonDelay, cancelButtonCanvasGroup.DOFade(1f, buttonMoveDuration))
-            .OnComplete(() =>
-            {
-                cgpWindow.blocksRaycasts = true;
-            });
+            .OnComplete(() =>{   cgpWindow.blocksRaycasts = true;   });
+
+        if (hasCancelButton)
+        {
+            showSequence
+                .Insert(cancelButtonDelay, cancelButtonRectTransform.DOAnchorPos(cancelButtonTargetPosition, buttonMoveDuration).SetEase(Ease.OutCubic))
+                .Insert(cancelButtonDelay, cancelButtonCanvasGroup.DOFade(1f, buttonMoveDuration));
+        }
     }
 
     public void Hide()
@@ -125,12 +143,27 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
         cancelButtonTargetPosition = cancelButtonRectTransform.anchoredPosition;
         hasCachedTargetPositions = true;
     }
+
+    private bool HasCancelData(cancelData data)
+    {
+        return !string.IsNullOrEmpty(data.cancelButtonText) || data.onCancel != null;
+    }
 }
 
-public struct ConfirmWindowData
-{
-    public string title;
-    public string content;
-    public Action onConfirm;
-    public Action onCancel;
-}
+    public struct ConfirmWindowData
+    {
+        public string title;
+        public string content;
+        public confirmData confirmData;
+        public cancelData cancelData;
+    }
+    public struct confirmData
+    {
+        public string confirmButtonText;
+        public Action onConfirm;
+    }
+    public struct cancelData
+    {
+        public string cancelButtonText;
+        public Action onCancel;
+    }

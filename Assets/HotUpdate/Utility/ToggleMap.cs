@@ -13,11 +13,11 @@ public void Toggle()
             {
                 if (wantToOpen)
                 {
-                    UIManager1.Instance.MapUI.OpenMapPanel();
+                    UIManager1.Instance.MapUI.Open();
                 }
                 else
                 {
-                    UIManager1.Instance.MapUI.CloseMapPanel();
+                    UIManager1.Instance.MapUI.Close();
                 }
             }
         }

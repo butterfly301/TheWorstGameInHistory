@@ -18,6 +18,8 @@ public BubbleDialogueUI(Transform layerTrans)
 
 public void Init()
     {
+        if (bubbleViewObj != null) return;
+
         LoadChoiceButtonPrefab();
         LoadBubbleView();
     }
@@ -48,8 +50,18 @@ private void LoadBubbleView()
 
 public DialogueViewBase GetDialogueView()
     {
-        bubbleViewObj.SetActive(true);
+        Open();
         return bubbleView;
+    }
+
+public void Open()
+    {
+        bubbleViewObj?.SetActive(true);
+    }
+
+public void Close()
+    {
+        bubbleViewObj?.SetActive(false);
     }
 }
 

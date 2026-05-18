@@ -26,6 +26,8 @@ namespace HotUpdate.UI
 		/// </summary>
 		public void Init()
 		{
+			if (glitchWindowObj != null) return;
+
 			AddressablesManager.Instance.LoadAssetAsync<GameObject>(
 				AddressableKeys.GlitchWindow_Prefab,
 				handle =>
@@ -34,6 +36,7 @@ namespace HotUpdate.UI
 					glitchWindowObj = Object.Instantiate(glitchWindowPrefab, parentTransform);
 					glitchWindow = glitchWindowObj.GetComponent<GlitchWindow>();
 					glitchWindow.Init();
+					Close();
 				}
 			);
 		}
@@ -41,12 +44,14 @@ namespace HotUpdate.UI
 		/// <summary>
 		/// 打开故障窗口
 		/// </summary>
-		public void OpenGlitchWindow()
+		public void Open()
 		{
-			if (glitchWindowObj != null)
-			{
-				glitchWindowObj.SetActive(true);
-			}
+			glitchWindowObj?.SetActive(true);
+		}
+
+		public void Close()
+		{
+			glitchWindowObj?.SetActive(false);
 		}
 	}
 }

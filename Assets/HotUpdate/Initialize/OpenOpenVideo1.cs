@@ -20,10 +20,8 @@ public class OpenOpenVideo1 : Open
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(AddressableKeys.UIManager1_Prefab,
         (handle) =>
         {
-            GameObject uiManagerObj = Instantiate(handle.Result);
-            UIManager1 uiManager1 = uiManagerObj.GetComponent<UIManager1>();
+            UIManager1 uiManager1 = UIManager1.GetOrCreate(handle.Result);
             uiManager1.Init();
-
         });
         //初始化视频管理器
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(AddressableKeys.VideoManager_Prefab,

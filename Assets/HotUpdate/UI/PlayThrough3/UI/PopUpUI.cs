@@ -7,6 +7,7 @@ public class PopUpUI
 {
     private readonly Transform parentTransform;
     private GameObject popUpFormPrefab;
+    private GameObject popUpFormObj;
     private PopUpForm popUpForm;
 
     public PopUpUI(Transform parent)
@@ -16,15 +17,34 @@ public class PopUpUI
 
     public void Init()
     {
+        if (popUpFormObj != null) return;
         AddressablesManager.Instance.LoadAssetAsync<GameObject>(
-            AddressableKeys.GetPrefabs_UI_Playthrough3("PopUpForm"),
+            AddressableKeys.PopUpForm_Prefab,
             handle =>
             {
                 popUpFormPrefab = handle.Result;
-                var popUpFormObj = Object.Instantiate(popUpFormPrefab, parentTransform);
+                popUpFormObj = Object.Instantiate(popUpFormPrefab, parentTransform);
                 popUpForm = popUpFormObj.GetComponent<PopUpForm>();
-                popUpForm.Init();
+                Close();
             }
         );
+    }
+
+    public void Init(PopUpData popUpData)
+    {
+        if (popUpForm == null)  return;
+        
+        popUpForm.Init(popUpData?.popUpFormNames);
+        Open();
+    }
+
+    public void Open()
+    {
+        popUpFormObj?.SetActive(true);
+    }
+
+    public void Close()
+    {
+        popUpFormObj?.SetActive(false);
     }
 }

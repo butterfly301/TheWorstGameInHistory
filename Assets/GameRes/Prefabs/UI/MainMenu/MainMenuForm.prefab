@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 656610537021451987}
   - component: {fileID: 8080976354373369220}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: BtnSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1074,7 +1074,7 @@ GameObject:
   - component: {fileID: 2714434172296343428}
   - component: {fileID: 5112993558441697260}
   m_Layer: 5
-  m_Name: Date
+  m_Name: TxtDate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1486,11 +1486,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3686215167515215079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77fb9fd6fd9cdc047add7e0479260d3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e811fbd02f139c419cd87e2a77a026a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8080976354373369220}
-  date: {fileID: 5112993558441697260}
+  btnSound: {fileID: 8080976354373369220}
+  txtDate: {fileID: 5112993558441697260}
 --- !u!1 &4139107978073079488
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,7 +3399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8291184928477314488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efe8110f6cc592f49b3ec1f7f0c0f624, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4216b0b8bf5744b8222b87b9ff695d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 419106704550106477}

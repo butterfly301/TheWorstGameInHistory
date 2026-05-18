@@ -23,6 +23,8 @@ public NarratorDialogueUI(Transform layerTrans)
 
 public void Init()
         {
+            if (narratorViewObj != null) return;
+
             LoadChoiceButtonPrefab();
             LoadNarratorView();
         }
@@ -53,8 +55,18 @@ private void LoadNarratorView()
 
 public DialogueViewBase GetDialogueView()
         {
-            narratorViewObj.SetActive(true);
+            Open();
             return narratorView;
+        }
+
+public void Open()
+        {
+            narratorViewObj?.SetActive(true);
+        }
+
+public void Close()
+        {
+            narratorViewObj?.SetActive(false);
         }
     }
 }

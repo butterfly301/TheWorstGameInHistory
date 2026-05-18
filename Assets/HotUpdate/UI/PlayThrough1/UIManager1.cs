@@ -11,8 +11,21 @@ using UnityEngine.Serialization;
 
 namespace HotUpdate.UI
 {
-    public class UIManager1 : MonoSingleton<UIManager1>, UIManager
+    public class UIManager1 : MonoSingleton<UIManager1>
     {
+        public static bool HasInstance => mInstance != null;
+
+        public static UIManager1 GetOrCreate(GameObject prefab)
+        {
+            if (mInstance != null)
+            {
+                return mInstance;
+            }
+
+            var uiManagerObj = Object.Instantiate(prefab);
+            return uiManagerObj.GetComponent<UIManager1>();
+        }
+
         [SerializeField] private Transform narratorUITrans;
         [SerializeField] private Transform traditionDialogueUITrans;
         [SerializeField] private Transform bubbleUITrans;
@@ -35,8 +48,21 @@ namespace HotUpdate.UI
         public GlitchWindowUI GlitchWindow { get; private set; }
         public TouchControlUI TouchControl { get; private set; }
 
+        private void Awake()
+        {
+            if (mInstance != null && mInstance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            mInstance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
         public void Init()
         {
+            uiLayerTrans.Clear();
             uiLayerTrans.Add(UILayer.NarratorUI, narratorUITrans);
             uiLayerTrans.Add(UILayer.traditionDialogueUI, traditionDialogueUITrans);
             uiLayerTrans.Add(UILayer.bubbleUI, bubbleUITrans);
@@ -47,15 +73,15 @@ namespace HotUpdate.UI
             uiLayerTrans.Add(UILayer.GlitchEffect, glitchEffectTrans);
             uiLayerTrans.Add(UILayer.TouchControl, touchControlTrans);
 
-            NarratorDialogue = new NarratorDialogueUI(uiLayerTrans[UILayer.NarratorUI]);
-            TraditionalDialogue = new TraditionalDialogueUI(uiLayerTrans[UILayer.traditionDialogueUI]);
-            BubbleDialogue = new BubbleDialogueUI(uiLayerTrans[UILayer.bubbleUI]);
-            SkillTree = new SkillTreeUI(uiLayerTrans[UILayer.SkillTreeUI]);
-            PauseUI = new PauseUI(uiLayerTrans[UILayer.PauseUI]);
-            MapUI = new MapUI(uiLayerTrans[UILayer.MapPanel]);
-            GlitchEffect = new GlitchEffectUI(uiLayerTrans[UILayer.GlitchEffect]);
-            GlitchWindow = new GlitchWindowUI(uiLayerTrans[UILayer.GlitchWindow]);
-            TouchControl = new TouchControlUI(uiLayerTrans[UILayer.TouchControl]);
+            NarratorDialogue ??= new NarratorDialogueUI(uiLayerTrans[UILayer.NarratorUI]);
+            TraditionalDialogue ??= new TraditionalDialogueUI(uiLayerTrans[UILayer.traditionDialogueUI]);
+            BubbleDialogue ??= new BubbleDialogueUI(uiLayerTrans[UILayer.bubbleUI]);
+            SkillTree ??= new SkillTreeUI(uiLayerTrans[UILayer.SkillTreeUI]);
+            PauseUI ??= new PauseUI(uiLayerTrans[UILayer.PauseUI]);
+            MapUI ??= new MapUI(uiLayerTrans[UILayer.MapPanel]);
+            GlitchEffect ??= new GlitchEffectUI(uiLayerTrans[UILayer.GlitchEffect]);
+            GlitchWindow ??= new GlitchWindowUI(uiLayerTrans[UILayer.GlitchWindow]);
+            TouchControl ??= new TouchControlUI(uiLayerTrans[UILayer.TouchControl]);
 
             NarratorDialogue.Init();
             TraditionalDialogue.Init();
