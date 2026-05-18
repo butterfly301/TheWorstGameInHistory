@@ -120,7 +120,7 @@ protected virtual void OnDownloadComplete()
 protected void DownloadSuccess()
     {
         downloadResultText.SetEntry("Download Complete");
-        mainMenu.GetAppGroup().EnableSoftware(softwareName);
+        mainMenu.AppGroupNode.EnableSoftware(softwareName);
     }
 
 protected void DownloadFailure()

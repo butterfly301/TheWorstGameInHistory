@@ -21,7 +21,8 @@ public class LobbyRoleNode : MonoBehaviour, IController, IAutoBind
 
     public void PlayCharacterVoice()
     {
-        this.SendCommand(new PlaySoundCommand(voiceName));
+        this.SendCommand(new PlayVoiceCommand(voiceName, () => chatBubble.gameObject.SetActive(false)));
+        chatBubble.gameObject.SetActive(true);
     }
     public IArchitecture GetArchitecture()
     {

@@ -102,10 +102,7 @@ namespace HotUpdate.UI
             });
         }
 
-        public AppGroupNode GetAppGroup()
-        {
-            return appGroupNode;
-        }
+        public AppGroupNode AppGroupNode => appGroupNode;
     }
 }
 

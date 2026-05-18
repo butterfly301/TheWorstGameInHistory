@@ -379,6 +379,7 @@ public static class AddressableKeys
     public const string PopUpForm_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/PopUpForm.prefab";
     public const string DoubleGuanYuPopUpForm_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/PopUpForms/DoubleGuanYuPopUpForm.prefab";
     public const string SmallEntryCell_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/SmallEntryCell.prefab";
+    public const string TipForm_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/TipForm.prefab";
     public const string UIManager3_Prefab = "Assets/GameRes/Prefabs/UI/Playthrough3/UIManager3.prefab";
     public const string VideoManager_Prefab = "Assets/GameRes/Prefabs/Video/VideoManager.prefab";
     public const string CallNarrator0_Prefab = "Assets/GameRes/Prefabs/World/CallNarrator0.prefab";

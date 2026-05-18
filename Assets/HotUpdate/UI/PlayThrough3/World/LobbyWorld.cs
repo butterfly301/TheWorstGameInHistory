@@ -10,8 +10,4 @@ public class LobbyWorldNode : MonoBehaviour,IAutoBind
     {
         lobbyRoleNode?.Init();
     }
-    public LobbyRoleNode GetRole()
-    {
-        return lobbyRoleNode;
-    }
 }
