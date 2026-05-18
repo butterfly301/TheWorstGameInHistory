@@ -28,7 +28,7 @@ public class OpenMainMenu : Open
         (handle) =>
         {
             GameObject mainMenuObj = Instantiate(handle.Result);
-            MainMenu mainMenu = mainMenuObj.GetComponent<MainMenu>();
+            MainMenuForm mainMenu = mainMenuObj.GetComponent<MainMenuForm>();
             mainMenu.Init();
 
         });

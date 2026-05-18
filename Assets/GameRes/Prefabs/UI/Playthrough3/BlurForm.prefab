@@ -75,7 +75,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  _strength: 20
+  _strength: 0
   _quality: 0
   _resolution: 4
   _iterations: 1

@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b7a048c19f8914a8e52c5812d0b610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnFriend: {fileID: 6750323935766168580}
 --- !u!1 &992261396971080399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b7a048c19f8914a8e52c5812d0b610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnFriend: {fileID: 0}
 --- !u!1 &1946567036074615723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +1822,7 @@ GameObject:
   - component: {fileID: 5564227219570501845}
   - component: {fileID: 6750323935766168580}
   m_Layer: 5
-  m_Name: btnFriend
+  m_Name: BtnFriend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

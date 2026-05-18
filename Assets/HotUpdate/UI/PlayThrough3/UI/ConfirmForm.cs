@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -11,7 +12,7 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
     [SerializeField] private float fadeDuration = 0.25f;
     [SerializeField] private float moveDuration = 0.3f;
     [SerializeField] private float windowOffsetY = 80f;
-    [SerializeField] private float buttonOffsetY = 30f;
+    [SerializeField] private float buttonOffsetY = 50f;
     [SerializeField] private float buttonMoveDuration = 0.22f;
     [SerializeField] private float confirmButtonDelay = 0.06f;
     [SerializeField] private float cancelButtonDelay = 0.12f;
@@ -25,6 +26,8 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
     private RectTransform windowRectTransform;
     private RectTransform confirmButtonRectTransform;
     private RectTransform cancelButtonRectTransform;
+    private CanvasGroup confirmButtonCanvasGroup;
+    private CanvasGroup cancelButtonCanvasGroup;
     private Vector2 windowTargetPosition;
     private Vector2 confirmButtonTargetPosition;
     private Vector2 cancelButtonTargetPosition;
@@ -33,12 +36,12 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
 
     public void Init()
     {
+        CacheTargetPositions();
         gameObject.SetActive(false);
     }
 
     public void Open(ConfirmWindowData data)
     {
-        //閫昏緫閮ㄥ垎
         txtTitle.text = data.title;
         txtContent.text = data.content;
         btnConfirm.onClick.RemoveAllListeners();
@@ -65,8 +68,10 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
         cgpBg.alpha = 0f;
         cgpBg.blocksRaycasts = true;
         cgpWindow.alpha = 0f;
-        cgpWindow.interactable = false;
         cgpWindow.blocksRaycasts = false;
+        
+        confirmButtonCanvasGroup.alpha = 0f;
+        cancelButtonCanvasGroup.alpha = 0f;
 
         windowRectTransform.anchoredPosition = windowTargetPosition + Vector2.down * windowOffsetY;
         confirmButtonRectTransform.anchoredPosition = confirmButtonTargetPosition + Vector2.down * buttonOffsetY;
@@ -77,10 +82,11 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
             .Join(cgpWindow.DOFade(1f, fadeDuration))
             .Join(windowRectTransform.DOAnchorPos(windowTargetPosition, moveDuration).SetEase(Ease.OutCubic))
             .Insert(confirmButtonDelay, confirmButtonRectTransform.DOAnchorPos(confirmButtonTargetPosition, buttonMoveDuration).SetEase(Ease.OutCubic))
+            .Insert(confirmButtonDelay, confirmButtonCanvasGroup.DOFade(1f, buttonMoveDuration))
             .Insert(cancelButtonDelay, cancelButtonRectTransform.DOAnchorPos(cancelButtonTargetPosition, buttonMoveDuration).SetEase(Ease.OutCubic))
+            .Insert(cancelButtonDelay, cancelButtonCanvasGroup.DOFade(1f, buttonMoveDuration))
             .OnComplete(() =>
             {
-                cgpWindow.interactable = true;
                 cgpWindow.blocksRaycasts = true;
             });
     }
@@ -88,7 +94,6 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
     public void Hide()
     {
         showSequence?.Kill();
-        cgpWindow.interactable = false;
         cgpWindow.blocksRaycasts = false;
         cgpBg.blocksRaycasts = false;
         gameObject.SetActive(false);
@@ -99,7 +104,8 @@ public class ConfirmForm : MonoBehaviour, IAutoBind
         windowRectTransform = cgpWindow.transform as RectTransform;
         confirmButtonRectTransform = btnConfirm.transform as RectTransform;
         cancelButtonRectTransform = btnCancel.transform as RectTransform;
-        CacheTargetPositions();
+        confirmButtonCanvasGroup = btnConfirm.GetComponent<CanvasGroup>();
+        cancelButtonCanvasGroup = btnCancel.GetComponent<CanvasGroup>();
     }
 
     private void OnDestroy()
@@ -125,6 +131,6 @@ public struct ConfirmWindowData
 {
     public string title;
     public string content;
-    public System.Action onConfirm;
-    public System.Action onCancel;
+    public Action onConfirm;
+    public Action onCancel;
 }

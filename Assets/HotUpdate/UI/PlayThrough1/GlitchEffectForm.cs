@@ -7,9 +7,12 @@ public class GlitchEffectForm : MonoBehaviour
     private CanvasGroup glitchEffectCanvasGroup;
     private Tweener glitchEffectTween;
 
+    private void Awake() {
+        glitchEffectCanvasGroup = GetComponent<CanvasGroup>();
+    }
+
     public void Init()
     {
-        glitchEffectCanvasGroup = GetComponent<CanvasGroup>();
         if (glitchEffectCanvasGroup != null)
         {
             glitchEffectCanvasGroup.alpha = 0;

@@ -5,7 +5,7 @@ public class BagPanel : MonoBehaviour, OptionPanelChildren
 {
     private IInventory inventory;
 
-public void Init()
+    public void Init()
     {
         //inventory = GetComponent<IInventory>();
         //UIManager.Instance.GetInventory().Add(inventory);

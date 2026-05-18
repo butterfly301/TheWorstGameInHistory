@@ -7,15 +7,16 @@ using UnityEngine;
 
 public class BlurForm : MonoBehaviour,IAutoBind
 {
+    private const float BlurRaycastThreshold = 0.001f;
+
     [SerializeField]private BlurredBackgroundImage blurredBackgroundImage;
     private Tweener blurStrengthTween;
 
     public void Init()
     {
-        // ensure initial state if needed
         if (blurredBackgroundImage != null)
         {
-            // no-op for now; strength can be adjusted via AdjustBlurStrength
+            UpdateRaycastState(blurredBackgroundImage.Strength);
         }
     }
 
@@ -33,7 +34,15 @@ public class BlurForm : MonoBehaviour,IAutoBind
                 v => blurredBackgroundImage.Strength = v,
                 target,
                 duration)
+            .OnStart(() => UpdateRaycastState(target))
+            .OnUpdate(() => UpdateRaycastState(blurredBackgroundImage.Strength))
+            .OnComplete(() => UpdateRaycastState(blurredBackgroundImage.Strength))
             .SetEase(Ease.Linear);
+    }
+
+    private void UpdateRaycastState(float strength)
+    {
+        blurredBackgroundImage.raycastTarget = strength > BlurRaycastThreshold;
     }
 
     private void OnDestroy()

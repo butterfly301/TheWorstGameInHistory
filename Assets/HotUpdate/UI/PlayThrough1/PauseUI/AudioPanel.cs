@@ -8,7 +8,7 @@ public class AudioPanel : MonoBehaviour, OptionPanelChildren,IAutoBind
     [SerializeField]private Slider musicSlider;
     [SerializeField]private Slider soundSlider;
 
-public void Init()
+    public void Init()
     {
         AudioKit.Settings.MusicVolume.RegisterWithInitValue(v => musicSlider.value = v);
         musicSlider.onValueChanged.AddListener(v => { AudioKit.Settings.MusicVolume.Value = v; });

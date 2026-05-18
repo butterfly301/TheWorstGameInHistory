@@ -42,7 +42,7 @@ protected override void OnEnable()
         StartDownload();
     }
 
-public override void Init(MainMenu mainMenuVar)
+public override void Init(MainMenuForm mainMenuVar)
     {
         base.Init(mainMenuVar);
         confirm.onClick.AddListener(() => { gameObject.SetActive(false); });

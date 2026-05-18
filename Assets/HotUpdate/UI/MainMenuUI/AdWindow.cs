@@ -10,7 +10,7 @@ namespace HotUpdate.UI.MainMenuUI
 {
     public class AdWindow : WindowBase
     {
-        public override void Init(MainMenu mainMenuVar)
+        public override void Init(MainMenuForm mainMenuVar)
         {
             base.Init(mainMenuVar);
             quit.onClick.AddListener(PlayIceBreakerVideo);

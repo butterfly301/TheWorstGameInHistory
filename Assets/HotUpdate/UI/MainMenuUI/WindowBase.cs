@@ -11,7 +11,7 @@ public class WindowBase : MonoBehaviour, IController,IAutoBind
 {
     protected GameData gameData;
     private Vector2 initialRectTransformPosition;
-    protected MainMenu mainMenu;
+    protected MainMenuForm mainMenu;
     [SerializeField]protected Button quit;
     private RectTransform rectTransform;
 
@@ -32,7 +32,7 @@ public IArchitecture GetArchitecture()
         return TheWorstGameInHistory.Interface;
     }
 
-public virtual void Init(MainMenu mainMenuVar)
+public virtual void Init(MainMenuForm mainMenuVar)
     {
         mainMenu = mainMenuVar;
         gameData = mainMenu.GameData;

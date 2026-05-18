@@ -9,7 +9,7 @@ public class LobbyUI
     private GameObject lobbyFormPrefab;
     private LobbyForm lobbyForm;
 
-public LobbyUI(Transform parent)
+    public LobbyUI(Transform parent)
     {
         parentTransform = parent;
     }

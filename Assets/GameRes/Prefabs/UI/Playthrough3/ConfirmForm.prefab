@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 5951510153671085952}
   - component: {fileID: 5681914465271875434}
   - component: {fileID: 9126342023204967339}
+  - component: {fileID: 7857638802628619003}
   m_Layer: 5
   m_Name: BtnConfirm
   m_TagString: Untagged
@@ -477,6 +478,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &7857638802628619003
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3505491507222611442}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4777617493016995795
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +909,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba8751cadff3354a8453385005fb076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeDuration: 0.25
+  moveDuration: 0.3
+  windowOffsetY: 80
+  buttonOffsetY: 50
+  buttonMoveDuration: 0.22
+  confirmButtonDelay: 0.06
+  cancelButtonDelay: 0.12
   cgpBg: {fileID: 3966496380383977942}
   cgpWindow: {fileID: 8505011278094305238}
   txtTitle: {fileID: 8255373190061975334}
@@ -914,6 +934,7 @@ GameObject:
   - component: {fileID: 8875379357730379337}
   - component: {fileID: 3979829758593936635}
   - component: {fileID: 4317129347458940393}
+  - component: {fileID: 6161301267109869326}
   m_Layer: 5
   m_Name: BtnCancel
   m_TagString: Untagged
@@ -1023,3 +1044,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &6161301267109869326
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637670822318925182}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
