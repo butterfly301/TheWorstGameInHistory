@@ -17,7 +17,7 @@ public class OpenLobby : Open
     {
         yield return null;
         //  播放bgm
-        this.SendCommand(new PlayMusicCommand(BGMAddress));
+        this.SendCommand(new PlayMusicCommand(BGMAddress,0.75f));
         // 初始化世界
         yield return StartCoroutine(InitializeLobbyWorld());
         // 初始化三周目大厅数据

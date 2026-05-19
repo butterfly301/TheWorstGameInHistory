@@ -13,9 +13,14 @@ namespace HotUpdate.Audio.Controller
             return TheWorstGameInHistory.Interface;
         }
 
-        public void PlayMusic(string musicName)
+        public void PlayMusic(string musicName, float volumeScale = 1.0f)
         {
-            this.SendCommand(new PlayMusicCommand(musicName));
+            this.SendCommand(new PlayMusicCommand(musicName, volumeScale));
+        }
+
+        public void SetCurrentMusicVolumeScale(float volumeScale)
+        {
+            this.SendCommand(new SetCurrentMusicVolumeScaleCommand(volumeScale));
         }
 
         public void PlaySound(string soundName)
