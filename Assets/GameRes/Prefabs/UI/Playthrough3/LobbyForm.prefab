@@ -3086,7 +3086,7 @@ GameObject:
   - component: {fileID: 2121616816433846020}
   - component: {fileID: 8134288383169745071}
   - component: {fileID: 9040617801734549920}
-  - component: {fileID: 2923082401956432992}
+  - component: {fileID: 155163835092213945}
   m_Layer: 5
   m_Name: CharcterCon
   m_TagString: Untagged
@@ -3152,7 +3152,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2923082401956432992
+--- !u!114 &155163835092213945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3855,7 +3855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 591047cbf7773dd4eb3337c96a072c8d, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

@@ -184,7 +184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u5F88\u591A\u5B57"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24af4c35c7cfa204090a021171ceb9d1, type: 2}
   m_sharedMaterial: {fileID: 2542700217750968387, guid: 24af4c35c7cfa204090a021171ceb9d1, type: 2}
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -317,7 +317,5 @@ MonoBehaviour:
   floatDuration: 1
   fadeDuration: 0.15
   stackSpacing: 90
-  extraLineSpacing: 30
-  charPerLine: 27
   bornScale: 1.3
   bornDuration: 0.3

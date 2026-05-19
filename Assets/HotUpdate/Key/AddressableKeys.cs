@@ -77,6 +77,7 @@ public static class AddressableKeys
     public const string SourceHanSerifSC_SemiBold_Otf = "Assets/GameRes/Art/Font/SourceHanSerifSC-SemiBold.otf";
     public const string Baguette_Mat = "Assets/GameRes/Art/Materials/Baguette.mat";
     public const string Green_Mat = "Assets/GameRes/Art/Materials/Green.mat";
+    public const string HeadIcon_Mat = "Assets/GameRes/Art/Materials/HeadIcon.mat";
     public const string IceBreakerSkybox_Mat = "Assets/GameRes/Art/Materials/IceBreakerSkybox.mat";
     public const string TrailPlayerAttack_Mat = "Assets/GameRes/Art/Materials/TrailPlayerAttack.mat";
     public const string TrailPlayerIdle_Mat = "Assets/GameRes/Art/Materials/TrailPlayerIdle.mat";
@@ -113,6 +114,7 @@ public static class AddressableKeys
     public const string Video_Render_Texture_RenderTexture = "Assets/GameRes/Art/RenderTexture/Video Render Texture.renderTexture";
     public const string Water_Render_Texture_0_RenderTexture = "Assets/GameRes/Art/RenderTexture/Water Render Texture 0.renderTexture";
     public const string Water_Render_Texture_1_RenderTexture = "Assets/GameRes/Art/RenderTexture/Water Render Texture 1.renderTexture";
+    public const string ui_mask_irregular_Shader = "Assets/GameRes/Art/Shaders/ui_mask_irregular.shader";
     public const string Circulation_Mp3 = "Assets/GameRes/Audio/BGM/Circulation.mp3";
     public const string City_of_Night_Mp3 = "Assets/GameRes/Audio/BGM/City of Night.mp3";
     public const string Fruit_Machine_Mp3 = "Assets/GameRes/Audio/BGM/Fruit Machine.mp3";
@@ -432,6 +434,7 @@ public static class AddressableKeys
     public static string GetArt_Playthrough3_Lobby(string path) => "Assets/GameRes/Art/Playthrough3/Lobby/" + path + ".png";
     public static string GetArt_Playthrough3_Login(string path) => "Assets/GameRes/Art/Playthrough3/Login/" + path + ".png";
     public static string GetArt_RenderTexture(string path) => "Assets/GameRes/Art/RenderTexture/" + path + ".renderTexture";
+    public static string GetArt_Shaders(string path) => "Assets/GameRes/Art/Shaders/" + path + ".shader";
     public static string GetAudio_BGM(string path) => "Assets/GameRes/Audio/BGM/" + path + ".mp3";
     public static string GetAudio_BGM_ReplaceInTheFuture(string path) => "Assets/GameRes/Audio/BGM/ReplaceInTheFuture/" + path + ".mp3";
     public static string GetAudio_Sound(string path) => "Assets/GameRes/Audio/Sound/" + path + ".wav";
