@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnFriend: {fileID: 6750323935766168580}
+  btnSignIn: {fileID: 7434947060002523090}
 --- !u!1 &992261396971080399
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ GameObject:
   - component: {fileID: 6101061854501700358}
   - component: {fileID: 7434947060002523090}
   m_Layer: 5
-  m_Name: btnSignIn
+  m_Name: BtnSignIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1297,6 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnFriend: {fileID: 0}
+  btnSignIn: {fileID: 0}
 --- !u!1 &1946567036074615723
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,7 +3745,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -114, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 105, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6416671770048228388
 CanvasRenderer:
