@@ -82,6 +82,7 @@ public static class AddressableKeys
     public const string TrailPlayerAttack_Mat = "Assets/GameRes/Art/Materials/TrailPlayerAttack.mat";
     public const string TrailPlayerIdle_Mat = "Assets/GameRes/Art/Materials/TrailPlayerIdle.mat";
     public const string Water_Mat = "Assets/GameRes/Art/Materials/Water.mat";
+    public const string Head_XunYu_Png = "Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/HeadIcon/Head_XunYu.png";
     public const string SunQian_Png = "Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/SunQian.png";
     public const string XunYu_Png = "Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/XunYu.png";
     public const string ZhouCang_Png = "Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/ZhouCang.png";
@@ -422,6 +423,7 @@ public static class AddressableKeys
     public static string GetArt_Font_Cartoon(string path) => "Assets/GameRes/Art/Font/Cartoon/" + path + "";
     public static string GetArt_Materials(string path) => "Assets/GameRes/Art/Materials/" + path + ".mat";
     public static string GetArt_Playthrough3_Character_ReplaceInTheFutre(string path) => "Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/" + path + ".png";
+    public static string GetArt_Playthrough3_Character_ReplaceInTheFutre_HeadIcon(string path) => "Assets/GameRes/Art/Playthrough3/Character/ReplaceInTheFutre/HeadIcon/" + path + ".png";
     public static string GetArt_Playthrough3_Common(string path) => "Assets/GameRes/Art/Playthrough3/Common/" + path + ".png";
     public static string GetArt_Playthrough3_Loading(string path) => "Assets/GameRes/Art/Playthrough3/Loading/" + path + ".png";
     public static string GetArt_Playthrough3_Lobby(string path) => "Assets/GameRes/Art/Playthrough3/Lobby/" + path + ".png";

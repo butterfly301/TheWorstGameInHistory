@@ -8,6 +8,7 @@
   <Project Path="Unity.InputSystem.csproj" />
   <Project Path="Unity.Localization.csproj" />
   <Project Path="Unity.2D.Aseprite.Editor.csproj" />
+  <Project Path="HotUpdate.csproj" />
   <Project Path="Unity.VisualScripting.Flow.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Runtime.csproj" />
   <Project Path="UnityEditor.UI.csproj" />
@@ -20,10 +21,9 @@
   <Project Path="Unity.2D.Common.Path.Editor.csproj" />
   <Project Path="Unity.Addressables.Editor.csproj" />
   <Project Path="Unity.2D.Psdimporter.Editor.csproj" />
-  <Project Path="HotUpdate.csproj" />
+  <Project Path="Unity.2D.IK.Runtime.csproj" />
   <Project Path="UnityEngine.Advertisements.csproj" />
   <Project Path="UIKit.csproj" />
-  <Project Path="Unity.2D.IK.Runtime.csproj" />
   <Project Path="UnityEditor.TestRunner.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
@@ -71,6 +71,7 @@
   <Project Path="Unity.2D.IK.Editor.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.001.csproj" />
   <Project Path="Unity.Burst.Editor.csproj" />
+  <Project Path="Editor.csproj" />
   <Project Path="Unity.2D.Aseprite.Common.csproj" />
   <Project Path="Unity.2D.Common.Editor.csproj" />
   <Project Path="Unity.Sysroot.Linux_x86_64.csproj" />
@@ -92,7 +93,6 @@
   <Project Path="UnityEngine.SpatialTracking.csproj" />
   <Project Path="Unity.InputSystem.ForUI.csproj" />
   <Project Path="ChocDino.UIFX.TMP.Editor.csproj" />
-  <Project Path="Editor.csproj" />
   <Project Path="Unity.InputSystem.RebindingUI.csproj" />
   <Project Path="ChocDino.UIFX.Editor.csproj" />
   <Project Path="Unity.Mathematics.Editor.csproj" />

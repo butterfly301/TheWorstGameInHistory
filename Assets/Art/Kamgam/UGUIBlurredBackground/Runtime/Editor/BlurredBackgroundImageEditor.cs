@@ -19,15 +19,6 @@ namespace Kamgam.UGUIBlurredBackground
         {
             base.OnInspectorGUI();
             obj._EditorApplyChangedValues();
-
-            if (!EditorApplication.isPlaying)
-            {
-                GUILayout.Space(8f);
-                if (GUILayout.Button("Preview Blur Once"))
-                {
-                    obj.EditorPreviewOnce();
-                }
-            }
         }
     }
 

@@ -39,13 +39,6 @@ namespace Kamgam.UGUIBlurredBackground
         {
             base.Awake();
 
-#if UNITY_EDITOR
-            if (!UnityEditor.EditorApplication.isPlaying)
-            {
-                refreshAfterLoadInEditor();
-                return;
-            }
-#endif
             BlurManager.Instance.RegisterImage(this);
 #if UNITY_EDITOR
             refreshAfterLoadInEditor();
@@ -56,13 +49,6 @@ namespace Kamgam.UGUIBlurredBackground
         {
             base.OnEnable();
 
-#if UNITY_EDITOR
-            if (!UnityEditor.EditorApplication.isPlaying)
-            {
-                material = null;
-                return;
-            }
-#endif
             BlurManager.Instance.RegisterImage(this);
             BlurManager.Instance.ApplyValues(this);
             BlurManager.Instance.Renderer.OnPostRender += onPostRender;
@@ -182,14 +168,6 @@ namespace Kamgam.UGUIBlurredBackground
 
         protected override void OnDisable()
         {
-#if UNITY_EDITOR
-            if (!UnityEditor.EditorApplication.isPlaying)
-            {
-                material = null;
-                base.OnDisable();
-                return;
-            }
-#endif
             if (BlurManager.HasInstance())
             {
                 BlurManager.Instance.UnregisterImage(this);
@@ -207,17 +185,5 @@ namespace Kamgam.UGUIBlurredBackground
         {
             base.OnDestroy();
         }
-
-#if UNITY_EDITOR
-        public void EditorPreviewOnce()
-        {
-            if (UnityEditor.EditorApplication.isPlaying)
-            {
-                return;
-            }
-
-            BlurManager.Instance.EditorPreviewOnce(this);
-        }
-#endif
     }
 }

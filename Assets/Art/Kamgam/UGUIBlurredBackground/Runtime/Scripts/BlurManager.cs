@@ -330,12 +330,6 @@ namespace Kamgam.UGUIBlurredBackground
 
         public void Update()
         {
-#if UNITY_EDITOR
-            if (!UnityEditor.EditorApplication.isPlaying)
-            {
-                return;
-            }
-#endif
             // Disable rendering is no elements with blurred background are visible.
             Renderer.Active = shouldBeActive();
 
@@ -345,50 +339,5 @@ namespace Kamgam.UGUIBlurredBackground
                 Renderer.Update();
             }
         }
-
-#if UNITY_EDITOR
-        public void EditorPreviewOnce(BlurredBackgroundImage img)
-        {
-            if (img == null || UnityEditor.EditorApplication.isPlaying)
-            {
-                return;
-            }
-
-            RegisterImage(img);
-            ApplyValues(img);
-            Renderer.SetImage(img);
-            Renderer.Active = shouldBeActive();
-            RefreshRenderModeInfos();
-
-            EditorUtils.RefreshGameView();
-
-            EditorScheduler.Schedule(0.05f, () =>
-            {
-                if (img == null || UnityEditor.EditorApplication.isPlaying)
-                {
-                    return;
-                }
-
-                Renderer.Update();
-                img.SetVerticesDirty();
-                EditorUtils.RefreshGameView();
-            }, "UGUIBlurredBg.PreviewOnce.Render");
-
-            EditorScheduler.Schedule(0.15f, () =>
-            {
-                if (UnityEditor.EditorApplication.isPlaying)
-                {
-                    return;
-                }
-
-                if (Renderer != null)
-                {
-                    Renderer.Active = false;
-                }
-
-                UnregisterImage(img);
-            }, "UGUIBlurredBg.PreviewOnce.Cleanup");
-        }
-#endif
     }
 }
