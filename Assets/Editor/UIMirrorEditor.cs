@@ -1,7 +1,6 @@
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-using StandaloneUIEffects;
 
 [CustomEditor(typeof(UIMirror), true)]
 [CanEditMultipleObjects]
